@@ -1,0 +1,8 @@
+﻿# Windows Systemdateien und Ordner ausschließen
+AppData/
+.vscode/
+*.bin
+*.log
+*.tmp
+Thumbs.db
+Desktop.ini
