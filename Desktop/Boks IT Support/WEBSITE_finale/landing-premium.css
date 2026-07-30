@@ -1,4 +1,4 @@
-/* BIT landing premium – shared by index.html & index-en.html (CSS only, no frameworks) */
+/* BIT landing premium – shared by index.html & index_en.html (CSS only, no frameworks) */
 
 :root {
     --lp-bg-deep: var(--bg, #0F1012);
@@ -188,9 +188,9 @@ section.hero.lp-hero .container {
 
 @media (min-width: 980px) {
     .lp-solutions-layout {
-        grid-template-columns: minmax(250px, 0.92fr) minmax(0, 1.08fr);
+        grid-template-columns: minmax(300px, 1.02fr) minmax(0, 0.98fr);
         align-items: start;
-        gap: 2.3rem;
+        gap: 1.6rem;
     }
 }
 
@@ -207,18 +207,20 @@ section.hero.lp-hero .container {
 
 .lp-solutions-intro p {
     color: var(--lp-muted);
-    margin: 0 0 1rem 0;
-    max-width: 25rem;
+    margin: 0 0 1.05rem 0;
+    max-width: 30rem;
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 .lp-inline-link {
-    font-size: 0.86rem;
+    font-size: 0.84rem;
     text-transform: uppercase;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.06em;
     color: var(--lp-gold-2);
     text-decoration: none;
     border-bottom: 1px solid var(--lp-border);
-    padding-bottom: 0.2rem;
+    padding-bottom: 0.16rem;
 }
 
 .lp-inline-link:hover {
@@ -228,7 +230,7 @@ section.hero.lp-hero .container {
 
 .lp-solution-stack {
     display: grid;
-    gap: 1rem;
+    gap: 0.82rem;
 }
 
 .lp-solution-module {
@@ -236,8 +238,8 @@ section.hero.lp-hero .container {
     padding: 1.35rem 1.2rem;
     border-radius: 10px;
     border: 1px solid var(--lp-border);
-    background: linear-gradient(160deg, rgba(22, 24, 30, 0.8) 0%, rgba(12, 13, 16, 0.92) 100%);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+    background: linear-gradient(160deg, rgba(22, 24, 30, 0.78) 0%, rgba(12, 13, 16, 0.9) 100%);
+    box-shadow: 0 6px 20px var(--shadow);
     scroll-margin-top: 88px;
 }
 
@@ -266,12 +268,12 @@ section.hero.lp-hero .container {
 .lp-solution-module h3 {
     margin: 0.4rem 0 0.42rem 0;
     font-size: clamp(1.08rem, 2.3vw, 1.32rem);
-    color: var(--lp-text);
+    color: #f3f0ea;
     line-height: 1.28;
 }
 
 .lp-solution-module > p {
-    color: var(--lp-muted);
+    color: #c9c2b5;
     font-size: 0.92rem;
     line-height: 1.55;
     margin: 0 0 0.75rem 0;
@@ -285,8 +287,8 @@ section.hero.lp-hero .container {
 
 .lp-term-list li {
     padding: 0.38rem 0;
-    border-top: 1px solid var(--lp-border);
-    color: var(--lp-text);
+    border-top: 1px solid rgba(184, 146, 58, 0.2);
+    color: #dfd8ca;
     font-size: 0.81rem;
     letter-spacing: 0.01em;
     font-family: "Consolas", "SFMono-Regular", "Menlo", "Monaco", monospace;
@@ -295,9 +297,216 @@ section.hero.lp-hero .container {
 .lp-legal-note {
     display: block;
     margin-top: 0.78rem;
-    color: var(--lp-muted);
+    color: #b7b0a3;
     font-size: 0.77rem;
     line-height: 1.4;
+}
+
+html[data-theme="light"] .lp-outcome-section,
+html[data-theme="light"] .lp-process-section {
+    border-top-color: var(--line);
+}
+
+html[data-theme="light"] .lp-outcome-intro h2,
+html[data-theme="light"] .lp-process-section h2 {
+    color: var(--text);
+}
+
+html[data-theme="light"] .lp-outcome-intro p,
+html[data-theme="light"] .lp-outcome-lines li {
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .lp-solutions-section {
+    background: var(--bg);
+}
+
+[data-theme="light"] .lp-solutions-intro h2 {
+    color: var(--text);
+}
+
+[data-theme="light"] .lp-solutions-intro p {
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .lp-inline-link {
+    color: var(--gold);
+    border-bottom-color: var(--border);
+}
+
+[data-theme="light"] .lp-inline-link:hover {
+    color: var(--gold-soft);
+    border-bottom-color: var(--gold-soft);
+}
+
+[data-theme="light"] .lp-solution-module {
+    background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    border: 1px solid var(--border);
+    box-shadow: 0 6px 18px var(--shadow);
+}
+
+[data-theme="light"] .lp-solution-module::before {
+    background: var(--gold);
+}
+
+[data-theme="light"] .lp-module-no {
+    color: var(--gold);
+}
+
+[data-theme="light"] .lp-solution-module h3 {
+    color: var(--text);
+}
+
+[data-theme="light"] .lp-solution-module > p {
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .lp-term-list li {
+    border-top: 1px solid var(--line);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .lp-legal-note {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] .lp-panel,
+html[data-theme="light"] .lp-panel,
+html[data-theme="dark"] .lp-solution-module,
+html[data-theme="light"] .lp-solution-module,
+html[data-theme="dark"] .lp-process-step,
+html[data-theme="light"] .lp-process-step,
+html[data-theme="dark"] .faq-item,
+html[data-theme="light"] .faq-item,
+html[data-theme="dark"] .faq-question,
+html[data-theme="light"] .faq-question,
+html[data-theme="dark"] .card,
+html[data-theme="light"] .card,
+html[data-theme="dark"] .contact-info-card,
+html[data-theme="light"] .contact-info-card {
+    background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    color: var(--text);
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 45px var(--shadow);
+}
+
+html[data-theme="dark"] .lp-panel p,
+html[data-theme="light"] .lp-panel p,
+html[data-theme="dark"] .lp-solution-module p,
+html[data-theme="light"] .lp-solution-module p,
+html[data-theme="dark"] .lp-term-list li,
+html[data-theme="light"] .lp-term-list li,
+html[data-theme="dark"] .faq-question,
+html[data-theme="light"] .faq-question,
+html[data-theme="dark"] .faq-answer,
+html[data-theme="light"] .faq-answer,
+html[data-theme="dark"] .section-benefit,
+html[data-theme="light"] .section-benefit {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="light"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="light"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="light"] h3 {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .lp-cta-panel .lp-panel,
+html[data-theme="light"] .lp-cta-panel .lp-panel {
+    background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    color: var(--text);
+    border: 1px solid var(--border);
+    box-shadow: 0 24px 60px var(--shadow);
+}
+
+html[data-theme="dark"] .lp-cta-title,
+html[data-theme="light"] .lp-cta-title {
+    color: var(--text);
+}
+
+html[data-theme="dark"] .lp-cta-lead,
+html[data-theme="light"] .lp-cta-lead {
+    color: var(--text-muted);
+}
+
+html[data-theme="dark"] .faq,
+html[data-theme="light"] .faq {
+    background: var(--bg);
+}
+
+html[data-theme="dark"] .faq-question,
+html[data-theme="light"] .faq-question {
+    background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+html[data-theme="dark"] .faq-question::after,
+html[data-theme="light"] .faq-question::after,
+html[data-theme="dark"] .faq-question .plus,
+html[data-theme="light"] .faq-question .plus,
+html[data-theme="dark"] .faq-question span,
+html[data-theme="light"] .faq-question span {
+    color: var(--gold);
+}
+
+html[data-theme="dark"] .hero.lp-hero {
+    background:
+        radial-gradient(ellipse 120% 85% at 50% -25%, rgba(184, 138, 42, 0.14) 0%, transparent 55%),
+        radial-gradient(ellipse 65% 45% at 90% 55%, rgba(184, 138, 42, 0.06) 0%, transparent 42%),
+        linear-gradient(180deg, #0E0F10 0%, #121416 45%, #202328 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+html[data-theme="dark"] .hero.lp-hero h1,
+html[data-theme="dark"] .hero.lp-hero .hero-subline,
+html[data-theme="dark"] .hero.lp-hero .hero-microcopy,
+html[data-theme="dark"] .hero.lp-hero .lp-hero-kicker {
+    color: var(--text);
+}
+
+html[data-theme="light"] .hero.lp-hero {
+    background:
+        radial-gradient(ellipse 120% 85% at 50% -20%, rgba(154, 116, 36, 0.22) 0%, transparent 58%),
+        radial-gradient(ellipse 65% 45% at 88% 50%, rgba(154, 116, 36, 0.1) 0%, transparent 45%),
+        linear-gradient(180deg, #FAF8F4 0%, #F4F1EA 48%, #EBE6DC 100%);
+    border-bottom: 1px solid rgba(154, 116, 36, 0.28);
+}
+
+html[data-theme="light"] .hero.lp-hero::before {
+    background-image:
+        linear-gradient(rgba(154, 116, 36, 0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(154, 116, 36, 0.09) 1px, transparent 1px);
+}
+
+html[data-theme="light"] .hero.lp-hero h1 {
+    color: #0F0E0D;
+}
+
+html[data-theme="light"] .hero.lp-hero .hero-subline,
+html[data-theme="light"] .hero.lp-hero .hero-microcopy {
+    color: #3A3632;
+}
+
+html[data-theme="light"] .hero.lp-hero .lp-hero-kicker {
+    color: #6F5520;
+    background: rgba(154, 116, 36, 0.14);
+    border-color: rgba(154, 116, 36, 0.4);
+}
+
+html[data-theme="light"] .hero.lp-hero .btn-secondary {
+    color: #121110;
+    border-color: #8A6A22;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+html[data-theme="light"] .hero.lp-hero .btn-secondary:hover {
+    color: #0F0E0D;
+    border-color: #9A7424;
+    background: #FFFFFF;
 }
 
 /* ----- Process section ----- */
@@ -363,45 +572,135 @@ section.hero.lp-hero .container {
     line-height: 1.5;
 }
 
-/* ----- Profile section ----- */
-.lp-profile-section {
+/* ----- About BIT section ----- */
+.about-bit-section {
     padding: clamp(3rem, 6.5vw, 4.5rem) 0;
     border-top: 1px solid rgba(38, 39, 43, 0.9);
 }
 
-.lp-profile-section h2 {
+.about-bit-card {
+    width: min(100%, 860px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(66px, 84px) minmax(0, 1fr);
+    gap: clamp(1.3rem, 3vw, 2rem);
+    align-items: center;
+    padding: clamp(1.35rem, 3vw, 2rem);
+    border: 1px solid rgba(184, 138, 42, 0.28);
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(24, 26, 29, 0.96), rgba(14, 15, 16, 0.98));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+}
+
+.about-bit-photo-wrap {
+    width: clamp(66px, 7vw, 84px);
+    justify-self: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(184, 138, 42, 0.38);
+    border-radius: 18px;
+    padding: 0.35rem;
+    background: rgba(184, 138, 42, 0.08);
+}
+
+
+.about-bit-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1122 / 1402;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.about-bit-content {
+    min-width: 0;
+}
+
+.about-bit-title {
     color: var(--lp-text);
     font-size: clamp(1.45rem, 3.1vw, 2.3rem);
     margin-bottom: 0.9rem;
 }
 
-.lp-profile-section > .container > p {
-    margin: 0;
-    max-width: 47rem;
+.about-bit-text {
     color: var(--lp-muted);
+    font-size: 0.96rem;
+    line-height: 1.68;
 }
 
-.lp-profile-points {
-    margin: 1.25rem 0 1.55rem 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    gap: 0.7rem;
+.about-bit-text p {
+    margin: 0;
 }
 
-@media (min-width: 760px) {
-    .lp-profile-points {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+.about-bit-text p + p {
+    margin-top: 0.85rem;
+}
+
+.about-bit-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    margin-top: 1.1rem;
+    color: var(--lp-gold);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.about-bit-link:hover,
+.about-bit-link:focus {
+    color: var(--lp-gold-2);
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+}
+
+@media (max-width: 760px) {
+    .about-bit-card {
+        grid-template-columns: auto 1fr;
+        grid-template-areas: "photo content";
+        align-items: start;
+        text-align: left;
+        padding: 1.15rem;
+        gap: 1rem;
+    }
+
+    .about-bit-photo-wrap {
+        grid-area: photo;
+        width: clamp(168px, 42vw, 210px);
+        justify-self: start;
+    }
+
+    .about-bit-content {
+        grid-area: content;
+    }
+
+    .about-bit-title {
+        font-size: clamp(1.35rem, 7vw, 1.75rem);
+    }
+
+    .about-bit-text {
+        font-size: 0.95rem;
     }
 }
 
-.lp-profile-points li {
-    padding: 0.58rem 0.8rem;
-    border: 1px solid var(--lp-border);
-    border-radius: 8px;
-    color: var(--lp-text);
-    font-size: 0.88rem;
-    background: rgba(184, 146, 58, 0.06);
+/* Desktop: Profilbild ICH.png – nach Mobile-Block, damit nichts Mobile überschreibt */
+@media (min-width: 761px) {
+    .about-bit-card {
+        grid-template-columns: 170px minmax(0, 1fr);
+    }
+
+    .about-bit-photo-wrap {
+        flex: 0 0 170px;
+        width: 170px;
+        max-width: 170px;
+    }
+
+    .about-bit-photo {
+        width: 170px;
+        height: 215px;
+        max-width: 170px;
+        aspect-ratio: auto;
+        object-fit: cover;
+    }
 }
 
 .lp-datenschutz {

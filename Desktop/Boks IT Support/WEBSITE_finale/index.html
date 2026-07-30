@@ -1,24 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospitality Systems, PMS Operations &amp; IT Support | BIT Zürich | boksitsupport.ch</title>
-    <meta name="description" content="Operative Unterstützung für Hotels und KMU: PMS, OTA, CRM, Revenue Control, Microsoft 365, Websites und Kalender. Unabhängig, klar abgegrenzt, Zürich.">
-    <meta name="keywords" content="PMS Operations Schweiz, Hospitality Systems, Hotel IT Support, OTA Prüfung, Revenue Control, KMU IT Zürich, Microsoft 365 Support, Windows 11">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <title>Wo Ihr Hotel Umsatz verliert | PMS-/OTA-Prüfung &amp; IT Support | BIT Zürich</title>
+    <meta name="description" content="BIT prüft PMS- und OTA-Daten, Gebühren, Folios und operative Systemfälle für Hotels. Zusätzlich KMU IT, Microsoft 365, Websites und Kalender.">
+    <meta name="keywords" content="PMS OTA Prüfung, Hotel Revenue Control, Hotel IT Support Schweiz, SIHOT.PMS Anwenderunterstützung, Folio Billing Review, KMU IT Zürich, Microsoft 365 Support">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Hospitality Systems, PMS Operations &amp; IT Support | BIT – Boks IT Support">
-    <meta property="og:description" content="Operative Unterstützung für Hotels und KMU: PMS, OTA, CRM, Revenue Control, Microsoft 365, Websites und Kalender.">
+    <meta property="og:title" content="Wo Ihr Hotel Umsatz verliert | PMS-/OTA-Prüfung &amp; IT Support | BIT Zürich">
+    <meta property="og:description" content="BIT prüft PMS- und OTA-Daten, Gebühren, Folios und operative Systemfälle für Hotels. Zusätzlich KMU IT, Microsoft 365, Websites und Kalender.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://boksitsupport.ch">
     
     <!-- Canonical -->
     <link rel="canonical" href="https://boksitsupport.ch/">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="landing-premium.css">
+    <link rel="alternate" hreflang="de" href="https://boksitsupport.ch/">
+    <link rel="alternate" hreflang="en" href="https://boksitsupport.ch/index_en.html">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -27,7 +28,7 @@
       "@type": "LocalBusiness",
       "name": "BIT - Boks IT Support",
       "url": "https://boksitsupport.ch",
-      "description": "Hospitality Systems, PMS Operations, Revenue Control, KMU IT & Web, Microsoft 365, Websites und Kalender – operative Unterstützung aus Zürich.",
+      "description": "PMS-/OTA-Prüfung, Gebühren, Folios und operative Systemfälle für Hotels; KMU IT, Microsoft 365, Websites und Kalender – BIT Zürich.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Zürich",
@@ -35,16 +36,20 @@
       }
     }
     </script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css?v=fix4">
+    <link rel="stylesheet" href="/landing-premium.css?v=fix4">
+    <link rel="stylesheet" href="/site-chrome.css?v=fix4">
 </head>
 <body>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Darstellung wechseln">
-        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
-    </button>
-    <!-- Header -->
-    <header>
+    <header class="header" id="header">
         <div class="header-inner">
-            <a href="index.html" class="logo"><img src="LOGO_DARK.png" alt="BIT – BOKS IT SUPPORT Logo"></a>
-            <nav>
+            <a href="index.html" class="logo">
+                <img src="/LOGO_DARK.png?v=imgfix" alt="BIT – BOKS IT SUPPORT Logo" class="logo-dark">
+                <img src="/LOGO_LIGHT.png?v=imgfix" alt="BIT – BOKS IT SUPPORT Logo" class="logo-light">
+            </a>
+            <nav class="header-nav" aria-label="Hauptnavigation">
                 <ul class="nav-links">
                     <li><a href="services.html">Leistungen</a></li>
                     <li><a href="index.html#hotel-sihot">PMS-/Hotel-Systeme</a></li>
@@ -53,17 +58,39 @@
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
+            <div class="header-controls">
+                <div class="lang-switch" role="group" aria-label="Sprache wählen">
+                    <a href="index.html" class="lang-link active" lang="de" aria-current="page">DE</a>
+                    <span class="lang-sep" aria-hidden="true">|</span>
+                    <a href="index_en.html" class="lang-link" lang="en">EN</a>
+                </div>
+            </div>
+            <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <nav class="mobile-nav" id="mobileNav" hidden aria-label="Mobile Navigation">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Leistungen</a></li>
+            <li><a href="index.html#hotel-sihot">PMS-/Hotel-Systeme</a></li>
+            <li><a href="index.html#kmu-it">IT &amp; Websites</a></li>
+            <li><a href="it-matrix.html">Expertise</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
 
     <!-- Hero -->
     <section class="hero lp-hero">
         <div class="container">
-            <p class="lp-hero-kicker">BIT / Boks IT Support</p>
-            <h1>Kosten, Zeit und Nerven sparen durch saubere Hotel- und IT-Systeme.</h1>
-            <p class="hero-subline">BIT unterstützt Hotels und KMU bei PMS-/OTA-Prozessen, Abrechnung, Microsoft 365, Websites und operativen Systemfragen.</p>
+            <h1>Wo Ihr Hotel Umsatz verliert.</h1>
+            <p class="hero-subline">Prüfung von PMS- und OTA-Daten, Gebühren, Folios und operativen Systemfällen.</p>
             <div class="hero-ctas">
-                <a href="kontakt.html" class="btn btn-primary">In 20 Minuten zur Einschätzung</a>
+                <a href="kontakt.html" class="btn btn-primary">Prüfung anfragen</a>
                 <a href="services.html" class="btn btn-secondary">Leistungen ansehen</a>
             </div>
             <p class="hero-microcopy">Unabhängig. Klar abgegrenzt. Remote oder vor Ort nach Absprache.</p>
@@ -74,53 +101,53 @@
     <section class="lp-outcome-section">
         <div class="container">
             <div class="lp-outcome-intro">
-                <h2>Wenn Systeme nicht sauber geführt sind, verliert der Betrieb Kontrolle.</h2>
-                <p>Reservierungen, Folios, Gebühren, Gästedaten, Benutzer und Buchungskanäle greifen täglich ineinander. BIT prüft diese Schnittstellen operativ – dort, wo Fehler Zeit, Geld oder Sicherheit kosten.</p>
+                <h2>Kleine Abweichungen werden in der Hotellerie teuer.</h2>
+                <p>Reservierungen, Folios, Gebühren und Buchungskanäle greifen täglich ineinander. BIT prüft klar abgegrenzte Abweichungen auf Basis bereitgestellter oder neutral aufbereiteter Unterlagen.</p>
             </div>
             <div class="lp-outcome-lines" role="list" aria-label="Ergebnisziele">
-                <p role="listitem">Abweichungen sichtbar machen</p>
-                <p role="listitem">Prozesse stabilisieren</p>
-                <p role="listitem">Systeme verständlich halten</p>
+                <p role="listitem">Abweichungen finden</p>
+                <p role="listitem">Ursache einordnen</p>
+                <p role="listitem">Nächsten Schritt festlegen</p>
             </div>
         </div>
     </section>
 
-    <!-- Lösungen -->
+    <!-- Prüffelder -->
     <section class="lp-solutions-section" id="kernbereiche">
         <div class="container lp-solutions-layout">
             <div class="lp-solutions-intro">
-                <h2>Lösungen</h2>
-                <p>Statt generischer IT-Betreuung: klar abgegrenzte operative Unterstützung entlang Ihrer wichtigsten Systemprozesse.</p>
-                <a href="services.html" class="lp-inline-link">Alle Leistungen im Überblick</a>
+                <h2>Prüffelder</h2>
+                <p>BIT prüft klar abgegrenzte Bereiche, in denen operative Fehler Zeit, Geld oder Kontrolle kosten.</p>
+                <a href="services.html" class="lp-inline-link">Alle Leistungen ansehen</a>
             </div>
             <div class="lp-solution-stack">
                 <article class="lp-solution-module" id="hotel-sihot">
                     <p class="lp-module-no">01</p>
-                    <h3>Hotel-Systemprozesse</h3>
-                    <p>PMS, OTA, CRM, Folios, Gebühren und Gästedaten im laufenden Betrieb.</p>
+                    <h3>PMS-/OTA-Abgleich</h3>
+                    <p>Abgleich von Buchungen, Raten, Kategorien, Folios und OTA-Daten.</p>
                     <ul class="lp-term-list">
                         <li>PMS-/OTA-Reconciliation</li>
                         <li>Folio &amp; Billing Review</li>
                         <li>Rate &amp; Mapping Review</li>
-                        <li>Guest Data Quality</li>
+                        <li>Stammdatenqualität</li>
                     </ul>
                 </article>
                 <article class="lp-solution-module lp-solution-module--offset">
                     <p class="lp-module-no">02</p>
-                    <h3>PMS Operations</h3>
-                    <p>Anwender- und Prozessunterstützung für konkrete Hotel-Systemfälle.</p>
+                    <h3>Gebühren &amp; Revenue Control</h3>
+                    <p>Prüfung von No-Shows, Stornos, Add-ons, Kurtaxe und abrechnungsrelevanten Fällen.</p>
                     <ul class="lp-term-list">
-                        <li>Reservation Control</li>
                         <li>No-Show &amp; Cancellation Review</li>
-                        <li>Revenue Leakage Review</li>
+                        <li>Fee, Tax &amp; Add-on Validation</li>
+                        <li>Abrechnungsabweichungen prüfen</li>
                         <li>Operational Reporting</li>
                     </ul>
-                    <small class="lp-legal-note">Erfahrung mit SIHOT.PMS aus praktischer Anwendung. Kein offizieller SIHOT-Partner. Kein Hersteller-Support.</small>
+                    <small class="lp-legal-note">Erfahrung mit SIHOT.PMS aus praktischer Anwendung. Keine Herstellervertretung und kein offizieller Hersteller-Support.</small>
                 </article>
                 <article class="lp-solution-module" id="kmu-it">
                     <p class="lp-module-no">03</p>
                     <h3>KMU IT &amp; Web</h3>
-                    <p>Klar abgegrenzter Support für Microsoft 365, Windows 11, Websites, Kalender und kleine Automationen.</p>
+                    <p>Klar abgegrenzter Support für Microsoft 365, Windows 11, Websites, Kalender und einfache Automationen.</p>
                     <ul class="lp-term-list">
                         <li>Microsoft 365</li>
                         <li>Windows 11</li>
@@ -132,6 +159,20 @@
         </div>
     </section>
 
+    <!-- Website & Google Teaser -->
+    <section class="lp-cta-panel" id="website-google-teaser">
+        <div class="container">
+            <div class="lp-panel">
+                <h2 class="lp-cta-title">Website &amp; Google-Profil für lokale Betriebe</h2>
+                <p class="section-benefit lp-cta-lead">Google-Profil ab CHF 190, komplette One-Pager-Website inkl. Google ab CHF 490 – einmalig eingerichtet, danach gehört alles Ihnen. Kein Abo. Für Praxen, Handwerker und kleine Betriebe in Zürich.</p>
+                <div class="hero-ctas">
+                    <a href="services.html#website-google" class="btn btn-primary">Pakete ansehen</a>
+                    <a href="kontakt.html" class="btn btn-secondary">Beratung anfragen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Vorgehen -->
     <section class="lp-process-section" id="ablauf">
         <div class="container">
@@ -139,39 +180,45 @@
             <div class="lp-process-line" role="list" aria-label="Vorgehensschritte">
                 <article class="lp-process-step" role="listitem">
                     <p class="lp-step-no">01</p>
-                    <h3>Verstehen</h3>
-                    <p>Problem, Systemumfeld und Ziel klären.</p>
+                    <h3>Anfrage</h3>
+                    <p>Kurzer Beschrieb per E-Mail.</p>
                 </article>
                 <article class="lp-process-step" role="listitem">
                     <p class="lp-step-no">02</p>
-                    <h3>Prüfen</h3>
-                    <p>Export, Screenshot, Fall oder Zugriff nach Absprache.</p>
+                    <h3>Einschätzung</h3>
+                    <p>BIT prüft, ob der Fall sinnvoll eingegrenzt werden kann.</p>
                 </article>
                 <article class="lp-process-step" role="listitem">
                     <p class="lp-step-no">03</p>
-                    <h3>Einordnen</h3>
-                    <p>Abweichung, Ursache, Risiko und Aufwand bewerten.</p>
+                    <h3>Prüfung</h3>
+                    <p>Kleine Erstprüfung oder Fixpreis nach Umfang.</p>
                 </article>
                 <article class="lp-process-step" role="listitem">
                     <p class="lp-step-no">04</p>
-                    <h3>Umsetzen</h3>
-                    <p>Korrektur, Dokumentation oder Übergabe.</p>
+                    <h3>Ergebnis</h3>
+                    <p>Befund, Ursache und empfohlener nächster Schritt.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Profil -->
-    <section class="lp-profile-section">
+    <!-- Über BIT -->
+    <section class="about-bit-section">
         <div class="container">
-            <h2>Hotelbetrieb und IT in einer Person.</h2>
-            <p>BIT verbindet operative Hotelerfahrung mit technischem Systemverständnis. Der Fokus liegt auf nachvollziehbaren Befunden, klarer Kommunikation und praktischer Umsetzung – nicht auf Theorie.</p>
-            <ul class="lp-profile-points">
-                <li>Hotelbetrieb aus der Praxis</li>
-                <li>Systemlogik statt Bauchgefühl</li>
-                <li>klare Dokumentation statt Chaos</li>
-            </ul>
-            <p class="lp-datenschutz">BIT arbeitet nach Schweizer Datenschutzrecht (DSG / nDSG). Prüfungen starten nach Möglichkeit mit anonymisierten oder geschwärzten Exports, Screenshots oder Beispielbuchungen. Direkter Systemzugriff nur nach Absprache.</p>
+            <div class="about-bit-card">
+                <div class="about-bit-photo-wrap">
+                    <img class="about-bit-photo" src="/ICH.png?v=imgfix" alt="Stefan Bogdanovic - BIT Boks IT Support Zürich" width="1122" height="1402" loading="lazy" decoding="async">
+                </div>
+                <div class="about-bit-content">
+                    <h2 class="about-bit-title">Über BIT</h2>
+                    <div class="about-bit-text">
+                        <p>BIT - Boks IT Support wird von Stefan Bogdanovic in Zürich betrieben. Der Fokus liegt auf praxisnaher Unterstützung bei Hotel-Systemprozessen, PMS-/OTA-nahen Abläufen, KMU-IT und strukturierter Prozessdokumentation.</p>
+                        <p>Je nach Auftrag arbeitet BIT projektbezogen mit ausgewählten Freelancern, Fachpersonen oder kleinen Umsetzungsteams zusammen. Die Verantwortung, Koordination und Qualitätssicherung bleiben dabei klar bei BIT.</p>
+                        <p>Die Arbeit erfolgt unabhängig, klar abgegrenzt und ohne Verwendung vertraulicher Informationen aktueller oder früherer Arbeitgeber.</p>
+                    </div>
+                    <a class="about-bit-link" href="kontakt.html">Direkt Kontakt aufnehmen</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -182,8 +229,8 @@
                 <h2 class="lp-cta-title">Ein Fall genügt für den ersten Schritt.</h2>
                 <p class="section-benefit lp-cta-lead">Senden Sie einen kurzen Beschrieb. BIT gibt eine Einschätzung, ob eine Prüfung sinnvoll ist.</p>
                 <div class="hero-ctas">
-                    <a href="kontakt.html" class="btn btn-primary">Einschätzung anfragen</a>
-                    <a href="mailto:info@boksitsupport.ch" class="btn btn-secondary">E-Mail senden</a>
+                    <a href="kontakt.html" class="btn btn-primary">Prüfung anfragen</a>
+                    <a href="mailto:admin@boksitsupport.ch" class="btn btn-secondary">E-Mail senden</a>
                 </div>
             </div>
         </div>
@@ -199,7 +246,7 @@
                         Arbeiten Sie nur mit Hotels?
                     </button>
                     <div class="faq-answer" role="region">
-                        <p>Schwerpunkt: Hotels und PMS-/OTA-Prozesse. Zusätzlich KMU: IT, Websites, Kalender.</p>
+                        <p>Nein. Schwerpunkt sind Hotels und PMS-/OTA-Prozesse. Zusätzlich unterstützt BIT KMU bei IT, Websites und Kalendern.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -207,7 +254,7 @@
                         Was ist der Unterschied zu klassischem IT-Support?
                     </button>
                     <div class="faq-answer" role="region">
-                        <p>Zusätzlich zur Technik: operative Abläufe – Buchungen, Folios, Gebühren, Datenqualität, Prozessfehler.</p>
+                        <p>BIT betrachtet nicht nur Technik, sondern auch operative Abläufe: Buchungen, Folios, Gebühren, Datenqualität und Prozessfehler.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -215,7 +262,7 @@
                         Brauchen Sie direkten Systemzugriff?
                     </button>
                     <div class="faq-answer" role="region">
-                        <p>Oft nicht. Start mit Exporten, Screenshots oder Fallbeschrieb. Zugriff nur nach Absprache.</p>
+                        <p>Oft nicht. Screenshots, Exporte oder Fallbeschreibungen reichen für den Start. Zugriff nur nach Absprache.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -223,7 +270,7 @@
                         Gibt es langfristige Bindung?
                     </button>
                     <div class="faq-answer" role="region">
-                        <p>Nein. Klar abgegrenzte Prüfungen und Einsätze.</p>
+                        <p>Nein. Kleine, klar abgegrenzte Einsätze sind möglich.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -231,15 +278,15 @@
                         Bieten Sie auch Websites und Kalender an?
                     </button>
                     <div class="faq-answer" role="region">
-                        <p>Ja. Websites, Landingpages, Formulare, Kalender- und Buchungslinks für KMU.</p>
+                        <p>Ja. BIT unterstützt einfache Websites, Landingpages, direkte Kontaktseiten und Kalender-/Buchungslösungen.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button type="button" class="faq-question" aria-expanded="false">
-                        Ist BIT offizieller SIHOT-Partner?
+                        Ist BIT Anbieter oder Herstellervertretung für PMS?
                     </button>
                     <div class="faq-answer" role="region">
-                        <p>Nein. BIT bietet unabhängige Anwender- und Prozessunterstützung. Erfahrung mit SIHOT.PMS stammt aus praktischer Hotelanwendung. Kein offizieller SIHOT-Partner. Kein Hersteller-Support.</p>
+                        <p>Nein. BIT bietet unabhängige Anwender- und Prozessunterstützung auf Basis praktischer Hotel-Erfahrung.</p>
                     </div>
                 </div>
             </div>
@@ -250,18 +297,20 @@
     <footer id="kontakt">
         <div class="container">
             <div class="footer-inner">
-                <ul class="footer-links">
-                    <li><a href="legal.html">Impressum</a></li>
-                    <li><a href="legal.html#datenschutz">Datenschutz</a></li>
-                </ul>
                 <div class="footer-contact">
-                    <a href="mailto:info@boksitsupport.ch">info@boksitsupport.ch</a>
+                    <div>BIT / boksitsupport.ch</div>
+                    <div>Zürich, Schweiz</div>
+                    <a href="mailto:admin@boksitsupport.ch">admin@boksitsupport.ch</a>
                 </div>
+                <ul class="footer-links">
+                    <li><a href="legal.html">Impressum</a> · <a href="legal.html#datenschutz">Datenschutz</a></li>
+                </ul>
             </div>
-            <p class="footer-copyright">© BIT / boksitsupport.ch</p>
+            <p class="footer-copyright">© BIT</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="/script.js?v=fix4"></script>
+    <script defer src="/site-chrome.js?v=fix4"></script>
 </body>
 </html>
