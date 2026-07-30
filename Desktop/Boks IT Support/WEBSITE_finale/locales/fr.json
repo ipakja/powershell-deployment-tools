@@ -1,0 +1,241 @@
+{
+  "lang": "fr-CH",
+  "skip": "Aller au contenu",
+  "language_suggestion": {
+    "prompt": "Souhaitez-vous afficher cette page dans la langue de votre navigateur ?",
+    "switch": "Changer de langue",
+    "dismiss": "Fermer"
+  },
+  "meta": {
+    "title": "Support informatique PME & entrée marché suisse | BIT",
+    "description": "Support informatique PME et hospitality à Zurich, entrée sur le marché suisse et représentation commerciale en Suisse pour entreprises B2B.",
+    "keywords": "support informatique PME Suisse, support informatique Zurich, entrée sur le marché suisse, représentation commerciale Suisse, support IT hôtellerie, contrôle PMS OTA, Microsoft 365 Zurich"
+  },
+  "nav": {
+    "aria": "Navigation principale",
+    "services": "Services",
+    "market": "Marché suisse",
+    "about": "À propos",
+    "contact": "Contact",
+    "menu": "Menu",
+    "languages": "Choisir la langue"
+  },
+  "hero": {
+    "eyebrow": "BIT – Swiss Market Development & Representation · Zurich",
+    "title": "Des systèmes stables. Des opérations claires. Un accès structuré au marché suisse.",
+    "lead": "Nous sécurisons l’informatique quotidienne des PME, hôtels et restaurants suisses. Nous accompagnons les entreprises B2B des Balkans dans leur entrée sur le marché suisse, de la validation à la représentation locale.",
+    "services_button": "Voir les services",
+    "trust": "Un interlocuteur responsable · résultats documentés · à distance ou sur place selon accord"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Un soutien opérationnel avec des livrables précis.",
+    "intro": "Nous évaluons d’abord la cause, les dépendances et le risque métier. L’hôtellerie et la restauration restent réunies dans un seul point de service hospitality.",
+    "cards": [
+      {
+        "title": "Hospitality : hôtels et restaurants",
+        "text": "Un support IT hospitality reliant réception, réservations, comptabilité et opérations de restauration.",
+        "items": [
+          "Contrôle PMS/OTA des tarifs, disponibilités et parcours de réservation",
+          "Rapprochement des folios, commissions, frais et paiements",
+          "Analyse des erreurs de mapping, d’interface et des doublons",
+          "Caisses, imprimantes, Wi-Fi, appareils et accès utilisateurs",
+          "Parcours de réservation, menus numériques et profil Google",
+          "Constats documentés et mesures correctives prioritaires"
+        ]
+      },
+      {
+        "title": "IT PME et solutions numériques",
+        "text": "Support informatique PME en Suisse pour cabinets, artisans, prestataires et équipes sans service IT interne.",
+        "items": [
+          "Microsoft 365 : utilisateurs, MFA, Outlook et autorisations",
+          "Windows 11, ordinateurs, imprimantes et configuration sécurisée",
+          "Wi-Fi, DNS, domaines, délivrabilité e-mail et sites web",
+          "Nettoyage des comptes et droits selon le moindre privilège",
+          "Contrôle des sauvegardes, mises à jour et sécurité de base",
+          "Documentation concise et remise aux collaborateurs"
+        ]
+      },
+      {
+        "title": "Support processus et projets",
+        "text": "Une base de décision solide et une réalisation coordonnée pour les projets numériques délimités.",
+        "items": [
+          "Analyse de l’existant, des causes et des risques",
+          "Exigences, responsabilités et objectifs mesurables",
+          "Comparaison indépendante des fournisseurs, licences et solutions",
+          "Cartographie des processus, blocages et potentiel d’automatisation",
+          "Coordination de spécialistes et fournisseurs sélectionnés",
+          "Recette, documentation et liste des actions ouvertes"
+        ]
+      }
+    ]
+  },
+  "market": {
+    "eyebrow": "BIT – Swiss Market Development & Representation",
+    "title": "Entrée sur le marché et représentation commerciale en Suisse.",
+    "text": "Pour les entreprises B2B de Bosnie-Herzégovine, Croatie, Serbie, Monténégro et Macédoine du Nord, nous transformons un potentiel en parcours commercial vérifiable. Nous ne promettons aucun contrat : nous réalisons un travail de marché local, discipliné et transparent.",
+    "items": [
+      "Validation du marché cible, de la concurrence et de l’offre",
+      "Adaptation de la proposition de valeur, des prix et supports",
+      "Identification et qualification de contacts commerciaux pertinents",
+      "Prospection locale et développement commercial en Suisse",
+      "Représentation en rendez-vous et clarification technique ou linguistique",
+      "Coordination de pilotes, retour du marché et recommandation"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Deux publics · un interlocuteur local",
+    "title": "Une présence là où la proximité opérationnelle compte.",
+    "intro": "Les entreprises suisses ont besoin de systèmes fiables. Les fournisseurs internationaux ont besoin de contexte et de présence locale. BIT répond aux deux besoins par des mandats clairement séparés.",
+    "cards": [
+      {
+        "title": "Pour les PME et l’hospitality suisses",
+        "text": "Pour PME, cabinets, artisans, prestataires, hôtels et restaurants à Zurich et en Suisse.",
+        "items": [
+          "Résoudre incidents et causes récurrentes",
+          "Sécuriser Microsoft 365, appareils et accès",
+          "Contrôler systèmes hospitality et flux de revenus",
+          "Documenter responsabilités et procédures",
+          "Coordonner les fournisseurs avec précision technique"
+        ]
+      },
+      {
+        "title": "Pour les entreprises B2B des Balkans",
+        "text": "Pour fournisseurs établis disposant de références, d’une capacité de livraison et d’un engagement réaliste en Suisse.",
+        "items": [
+          "Évaluer la maturité marché et les segments cibles",
+          "Expliquer les attentes suisses en qualité et communication",
+          "Contacter localement de manière ciblée et professionnelle",
+          "Accompagner rendez-vous, offres et pilotes",
+          "Restituer preuves et retours du marché en transparence"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Méthode",
+    "title": "Un processus traçable du premier contact à la remise.",
+    "intro": "Un processus clair protège le temps, le budget et les données sensibles. Chaque mandat commence par une évaluation et un périmètre, jamais par des promesses prématurées.",
+    "steps": [
+      {
+        "title": "Premier contact",
+        "text": "Envoyez objectif, situation et urgence par WhatsApp, Viber ou e-mail, sans mot de passe ni accès confidentiel."
+      },
+      {
+        "title": "Évaluation et périmètre",
+        "text": "Nous clarifions causes, systèmes, marché cible, acteurs et risques, puis donnons un avis franc sur la faisabilité."
+      },
+      {
+        "title": "Réalisation et communication",
+        "text": "Nous avançons par étapes convenues, validons les décisions et signalons rapidement tout écart."
+      },
+      {
+        "title": "Remise et suite",
+        "text": "Vous recevez les résultats, la documentation utile, les points ouverts et une recommandation priorisée."
+      }
+    ]
+  },
+  "assurance": {
+    "eyebrow": "La confiance par des limites claires",
+    "title": "Ce que vous pouvez attendre – et ce que nous ne promettons pas.",
+    "text": "Une bonne collaboration repose sur des attentes réalistes. BIT agit avec indépendance, discrétion et responsabilité définie. Nous ne demandons jamais d’identifiants par messagerie.",
+    "items": [
+      "Aucune commission fournisseur ne dicte nos recommandations",
+      "Aucune garantie de succès commercial, contrat ou système tiers sans erreur",
+      "Accès confidentiels uniquement par un canal sécurisé convenu",
+      "MFA, droits minimaux et changements documentés par défaut",
+      "Spécialistes externes seulement si nécessaire, avec périmètre défini",
+      "Coûts, hypothèses et risques ouverts annoncés avant réalisation"
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "title": "Avant le premier échange.",
+    "items": [
+      {
+        "question": "Quelles entreprises bénéficient du support informatique à Zurich ?",
+        "answer": "Nous accompagnons surtout PME, cabinets, artisans, prestataires, hôtels et restaurants. Chaque mandat est délimité selon les systèmes, l’urgence et l’expertise nécessaire."
+      },
+      {
+        "question": "L’hôtel et la restauration sont-ils deux services distincts ?",
+        "answer": "Non. Ils restent un seul point de service hospitality, car PMS, OTA, caisse, paiements, Wi-Fi et opérations sont souvent interdépendants."
+      },
+      {
+        "question": "Que comprend un contrôle PMS/OTA ?",
+        "answer": "Selon le mandat, nous contrôlons tarifs, disponibilités, réservations, mapping, folios, frais, commissions et écarts inhabituels. BIT est indépendant et ne représente officiellement aucun fournisseur PMS."
+      },
+      {
+        "question": "Comment accompagnez-vous l’entrée sur le marché suisse ?",
+        "answer": "Nous validons segments et positionnement, qualifions les contacts, réalisons la prospection convenue, accompagnons les rendez-vous et coordonnons les pilotes. Les activités et retours sont documentés."
+      },
+      {
+        "question": "Garantissez-vous des clients ou des ventes en Suisse ?",
+        "answer": "Non. Un développement commercial sérieux ne garantit aucun contrat. Nous fournissons validation structurée, activité locale et retours fiables pour décider sur des faits."
+      },
+      {
+        "question": "Travaillez-vous à distance ou sur place ?",
+        "answer": "De nombreuses analyses et interventions sont possibles à distance. Les missions à Zurich et ailleurs en Suisse sont organisées selon disponibilité et périmètre clair."
+      },
+      {
+        "question": "Comment commencer ?",
+        "answer": "Envoyez une brève description par WhatsApp, Viber ou e-mail avec l’objectif, la situation et l’urgence. Ne transmettez jamais mots de passe, codes d’accès ou données sensibles par messagerie."
+      },
+      {
+        "question": "Un accompagnement régulier est-il possible ?",
+        "answer": "Oui, lorsque systèmes, responsabilités et délais de réponse sont clairement définis. Nous commençons généralement par un état des lieux avant de convenir d’un mandat récurrent."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "À propos de BIT",
+    "title": "Gestion personnelle. Réseau professionnel.",
+    "text": "BIT est dirigé par Stefan Bogdanovic à Zurich. L’accent est mis sur des solutions compréhensibles, une coordination rigoureuse et une réalisation fiable pour les PME, l’hospitality et les partenaires internationaux.",
+    "independent": "Selon le mandat, des spécialistes sélectionnés peuvent participer. La responsabilité et l’assurance qualité restent chez BIT. BIT agit de manière indépendante et ne représente officiellement aucun fournisseur PMS.",
+    "image_alt": "Stefan Bogdanovic, BIT Zurich"
+  },
+  "contact": {
+    "eyebrow": "Contact direct",
+    "title": "Écrivez-nous directement.",
+    "text": "Aucun formulaire et aucun détour inutile. Décrivez brièvement votre demande – n’envoyez jamais d’identifiants confidentiels par messagerie.",
+    "whatsapp": "Écrire sur WhatsApp",
+    "viber": "Écrire sur Viber",
+    "email": "Envoyer un e-mail",
+    "email_subject": "Demande via boksitsupport.ch",
+    "quick_contact": "Contact rapide"
+  },
+  "footer": {
+    "location": "Zurich, Suisse",
+    "legal": "Mentions légales",
+    "privacy": "Protection des données"
+  },
+  "legal_page": {
+    "title": "Mentions légales",
+    "eyebrow": "Informations légales",
+    "lead": "Identification du prestataire et informations relatives à l’utilisation de ce site. Droit applicable principal : Suisse.",
+    "back": "Retour au site",
+    "provider_title": "Prestataire",
+    "provider_name": "BIT – Boks IT Support",
+    "entity_type": "entreprise individuelle (Einzelfirma selon le droit suisse)",
+    "owner": "Responsable du contenu : Stefan Bogdanovic",
+    "activity_title": "Activité",
+    "activity": "Développement du marché suisse et représentation sur la base d’un mandat écrit, ainsi que support IT et assistance numérique pour les PME et l’hospitality.",
+    "address_title": "Adresse",
+    "city": "Zurich",
+    "country": "Suisse",
+    "contact_title": "Contact",
+    "registration_title": "Registre et fiscalité",
+    "registration": "Les éventuelles identifications d’entreprise, du registre du commerce ou de TVA sont communiquées sur demande. Seules des informations connues et vérifiées sont publiées ici.",
+    "terms_title": "Conditions générales – points essentiels",
+    "terms": "Le périmètre, le prix et le calendrier sont convenus par écrit. Les frais de tiers nécessitent une autorisation ; toute représentation exige un mandat écrit explicite. Je fais intervenir des spécialistes externes uniquement après accord préalable. Je reste la partie contractuelle. Il s’agit de points essentiels et non d’un conseil juridique complet.",
+    "liability_title": "Responsabilité du contenu",
+    "liability": "Je prépare le contenu de ce site avec soin. Je ne donne aucune assurance quant à son exhaustivité, son exactitude ou sa disponibilité continue. Les contenus des sites externes liés relèvent exclusivement de la responsabilité de leurs exploitants.",
+    "copyright_title": "Droit d’auteur",
+    "copyright": "© 2026 BIT – Boks IT Support. Tous droits réservés. Les textes, la conception et les autres contenus de ce site ne peuvent être reproduits, diffusés ou utilisés autrement sans autorisation écrite préalable.",
+    "privacy_title": "Protection des données",
+    "privacy": "Ce site statique n’utilise ni formulaire de contact ni suivi propriétaire. L’hébergeur peut traiter les journaux techniques nécessaires. En cas de contact par WhatsApp, Viber ou e-mail, les règles de confidentialité du fournisseur concerné s’appliquent également.",
+    "privacy_messaging": "WhatsApp et Viber peuvent traiter et transférer des métadonnées de contact, d’appareil et de communication hors de Suisse. L’e-mail et le téléphone restent disponibles comme solutions de rechange. N’envoyez aucun identifiant confidentiel par messagerie.",
+    "jurisdiction_title": "Droit applicable et for",
+    "jurisdiction": "Le droit suisse s’applique. Dans la mesure où la loi le permet, Zurich est le for pour les litiges relatifs à ce site et aux prestations proposées.",
+    "updated": "Mise à jour : juillet 2026"
+  }
+}

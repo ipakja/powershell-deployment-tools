@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="$html_lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$meta_title</title>
+    <meta name="description" content="$meta_description">
+    <link rel="canonical" href="$canonical">
+$alternate_links
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/assets/universal.css?v=9">
+</head>
+<body data-current-language="$language" data-language-prompt="$language_prompt"
+      data-language-switch="$language_switch" data-language-dismiss="$language_dismiss">
+    <a class="skip-link" href="#main">$skip</a>
+    <main id="main" class="gateway">
+        <div class="container gateway-inner">
+            <img src="/LOGO_DARK.png" alt="BIT – Boks IT Support" width="174">
+            <div>
+                <p class="eyebrow">$identity</p>
+                <h1>$title</h1>
+                <p class="hero-lead">$subtitle</p>
+            </div>
+            <div class="gateway-grid">
+                <a class="gateway-card" href="$hospitality_url">
+                    <span class="eyebrow">A</span>
+                    <h2>$hospitality_title</h2>
+                    <p>$hospitality_text</p>
+$hospitality_note
+                </a>
+                <a class="gateway-card" href="$market_url">
+                    <span class="eyebrow">B</span>
+                    <h2>$market_title</h2>
+                    <p>$market_text</p>
+                </a>
+            </div>
+            <nav class="language-nav gateway-languages" data-language-nav aria-label="$languages_label">
+$language_links
+            </nav>
+            <p class="gateway-legal"><a href="$legal_url">$legal_label</a></p>
+        </div>
+    </main>
+    <script type="module" src="/assets/js/app.js?v=2"></script>
+</body>
+</html>

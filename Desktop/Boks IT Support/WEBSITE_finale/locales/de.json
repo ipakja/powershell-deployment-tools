@@ -1,0 +1,241 @@
+{
+  "lang": "de-CH",
+  "skip": "Zum Inhalt springen",
+  "language_suggestion": {
+    "prompt": "Möchten Sie diese Seite in Ihrer Browsersprache öffnen?",
+    "switch": "Sprache wechseln",
+    "dismiss": "Schliessen"
+  },
+  "meta": {
+    "title": "IT Support Zürich & Markteintritt Schweiz | BIT",
+    "description": "IT Support für KMU und Hospitality in Zürich sowie Markteintritt, Geschäftsanbahnung und Vertretung in der Schweiz für B2B-Unternehmen.",
+    "keywords": "IT Support Zürich, KMU IT Support Schweiz, Hotel IT Support, PMS OTA Prüfung, Gastronomie Digitalisierung, Microsoft 365 Support Zürich, Markteintritt Schweiz, Vertretung Schweiz, Geschäftsanbahnung Schweiz"
+  },
+  "nav": {
+    "aria": "Hauptnavigation",
+    "services": "Leistungen",
+    "market": "Schweizer Markt",
+    "about": "Über BIT",
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "languages": "Sprache wählen"
+  },
+  "hero": {
+    "eyebrow": "BIT – Swiss Market Development & Representation · Zürich",
+    "title": "Stabile Systeme. Klare Abläufe. Direkter Zugang zum Schweizer Markt.",
+    "lead": "Wir sichern den digitalen Betrieb von Schweizer KMU, Hotels und Gastronomiebetrieben. B2B-Unternehmen aus dem Balkan begleiten wir beim Markteintritt in die Schweiz – von der Marktprüfung bis zur lokalen Vertretung.",
+    "services_button": "Leistungen ansehen",
+    "trust": "Ein Ansprechpartner · dokumentierte Ergebnisse · remote oder vor Ort in Zürich und nach Absprache"
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "title": "Operative Unterstützung mit konkreten Ergebnissen.",
+    "intro": "Wir prüfen zuerst Ursache, Abhängigkeiten und Geschäftsrisiko. Danach setzen wir nur um, was technisch sinnvoll, sicher und nachvollziehbar ist. Hotel und Gastronomie bleiben ein gemeinsamer Hospitality-Servicepunkt.",
+    "cards": [
+      {
+        "title": "Hospitality: Hotel & Gastronomie",
+        "text": "Wir verbinden Hotel IT Support mit der Prüfung operativer Abläufe zwischen Rezeption, Reservierung, Buchhaltung und Gastronomie.",
+        "items": [
+          "PMS-/OTA-Prüfung: Verfügbarkeiten, Raten und Buchungswege",
+          "Abgleich von Folios, Kommissionen, Gebühren und Zahlungen",
+          "Analyse von Doppelbuchungen, Mapping- und Schnittstellenfehlern",
+          "Kasse, Drucker, WLAN, Endgeräte und Benutzerzugänge",
+          "Digitale Speisekarten, Buchungswege und Google-Unternehmensprofil",
+          "Dokumentierte Befunde und priorisierte Korrekturmassnahmen"
+        ]
+      },
+      {
+        "title": "KMU IT & digitale Lösungen",
+        "text": "KMU IT Support in Zürich und der Schweiz für Praxen, Handwerk, Dienstleister und kleine Teams ohne eigene IT-Abteilung.",
+        "items": [
+          "Microsoft 365 Support: Benutzer, MFA, Outlook und Berechtigungen",
+          "Windows 11, Geräte, Drucker und sichere Grundeinstellungen",
+          "WLAN, DNS, Domains, E-Mail-Zustellung und Website-Betrieb",
+          "Kontenbereinigung und Rollen nach dem Least-Privilege-Prinzip",
+          "Backup-, Update- und Basissicherheitsprüfung",
+          "Kurze Systemdokumentation und klare Übergabe an Mitarbeitende"
+        ]
+      },
+      {
+        "title": "Prozess- & Projektunterstützung",
+        "text": "Für abgegrenzte Vorhaben schaffen wir eine belastbare Entscheidungsgrundlage und koordinieren die Umsetzung.",
+        "items": [
+          "Ist-Aufnahme, Ursachenanalyse und Risikoeinstufung",
+          "Anforderungen, Verantwortlichkeiten und messbares Zielbild",
+          "Neutraler Anbieter-, Lizenz- und Lösungsvergleich",
+          "Prozessaufnahme mit Engpässen und Automationspotenzial",
+          "Koordination ausgewählter Fachpartner und Lieferanten",
+          "Abnahme, Dokumentation und offene-Punkte-Liste"
+        ]
+      }
+    ]
+  },
+  "market": {
+    "eyebrow": "BIT – Swiss Market Development & Representation",
+    "title": "Markteintritt und Vertretung in der Schweiz.",
+    "text": "Für B2B-Unternehmen aus Bosnien und Herzegowina, Kroatien, Serbien, Montenegro und Nordmazedonien übersetzen wir Marktpotenzial in einen prüfbaren Vertriebsweg. Wir versprechen keine Aufträge, sondern qualifizierte Marktarbeit mit transparenter Dokumentation.",
+    "items": [
+      "Zielmarkt-, Wettbewerbs- und Angebotsprüfung für die Schweiz",
+      "Schärfung von Nutzenargumentation, Preislogik und Unterlagen",
+      "Identifikation und Qualifizierung passender Geschäftskontakte",
+      "Lokale Erstansprache und Geschäftsanbahnung in der Schweiz",
+      "Vertretung bei Gesprächen sowie technische und sprachliche Klärung",
+      "Pilotkoordination, Rückmeldungen und Empfehlung für den nächsten Schritt"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Zwei Zielgruppen · ein lokaler Ansprechpartner",
+    "title": "Unterstützung dort, wo operative Nähe zählt.",
+    "intro": "Schweizer Betriebe brauchen verlässliche Systeme. Internationale Anbieter brauchen Marktverständnis und lokale Präsenz. BIT verbindet beide Perspektiven ohne die Leistungen zu vermischen.",
+    "cards": [
+      {
+        "title": "Für Schweizer KMU und Hospitality",
+        "text": "Für KMU, Praxen, Handwerks- und Dienstleistungsbetriebe sowie Hotels und Gastronomie in Zürich und der Schweiz.",
+        "items": [
+          "Störungen und wiederkehrende Ursachen strukturiert beheben",
+          "Microsoft 365, Endgeräte und Zugriffe absichern",
+          "Hospitality-Systeme und Umsatzflüsse nachvollziehen",
+          "Verantwortlichkeiten und Abläufe dokumentieren",
+          "Externe Anbieter technisch fundiert koordinieren"
+        ]
+      },
+      {
+        "title": "Für B2B-Unternehmen aus dem Balkan",
+        "text": "Für etablierte Anbieter mit Referenzen, Lieferfähigkeit und einem realistischen Interesse am Schweizer Markt.",
+        "items": [
+          "Marktreife und Zielkundensegment kritisch prüfen",
+          "Schweizer Erwartungen an Qualität und Kommunikation einordnen",
+          "Lokale Kontakte qualifiziert und respektvoll ansprechen",
+          "Gespräche, Angebote und Pilotprojekte begleiten",
+          "Erkenntnisse transparent zurückspielen"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Vorgehen",
+    "title": "Nachvollziehbar vom Erstkontakt bis zur Übergabe.",
+    "intro": "Ein klarer Prozess schützt Zeit, Budget und sensible Informationen. Jeder Auftrag beginnt mit Prüfung und Abgrenzung – nicht mit vorschnellen Versprechen.",
+    "steps": [
+      {
+        "title": "Erstkontakt",
+        "text": "Sie senden Ziel, Ausgangslage und Dringlichkeit über WhatsApp, Viber oder E-Mail – ohne Passwörter oder vertrauliche Zugänge."
+      },
+      {
+        "title": "Prüfung & Abgrenzung",
+        "text": "Wir klären Ursache, Systeme, Zielmarkt, Beteiligte und Risiken. Sie erhalten eine ehrliche Einschätzung zu Machbarkeit und Umfang."
+      },
+      {
+        "title": "Umsetzung & Kommunikation",
+        "text": "Wir arbeiten in vereinbarten Schritten, stimmen Entscheidungen ab und melden Abweichungen frühzeitig statt sie zu verstecken."
+      },
+      {
+        "title": "Übergabe & Weiterführung",
+        "text": "Sie erhalten Ergebnisse, relevante Dokumentation, offene Punkte und eine priorisierte Empfehlung für den sicheren nächsten Schritt."
+      }
+    ]
+  },
+  "assurance": {
+    "eyebrow": "Vertrauen durch klare Grenzen",
+    "title": "Was Sie erwarten können – und was nicht.",
+    "text": "Gute Zusammenarbeit beginnt mit realistischen Erwartungen. BIT arbeitet unabhängig, diskret und mit klarer Verantwortung. Zugangsdaten werden nicht über Messenger angefordert.",
+    "items": [
+      "Keine Herstellerprovision als Grundlage unserer Empfehlung",
+      "Keine Garantie für Markterfolg, Aufträge oder fehlerfreie Fremdsysteme",
+      "Vertrauliche Zugänge nur über einen abgestimmten sicheren Weg",
+      "MFA, minimale Berechtigungen und dokumentierte Änderungen als Standard",
+      "Externe Spezialisten nur bei Bedarf und mit klarer Aufgabenabgrenzung",
+      "Kosten, Annahmen und offene Risiken werden vor der Umsetzung benannt"
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Vor dem ersten Gespräch.",
+    "items": [
+      {
+        "question": "Für welche Betriebe bietet BIT IT Support in Zürich an?",
+        "answer": "Wir unterstützen vor allem KMU, Praxen, Handwerks- und Dienstleistungsbetriebe sowie Hotels und Gastronomie. Der Auftrag wird nach Systemlandschaft, Dringlichkeit und benötigtem Spezialwissen abgegrenzt."
+      },
+      {
+        "question": "Übernimmt BIT Hotel und Gastronomie getrennt?",
+        "answer": "Nein. Hotel und Gastronomie bilden bewusst einen gemeinsamen Hospitality-Servicepunkt, weil PMS, OTA, Kasse, Zahlungen, WLAN und operative Abläufe häufig voneinander abhängen."
+      },
+      {
+        "question": "Was umfasst eine PMS-/OTA-Prüfung?",
+        "answer": "Je nach Auftrag prüfen wir Raten, Verfügbarkeiten, Buchungswege, Mapping, Folios, Gebühren, Kommissionen und auffällige Abweichungen. BIT ist unabhängig und keine offizielle PMS-Herstellervertretung."
+      },
+      {
+        "question": "Wie unterstützt BIT beim Markteintritt in die Schweiz?",
+        "answer": "Wir prüfen Zielgruppen und Positionierung, qualifizieren Kontakte, übernehmen abgestimmte Erstansprachen, begleiten Gespräche und koordinieren Pilotprojekte. Ergebnisse und Marktfeedback werden nachvollziehbar dokumentiert."
+      },
+      {
+        "question": "Garantiert BIT Kunden oder Vertriebserfolg in der Schweiz?",
+        "answer": "Nein. Seriöse Geschäftsanbahnung kann keine Aufträge garantieren. Wir liefern strukturierte Marktprüfung, lokale Aktivität und belastbares Feedback, damit Sie fundiert über weitere Investitionen entscheiden."
+      },
+      {
+        "question": "Arbeitet BIT remote oder vor Ort?",
+        "answer": "Viele Analysen und Supportleistungen sind remote möglich. Einsätze vor Ort in Zürich und weiteren Regionen der Schweiz erfolgen nach Absprache, Verfügbarkeit und klarer Aufgabenbeschreibung."
+      },
+      {
+        "question": "Wie startet eine Zusammenarbeit?",
+        "answer": "Senden Sie eine kurze Beschreibung über WhatsApp, Viber oder E-Mail. Nennen Sie Ziel, aktuelle Situation und Dringlichkeit. Passwörter, Zugangscodes und sensible Kundendaten senden Sie bitte nie über Messenger."
+      },
+      {
+        "question": "Ist eine längerfristige Betreuung möglich?",
+        "answer": "Ja, wenn Systeme, Verantwortlichkeiten und Reaktionsrahmen klar definiert sind. Häufig beginnen wir mit einer Bestandsaufnahme und vereinbaren danach ein passendes Support- oder Marktentwicklungsmandat."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Über BIT",
+    "title": "Persönlich geführt. Fachlich vernetzt.",
+    "text": "BIT wird von Stefan Bogdanovic in Zürich geführt. Der Fokus liegt auf verständlichen Lösungen, sauberer Koordination und verlässlicher Umsetzung für KMU, Hospitality und internationale Partner.",
+    "independent": "Je nach Auftrag arbeiten ausgewählte Fachpersonen mit. Verantwortung und Qualitätssicherung bleiben bei BIT. BIT arbeitet unabhängig und ist keine offizielle PMS-Herstellervertretung.",
+    "image_alt": "Stefan Bogdanovic, BIT Zürich"
+  },
+  "contact": {
+    "eyebrow": "Direkter Kontakt",
+    "title": "Schreiben Sie uns direkt.",
+    "text": "Kein Kontaktformular und kein unnötiger Umweg. Senden Sie kurz Ihr Anliegen – vertrauliche Zugangsdaten bitte nie über Messenger senden.",
+    "whatsapp": "Über WhatsApp schreiben",
+    "viber": "Über Viber schreiben",
+    "email": "E-Mail senden",
+    "email_subject": "Anfrage über boksitsupport.ch",
+    "quick_contact": "Schnellkontakt"
+  },
+  "footer": {
+    "location": "Zürich, Schweiz",
+    "legal": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "legal_page": {
+    "title": "Impressum",
+    "eyebrow": "Rechtliche Angaben",
+    "lead": "Anbieterkennzeichnung und Hinweise zur Nutzung dieser Website. Primäre Rechtsordnung: Schweiz.",
+    "back": "Zurück zur Website",
+    "provider_title": "Anbieter",
+    "provider_name": "BIT – Boks IT Support",
+    "entity_type": "Einzelfirma",
+    "owner": "Inhaltlich verantwortlich: Stefan Bogdanovic",
+    "activity_title": "Tätigkeit",
+    "activity": "Schweizer Marktentwicklung und Vertretung auf Grundlage eines schriftlichen Mandats sowie IT-Support und digitale Unterstützung für KMU und Hospitality.",
+    "address_title": "Adresse",
+    "city": "Zürich",
+    "country": "Schweiz",
+    "contact_title": "Kontakt",
+    "registration_title": "Register- und Steuerangaben",
+    "registration": "Angaben zu allfälligen Unternehmens-, Handelsregister- oder Mehrwertsteuer-Identifikationen werden auf Anfrage mitgeteilt. Hier werden nur bekannte und geprüfte Angaben veröffentlicht.",
+    "terms_title": "AGB – wichtige Eckpunkte",
+    "terms": "Umfang, Preis und Termine werden schriftlich vereinbart. Kosten Dritter benötigen eine Freigabe; eine Vertretung setzt ein ausdrückliches schriftliches Mandat voraus. Externe Fachpersonen beziehe ich nur nach vorheriger Absprache ein. Vertragspartner bleibe ich. Dies sind wichtige Eckpunkte und keine umfassende Rechtsberatung.",
+    "liability_title": "Haftung für Inhalte",
+    "liability": "Die Inhalte dieser Website erstelle ich mit Sorgfalt. Eine Zusicherung für Vollständigkeit, Richtigkeit oder laufende Verfügbarkeit übernehme ich nicht. Für Inhalte verlinkter externer Seiten sind ausschliesslich deren Betreiber verantwortlich.",
+    "copyright_title": "Urheberrecht",
+    "copyright": "© 2026 BIT – Boks IT Support. Alle Rechte vorbehalten. Texte, Gestaltung und sonstige Inhalte dieser Website dürfen ohne vorherige schriftliche Zustimmung nicht vervielfältigt, verbreitet oder anderweitig genutzt werden.",
+    "privacy_title": "Datenschutz",
+    "privacy": "Diese statische Website verwendet kein Kontaktformular und kein eigenes Tracking. Beim Aufruf können technisch notwendige Server-Logdaten durch den Hosting-Anbieter verarbeitet werden. Bei Kontakt über WhatsApp, Viber oder E-Mail gelten zusätzlich die Datenschutzbestimmungen des jeweiligen Anbieters.",
+    "privacy_messaging": "WhatsApp und Viber können Kontakt-, Geräte- und Kommunikationsmetadaten ausserhalb der Schweiz verarbeiten und übertragen. E-Mail und Telefon stehen als Alternativen zur Verfügung. Senden Sie keine vertraulichen Zugangsdaten über Messenger.",
+    "jurisdiction_title": "Anwendbares Recht und Gerichtsstand",
+    "jurisdiction": "Es gilt schweizerisches Recht. Soweit gesetzlich zulässig, ist Zürich Gerichtsstand für Streitigkeiten im Zusammenhang mit dieser Website und den darüber angebotenen Leistungen.",
+    "updated": "Stand: Juli 2026"
+  }
+}

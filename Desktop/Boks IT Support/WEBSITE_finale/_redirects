@@ -1,0 +1,34 @@
+# Canonical multilingual structure
+/index.html /de/ 301
+/index_en.html /en/ 301
+/index-en.html /en/ 301
+/en.html /en/ 301
+
+# Legacy German routes
+/services /de/#services 301
+/services.html /de/#services 301
+/packages /de/#services 301
+/packages.html /de/#services 301
+/it-matrix /de/#services 301
+/it-matrix.html /de/#services 301
+/kontakt /de/#contact 301
+/kontakt.html /de/#contact 301
+/rechtliches /de/legal/ 301
+/legal /de/legal/ 301
+/legal.html /de/legal/ 301
+
+# Legacy English routes
+/services-en /en/#services 301
+/services-en.html /en/#services 301
+/packages-en /en/#services 301
+/packages-en.html /en/#services 301
+/it-matrix-en /en/#services 301
+/it-matrix-en.html /en/#services 301
+/kontakt-en /en/#contact 301
+/kontakt-en.html /en/#contact 301
+/legal-en /en/legal/ 301
+/legal-en.html /en/legal/ 301
+
+# Force non-www on Cloudflare Pages
+https://www.boksitsupport.ch/* https://boksitsupport.ch/:splat 301
+http://www.boksitsupport.ch/* https://boksitsupport.ch/:splat 301
