@@ -67,7 +67,7 @@
   "ui": {
     "services_eyebrow": "Services",
     "process_eyebrow": "Process",
-    "audience_eyebrow": "Audience",
+    "audience_eyebrow": "Offer",
     "faq_eyebrow": "FAQ",
     "inquiry_eyebrow": "Inquiry",
     "archive_eyebrow": "Archive",
@@ -129,17 +129,17 @@
   },
   "home": {
     "meta_title": "IT support for small businesses without in-house IT | BIT Zurich",
-    "meta_description": "BIT helps companies in Zurich with user accounts, Microsoft 365, access and workplace issues — clearly scoped, with a written framework.",
+    "meta_description": "BIT helps companies in Zurich with user accounts, Microsoft 365, access and workplace issues — clearly scoped, with a written agreement on scope.",
     "eyebrow": "IT coordination for Zurich and remote across Switzerland",
     "h1": "IT support for small businesses without in-house IT",
     "lead": "BIT supports businesses with user accounts, Microsoft 365, access and recurring workplace issues. Clearly defined standard cases are reviewed and handled.",
     "trust": "For companies with about 5–50 employees · Zurich and remote across Switzerland",
     "cta_subline": "Non-binding needs assessment. Submitting the form does not create an engagement.",
-    "outcome": "You get a clear contact person, a written scope and a documented close-out. The service frame is clearly bounded and agreed before work starts.",
+    "outcome": "You get a clear contact person, a written scope and a documented close-out. The service scope is clearly bounded and agreed before work starts.",
     "pilot_banner": "BIT currently reviews selected requests within a limited introductory operation.",
     "trust_block": {
       "title": "Who is behind BIT",
-      "text": "Stefan Bogdanovic, Zurich. Operational experience from hotel and front-desk environments. Clearly scoped user, access and workplace requests – a contact person, a written framework and a traceable close-out."
+      "text": "Stefan Bogdanovic, Zurich. Operational experience from hotel and front-desk environments. Clearly scoped user, access and workplace requests – a contact person, a written scope and a traceable close-out."
     },
     "examples_teaser": {
       "title": "Sample cases instead of references",
@@ -222,8 +222,8 @@
             "Required systems and roles",
             "Who may grant approvals"
           ],
-          "boundaries": "Specialist technical cases outside the agreed frame are not automatically included and are reviewed before work starts. No 24/7 cover and no unlimited scope. BIT does not replace an internal IT department and does not take unlimited retainer work. Vendor or infrastructure specialities are reviewed before start and continued only after agreement with a suitable specialist.",
-          "intro": "User and access topics often arise under time pressure: a Monday joiner, a leaver without a clear account list, a role change with new rights. BIT captures the request in a structured way, clarifies approvals and records the agreed scope in writing. Result first: a productive start or closed access — documented, traceable and without an open-ended retainer. Most cases are handled remotely; an on-site appointment in the Zurich area is agreed in advance only when needed and listed separately in the quote. Approvals stay with the company. Work does not start without a written frame.",
+          "boundaries": "Specialist technical cases outside the agreed scope are not automatically included and are reviewed before work starts. No 24/7 cover and no unlimited scope. BIT does not replace an internal IT department and does not take unlimited retainer work. Vendor or infrastructure specialities are reviewed before start and continued only after agreement with a suitable specialist.",
+          "intro": "User and access topics often arise under time pressure: a Monday joiner, a leaver without a clear account list, a role change with new rights. BIT captures the request in a structured way, clarifies approvals and records the agreed scope in writing. Result first: a productive start or closed access — documented, traceable and without an open-ended retainer. Most cases are handled remotely; an on-site appointment in the Zurich area is agreed in advance only when needed and listed separately in the quote. Approvals stay with the company. Work does not start without a written scope.",
           "closing": "For a non-binding assessment, use the inquiry form with Users & access preselected. Submitting the form does not create an engagement."
         }
       },
@@ -243,7 +243,7 @@
           ],
           "steps": [
             "Capture the issue and impact",
-            "Check whether it fits the standard frame",
+            "Check whether it fits the standard scope",
             "Handle or coordinate after agreement",
             "Document the outcome and open points"
           ],
@@ -253,7 +253,7 @@
             "Since when and how often it occurs"
           ],
           "boundaries": "Vendor-dependent or deep infrastructure topics are not automatically included. A specialist is involved only by agreement. Without enough detail (error picture, timing, affected workstation) the case cannot be scoped reliably. Critical infrastructure or production environments are outside this entry point.",
-          "intro": "When Outlook, Teams or sign-in stalls at a workstation, work time is lost immediately. BIT narrows whether the account, device or service is affected and handles clearly scoped standard cases within the agreed frame. Result first: less time lost on everyday disruptions and one contact person through to documented close-out. The goal is a clearly scoped standard case with a documented outcome — not an open-ended retainer and not an automatic vendor escalation. Remote is the default; Zurich-area on-site visits only by agreement and listed separately in the quote.",
+          "intro": "When Outlook, Teams or sign-in stalls at a workstation, work time is lost immediately. BIT narrows whether the account, device or service is affected and handles clearly scoped standard cases within the agreed scope. Result first: less time lost on everyday disruptions and one contact person through to documented close-out. The goal is a clearly scoped standard case with a documented outcome — not an open-ended retainer and not an automatic vendor escalation. Remote is the default; Zurich-area on-site visits only by agreement and listed separately in the quote.",
           "closing": "Describe the issue via the inquiry form (Microsoft 365 & workplace). Submitting the form does not create an engagement."
         }
       },
@@ -283,7 +283,7 @@
             "Known access or permission questions"
           ],
           "boundaries": "The basics check is not a cybersecurity audit and not a penetration test. Specialist technical execution only after prior agreement with a suitable specialist. The finding is a priority overview, not a guarantee of completeness across every system and not approval for technical changes without a written follow-on agreement.",
-          "intro": "When it is unclear which accounts and rights are still active, you need a written overview first — not an open-ended engagement. The IT basics check is a clearly scoped entry: review access, prioritise risks, deliver a finding. Result first: a documented finding with priorities before further steps are agreed. From CHF 190 as a fixed-price entry. The check creates a decision base: what first, what later, what sits outside the frame. Remote is usual; Zurich-area on-site only when needed and listed separately. Not a security audit and not an unlimited follow-on engagement.",
+          "intro": "When it is unclear which accounts and rights are still active, you need a written overview first — not an open-ended engagement. The IT basics check is a clearly scoped entry: review access, prioritise risks, deliver a finding. Result first: a documented finding with priorities before further steps are agreed. From CHF 190 as a fixed-price entry. The check creates a decision base: what first, what later, what sits outside the agreed scope. Remote is usual; Zurich-area on-site only when needed and listed separately. Not a security audit and not an unlimited follow-on engagement.",
           "closing": "For the basics check, use the inquiry form with IT basics check preselected. Submitting the form does not create an engagement."
         }
       }
@@ -309,24 +309,32 @@
     ]
   },
   "audience": {
-    "title": "Who this is for",
-    "fit_title": "A good fit for",
-    "fit": [
-      "about 5-50 employees",
-      "mostly Windows and Microsoft 365",
-      "no dedicated IT role",
-      "recurring joiners and leavers",
-      "a need for documented handling"
+    "title": "Services for small businesses without an in-house IT team",
+    "lead": "BIT provides structured user, access and digital workplace services for Swiss businesses with approximately 5–50 employees.",
+    "services_title": "Typical services",
+    "services": [
+      "employee onboarding and offboarding",
+      "user accounts, roles and access changes",
+      "Microsoft 365 and workplace requests",
+      "coordination with specialised delivery partners",
+      "documented completion and follow-up"
     ],
-    "nofit_title": "Not the right frame for",
+    "fit_title": "Best suited for businesses that…",
+    "fit": [
+      "have approximately 5–50 employees",
+      "do not employ an in-house IT role",
+      "use Windows and Microsoft 365",
+      "have recurring user and access changes"
+    ],
+    "nofit_title": "Outside the current standard service",
     "nofit": [
-      "private individuals",
-      "large enterprises",
-      "critical infrastructure",
-      "specialised production IT",
-      "unlimited 24/7 support",
-      "requirements without a clear scope"
-    ]
+      "guaranteed 24/7 support",
+      "full IT infrastructure management",
+      "complex server and network operations",
+      "advanced cybersecurity projects",
+      "critical or highly regulated environments"
+    ],
+    "nofit_note": "Additional specialist services may be coordinated separately where a suitable delivery partner is available."
   },
   "role": {
     "title": "BIT’s role",
@@ -389,7 +397,7 @@
       },
       {
         "q": "Can every IT problem be covered?",
-        "a": "No. BIT takes on clearly scoped user, access and workplace tasks within a written framework. Complex infrastructure, vendor-dependent or specialist topics are not automatically included and are reviewed before work starts."
+        "a": "No. BIT takes on clearly scoped user, access and workplace tasks within a written scope. Complex infrastructure, vendor-dependent or specialist topics are not automatically included and are reviewed before work starts."
       },
       {
         "q": "Does BIT only work with hotels?",
@@ -507,7 +515,7 @@
       "sections": [
         {
           "title": "Starting point",
-          "text": "Short description of the need and the agreed frame."
+          "text": "Short description of the need and the agreed scope."
         },
         {
           "title": "Checked points",

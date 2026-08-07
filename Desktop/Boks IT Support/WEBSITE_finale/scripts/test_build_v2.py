@@ -319,8 +319,38 @@ def test_siz_credentials_published() -> None:
     assert "ICT Power-User SIZ" in en_about
     home = read("de/index.html")
     assert "Ansprechpartner" in home
-    assert "schriftlichem Rahmen" in home or "schriftlicher Rahmen" in home
+    assert "schriftlich vereinbartem Umfang" in home or "schriftlicher Umfang" in home or "schriftlich vereinbarten Umfang" in home
     assert "nachvollziehbarem Abschluss" in home or "nachvollziehbarer Abschluss" in home
+
+
+def test_audience_what_whom_when_structure() -> None:
+    """Audience page leads with what/for whom, then fit, then outside standard."""
+    de = read("de/fuer-unternehmen/index.html")
+    en = read("en/for-businesses/index.html")
+
+    assert "Für kleine Unternehmen ohne eigene interne IT" in de
+    assert "Typische Leistungen" in de
+    assert "Besonders geeignet für Unternehmen, die" in de
+    assert "Ausserhalb des aktuellen Standardangebots" in de
+    assert "Geeignet für" not in de or "Besonders geeignet" in de
+    assert "Nicht der richtige Rahmen" not in de
+    assert "geeignete Fachstelle verfügbar" in de
+    assert "Benutzer-Onboarding und Offboarding" in de
+
+    assert "Services for small businesses without an in-house IT team" in en
+    assert "Typical services" in en
+    assert "Best suited for businesses that" in en
+    assert "Outside the current standard service" in en
+    assert "A good fit for" not in en
+    assert "Not the right frame" not in en
+    assert "suitable delivery partner is available" in en
+    assert "employee onboarding and offboarding" in en
+
+    # Order: services before fit before nofit
+    assert de.index("Typische Leistungen") < de.index("Besonders geeignet")
+    assert de.index("Besonders geeignet") < de.index("Ausserhalb des aktuellen Standardangebots")
+    assert en.index("Typical services") < en.index("Best suited for businesses")
+    assert en.index("Best suited for businesses") < en.index("Outside the current standard service")
 
 
 def test_services_rewrite_structure_and_slugs() -> None:

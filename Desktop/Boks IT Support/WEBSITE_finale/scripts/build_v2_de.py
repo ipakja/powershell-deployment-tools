@@ -756,16 +756,22 @@ def process_main(v2: dict[str, Any]) -> str:
 
 
 def audience_main(v2: dict[str, Any]) -> str:
-    """Audience fit page."""
+    """Audience page: what → for whom → when it fits → boundaries."""
     a = v2["audience"]
     ui = v2["ui"]
+    nofit_body = ul(a["nofit"])
+    note = a.get("nofit_note") or ""
+    if note:
+        nofit_body += f'                <p class="muted audience-nofit-note">{escape(note)}</p>\n'
     return (
         '        <section class="hero"><div class="container">\n'
         f'            <p class="eyebrow">{escape(ui["audience_eyebrow"])}</p>\n'
         f"            <h1>{escape(a['title'])}</h1>\n"
+        f'            <p class="hero-lead">{escape(a["lead"])}</p>\n'
         "        </div></section>\n"
+        + section(a["services_title"], ul(a["services"]))
         + section(a["fit_title"], ul(a["fit"]))
-        + section(a["nofit_title"], ul(a["nofit"]))
+        + section(a["nofit_title"], nofit_body)
         + section(
             v2["role"]["title"],
             (
