@@ -1,5 +1,6 @@
 ﻿.viewer-token.local
 *.local
+*.bak
 node_modules/
 .wrangler/
 .pytest_cache/

@@ -2,6 +2,7 @@
 
 **Datum:** 2026-08-07  
 **Branch:** `bit-website-sync` → Deploy Production `website` / `main`  
+**Commit:** `312fd688d940681757c45ee409ac2af03ecf4070`  
 **Deploy-Zeit:** 2026-08-07 ca. 23:58 +02:00 (letzter Functions-Deploy `e80482ce`)  
 **Preview:** https://e80482ce.website-5db.pages.dev
 
@@ -59,9 +60,9 @@
 
 ## 8. Git / Deploy
 
-- Commit-Hash: *(nach Commit eintragen / siehe git log)*
-- Production-Deploy Branch `main` durchgeführt
-- `main` vs Live: Production trackt Pages Deployments von diesem Workspace; Git-Branch der Sync-Arbeit ist `bit-website-sync`. Falls `origin/main` hinter dem Sync-Branch liegt → PR `bit-website-sync` → `main` empfohlen.
+- Commit-Hash: `312fd688d940681757c45ee409ac2af03ecf4070`
+- Production-Deploy Branch `main` durchgeführt (Pages Deployment `e80482ce`, ca. 23:58 +02:00)
+- `origin/main` ist Merge-Base/Ancestor von `bit-website-sync` (sync liegt voraus). **PR empfohlen:** `bit-website-sync` → `main`, damit Git-main dem Live-Stand entspricht.
 
 ## 9. Geprüfte URLs
 
