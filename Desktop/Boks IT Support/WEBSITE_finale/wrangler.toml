@@ -1,0 +1,20 @@
+# Cloudflare Pages – BIT website (project: website)
+# Secrets / vars (Dashboard → website → Settings → Environment variables → Production):
+#   TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID  (recommended push notify – see docs/INQUIRY_NOTIFY.md)
+#   optional INQUIRY_WEBHOOK_URL (Slack/Discord/generic)
+#   INQUIRY_VIEW_TOKEN (protected GET /api/inquiries)
+#   optional INQUIRY_DIAG_TOKEN, RESEND_API_KEY, INQUIRY_MIRROR_TO,
+#   optional INQUIRY_NOTIFY_EMAIL / INQUIRY_TO / INQUIRY_FROM (nur wenn Resend aktiv).
+# Delivery: KV INQUIRY_LOG (primär) + Telegram/Webhook notify + optional Resend.
+# KV-Binding INQUIRY_LOG: Namespace erstellt, Binding via diesem File beim Deploy.
+
+name = "website"
+compatibility_date = "2026-07-01"
+pages_build_output_dir = "."
+
+# Primary delivery: store inquiry JSON (TTL ~12 months).
+# Dashboard-Fallback: Workers & Pages → website → Settings → Functions →
+#   KV namespace bindings → Variable name INQUIRY_LOG → namespace INQUIRY_LOG
+[[kv_namespaces]]
+binding = "INQUIRY_LOG"
+id = "d6f0c62cf7a14b199355315aa0dec76c"

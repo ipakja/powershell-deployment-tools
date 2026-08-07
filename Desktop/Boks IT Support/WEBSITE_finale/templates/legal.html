@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="$html_lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$legal_title | BIT</title>
+    <meta name="description" content="$legal_meta_description">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#0d0f11">
+    <link rel="canonical" href="$canonical">
+$alternate_links
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/assets/universal.css?v=12">
+</head>
+<body data-current-language="$language" data-page="legal">
+    <a class="skip-link" href="#main">$skip</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/$language/" aria-label="BIT – Boks IT Support">
+                <img src="/LOGO_DARK.png" alt="BIT – Boks IT Support" width="174">
+            </a>
+            <nav class="main-nav" data-main-nav aria-label="$nav_aria">
+$nav_links
+            </nav>
+            <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="$menu_label">$menu_label</button>
+            <nav class="language-nav" data-language-nav aria-label="$nav_languages">
+$language_links
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="section legal-section">
+            <div class="container legal-content">
+                <p class="eyebrow">$legal_eyebrow</p>
+                <h1>$legal_title</h1>
+                <p class="legal-lead">$legal_lead</p>
+
+                <div class="legal-document">
+                    <section class="legal-block" aria-labelledby="legal-provider">
+                        <h2 id="legal-provider">$legal_provider_title</h2>
+                        <p class="legal-identity">
+                            <strong>$legal_provider_name</strong><br>
+                            $legal_entity_note<br>
+                            $address_street, $address_postal_code $address_city, $address_country<br>
+                            <a href="mailto:$email">$email</a> · <a href="$phone_href">$phone_display</a><br>
+                            $legal_owner
+                        </p>
+                    </section>
+
+                    <section class="legal-block" aria-labelledby="legal-activity">
+                        <h2 id="legal-activity">$legal_activity_title</h2>
+                        <p>$legal_activity</p>
+                    </section>
+
+                    <section class="legal-block" aria-labelledby="legal-registration">
+                        <h2 id="legal-registration">$legal_registration_title</h2>
+                        <p>$legal_registration</p>
+                    </section>
+
+                    <section class="legal-block" aria-labelledby="legal-liability">
+                        <h2 id="legal-liability">$liability_title</h2>
+                        <p>$liability</p>
+                    </section>
+
+                    <section class="legal-block" aria-labelledby="legal-copyright">
+                        <h2 id="legal-copyright">$copyright_title</h2>
+                        <p>$copyright</p>
+                    </section>
+
+                    <section class="legal-block" id="privacy" aria-labelledby="legal-privacy">
+                        <h2 id="legal-privacy">$privacy_title</h2>
+$privacy_body
+                    </section>
+
+                    <section class="legal-block" aria-labelledby="legal-jurisdiction">
+                        <h2 id="legal-jurisdiction">$jurisdiction_title</h2>
+                        <p>$jurisdiction</p>
+                    </section>
+
+                    <p class="legal-updated">$legal_updated</p>
+                </div>
+
+                <p class="legal-back">
+                    <a class="button button-secondary" href="/$language/">
+                        $legal_back
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <div>© 2026 BIT · Stefan Bogdanovic · $footer_city</div>
+                <p class="footer-note">$footer_note</p>
+                <div class="footer-channels">
+                    <a href="mailto:$email">$email</a>
+                    <a href="$phone_href">$phone_display</a>
+                    <a data-contact="whatsapp" href="$whatsapp_url">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="$inquiry_href">$inquiry_label</a>
+                <a href="/$language/legal/">$footer_legal</a>
+                <a href="/$language/legal/#privacy">$footer_privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/assets/js/app.js?v=3"></script>
+</body>
+</html>

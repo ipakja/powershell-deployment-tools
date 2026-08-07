@@ -1,0 +1,502 @@
+{
+  "language": "en",
+  "html_lang": "en",
+  "og_locale": "en_GB",
+  "hreflang": "en",
+  "skip": "Skip to content",
+  "nav_aria": "Main navigation",
+  "menu_label": "Menu",
+  "languages_label": "Language",
+  "inquiry_label": "Inquiry",
+  "legal_label": "Legal notice & privacy",
+  "archive_label": "Market Access",
+  "state": "A",
+  "cta_primary": "Have your IT need reviewed",
+  "cta_primary_href": "/en/inquiry/",
+  "cta_secondary": "View services",
+  "cta_secondary_href": "/en/services/",
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/en/",
+      "pair": "home"
+    },
+    {
+      "label": "Services",
+      "href": "/en/services/",
+      "pair": "services"
+    },
+    {
+      "label": "Examples",
+      "href": "/en/examples/",
+      "pair": "examples"
+    },
+    {
+      "label": "How it works",
+      "href": "/en/how-it-works/",
+      "pair": "process"
+    },
+    {
+      "label": "For businesses",
+      "href": "/en/for-businesses/",
+      "pair": "audience"
+    },
+    {
+      "label": "About BIT",
+      "href": "/en/about-bit/",
+      "pair": "about"
+    },
+    {
+      "label": "FAQ",
+      "href": "/en/faq/",
+      "pair": "faq"
+    },
+    {
+      "label": "Inquiry",
+      "href": "/en/inquiry/",
+      "pair": "inquiry"
+    }
+  ],
+  "footer_channels_note": "Email and phone are available in the footer; WhatsApp is optional. The primary path for a needs assessment is the inquiry form.",
+  "footer_channels_note_offline": "For a needs assessment, please reach me directly by email or phone (WhatsApp optional). Form delivery is being set up.",
+  "price_note": "Guideline figures only; binding once the scope has been reviewed in writing.",
+  "prices": {
+    "hourly": "CHF 120",
+    "small_job": "CHF 190"
+  },
+  "ui": {
+    "services_eyebrow": "Services",
+    "process_eyebrow": "Process",
+    "audience_eyebrow": "Audience",
+    "faq_eyebrow": "FAQ",
+    "inquiry_eyebrow": "Inquiry",
+    "archive_eyebrow": "Archive",
+    "back_to_services": "Services",
+    "guidelines_title": "Guideline rates",
+    "four_areas": "Three service areas",
+    "five_steps": "Five steps",
+    "answers": "Answers",
+    "process_lead": "Every engagement starts with a written clarification of scope and responsibility.",
+    "view_service": "View service",
+    "from_small_job": "IT basics check from CHF 190",
+    "hourly_line": "Working time: {hourly} per hour",
+    "small_job_line": "IT basics check / clearly scoped entry: from {small_job} (written finding)",
+    "travel_line": "Most requests are handled remotely. If an on-site appointment is required, it is agreed in advance and listed separately in the quote — Zurich area.",
+    "to_it_home": "Back to the IT home page",
+    "archive_extra": "Earlier market-entry content is kept here for reference only and is not part of the current Swiss IT offer.",
+    "archive_rates": "Guideline rates for IT coordination are listed under",
+    "three_areas": "Three service areas",
+    "examples_eyebrow": "Examples",
+    "situations_title": "Typical situations",
+    "steps_title": "Process",
+    "required_info_title": "Required details",
+    "boundaries_title": "Boundaries",
+    "report_structure_title": "Sample report structure"
+  },
+  "form": {
+    "company": "Company *",
+    "first_name": "First name *",
+    "last_name": "Last name *",
+    "email": "Business email *",
+    "phone": "Phone (optional)",
+    "location": "Location / canton (optional)",
+    "industry": "Industry (optional)",
+    "employees": "Number of employees *",
+    "workstations": "Number of workstations (optional)",
+    "m365": "Microsoft 365 in use (optional)",
+    "internal_it": "Internal IT in place (optional)",
+    "external_it": "Current external IT support (optional)",
+    "area": "Requested area *",
+    "start": "Preferred start (optional)",
+    "description": "Short problem description *",
+    "choose": "Please select",
+    "yes": "Yes",
+    "no": "No",
+    "unclear": "Unclear",
+    "partial": "Partially",
+    "several": "Several",
+    "still_unclear": "Still unclear",
+    "immediate": "Immediately",
+    "within_2_weeks": "Within 2 weeks",
+    "within_1_month": "Within 1 month",
+    "later": "Later / unclear",
+    "onboarding": "Users & access",
+    "offboarding": "Microsoft 365 & workplace",
+    "workplace": "IT basics check",
+    "vendor": "Several / unclear",
+    "desc_placeholder": "No passwords or access credentials",
+    "optional_heading": "Additional details (optional)"
+  },
+  "home": {
+    "meta_title": "IT support for small businesses without in-house IT | BIT Zurich",
+    "meta_description": "BIT helps companies in Zurich with user accounts, Microsoft 365, access and workplace issues — clearly scoped, with a written framework.",
+    "eyebrow": "IT support for small businesses without in-house IT",
+    "h1": "IT support for small businesses without in-house IT",
+    "lead": "BIT supports businesses with user accounts, Microsoft 365, access and recurring workplace issues. Clearly defined standard cases are reviewed and handled; for specialist topics, technical execution is coordinated after prior agreement.",
+    "trust": "For companies with about 5–50 employees · Zurich and remote across Switzerland",
+    "cta_subline": "Non-binding needs assessment. Submitting the form does not create an engagement.",
+    "outcome": "You get a clear contact person, a written framework and a traceable close-out — without MSP claims and without all-inclusive promises.",
+    "pilot_banner": "BIT currently reviews selected requests within a limited introductory operation.",
+    "trust_block": {
+      "title": "Who is behind BIT",
+      "text": "Stefan Bogdanovic, Zurich. Operational experience from hotel and front-desk environments. Clearly scoped user, access and workplace requests – a contact person, a written framework and a traceable close-out."
+    },
+    "examples_teaser": {
+      "title": "Sample cases instead of references",
+      "text": "Two anonymised sample flows show how BIT structures joiners and leavers — without invented client stories.",
+      "href": "/en/examples/",
+      "cta": "View sample cases"
+    }
+  },
+  "concerns": {
+    "title": "Typical situations",
+    "items": [
+      {
+        "text": "A new employee starts and needs access",
+        "href": "/en/inquiry/?area=users-access"
+      },
+      {
+        "text": "A former employee still has active accounts",
+        "href": "/en/services/users-and-access/"
+      },
+      {
+        "text": "Outlook or Microsoft 365 fails at a workstation",
+        "href": "/en/inquiry/?area=m365-workplace"
+      },
+      {
+        "text": "Unclear which accounts and rights are still active",
+        "href": "/en/inquiry/?area=basischeck"
+      }
+    ]
+  },
+  "problem": {
+    "title": "When nobody in the company is clearly responsible for IT",
+    "items": [
+      {
+        "title": "Uneven joiners and leavers",
+        "text": "Access is created and left in place because no one keeps the overview."
+      },
+      {
+        "title": "Day-to-day requests that stall",
+        "text": "Outlook, printers and permission questions sit unresolved when ownership is unclear."
+      },
+      {
+        "title": "Unclear priorities",
+        "text": "Without a written finding it stays unclear what to fix first and what can wait."
+      }
+    ]
+  },
+  "services": {
+    "title": "Three clear entry points",
+    "intro": "For companies with about 5–50 employees in Zurich and remote across Switzerland. BIT reviews and handles clearly defined standard cases; specialist topics are coordinated with a suitable specialist after prior agreement.",
+    "scope_note": "Scope and technical responsibility are agreed up front. Not every issue is automatically included.",
+    "vendor_note": "Vendor coordination is not a separate product card: where needed, BIT clarifies ownership and follows the work through — within the written scope.",
+    "path": "/en/services/",
+    "cards": [
+      {
+        "slug": "users-and-access",
+        "icon": "users",
+        "title": "Users & access",
+        "benefit": "Joiner ready, leaver nothing left open unnecessarily",
+        "text": "Joiners, leavers, role changes, permissions, shared mailboxes, MFA and licences — with documented approvals.",
+        "area": "users-access",
+        "detail": {
+          "situations": [
+            "A new employee should be productive on Monday.",
+            "A departure is coming and active access must be closed.",
+            "A role change needs adjusted rights and mailboxes."
+          ],
+          "steps": [
+            "Capture the need and required details",
+            "Clarify approvals and ownership",
+            "Handle or coordinate execution after agreement",
+            "Document the close-out in writing"
+          ],
+          "required_info": [
+            "Name and start or leave date",
+            "Required systems and roles",
+            "Who may grant approvals"
+          ],
+          "boundaries": "Specialist technical cases outside the agreed frame are only coordinated with a suitable specialist after prior agreement. No 24/7 cover and no all-inclusive scope."
+        }
+      },
+      {
+        "slug": "microsoft-365-workplace",
+        "icon": "m365",
+        "title": "Microsoft 365 & workplace",
+        "benefit": "Less time lost on everyday disruptions",
+        "text": "Sign-in, Outlook, Teams, Windows, printers and devices: structured review and handling of clearly scoped standard cases.",
+        "area": "m365-workplace",
+        "detail": {
+          "situations": [
+            "Outlook or Teams fails at a workstation.",
+            "Sign-in or MFA blocks the start of work.",
+            "Recurring printer or device issues cost time."
+          ],
+          "steps": [
+            "Capture the issue and impact",
+            "Check whether it fits the standard frame",
+            "Handle or coordinate after agreement",
+            "Document the outcome and open points"
+          ],
+          "required_info": [
+            "Affected workstation or user",
+            "Error message or observed behaviour",
+            "Since when and how often it occurs"
+          ],
+          "boundaries": "Vendor-dependent or deep infrastructure topics are not automatically included. A specialist is involved only by agreement."
+        }
+      },
+      {
+        "slug": "it-basics-check",
+        "icon": "security",
+        "title": "IT basics check",
+        "benefit": "Written findings and priorities — fixed-price entry from CHF 190",
+        "text": "Clearly scoped entry: review accounts and access, prioritise risks, deliver a written finding. Not a cybersecurity audit.",
+        "area": "basischeck",
+        "price_label": "Fixed-price entry from CHF 190",
+        "detail": {
+          "situations": [
+            "Unclear which accounts and rights are still active.",
+            "You want a written overview before further steps.",
+            "A clearly scoped entry matters more than an open-ended engagement."
+          ],
+          "steps": [
+            "Capture the starting point and access overview",
+            "Record checked points and findings",
+            "Formulate priorities and next steps",
+            "Hand over the written finding"
+          ],
+          "required_info": [
+            "Approximate number of employees and workstations",
+            "Whether Microsoft 365 is in use",
+            "Known access or permission questions"
+          ],
+          "boundaries": "The basics check is not a cybersecurity audit and not a penetration test. Specialist technical execution only after prior agreement with a suitable specialist."
+        }
+      }
+    ]
+  },
+  "limits": {
+    "title": "Clearly scoped",
+    "lead": "BIT takes on clearly scoped tasks with a written objective. Specialist topics are reviewed before work starts and only executed or handed on by agreement.",
+    "items": [
+      "no 24/7 incident cover",
+      "no open-ended retainer work",
+      "no work outside the confirmed scope"
+    ]
+  },
+  "process": {
+    "title": "How it works",
+    "steps": [
+      "Describe the need",
+      "Review scope and responsibility",
+      "Confirm the approach in writing",
+      "Coordinate and follow through",
+      "Document the outcome"
+    ]
+  },
+  "audience": {
+    "title": "Who this is for",
+    "fit_title": "A good fit for",
+    "fit": [
+      "about 5-50 employees",
+      "mostly Windows and Microsoft 365",
+      "no dedicated IT role",
+      "recurring joiners and leavers",
+      "a need for documented handling"
+    ],
+    "nofit_title": "Not the right frame for",
+    "nofit": [
+      "private individuals",
+      "large enterprises",
+      "critical infrastructure",
+      "specialised production IT",
+      "unlimited 24/7 support",
+      "vague all-inclusive expectations"
+    ]
+  },
+  "role": {
+    "title": "BIT’s role",
+    "owns": "Intake, structuring, coordination, communication, documentation, follow-up and billing.",
+    "tech": "For specialist topics, technical execution is coordinated with a suitable specialist after prior agreement.",
+    "contract": "Scope, responsibilities and billing are set in writing before work begins."
+  },
+  "examples": {
+    "title": "Worked examples",
+    "note": "All examples are sample flows, not documented client cases.",
+    "items": [
+      {
+        "title": "Sample: new employee starts",
+        "text": "Capture required access, written approval, coordinate setup, documented close-out."
+      },
+      {
+        "title": "Sample: leaver without clarity",
+        "text": "List existing accounts and rights, coordinate disablement, document handover and confirmation."
+      },
+      {
+        "title": "Sample: Outlook issue at a desk",
+        "text": "Structured intake, clarify ownership, follow progress, record the outcome."
+      },
+      {
+        "title": "Sample: unclear vendor ownership",
+        "text": "Collect details, contact the responsible party, track status and document handover."
+      }
+    ]
+  },
+  "about": {
+    "meta_title": "About BIT | BIT",
+    "meta_description": "Stefan Bogdanovic runs BIT in Zurich. Operational experience from hotel and front-desk environments, focused on clearly scoped user and workplace requests.",
+    "title": "Who is behind BIT",
+    "lead": "Stefan Bogdanovic · owner and main contact · Zurich",
+    "body": [
+      "I know day-to-day operations from hotel and front-desk environments and the everyday user, access and system questions small businesses face.",
+      "BIT supports small businesses without in-house IT with user accounts, Microsoft 365, access and recurring workplace issues. I work as an operational contact — not as a general IT expert for every issue, and not as an expert team.",
+      "Working languages for this Swiss IT site: German and English. Other languages by agreement or with external language support."
+    ],
+    "siz_comment": "",
+    "pilot": "BIT currently reviews selected requests within a limited introductory operation.",
+    "credentials": [
+      "ICT Professional SIZ – Systems & Network",
+      "ICT Power-User SIZ"
+    ]
+  },
+  "faq": {
+    "meta_title": "FAQ | BIT",
+    "meta_description": "Common questions about BIT’s scope, audience and way of working.",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Is BIT an in-house IT department?",
+        "a": "No. BIT takes structured ownership of clearly scoped user, access and workplace requests, documents them and follows them through. Scope is agreed in writing first."
+      },
+      {
+        "q": "Which companies is this for?",
+        "a": "Smaller companies with about 5–50 employees, mostly on Windows and Microsoft 365, without a dedicated IT role — Zurich and remote across Switzerland."
+      },
+      {
+        "q": "Can every IT problem be covered?",
+        "a": "No. I first check whether your need fits the defined service frame. Complex or vendor-dependent cases are reviewed before work starts and only continued by agreement."
+      },
+      {
+        "q": "Does BIT only work with hotels?",
+        "a": "No. Hotels and front desk are one experience example. The offer is aimed at smaller Swiss companies without in-house IT."
+      },
+      {
+        "q": "Who makes technical changes?",
+        "a": "It depends on the case and the written agreement. Where a task sits outside my own scope, I check first whether a suitable external specialist can be involved."
+      },
+      {
+        "q": "How are access changes approved?",
+        "a": "Permission and access changes only happen after documented approval and within the written scope."
+      },
+      {
+        "q": "Are there fixed packages or prices?",
+        "a": "There are guideline rates (working time CHF 120 per hour). The IT basics check is a fixed-price entry from CHF 190 with a written finding and priorities. Most requests are handled remotely. If an on-site appointment is required, it is agreed in advance and listed separately in the quote — Zurich area. Prices become binding only after written review of scope."
+      }
+    ]
+  },
+  "inquiry": {
+    "live": true,
+    "meta_title": "Have your IT need reviewed | BIT",
+    "meta_description": "Describe your IT need without obligation. Reply usually within two working days.",
+    "title": "Have your IT need reviewed",
+    "lead": "Describe your starting point in a few minutes. You will receive an assessment of whether and how a collaboration could work.",
+    "notice": "Non-binding needs assessment. Submitting the form does not create an engagement. BIT currently reviews selected requests within a limited introductory operation.",
+    "response_expectation": "Reply usually within two working days.",
+    "security": "Please do not submit passwords, recovery codes or specially protected personal data.",
+    "offline_banner": "Form delivery is being set up. Until delivery is proven, please reach me directly by email.",
+    "submit": "Send inquiry",
+    "success": "Thank you. Your details have been received. Reply usually within two working days.",
+    "error": "The inquiry could not be sent. Please try again later or email admin@boksitsupport.ch.",
+    "privacy_label": "I have read the privacy notice and consent to processing of these details for needs assessment."
+  },
+  "closing": {
+    "title": "Does your need fit BIT?",
+    "text": "Have your IT need reviewed without obligation. You will receive an assessment of whether and how a collaboration could work.",
+    "note": "Non-binding needs assessment · reply usually within two working days · no all-inclusive promise",
+    "response_expectation": "Reply usually within two working days."
+  },
+  "market_access_archive": {
+    "meta_title": "BIT focuses on IT coordination | BIT",
+    "meta_description": "BIT supports smaller Swiss companies without in-house IT with users, access and workplace topics.",
+    "title": "BIT focuses on IT coordination",
+    "lead": "BIT supports smaller Swiss companies without in-house IT with users, access and workplace topics. Earlier offerings on market entry and representation are not currently continued.",
+    "cta": "To the current offer"
+  },
+  "examples_page": {
+    "meta_title": "Sample cases | BIT",
+    "meta_description": "Two anonymised sample cases: leaver and new joiner — plus sample report structure. No real client references.",
+    "title": "Sample cases",
+    "lead": "The following flows are samples, not documented client cases. They show how BIT structures typical standard cases.",
+    "note": "State A: No invented clients or partners. All examples are labelled as samples.",
+    "cases": [
+      {
+        "title": "Sample: employee departure",
+        "situation": "Someone is leaving the company. It is unclear which accounts, mailboxes and access rights remain active and who may approve deactivation.",
+        "required": [
+          "Leave date",
+          "Known systems and accounts",
+          "Person authorised to approve",
+          "Whether devices or shared mailboxes are involved"
+        ],
+        "steps": [
+          "Capture starting point and affected systems",
+          "Obtain approval for deactivation",
+          "Handle or coordinate after agreement",
+          "Document close-out and open risks"
+        ],
+        "approvals": "Written approval from the responsible manager before any access change.",
+        "result": "Documented overview of handled access, confirmation of deactivation steps and a list of open points."
+      },
+      {
+        "title": "Sample: new employee starts on Monday",
+        "situation": "A new employee should start ready to work. Required access, licences and devices are not yet clearly assembled.",
+        "required": [
+          "Start date and role",
+          "Required systems (e.g. Microsoft 365)",
+          "Device needs if known",
+          "Who may approve access"
+        ],
+        "steps": [
+          "Clarify needs and approvals",
+          "Prepare accounts and rights",
+          "Check readiness on day one",
+          "Record the outcome in writing"
+        ],
+        "approvals": "Approval for accounts, rights and any licences before setup.",
+        "result": "Checklist of set-up access, known limitations and next steps if anything is missing."
+      }
+    ],
+    "report": {
+      "title": "Sample report structure",
+      "intro": "How an anonymised close-out can look — without client names and without sensitive data.",
+      "sections": [
+        {
+          "title": "Starting point",
+          "text": "Short description of the need and the agreed frame."
+        },
+        {
+          "title": "Checked points",
+          "text": "Which systems, accounts or workplaces were reviewed."
+        },
+        {
+          "title": "Finding",
+          "text": "What was observed — factual, without exaggeration."
+        },
+        {
+          "title": "Changes made",
+          "text": "What was implemented or coordinated within the agreed scope."
+        },
+        {
+          "title": "Open risks",
+          "text": "What remains open on purpose or needs a specialist."
+        },
+        {
+          "title": "Next steps",
+          "text": "Recommended follow-ups with clear priority."
+        }
+      ]
+    }
+  }
+}
