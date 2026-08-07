@@ -2,10 +2,11 @@
 # Secrets / vars (Dashboard → website → Settings → Environment variables → Production):
 #   TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID  (recommended push notify – see docs/INQUIRY_NOTIFY.md)
 #   optional INQUIRY_WEBHOOK_URL (Slack/Discord/generic)
-#   INQUIRY_VIEW_TOKEN (protected GET /api/inquiries)
+#   INQUIRY_VIEW_TOKEN (protected GET /api/inquiries and POST /api/inquiry-notify-test)
 #   optional INQUIRY_DIAG_TOKEN, RESEND_API_KEY, INQUIRY_MIRROR_TO,
 #   optional INQUIRY_NOTIFY_EMAIL / INQUIRY_TO / INQUIRY_FROM (nur wenn Resend aktiv).
 # Delivery: KV INQUIRY_LOG (primär) + Telegram/Webhook notify + optional Resend.
+# Notify-Test ohne KV: POST /api/inquiry-notify-test (Token erforderlich).
 # KV-Binding INQUIRY_LOG: Namespace erstellt, Binding via diesem File beim Deploy.
 
 name = "website"

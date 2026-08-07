@@ -92,8 +92,12 @@ async function onSubmit(event) {
   const data = collect(form);
 
   if (!form.reportValidity()) {
-    // Keep all field values on validation failure.
-    showFailure(status, errorMsg, data);
+    // Browser shows field errors; keep values; do not claim send failure.
+    if (status) {
+      status.textContent = "";
+      status.dataset.state = "";
+      status.replaceChildren();
+    }
     return;
   }
 

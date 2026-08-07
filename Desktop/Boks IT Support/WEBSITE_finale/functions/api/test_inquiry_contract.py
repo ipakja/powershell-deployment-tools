@@ -13,6 +13,9 @@ DE_PRIVACY = (ROOT / "locales" / "de.json").read_text(encoding="utf-8")
 EN_PRIVACY = (ROOT / "locales" / "en.json").read_text(encoding="utf-8")
 NOTIFY_DOC = (ROOT / "docs" / "INQUIRY_NOTIFY.md").read_text(encoding="utf-8")
 LIST_PS1 = (ROOT / "scripts" / "list_inquiries.ps1").read_text(encoding="utf-8")
+NOTIFY_TEST = (ROOT / "functions" / "api" / "inquiry-notify-test.js").read_text(
+    encoding="utf-8"
+)
 
 
 def test_inquiry_kv_webhook_telegram_no_formsubmit() -> None:
@@ -62,10 +65,14 @@ def test_inquiries_viewer_auth_and_kv() -> None:
     assert "cache-control" in INQUIRIES
     assert "no-store" in INQUIRIES
     assert "unauthorized" in INQUIRIES
+    assert "auth_not_configured" in INQUIRIES
+    assert "503" in INQUIRIES
     assert "kv_not_bound" in INQUIRIES
     assert "Bearer" in INQUIRIES
     assert "MAX_LIMIT" in INQUIRIES or "50" in INQUIRIES
     assert "FormSubmit" not in INQUIRIES
+    # Never open when secrets missing: early 503 before KV read
+    assert INQUIRIES.index("auth_not_configured") < INQUIRIES.index("kv_not_bound")
 
 
 def test_wrangler_binds_inquiry_log_kv() -> None:
@@ -101,7 +108,51 @@ def test_notify_docs_and_list_script_exist() -> None:
     assert "TELEGRAM_CHAT_ID" in NOTIFY_DOC
     assert "INQUIRY_VIEW_TOKEN" in NOTIFY_DOC
     assert "/api/inquiries" in NOTIFY_DOC
+    assert "/api/inquiry-notify-test" in NOTIFY_DOC
     assert "BotFather" in NOTIFY_DOC
     assert "list_inquiries.ps1" in NOTIFY_DOC
+    assert "Erfolgskriterium" in NOTIFY_DOC
+    assert "auth_not_configured" in NOTIFY_DOC
+    assert "503" in NOTIFY_DOC
     assert "INQUIRY_VIEW_TOKEN" in LIST_PS1 or "Token" in LIST_PS1
     assert "/api/inquiries" in LIST_PS1
+
+
+def test_notify_test_endpoint_no_kv() -> None:
+    assert "inquiry-notify-test" in NOTIFY_TEST or "NOTIFY_TEST" in NOTIFY_TEST
+    assert "deliverPushNotify" in NOTIFY_TEST
+    assert ".put(" not in NOTIFY_TEST
+    assert 'stored: false' in NOTIFY_TEST
+    assert "INQUIRY_VIEW_TOKEN" in NOTIFY_TEST
+    assert "INQUIRY_DIAG_TOKEN" in NOTIFY_TEST
+    assert "auth_not_configured" in NOTIFY_TEST
+    assert "unauthorized" in NOTIFY_TEST
+    assert "503" in NOTIFY_TEST
+    # Auth gate before any Telegram/webhook send (import may appear earlier)
+    assert NOTIFY_TEST.index("auth_not_configured") < NOTIFY_TEST.index(
+        "await deliverPushNotify"
+    )
+    assert "export async function deliverPushNotify" in INQUIRY
+    assert "INQUIRY_STORED_BUT_NOTIFY_FAILED" in INQUIRY
+
+
+def test_health_never_exposes_secrets_or_contents() -> None:
+    assert "hasKv" in HEALTH
+    assert "hasPushNotify" in HEALTH
+    # Response payload is booleans only — no secret values, chat IDs, or inquiry bodies
+    assert "chat.id" not in HEALTH
+    assert "TELEGRAM_CHAT_ID" in HEALTH  # presence check only
+    assert "INQUIRY_VIEW_TOKEN" not in HEALTH
+    assert "requestId" not in HEALTH
+    assert "receivedAt" not in HEALTH
+    assert "never returns secret values" in HEALTH
+
+
+def test_client_preserves_fields_on_failure() -> None:
+    assert "showFailure" in CLIENT
+    assert "buildMailtoHref" in CLIENT
+    assert "form.reset()" in CLIENT
+    # reset only on success path; failure must not clear
+    assert "Stattdessen per E-Mail senden" in CLIENT
+    assert "reportValidity" in CLIENT
+    assert "Keep all field values" not in CLIENT or "do not claim send failure" in CLIENT or "Browser shows field errors" in CLIENT

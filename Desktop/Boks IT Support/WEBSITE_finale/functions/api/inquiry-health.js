@@ -1,6 +1,8 @@
 /**
- * Inquiry delivery diagnostics – never returns secret values.
+ * Inquiry delivery diagnostics – never returns secret values,
+ * tokens, chat IDs, or inquiry contents.
  * GET /api/inquiry-health
+ * Public for boolean flags when INQUIRY_DIAG_TOKEN is unset.
  * Optional: ?token=… must match env.INQUIRY_DIAG_TOKEN when that secret is set.
  * Booleans only: hasKv, hasResendKey, hasWebhook, hasTelegram, hasPushNotify.
  */

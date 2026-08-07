@@ -164,7 +164,7 @@ async function postJson(url, body, requestId, label) {
 }
 
 /** Telegram Bot API sendMessage. */
-async function deliverViaTelegram(env, record) {
+export async function deliverViaTelegram(env, record) {
   const token = String(env.TELEGRAM_BOT_TOKEN || "").trim();
   const chatId = String(env.TELEGRAM_CHAT_ID || "").trim();
   if (!token || !chatId) {
@@ -189,7 +189,7 @@ async function deliverViaTelegram(env, record) {
 /**
  * Slack Incoming Webhook, Discord webhook, Telegram sendMessage URL, or generic JSON.
  */
-async function deliverViaWebhook(env, record) {
+export async function deliverViaWebhook(env, record) {
   const url = String(env.INQUIRY_WEBHOOK_URL || "").trim();
   if (!url) {
     return { ok: false, reason: "not_configured" };
@@ -222,6 +222,27 @@ async function deliverViaWebhook(env, record) {
   return result.ok
     ? { ok: true, via: "webhook" }
     : { ok: false, reason: result.reason || "webhook_failed", status: result.status };
+}
+
+/** Run configured push channels; does not touch KV. */
+export async function deliverPushNotify(env, record) {
+  const telegramResult = await deliverViaTelegram(env, record);
+  const webhookResult = await deliverViaWebhook(env, record);
+  const notifyVias = [];
+  if (telegramResult.ok) notifyVias.push("telegram");
+  if (webhookResult.ok) notifyVias.push("webhook");
+  if (!telegramResult.ok && telegramResult.reason !== "not_configured") {
+    console.error("INQUIRY_NOTIFY_TELEGRAM_FAILED", record.requestId, telegramResult);
+  }
+  if (!webhookResult.ok && webhookResult.reason !== "not_configured") {
+    console.error("INQUIRY_NOTIFY_WEBHOOK_FAILED", record.requestId, webhookResult);
+  }
+  return {
+    ok: notifyVias.length > 0,
+    notifyVias,
+    telegram: telegramResult,
+    webhook: webhookResult,
+  };
 }
 
 async function deliverViaResend(env, requestId, receivedAt, fields) {

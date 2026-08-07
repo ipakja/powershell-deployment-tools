@@ -3,6 +3,8 @@
  * GET /api/inquiries?token=…&limit=20
  * Auth: Authorization Bearer OR ?token= matching INQUIRY_VIEW_TOKEN
  *       (fallback: INQUIRY_DIAG_TOKEN when VIEW is unset).
+ * If neither secret is configured → 503 (never open access).
+ * Wrong/missing token when secrets exist → 401.
  */
 const DEFAULT_LIMIT = 20;
 const MAX_LIMIT = 50;
@@ -69,12 +71,17 @@ export async function onRequestGet(context) {
   const required = viewToken(env);
 
   if (!required) {
-    return json(401, { ok: false, error: "unauthorized" });
+    return json(503, {
+      ok: false,
+      error: "auth_not_configured",
+      message:
+        "INQUIRY_VIEW_TOKEN (or INQUIRY_DIAG_TOKEN) is not set in Production.",
+    });
   }
 
   const provided =
     extractBearer(request) || String(url.searchParams.get("token") || "").trim();
-  if (provided !== required) {
+  if (!provided || provided !== required) {
     return json(401, { ok: false, error: "unauthorized" });
   }
 

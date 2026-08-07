@@ -16,7 +16,7 @@
     <link rel="alternate" hreflang="en" href="https://boksitsupport.ch/en/inquiry/">
     <link rel="alternate" hreflang="x-default" href="https://boksitsupport.ch/de/anfrage/">
     <link rel="icon" href="/favicon.png">
-    <link rel="stylesheet" href="/assets/universal.css?v=13">
+    <link rel="stylesheet" href="/assets/universal.css?v=15">
 
 </head>
 <body data-current-language="en" data-page="inquiry">
@@ -53,6 +53,15 @@
             <p class="form-security">Please do not submit passwords, recovery codes or specially protected personal data.</p>
         </div></section>
         <section class="section"><div class="container">
+            <div class="inquiry-direct">
+                <p class="inquiry-direct-intro">The quickest way is this – the template is pre-filled; you only add your details.</p>
+                <div class="hero-actions">
+                    <a class="button button-whatsapp" data-contact="whatsapp" href="https://wa.me/41782632701?text=IT%20need%20%E2%80%93%20%5BCompany%20name%5D%0A%0ACompany%3A%0AContact%20person%3A%0ALocation%20or%20canton%3A%0ANumber%20of%20employees%3A%0AMicrosoft%20365%20in%20use%3A%20yes%20%2F%20no%20%2F%20unclear%0AWhat%20is%20it%20about%3A%0AStarting%20when%3A">Describe via WhatsApp</a>
+                    <a class="button button-secondary" href="#" role="button" data-direct-mailto data-email-user="admin" data-email-domain="boksitsupport.ch" data-mailto-subject-enc="IT%20need%20%E2%80%93%20%5BCompany%20name%5D" data-mailto-body-enc="Company%3A%0AContact%20person%3A%0ALocation%20or%20canton%3A%0ANumber%20of%20employees%3A%0AMicrosoft%20365%20in%20use%3A%20yes%20%2F%20no%20%2F%20unclear%0AWhat%20is%20it%20about%3A%0AStarting%20when%3A">Describe via email</a>
+                </div>
+                <p class="inquiry-direct-contact"><a href="tel:+41782632701">+41 78 263 27 01</a> · <a href="mailto:admin@boksitsupport.ch" data-contact="email"><span data-email-user="admin" data-email-domain="boksitsupport.ch">Email</span></a> · <a data-contact="whatsapp" href="https://wa.me/41782632701">WhatsApp</a></p>
+            </div>
+            <h2 class="inquiry-form-alt-heading">Or use the form</h2>
             <form class="inquiry-form" id="inquiry-form" novalidate data-success="Thank you. Your details have been received. Reply usually within two working days." data-error="The inquiry could not be sent. Please try again later or email admin@boksitsupport.ch.">
                 <div class="form-grid">
                     <label>Company *<input name="company" required maxlength="200" autocomplete="organization"></label>
@@ -131,7 +140,7 @@
             <div class="container">
                 <h2>Does your need fit BIT?</h2>
                 <p class="section-intro">Have your IT need reviewed without obligation. You will receive an assessment of whether and how a collaboration could work.</p>
-                <p class="muted">Non-binding needs assessment · reply usually within two working days · no all-inclusive promise</p>
+                <p class="muted">Non-binding needs assessment · Submitting the form does not create an engagement.</p>
                 <p class="response-expectation">Reply usually within two working days.</p>
                 <div class="hero-actions">
                     <a class="button button-primary" href="/en/inquiry/">Have your IT need reviewed</a>
@@ -144,11 +153,12 @@
         <div class="container footer-inner">
             <div>
                 <div>© 2026 BIT · Stefan Bogdanovic · Zürich</div>
-                <p class="footer-note">Email and phone are available in the footer; WhatsApp is optional. The primary path for a needs assessment is the inquiry form.</p>
+                <p class="footer-note">Email, phone and WhatsApp are available in the footer. For a needs assessment, use the direct WhatsApp or email path, or the inquiry form.</p>
                 <div class="footer-channels">
-                    <a href="mailto:admin@boksitsupport.ch">admin@boksitsupport.ch</a>
+                    <a href="mailto:admin@boksitsupport.ch" data-contact="email"><span data-email-user="admin" data-email-domain="boksitsupport.ch">Email</span></a>
                     <a href="tel:+41782632701">+41 78 263 27 01</a>
                     <a data-contact="whatsapp" href="https://wa.me/41782632701">WhatsApp</a>
+
                 </div>
             </div>
             <div class="footer-links">
@@ -157,7 +167,7 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="/assets/js/app.js?v=3"></script>
+    <script type="module" src="/assets/js/app.js?v=5"></script>
     <script type="module" src="/assets/js/inquiry-form.js?v=10"></script>
 
 </body>

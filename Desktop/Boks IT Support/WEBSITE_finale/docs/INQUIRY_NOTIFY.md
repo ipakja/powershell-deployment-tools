@@ -4,68 +4,173 @@
 
 **No FormSubmit.** Paths: Cloudflare KV (`INQUIRY_LOG`) + Telegram and/or webhook + optional Resend.
 
+**Parallel zero-backend path:** WhatsApp / mailto with pre-filled templates on the inquiry pages — see [INQUIRY_DIRECT.md](./INQUIRY_DIRECT.md). Keep both; do not remove the form.
+
 Full delivery model: see [INQUIRY_KV_WEBHOOK.md](./INQUIRY_KV_WEBHOOK.md).
 
 ---
 
-## Telegram (recommended)
+## Nummerierte Schritte für Stefan (Telegram empfohlen)
 
-Exact steps:
+### Schritt 1 — Bot anlegen
 
-1. Talk to [@BotFather](https://t.me/BotFather) on Telegram → create a bot → copy the bot **token**.
-2. Message your new bot once (any text). Then open  
+1. In Telegram [@BotFather](https://t.me/BotFather) öffnen → `/newbot` → Name und Username wählen.
+2. BotFather liefert den **Bot-Token** (Format `123456:ABC…`).
+
+**Erfolgskriterium:** Sie haben den Token kopiert und speichern ihn nur als Secret (nicht in Git).
+
+**Secret-Name:** `TELEGRAM_BOT_TOKEN`
+
+---
+
+### Schritt 2 — Chat-ID ermitteln
+
+1. Den neuen Bot in Telegram einmal anschreiben (beliebiger Text).
+2. Im Browser öffnen:  
    `https://api.telegram.org/bot<TOKEN>/getUpdates`  
-   in the browser and copy your **chat_id** from the JSON (`message.chat.id`).
-3. Cloudflare Dashboard → **Workers & Pages** → project **`website`** → **Settings** → **Environment variables** → **Production**:
-   - `TELEGRAM_BOT_TOKEN` = *(bot token from BotFather)*
-   - `TELEGRAM_CHAT_ID` = *(numeric chat id)*
-4. Redeploy the site, or wait for the next deploy so Production picks up the vars.
-5. Test with a **real form submit** from the phone or browser on  
-   `https://boksitsupport.ch/de/anfrage/`  
-   You should get a Telegram message; the visitor still sees success if KV wrote even when notify fails (failures are logged).
+   (`<TOKEN>` durch den echten Token ersetzen).
+3. In der JSON-Antwort `message.chat.id` notieren (Zahl, ggf. negativ bei Gruppen).
 
-Optional (same Production env):
+**Erfolgskriterium:** Sie sehen eine numerische `chat.id` und haben sie kopiert.
 
-| Variable | Purpose |
-|----------|---------|
-| `INQUIRY_VIEW_TOKEN` | Secret for listing recent inquiries (see Viewer below) |
-| `INQUIRY_DIAG_TOKEN` | Optional gate for `/api/inquiry-health`; also fallback auth for the viewer if `INQUIRY_VIEW_TOKEN` is unset |
-| `INQUIRY_WEBHOOK_URL` | Slack/Discord/generic webhook (alternative or addition to Telegram) |
-| `RESEND_API_KEY` | Optional email notify |
+**Secret-Name:** `TELEGRAM_CHAT_ID`
 
 ---
 
-## Slack alternative
+### Schritt 3 — Secrets in Cloudflare setzen (Dashboard)
 
-1. Create a Slack **Incoming Webhook** for the channel that should receive leads.
-2. In Cloudflare Pages → project **`website`** → Settings → Environment variables → Production:
-   - `INQUIRY_WEBHOOK_URL` = *(Incoming Webhook URL)*
-3. Redeploy / wait, then submit a real test inquiry.
+1. [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → Projekt **`website`**.
+2. **Settings** → **Environment variables** (bzw. Variables and Secrets) → Umgebung **Production**.
+3. Anlegen bzw. aktualisieren:
 
-Discord webhooks and generic JSON endpoints also work via `INQUIRY_WEBHOOK_URL`.
+| Secret / Variable | Pflicht | Zweck |
+|-------------------|---------|--------|
+| `TELEGRAM_BOT_TOKEN` | ja (für Telegram) | Bot-Token von BotFather |
+| `TELEGRAM_CHAT_ID` | ja (für Telegram) | Numerische Chat-ID |
+| `INQUIRY_VIEW_TOKEN` | empfohlen | Langer Zufallsstring (32+ Zeichen) für Viewer und Notify-Test |
+| `INQUIRY_DIAG_TOKEN` | optional | Fallback-Auth für Health/Viewer/Notify-Test, falls VIEW fehlt |
+| `INQUIRY_WEBHOOK_URL` | optional | Alternative/Zusatz: Slack Incoming Webhook, Discord oder generisches JSON |
+
+**Wrangler-Alternative** (lokal, eingeloggt):
+
+```bat
+npx wrangler pages secret put TELEGRAM_BOT_TOKEN --project-name website
+npx wrangler pages secret put TELEGRAM_CHAT_ID --project-name website
+npx wrangler pages secret put INQUIRY_VIEW_TOKEN --project-name website
+```
+
+(Jeder Befehl fragt den Wert interaktiv ab.)
+
+**Erfolgskriterium:** Die drei Namen erscheinen unter Production für Projekt `website` (Werte bleiben verborgen).
 
 ---
 
-## Viewer (list recent inquiries without wrangler)
+### Schritt 4 — Redeploy
 
-1. Set `INQUIRY_VIEW_TOKEN` in Production to a **long random secret** (e.g. 32+ chars).
-2. List recent leads:
+Nach dem Setzen von Production-Variablen/Secrets:
+
+```bat
+deploy.bat
+```
+
+oder:
+
+```bat
+python scripts\build_site.py
+npx wrangler pages deploy . --project-name website --branch=main --commit-dirty=true
+```
+
+**Erfolgskriterium:** Deploy endet ohne Fehler; Production zeigt den neuen Deployment-Zeitpunkt.
+
+**Hinweis:** Secrets gelten erst zuverlässig nach einem erfolgreichen Pages-Deploy (oder wenn Cloudflare die Vars sofort an die laufenden Functions bindet — Redeploy ist der sichere Weg).
+
+---
+
+### Schritt 5 — Notify-Test ohne KV-Eintrag
+
+**Auth Pflicht:** `INQUIRY_VIEW_TOKEN` (oder Fallback `INQUIRY_DIAG_TOKEN`). Ohne konfiguriertes Secret → **503** `auth_not_configured`. Falsches Token → **401**. Endpoint ist **nie öffentlich**.
+
+```http
+POST https://boksitsupport.ch/api/inquiry-notify-test
+Authorization: Bearer <INQUIRY_VIEW_TOKEN>
+Content-Type: application/json
+
+{"note":"Notify-Test Stefan"}
+```
+
+Alternativ Query: `POST …/api/inquiry-notify-test?token=<INQUIRY_VIEW_TOKEN>`
+
+curl (PowerShell):
+
+```powershell
+curl.exe -X POST "https://boksitsupport.ch/api/inquiry-notify-test" `
+  -H "Authorization: Bearer $env:INQUIRY_VIEW_TOKEN" `
+  -H "Content-Type: application/json" `
+  -d "{\"note\":\"Notify-Test Stefan\"}"
+```
+
+Invoke-RestMethod:
+
+```powershell
+Invoke-RestMethod -Method Post `
+  -Uri "https://boksitsupport.ch/api/inquiry-notify-test" `
+  -Headers @{ Authorization = "Bearer $env:INQUIRY_VIEW_TOKEN" } `
+  -ContentType "application/json" `
+  -Body '{"note":"Notify-Test Stefan"}'
+```
+
+**Erfolgskriterium:** HTTP 200 mit `"ok":true,"stored":false,"notified":true`; Telegram (oder Webhook) erhält die Testnachricht; unter `/api/inquiries` erscheint **kein** neuer KV-Eintrag für diesen Test.
+
+---
+
+### Schritt 6 — Echten Formular-Submit prüfen
+
+1. Formular auf `https://boksitsupport.ch/de/anfrage/` ausfüllen und senden.
+2. Telegram prüfen.
+3. Optional Viewer:
+
+```powershell
+.\scripts\list_inquiries.ps1 -Token "SECRET" -Limit 5
+```
+
+**Erfolgskriterium:** Besuchermeldung Erfolg; Telegram-Nachricht; Eintrag in `/api/inquiries`. Wenn Notify fehlschlägt, bleibt KV-Erfolg für den Besucher erhalten (im Log: `INQUIRY_STORED_BUT_NOTIFY_FAILED`).
+
+---
+
+## Slack-Alternative
+
+1. Slack **Incoming Webhook** für den gewünschten Kanal erstellen.
+2. Production: `INQUIRY_WEBHOOK_URL` = Webhook-URL.
+3. Redeploy (Schritt 4), dann Notify-Test (Schritt 5).
+
+---
+
+## Viewer (letzte Anfragen ohne wrangler)
+
+**Auth Pflicht:** `INQUIRY_VIEW_TOKEN` (oder Fallback `INQUIRY_DIAG_TOKEN`). Ohne Secret → **503** `auth_not_configured`. Falsches/fehlendes Token → **401**. **Nie** Inquiry-Daten ohne gültiges Token.
 
 ```http
 GET https://boksitsupport.ch/api/inquiries?token=SECRET&limit=20
 ```
 
-Or with header: `Authorization: Bearer SECRET`
+oder Header: `Authorization: Bearer SECRET`
 
-- Default `limit` is 20; maximum is 50.
-- Wrong/missing token → **401**
-- KV not bound → **503**
-- Response: `{ ok, count, items: [{ key, receivedAt, requestId, company, contact, email, area, start, description, … }] }`
+- Default `limit` 20, Maximum 50
+- Secrets nicht gesetzt → **503** `auth_not_configured`
+- Falsches/fehlendes Token → **401**
+- KV nicht gebunden → **503** `kv_not_bound`
 
-### PowerShell helper
+curl:
 
 ```powershell
-.\scripts\list_inquiries.ps1 -Token "SECRET" -Limit 20
+curl.exe "https://boksitsupport.ch/api/inquiries?token=$env:INQUIRY_VIEW_TOKEN&limit=20"
+# oder:
+curl.exe "https://boksitsupport.ch/api/inquiries?limit=20" `
+  -H "Authorization: Bearer $env:INQUIRY_VIEW_TOKEN"
+```
+
+```powershell
+.\scripts\list_inquiries.ps1 -Token $env:INQUIRY_VIEW_TOKEN -Limit 20
 ```
 
 Optional: `-BaseUrl "https://boksitsupport.ch"`
@@ -78,21 +183,27 @@ Optional: `-BaseUrl "https://boksitsupport.ch"`
 GET https://boksitsupport.ch/api/inquiry-health
 ```
 
-Returns booleans only (no secrets):
+Öffentlich (Booleans only): `ok`, `hasKv`, `hasResendKey`, `hasWebhook`, `hasTelegram`, `hasPushNotify`.
 
-`hasKv`, `hasResendKey`, `hasWebhook`, `hasTelegram`, `hasPushNotify`
+Keine Secrets, Tokens, Chat-IDs oder Inquiry-Inhalte. `hasPushNotify` ist `true`, sobald Telegram **oder** Webhook **oder** Resend gesetzt ist.
 
-`hasPushNotify` is true if webhook **or** Telegram **or** Resend is configured.
-
-If `INQUIRY_DIAG_TOKEN` is set, pass `?token=…`.
+Wenn `INQUIRY_DIAG_TOKEN` gesetzt ist: `?token=…` mitgeben (sonst 401).
 
 ---
 
-## What Stefan must do himself
+## Fallback-Verhalten (technisch)
 
-Cursor / deploy cannot create your Telegram bot or set private secrets for you.
+- KV-Schreiben ist der primäre Erfolgspfad für den Besucher.
+- Push-Notify (Telegram/Webhook/Resend) läuft danach; Fehler werden geloggt und **setzen den Besuchererfolg nicht zurück**, wenn KV ok ist.
+- Formular-Client: bei API-Fehler **keine** Erfolgsmeldung, Felder bleiben, Mailto-Alternative wird angeboten.
 
-1. Create the bot with BotFather and obtain `chat_id`.
-2. Enter `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` (and `INQUIRY_VIEW_TOKEN`) in the Cloudflare Dashboard for project **`website`** / Production.
-3. Redeploy if vars do not apply immediately.
-4. Send one real test from the phone and confirm Telegram + `/api/inquiries`.
+---
+
+## Was Stefan selbst erledigen muss
+
+Cursor/Deploy kann den Telegram-Bot und die privaten Secrets nicht für Sie anlegen.
+
+1. Bot + `chat_id` (Schritte 1–2).
+2. Secrets in Cloudflare Production für Projekt **`website`** (Schritt 3).
+3. Redeploy (Schritt 4).
+4. Notify-Test + ein echter Formular-Test (Schritte 5–6).

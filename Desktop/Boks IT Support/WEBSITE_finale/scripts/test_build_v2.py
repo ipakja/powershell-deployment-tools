@@ -33,7 +33,10 @@ def test_impressum_is_sole_proprietorship_with_address() -> None:
     assert "FormSubmit" not in legal
     assert "Resend" in legal
     assert "Bedarfsabklärung" in legal
-    assert "zwölf Monate nach Abschluss der Bedarfsabklärung" in legal
+    assert "höchstens zwölf Monate" in legal
+    assert "/api/inquiry" not in legal
+    assert "KV-Speicher" not in legal
+    assert "Sobald das Formular freigeschaltet" not in legal
     assert "<!-- BESTÄTIGUNG ERFORDERLICH: Aufbewahrungsdauer Anfragen -->" not in legal
     assert "INQUIRY_LOG" not in legal
     assert "INQUIRY_NOTIFY_EMAIL" not in legal
@@ -41,6 +44,8 @@ def test_impressum_is_sole_proprietorship_with_address() -> None:
     assert "IT-Support" in legal or "IT-Koordination" in legal
     assert "Market Development" not in legal
     assert 'class="main-nav"' in legal
+    assert 'href="/de/beispiele/"' in legal
+    assert "Beispiele" in legal
     menu = re.search(r'<nav class="language-nav".*?</nav>', legal, re.S).group(0)
     assert ">DE<" in menu and ">EN<" in menu
     assert ">FR<" not in menu and ">SR<" not in menu
@@ -52,10 +57,15 @@ def test_impressum_is_sole_proprietorship_with_address() -> None:
     assert "FormSubmit" not in en
     assert "Resend" in en
     assert "twelve months" in en
+    assert "/api/inquiry" not in en
+    assert "KV storage" not in en
+    assert "Once the form is enabled" not in en
     assert "INQUIRY_LOG" not in en
     assert "INQUIRY_NOTIFY_EMAIL" not in en
     assert "Last updated: August 2026" in en
     assert "needs assessment" in en.lower()
+    assert 'href="/en/examples/"' in en
+    assert "Examples" in en
     en_menu = re.search(r'<nav class="language-nav".*?</nav>', en, re.S).group(0)
     assert 'href="/de/legal/"' in en_menu and 'href="/en/legal/"' in en_menu
     assert ">FR<" not in en_menu
@@ -65,27 +75,40 @@ def test_homepage_zurich_pilot_concerns_and_footer() -> None:
     de = read("de/index.html")
     en = read("en/index.html")
     assert "IT-Support für kleine Unternehmen ohne eigene IT" in de
-    assert "IT-Support für kleine Unternehmen ohne eigene IT" in de
+    assert "IT-Koordination für Zürich und remote in der Schweiz" in de
     assert "Zürich und remote in der Schweiz" in de
     assert "Wer dahintersteht" in de
     assert "Stefan Bogdanovic, Zürich" in de
     assert "IT-Anliegen prüfen lassen" in de
     assert "begrenzten Einführungsbetriebs" in de
     assert 'href="/de/anfrage/?area=users-access"' in de
+    assert 'href="/de/leistungen/benutzer-und-zugaenge/">Ein ehemaliger' not in de
+    assert 'href="/de/anfrage/?area=users-access">Ein ehemaliger Mitarbeiter hat noch aktive Konten<' in de
     assert 'href="/de/market-access/">Market Access<' not in de
     assert "Market Access (Archiv)" not in de
     hero = re.search(r'<section class="hero">.*?</section>', de, re.S).group(0)
+    eyebrow = re.search(r'class="eyebrow">(.*?)</p>', hero).group(1)
+    h1 = re.search(r"<h1>(.*?)</h1>", hero).group(1)
+    assert eyebrow != h1
     assert hero.index("hero-actions") < hero.index("pilot-banner")
     assert "IT support for small businesses without in-house IT" in en
+    assert "IT coordination for Zurich and remote across Switzerland" in en
     assert "Zurich and remote across Switzerland" in en
     assert 'href="/en/inquiry/?area=users-access"' in en
+    assert 'href="/en/services/users-and-access/">A former employee' not in en
+    assert 'href="/en/inquiry/?area=users-access">A former employee still has active accounts<' in en
     assert 'href="/en/market-access/">Market Access<' not in en
     assert "Market Access (archive)" not in en
     assert "inquiry" in read("de/anfrage/index.html")
     assert 'value="users-access"' in read("de/anfrage/index.html")
     assert 'id="inquiry-form"' in read("de/anfrage/index.html")
     assert 'data-inquiry-offline="true"' not in read("de/anfrage/index.html")
-
+    cta_de = re.search(r'id="cta".*?</section>', de, re.S).group(0)
+    assert cta_de.count("Rückmeldung in der Regel innerhalb von zwei Arbeitstagen") == 1
+    assert de.count("IT-Basischeck ab CHF 190") == 1
+    cta_en = re.search(r'id="cta".*?</section>', en, re.S).group(0)
+    assert cta_en.count("Reply usually within two working days") == 1
+    assert en.count("IT basics check from CHF 190") == 1
 
 def test_english_home_and_language_switch() -> None:
     en = read("en/index.html")
@@ -201,7 +224,8 @@ def test_no_travel_flat_rate_remote_policy_on_it_pages() -> None:
 def test_footer_offline_and_inquiry_gated() -> None:
     """When inquiry.live is true: form enabled; footer uses live channel note."""
     home = read("de/index.html")
-    assert "Der primäre Weg für eine Bedarfsabklärung ist das Anfrageformular" in home
+    assert "Anfrageformular" in home
+    assert "Direktweg" in home or "WhatsApp" in home
     inquiry = read("de/anfrage/index.html")
     assert 'data-inquiry-offline="true"' not in inquiry
     assert 'disabled="disabled"' not in inquiry
@@ -224,6 +248,62 @@ def test_inquiry_offline_markup_when_gated() -> None:
     assert 'data-inquiry-offline="true"' in html
     assert 'disabled="disabled"' in html
     assert 'aria-disabled="true"' in html
+
+
+def test_inquiry_direct_path_whatsapp_and_mailto() -> None:
+    """Anfrage/inquiry: dual-path buttons above form; home closing has WhatsApp secondary."""
+    de = read("de/anfrage/index.html")
+    en = read("en/inquiry/index.html")
+    assert "https://wa.me/41782632701?text=" in de
+    assert 'data-direct-mailto' in de
+    assert 'data-mailto-subject-enc=' in de
+    assert 'data-mailto-body-enc=' in de
+    assert "Per WhatsApp schildern" in de
+    assert "Per E-Mail schildern" in de
+    assert "Oder über das Formular" in de
+    assert "Am schnellsten geht es so" in de
+    assert 'class="inquiry-direct"' in de
+    assert 'id="inquiry-form"' in de
+    assert de.index("inquiry-direct") < de.index('id="inquiry-form"')
+    assert "Rückmeldung in der Regel innerhalb von zwei Arbeitstagen." in de
+    assert "Pilotbedarf" not in de
+    assert "Viber" not in de
+    assert "Market Access (Archiv)" not in de
+    assert "Market Access" not in de
+    assert 'data-contact="email"' in de
+    assert 'data-email-user="admin"' in de
+    assert 'data-email-domain="boksitsupport.ch"' in de
+    # Visible footer/contact text must not hardcode the full address as link text
+    assert re.search(
+        r'data-contact="email"[^>]*>\s*<span[^>]*>E-Mail</span>',
+        de,
+    )
+
+    assert "https://wa.me/41782632701?text=" in en
+    assert 'data-direct-mailto' in en
+    assert 'data-mailto-subject-enc=' in en
+    assert "Describe via WhatsApp" in en
+    assert "Describe via email" in en
+    assert "Or use the form" in en
+    assert "The quickest way is this" in en
+    assert "Reply usually within two working days." in en
+    assert "Pilotbedarf" not in en
+    assert "Viber" not in en
+    assert "Market Access (Archiv)" not in en
+    assert "Market Access" not in en
+
+    home_de = read("de/index.html")
+    home_en = read("en/index.html")
+    cta_de = re.search(r'<section class="section" id="cta">.*?</section>', home_de, re.S)
+    cta_en = re.search(r'<section class="section" id="cta">.*?</section>', home_en, re.S)
+    assert cta_de and "button-primary" in cta_de.group(0)
+    assert "button-whatsapp" in cta_de.group(0)
+    assert "https://wa.me/41782632701?text=" in cta_de.group(0)
+    assert "Per WhatsApp schildern" in cta_de.group(0)
+    assert cta_en and "button-whatsapp" in cta_en.group(0)
+    assert "Describe via WhatsApp" in cta_en.group(0)
+    assert "universal.css?v=15" in de
+    assert (build_site.ROOT / "docs" / "INQUIRY_DIRECT.md").is_file()
 
 
 def test_siz_credentials_published() -> None:
@@ -280,8 +360,12 @@ def test_services_rewrite_structure_and_slugs() -> None:
         assert "Nicht jedes Problem ist automatisch enthalten" not in hero
         assert "Not every issue is automatically included" not in hero
 
-    assert "Fachperson" in read("de/leistungen/it-basischeck/index.html")
-    assert "specialist" in read("en/services/it-basics-check/index.html")
+    assert "Fachperson" in read("de/leistungen/it-basischeck/index.html") or "Absprache" in read(
+        "de/leistungen/it-basischeck/index.html"
+    )
+    assert "specialist" in read("en/services/it-basics-check/index.html") or "agreement" in read(
+        "en/services/it-basics-check/index.html"
+    )
 
 
 def test_legacy_hospitality_and_market_html_removed() -> None:
@@ -395,9 +479,20 @@ def test_examples_pages_and_nav() -> None:
     assert "dauerhaft" not in legal
     assert "INQUIRY_LOG" not in legal
     assert "Viber" not in legal
+    assert "/api/inquiry" not in legal
+    assert "höchstens zwölf Monate" in legal
+    assert 'href="/de/beispiele/"' in legal
+    assert "Beispiele" in legal
     assert legal.count("Schaffhauserstrasse 457") == 1
     assert 'id="legal-address"' not in legal
     assert 'id="legal-contact"' not in legal
+    en_legal = read("en/legal/index.html")
+    assert "FormSubmit" not in en_legal
+    assert "Viber" not in en_legal
+    assert "/api/inquiry" not in en_legal
+    assert "twelve months" in en_legal
+    assert 'href="/en/examples/"' in en_legal
+    assert "Examples" in en_legal
 
 
 def test_footer_has_no_viber() -> None:
@@ -464,4 +559,111 @@ def test_anfrage_title_h1_footer_and_response_expectation() -> None:
     assert (build_site.ROOT / "functions" / "api" / "inquiries.js").is_file()
     assert (build_site.ROOT / "docs" / "INQUIRY_NOTIFY.md").is_file()
     assert (build_site.ROOT / "scripts" / "list_inquiries.ps1").is_file()
+    assert (build_site.ROOT / "functions" / "api" / "inquiry-notify-test.js").is_file()
+
+
+def test_phase2_markers_partner_examples_process_list() -> None:
+    """Phase 2+3: no internal markers, partner section, third example, single numbering."""
+    visitor_paths = [
+        "de/index.html",
+        "en/index.html",
+        "de/beispiele/index.html",
+        "en/examples/index.html",
+        "de/faq/index.html",
+        "en/faq/index.html",
+        "de/leistungen/index.html",
+        "en/services/index.html",
+        "de/so-funktioniert-es/index.html",
+        "en/how-it-works/index.html",
+        "de/ueber-bit/index.html",
+        "en/about-bit/index.html",
+        "de/anfrage/index.html",
+        "en/inquiry/index.html",
+        "de/legal/index.html",
+        "en/legal/index.html",
+    ]
+    for path in visitor_paths:
+        text = read(path)
+        assert "Zustand A" not in text
+        assert "State A" not in text
+        assert "Zustand B" not in text
+        assert "MVP" not in text
+        assert "Phase 1" not in text
+        assert "Phase 2" not in text
+        assert "Alles-inklusive" not in text
+        assert "all-inclusive" not in text.lower()
+        assert "Viber" not in text
+        assert "FormSubmit" not in text
+
+    home = read("de/index.html")
+    assert "Ein Vertragspartner, ein Ansprechpartner" in home
+    assert 'id="vertragspartner"' in home
+    assert home.index('id="vertragspartner"') < home.index("<h2>Klar abgegrenzt</h2>")
+    assert "bei Spezialthemen wird die technische Umsetzung" not in home
+    hero = re.search(r'<section class="hero">.*?</section>', home, re.S).group(0)
+    assert "Spezialthemen" not in hero
+
+    en_home = read("en/index.html")
+    assert "One contractual partner, one contact person" in en_home
+    assert "for specialist topics, technical execution is coordinated" not in en_home.lower()
+
+    about = read("de/ueber-bit/index.html")
+    assert "Vertragspartner bleibe ich" in about
+    legal = read("de/legal/index.html")
+    assert "Vertragspartner bleibe ich" in legal
+
+    examples = read("de/beispiele/index.html")
+    assert "So kann ein Auftrag bei BIT ablaufen" in examples
+    assert "illustrative Musterfälle" in examples
+    assert "Muster: Outlook funktioniert an einem Arbeitsplatz nicht" in examples
+    assert "besonders schützenswerte Personendaten" in examples
+    assert "Offene Punkte und Risiken" in examples
+    assert "Freigegebene Änderungen innerhalb des vereinbarten Leistungsumfangs" in examples
+    assert "Freigegebene Konten, Rechte und Lizenzen" in examples
+    assert "Zustand A" not in examples
+    assert 'class="form-notice"' not in examples
+
+    en_ex = read("en/examples/index.html")
+    assert "How an engagement with BIT can run" in en_ex
+    assert "Sample: Outlook does not work at a workstation" in en_ex
+    assert "specially protected personal data" in en_ex
+    assert "Open points and risks" in en_ex
+
+    # Process list: ul + span numbering only (no double ol markers in source)
+    for path in (
+        "de/index.html",
+        "de/beispiele/index.html",
+        "de/so-funktioniert-es/index.html",
+        "en/index.html",
+        "en/examples/index.html",
+        "en/how-it-works/index.html",
+    ):
+        html = read(path)
+        assert '<ul class="process-list">' in html
+        assert '<ol class="process-list">' not in html
+        # text extraction must not yield "1 1" from adjacent duplicate markers
+        for m in re.finditer(
+            r'<li><span>(\d+)</span><span class="process-text">', html
+        ):
+            assert m.group(1).isdigit()
+        assert not re.search(
+            r'<span>(\d+)</span>\s*<span>\1</span>', html
+        ), f"double number markers in {path}"
+
+    faq = read("de/faq/index.html")
+    assert "Können alle IT-Probleme übernommen werden?" in faq
+    assert "klar abgegrenzte Benutzer-, Zugangs- und Arbeitsplatzaufgaben" in faq
+    assert "Durch das Absenden entsteht noch kein Auftrag" in read("de/index.html")
+
+    users = read("de/leistungen/benutzer-und-zugaenge/index.html")
+    words = re.findall(r"[A-Za-zÄÖÜäöü]{2,}", users)
+    assert len(words) >= 280
+    assert 'area=users-access' in users
+    assert "ProfessionalService" in users
+
+    assert (build_site.ROOT / "docs" / "PHASE2_PLAN.md").is_file()
+    assert (build_site.ROOT / "functions" / "api" / "inquiry-notify-test.js").is_file()
+    notify = (build_site.ROOT / "docs" / "INQUIRY_NOTIFY.md").read_text(encoding="utf-8")
+    assert "/api/inquiry-notify-test" in notify
+    assert "TELEGRAM_BOT_TOKEN" in notify
 

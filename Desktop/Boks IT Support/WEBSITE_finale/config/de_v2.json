@@ -46,7 +46,7 @@
       "pair": "inquiry"
     }
   ],
-  "footer_channels_note": "E-Mail und Telefon stehen im Footer zur Verfügung; WhatsApp ist optional. Der primäre Weg für eine Bedarfsabklärung ist das Anfrageformular.",
+  "footer_channels_note": "E-Mail, Telefon und WhatsApp stehen im Footer zur Verfügung. Für eine Bedarfsabklärung nutzen Sie den Direktweg per WhatsApp oder E-Mail, oder das Anfrageformular.",
   "footer_channels_note_offline": "Für die Bedarfsabklärung erreichen Sie mich derzeit direkt per E-Mail oder Telefon (WhatsApp optional). Die Formularzustellung wird eingerichtet.",
   "price_note": "Richtwerte, verbindlich erst nach schriftlicher Prüfung des Umfangs.",
   "prices": {
@@ -56,12 +56,12 @@
   "home": {
     "meta_title": "IT-Support für kleine Unternehmen ohne eigene IT | BIT Zürich",
     "meta_description": "BIT unterstützt Unternehmen in Zürich bei Benutzerkonten, Microsoft 365, Zugängen und Arbeitsplatzproblemen – klar abgegrenzt, mit schriftlichem Rahmen.",
-    "eyebrow": "IT-Support für kleine Unternehmen ohne eigene IT",
+    "eyebrow": "IT-Koordination für Zürich und remote in der Schweiz",
     "h1": "IT-Support für kleine Unternehmen ohne eigene IT",
-    "lead": "BIT unterstützt Unternehmen bei Benutzerkonten, Microsoft 365, Zugängen und wiederkehrenden Arbeitsplatzproblemen. Klar definierte Standardfälle werden geprüft und bearbeitet; bei Spezialthemen wird die technische Umsetzung nach vorheriger Abstimmung koordiniert.",
+    "lead": "BIT unterstützt Unternehmen bei Benutzerkonten, Microsoft 365, Zugängen und wiederkehrenden Arbeitsplatzproblemen. Klar definierte Standardfälle werden geprüft und bearbeitet.",
     "trust": "Für Unternehmen mit ca. 5–50 Mitarbeitenden · Zürich und remote in der Schweiz",
     "cta_subline": "Unverbindliche Bedarfsabklärung. Durch das Formular entsteht noch kein Auftrag.",
-    "outcome": "Sie erhalten einen klaren Ansprechpartner, einen schriftlichen Rahmen und einen nachvollziehbaren Abschluss – ohne MSP-Versprechen und ohne Alles-inklusive.",
+    "outcome": "Sie erhalten einen klaren Ansprechpartner, einen schriftlich vereinbarten Rahmen und einen dokumentierten Abschluss. Der Leistungsumfang ist klar abgegrenzt und wird vor Beginn festgehalten.",
     "pilot_banner": "BIT prüft derzeit ausgewählte Anfragen im Rahmen eines begrenzten Einführungsbetriebs.",
     "trust_block": {
       "title": "Wer dahintersteht",
@@ -69,9 +69,13 @@
     },
     "examples_teaser": {
       "title": "Musterfälle statt Referenzen",
-      "text": "Zwei anonymisierte Musterabläufe zeigen, wie BIT Eintritte und Austritte strukturiert – ohne erfundene Kundenfälle.",
+      "text": "Drei anonymisierte Musterabläufe zeigen, wie BIT Eintritte, Austritte und Arbeitsplatzstörungen strukturiert – ohne erfundene Kundenfälle.",
       "href": "/de/beispiele/",
       "cta": "Musterfälle ansehen"
+    },
+    "partner": {
+      "title": "Ein Vertragspartner, ein Ansprechpartner",
+      "text": "BIT nimmt Ihr Anliegen auf, klärt den Umfang schriftlich und bleibt Ihr Ansprechpartner bis zum dokumentierten Abschluss. Sie verhandeln nicht mit mehreren Anbietern und koordinieren keine Termine. Wird für ein Spezialthema zusätzliche Fachkompetenz benötigt, wird das vorab besprochen; Kosten Dritter entstehen nur nach Ihrer schriftlichen Freigabe."
     }
   },
   "concerns": {
@@ -83,7 +87,7 @@
       },
       {
         "text": "Ein ehemaliger Mitarbeiter hat noch aktive Konten",
-        "href": "/de/leistungen/benutzer-und-zugaenge/"
+        "href": "/de/anfrage/?area=users-access"
       },
       {
         "text": "Outlook oder Microsoft 365 funktioniert an einem Arbeitsplatz nicht",
@@ -114,7 +118,7 @@
   },
   "services": {
     "title": "Drei klare Einstiege",
-    "intro": "Für Unternehmen mit etwa 5–50 Mitarbeitenden in Zürich und remote in der Schweiz. BIT prüft und bearbeitet klar definierte Standardfälle; Spezialthemen werden nach vorheriger Abstimmung mit einer geeigneten Fachperson koordiniert.",
+    "intro": "Für Unternehmen mit etwa 5–50 Mitarbeitenden in Zürich und remote in der Schweiz. BIT prüft und bearbeitet klar definierte Standardfälle innerhalb eines schriftlich vereinbarten Rahmens.",
     "scope_note": "Umfang und technische Zuständigkeit werden vorab vereinbart. Nicht jedes Problem ist automatisch enthalten.",
     "vendor_note": "Anbieterkoordination ist kein eigener Produktblock: Bei Bedarf klärt BIT Zuständigkeiten und verfolgt die Bearbeitung nach – innerhalb des schriftlich vereinbarten Rahmens.",
     "path": "/de/leistungen/",
@@ -135,7 +139,7 @@
           "steps": [
             "Anliegen und benötigte Angaben aufnehmen",
             "Freigaben und Zuständigkeiten klären",
-            "Umsetzung prüfen bzw. nach Abstimmung koordinieren",
+            "Freigegebene Änderungen innerhalb des vereinbarten Leistungsumfangs bearbeiten oder die technische Umsetzung mit der zuständigen Fachstelle koordinieren.",
             "Abschluss schriftlich dokumentieren"
           ],
           "required_info": [
@@ -143,7 +147,9 @@
             "Benötigte Systeme und Rollen",
             "Wer Freigaben erteilen darf"
           ],
-          "boundaries": "Technische Spezialfälle ausserhalb des vereinbarten Rahmens werden nur nach vorheriger Abstimmung mit einer geeigneten Fachperson koordiniert. Keine 24/7-Bereitschaft und kein Alles-inklusive."
+          "boundaries": "Technische Spezialfälle ausserhalb des vereinbarten Rahmens gehören nicht automatisch dazu und werden vor Beginn geprüft. Keine 24/7-Bereitschaft und kein unbegrenzter Leistungsumfang.",
+          "intro": "Benutzer- und Zugangsthemen entstehen oft unter Zeitdruck: ein Eintritt am Montag, ein Austritt ohne klare Kontenliste, ein Rollenwechsel mit neuen Rechten. BIT nimmt das Anliegen strukturiert auf, klärt Freigaben und hält den vereinbarten Umfang schriftlich fest. Ergebnis zuerst: arbeitsfähiger Start oder geschlossene Zugänge – dokumentiert, nachvollziehbar und ohne offenen Dauerauftrag.",
+          "closing": "Für eine unverbindliche Einschätzung nutzen Sie das Anfrageformular mit vorausgewähltem Bereich Benutzer & Zugänge. Durch das Absenden entsteht noch kein Auftrag."
         }
       },
       {
@@ -170,17 +176,18 @@
             "Fehlermeldung oder beobachtetes Verhalten",
             "Seit wann und wie oft das Problem auftritt"
           ],
-          "boundaries": "Herstellerabhängige oder tiefgehende Infrastrukturthemen sind nicht automatisch enthalten. Eine Fachperson wird nur nach Absprache beigezogen."
+          "boundaries": "Herstellerabhängige oder tiefgehende Infrastrukturthemen sind nicht automatisch enthalten. Eine Fachperson wird nur nach Absprache beigezogen.",
+          "intro": "Wenn Outlook, Teams oder die Anmeldung an einem Arbeitsplatz stocken, kostet das sofort Arbeitszeit. BIT grenzt ein, ob Konto, Gerät oder Dienst betroffen ist, und bearbeitet klar abgegrenzte Standardfälle im vereinbarten Rahmen. Ergebnis zuerst: weniger Zeitverlust bei Alltagsstörungen und ein fester Ansprechpartner bis zum dokumentierten Abschluss. Nicht enthalten sind automatisch Hersteller-Ticket-Eskalationen oder tiefgehende Infrastrukturänderungen ohne vorherige schriftliche Klärung.",
+          "closing": "Schildern Sie die Störung über das Anfrageformular (Bereich Microsoft 365 & Arbeitsplatz). Durch das Absenden entsteht noch kein Auftrag."
         }
       },
       {
         "slug": "it-basischeck",
         "icon": "security",
         "title": "IT-Basischeck",
-        "benefit": "Schriftlicher Befund und Prioritäten – Festpreis-Einstieg ab CHF 190",
+        "benefit": "Schriftlicher Befund und Prioritäten",
         "text": "Klar abgegrenzter Einstieg: vorhandene Konten und Zugänge sichten, Risiken priorisieren, schriftlichen Befund liefern. Kein Cybersecurity-Audit.",
         "area": "basischeck",
-        "price_label": "Festpreis-Einstieg ab CHF 190",
         "detail": {
           "situations": [
             "Unklar, welche Konten und Rechte noch aktiv sind.",
@@ -198,14 +205,16 @@
             "Ob Microsoft 365 im Einsatz ist",
             "Bekannte Zugangs- oder Rechtefragen"
           ],
-          "boundaries": "Der Basischeck ist kein Cybersecurity-Audit und kein Penetrationstest. Technische Spezialumsetzung erfolgt nur nach vorheriger Abstimmung mit einer geeigneten Fachperson."
+          "boundaries": "Der Basischeck ist kein Cybersecurity-Audit und kein Penetrationstest. Technische Spezialumsetzung erfolgt nur nach vorheriger Abstimmung mit einer geeigneten Fachperson.",
+          "intro": "Wenn unklar ist, welche Konten und Rechte noch aktiv sind, braucht es zuerst einen schriftlichen Überblick – keinen offenen Auftrag. Der IT-Basischeck ist ein klar abgegrenzter Einstieg: vorhandene Zugänge sichten, Risiken priorisieren, Befund liefern. Ergebnis zuerst: ein dokumentierter Befund mit Prioritäten, bevor weitere Schritte vereinbart werden. Ab CHF 190 als Festpreis-Einstieg.",
+          "closing": "Für den Basischeck nutzen Sie das Anfrageformular mit vorausgewähltem Bereich IT-Basischeck. Durch das Absenden entsteht noch kein Auftrag."
         }
       }
     ]
   },
   "limits": {
     "title": "Klar abgegrenzt",
-    "lead": "BIT übernimmt klar abgegrenzte Aufgaben mit schriftlich definiertem Ziel. Spezialthemen werden vor Beginn geprüft und nur nach Absprache technisch umgesetzt oder weitergegeben.",
+    "lead": "BIT übernimmt klar abgegrenzte Aufgaben mit schriftlich definiertem Ziel. Umfang und Zuständigkeit werden vor Beginn festgehalten.",
     "items": [
       "keine 24/7-Störungsbereitschaft",
       "keine unbegrenzten Pauschalaufträge",
@@ -239,14 +248,14 @@
       "kritische Infrastrukturen",
       "spezialisierte Produktions-IT",
       "uneingeschränkter 24/7-Support",
-      "unklare Alles-inklusive-Anforderungen"
+      "Anforderungen ohne klaren Leistungsumfang"
     ]
   },
   "role": {
     "title": "Die Rolle von BIT",
     "owns": "Aufnahme, Strukturierung, Koordination, Kommunikation, Dokumentation, Nachverfolgung und Abrechnung.",
-    "tech": "Bei Spezialthemen wird die technische Umsetzung nach vorheriger Abstimmung mit einer geeigneten Fachperson koordiniert.",
-    "contract": "Leistungsumfang, Zuständigkeiten und Abrechnung werden vor Beginn schriftlich festgelegt."
+    "tech": "Spezialthemen und Kosten Dritter werden vorab besprochen; siehe Abschnitt «Ein Vertragspartner, ein Ansprechpartner» auf der Startseite.",
+    "contract": "Leistungsumfang, Zuständigkeiten und Abrechnung werden vor Beginn schriftlich festgelegt. Vertragspartner bleibe ich."
   },
   "examples": {
     "title": "Anwendungsbeispiele",
@@ -261,7 +270,7 @@
         "text": "Bestehende Konten und Rechte erfassen, Deaktivierung koordinieren lassen, Übergabe und Bestätigung dokumentieren."
       },
       {
-        "title": "Muster: Outlook-Störung am Arbeitsplatz",
+        "title": "Muster: Outlook funktioniert an einem Arbeitsplatz nicht",
         "text": "Problem strukturiert aufnehmen, zuständige Stelle klären, Bearbeitung nachverfolgen, Ergebnis festhalten."
       },
       {
@@ -278,6 +287,7 @@
     "body": [
       "Ich kenne operative Abläufe aus Hotel- und Rezeptionsumfeld und die alltäglichen Benutzer-, Zugangs- und Systemfragen kleiner Betriebe.",
       "BIT unterstützt kleine Unternehmen ohne eigene IT bei Benutzerkonten, Microsoft 365, Zugängen und wiederkehrenden Arbeitsplatzproblemen. Ich arbeite als operativer Ansprechpartner – nicht als allgemeiner IT-Experte für jedes Problem und nicht als Expertenteam.",
+      "Vertragspartner bleibe ich. Als Einzelunternehmen bin ich Ihr Ansprechpartner für Aufnahme, schriftlichen Rahmen, Nachverfolgung und Abrechnung.",
       "Arbeitssprachen für diese Schweizer IT-Seite: Deutsch und Englisch. Weitere Sprachen nach Vereinbarung beziehungsweise mit externer Sprachunterstützung."
     ],
     "siz_comment": "",
@@ -302,7 +312,7 @@
       },
       {
         "q": "Können alle IT-Probleme übernommen werden?",
-        "a": "Nein. Ich prüfe zuerst, ob Ihr Anliegen in den definierten Leistungsrahmen passt. Komplexe oder herstellerabhängige Fälle werden vor Beginn geprüft und nur nach Absprache weitergegeben."
+        "a": "Nein. BIT übernimmt klar abgegrenzte Benutzer-, Zugangs- und Arbeitsplatzaufgaben innerhalb eines schriftlich vereinbarten Rahmens. Komplexe Infrastruktur-, Hersteller- oder Spezialthemen gehören nicht automatisch dazu und werden vor Beginn geprüft."
       },
       {
         "q": "Arbeitet BIT nur mit Hotels?",
@@ -340,8 +350,9 @@
   "closing": {
     "title": "Passt Ihr Anliegen zu BIT?",
     "text": "Schildern Sie Ihr IT-Anliegen unverbindlich. Sie erhalten eine Einschätzung, ob und in welchem Rahmen eine Zusammenarbeit möglich ist.",
-    "note": "Unverbindliche Bedarfsabklärung · Rückmeldung in der Regel innerhalb von zwei Arbeitstagen · kein Alles-inklusive-Versprechen",
-    "response_expectation": "Rückmeldung in der Regel innerhalb von zwei Arbeitstagen."
+    "note": "Unverbindliche Bedarfsabklärung · Durch das Absenden entsteht noch kein Auftrag.",
+    "response_expectation": "Rückmeldung in der Regel innerhalb von zwei Arbeitstagen.",
+    "whatsapp_label": "Per WhatsApp schildern"
   },
   "market_access_archive": {
     "meta_title": "BIT konzentriert sich auf IT-Koordination | BIT",
@@ -426,10 +437,10 @@
   },
   "examples_page": {
     "meta_title": "Musterfälle | BIT",
-    "meta_description": "Zwei anonymisierte Musterfälle: Austritt und neuer Mitarbeiter – plus Musterbericht-Struktur. Keine realen Kundenreferenzen.",
-    "title": "Musterfälle",
-    "lead": "Die folgenden Abläufe sind Muster, keine dokumentierten Kundenfälle. Sie zeigen, wie BIT typische Standardfälle strukturiert.",
-    "note": "Zustand A: Keine erfundenen Kunden oder Partner. Alle Beispiele sind als Muster gekennzeichnet.",
+    "meta_description": "Illustrative Musterfälle: Austritt, neuer Mitarbeiter und Outlook – plus Musterbericht-Struktur. Keine Kundenreferenzen.",
+    "title": "So kann ein Auftrag bei BIT ablaufen",
+    "lead": "Die folgenden Beispiele sind illustrative Musterfälle und keine Kundenreferenzen. Sie zeigen, wie BIT klar abgegrenzte Benutzer-, Zugangs- und Arbeitsplatzaufgaben strukturiert — von der Freigabe bis zum dokumentierten Abschluss.",
+    "note": "",
     "cases": [
       {
         "title": "Muster: Austritt eines Mitarbeiters",
@@ -443,8 +454,8 @@
         "steps": [
           "Ausgangslage und betroffene Systeme aufnehmen",
           "Freigabe für Deaktivierung einholen",
-          "Umsetzung prüfen bzw. nach Abstimmung koordinieren",
-          "Abschluss und offene Risiken dokumentieren"
+          "Freigegebene Änderungen innerhalb des vereinbarten Leistungsumfangs bearbeiten oder die technische Umsetzung mit der zuständigen Fachstelle koordinieren.",
+          "Abschluss sowie offene Punkte und Risiken dokumentieren"
         ],
         "approvals": "Schriftliche Freigabe der zuständigen Führungsperson vor jeder Zugangsänderung.",
         "result": "Dokumentierte Übersicht der behandelten Zugänge, Bestätigung der Deaktivierungsschritte und Liste offener Punkte."
@@ -460,17 +471,36 @@
         ],
         "steps": [
           "Bedarf und Freigaben klären",
-          "Konten und Rechte vorbereiten lassen",
+          "Freigegebene Konten, Rechte und Lizenzen zur Einrichtung veranlassen und dokumentieren.",
           "Arbeitsfähigkeit am Starttag prüfen",
           "Ergebnis schriftlich festhalten"
         ],
         "approvals": "Freigabe für Konten, Rechte und ggf. Lizenzen vor der Einrichtung.",
         "result": "Checkliste der eingerichteten Zugänge, bekannte Einschränkungen und nächste Schritte falls etwas fehlt."
+      },
+      {
+        "title": "Muster: Outlook funktioniert an einem Arbeitsplatz nicht",
+        "situation": "Outlook ist an einem Arbeitsplatz nicht nutzbar. Unklar ist, ob nur dieser Arbeitsplatz oder weitere Benutzer betroffen sind und ob die Ursache beim Konto, am Gerät oder am Dienst liegt.",
+        "required": [
+          "Betroffener Benutzer und Arbeitsplatz",
+          "Genaue Fehlermeldung oder beobachtetes Verhalten",
+          "Seit wann das Problem besteht",
+          "Ob weitere Personen betroffen sind",
+          "Kürzliche Änderungen an Konto, Gerät oder Software"
+        ],
+        "steps": [
+          "Eingrenzen, ob Konto, Gerät oder Dienst betroffen ist",
+          "Im bestätigten Umfang bearbeiten oder an die zuständige Fachstelle übergeben",
+          "Bearbeitung nachverfolgen",
+          "Ergebnis und offene Punkte dokumentieren"
+        ],
+        "approvals": "Zugriff auf den betroffenen Arbeitsplatz nur nach Absprache mit der zuständigen Person.",
+        "result": "Dokumentierte Ursacheneingrenzung, durchgeführte oder koordinierte Massnahmen und Liste offener Punkte."
       }
     ],
     "report": {
       "title": "Musterbericht-Struktur",
-      "intro": "So kann ein anonymisierter Abschluss aussehen – ohne Kundennamen und ohne Sensitivdaten.",
+      "intro": "So kann ein anonymisierter Abschluss aussehen – ohne Kundennamen und ohne besonders schützenswerte Personendaten.",
       "sections": [
         {
           "title": "Ausgangslage",
@@ -489,8 +519,8 @@
           "text": "Was im vereinbarten Umfang umgesetzt oder koordiniert wurde."
         },
         {
-          "title": "Offene Risiken",
-          "text": "Was bewusst offen bleibt oder einer Fachperson bedarf."
+          "title": "Offene Punkte und Risiken",
+          "text": "Welche Punkte noch nicht abgeschlossen sind, welche Abhängigkeiten bestehen und wo zusätzliche Fachkompetenz erforderlich ist."
         },
         {
           "title": "Nächste Schritte",
@@ -498,5 +528,21 @@
         }
       ]
     }
+  },
+  "direct_path": {
+    "intro": "Am schnellsten geht es so – die Vorlage ist bereits ausgefüllt, Sie ergänzen nur Ihre Angaben.",
+    "whatsapp_label": "Per WhatsApp schildern",
+    "email_label": "Per E-Mail schildern",
+    "form_heading": "Oder über das Formular",
+    "subject": "IT-Anliegen – [Firmenname]",
+    "body_lines": [
+      "Firma:",
+      "Ansprechperson:",
+      "Ort oder Kanton:",
+      "Anzahl Mitarbeitende:",
+      "Microsoft 365 im Einsatz: ja / nein / unklar",
+      "Worum geht es:",
+      "Ab wann:"
+    ]
   }
 }
