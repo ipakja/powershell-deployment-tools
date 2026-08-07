@@ -25,7 +25,7 @@
    **Erfolg:** Viewer zeigt «Einträge der letzten 7 Tage» und «Neueste Anfrage».
 2. Optional Resend später: [RESEND_GOLIVE.md](./RESEND_GOLIVE.md) (Test mit `onboarding@resend.dev` nur an Account-E-Mail; Produktion braucht DNS only).
 3. Telegram optional – Code bleibt, Docs empfehlen Viewer.
-4. Ana 5-Sekunden-Test: [5-SEKUNDEN-TEST.md](./5-SEKUNDEN-TEST.md) — **noch offen**.
+4. 5-Sekunden-Erstkontakt (Screenshot, 3–5 Fremde; Ana nur optional separat): [5-SEKUNDEN-TEST.md](./5-SEKUNDEN-TEST.md) — **noch offen**.
 
 ## 3. Resend-Ergebnis
 
@@ -78,6 +78,7 @@
 ## 10. Offen für Stefan
 
 1. Bookmark-URL privat halten  
-2. Ana 5-Sekunden-Test  
+2. 5-Sekunden-Erstkontakt (Screenshot + 3–5 Fremde; siehe 5-SEKUNDEN-TEST.md)  
+
 3. Optional Resend/Telegram  
 4. Ggf. Cloudflare Email Obfuscation für `/api/*` prüfen (mailto-Workaround aktiv)

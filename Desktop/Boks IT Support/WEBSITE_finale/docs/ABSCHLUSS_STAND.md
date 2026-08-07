@@ -36,7 +36,7 @@
 2. Google Search Console: Sitemap + Reindex `/de/`, `/de/leistungen/`, `/de/legal/`
 3. Resend (Domain + Key), wenn E-Mail-Notify gewünscht
 4. Google-Business-Profil
-5. 5-Sekunden-Test mit Ana
+5. 5-Sekunden-Erstkontakt (Screenshot, 3–5 Fremde; siehe 5-SEKUNDEN-TEST.md)
 6. Partnervertrag / AHV-Status / echte Cases – ausserhalb der Website
 7. Aufbewahrungs-/Rechtsfragen bei Bedarf mit Fachperson
 

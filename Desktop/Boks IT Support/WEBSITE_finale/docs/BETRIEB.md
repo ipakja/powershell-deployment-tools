@@ -48,5 +48,5 @@ npx wrangler pages deploy . --project-name website --branch=main --commit-dirty=
 | [INQUIRY_NOTIFY.md](./INQUIRY_NOTIFY.md) | Optional Push |
 | [INQUIRY_DIRECT.md](./INQUIRY_DIRECT.md) | WhatsApp/mailto |
 | [RESEND_GOLIVE.md](./RESEND_GOLIVE.md) | Resend Test + DNS |
-| [5-SEKUNDEN-TEST.md](./5-SEKUNDEN-TEST.md) | Ana-Test |
+| [5-SEKUNDEN-TEST.md](./5-SEKUNDEN-TEST.md) | 5-Sekunden-Erstkontakt (Screenshot, 3–5 Fremde) |
 | [ABSCHLUSSBERICHT_FINAL.md](./ABSCHLUSSBERICHT_FINAL.md) | Abschluss |

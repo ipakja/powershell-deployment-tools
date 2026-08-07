@@ -2,37 +2,53 @@
 
 Ziel: Prüfen, ob der Hero ohne Kontext verständlich ist (Auftrag v2, Akzeptanzkriterium).
 
-**Status:** Noch von Stefan mit Ana durchzuführen (letzter manueller Punkt).
+**Status:** Noch offen – erst nach Auth-Check und echtem Formular-Testlead, mit Screenshot und 3–5 fremden Personen.
 
-## Ablauf (pro Person, ca. 1 Minute)
+## Empfohlene Reihenfolge (nicht überspringen)
 
-1. Zeige **nur den oberen Bereich** der Startseite (`/de/`): Logo, Eyebrow, H1, Lead, Pilot-Hinweis, die zwei Buttons. Kein Scrollen, keine Erklärung.
-2. Nach **5 Sekunden** Bildschirm wegnehmen oder zuklappen.
-3. Stelle nacheinander genau diese drei Fragen (ohne nachzuhelfen):
+1. Token-Rotation (erledigt – altes Token ungültig)
+2. Auth-Verifikation (4 Fälle: neues Token 200, altes Token 401, kein Token 401, Secret fehlt → 503 im Code)
+3. Echtes Formular-Testlead absenden und im Viewer prüfen
+4. Screenshot Above-the-fold Home (mobil; Desktop optional)
+5. 3–5 fremde Personen mit Screenshot testen (kein Live-Öffnen)
+6. Erst danach Website-Inhalt erneut ändern
+
+## Methode (wichtig)
+
+1. Zeige einen **Screenshot** des sichtbaren Homepage-Heros (Above-the-fold), **mobil** bevorzugt. Desktop-Screenshot optional zusätzlich.
+2. **Nicht** die Live-Seite öffnen – Scrollen und Navigation verfälschen den Erstkontakt-Test.
+3. Nach **genau 5 Sekunden** Screenshot wegnehmen / verdecken.
+4. Vorher **nichts erklären**. Bitte die Person, nicht «nett» zu sein – ehrliche erste Reaktion zählt.
+
+## Fragen (ohne nachzuhelfen)
 
 | # | Frage | Erwartete Antwort (sinngemäss) |
 |---|---|---|
-| 1 | Was bietet das an? | IT-Support für kleine Unternehmen ohne eigene IT – Benutzerkonten, Microsoft 365, Zugänge, Arbeitsplatzprobleme. |
-| 2 | Für wen? | Unternehmen mit ca. 5–50 Mitarbeitenden, Zürich und remote in der Schweiz. |
-| 3 | Was wäre der nächste Schritt? | IT-Anliegen prüfen lassen / Anfrageformular. |
+| 1 | Was bietet das an? | BIT organisiert Benutzerkonten, Zugänge und alltägliche IT-Anfragen für kleine Schweizer Unternehmen ohne eigene IT. |
+| 2 | Für wen? | Kleine Unternehmen / KMU ohne eigene IT (Schweiz). |
+| 3 | Was wäre der nächste Schritt? | **Jeder konkrete Weg reicht:** Anfrageformular **oder** WhatsApp – beide gleichwertig (kein Hierarchie-Fehler). |
 
-## Testpersonen (empfohlen)
+**Kernbotschaft (Q1):** BIT organisiert Benutzerkonten, Zugänge und alltägliche IT-Anfragen für kleine Schweizer Unternehmen ohne eigene IT.
 
-1. **Ana** (erste Person – kennt die alte Seite und die Kritik)
-2. Person ohne IT-Hintergrund
-3. Person mit KMU-/Büroalltag, aber ohne BIT-Kontext
+## Testpersonen
+
+- **Erstkontakt:** 3–5 Personen **ohne** Projektkenntnis. Bevorzugt Kleingewerbe / Handwerk / Gastro / Administration – **nicht** IT.
+- **Nicht** für Erstkontakt: Personen, die die Seite schon kennen oder bereits Feedback gegeben haben (z. B. Ana).
+- **Ana (optional, separat):** Nur die Frage «Sind meine früheren Einwände adressiert?» – **kein** 5-Sekunden-Erstkontakt.
 
 ## Auswertung
 
-| Person | Q1 verstanden? | Q2 verstanden? | Q3 verstanden? | Freie Notiz |
-|---|---|---|---|---|
-| Ana | | | | |
-| Person 2 | | | | |
-| Person 3 | | | | |
+| Person | Profil (ohne Namen wenn nötig) | Q1 | Q2 | Q3 (Form **oder** WA) | Freie Notiz |
+|---|---|---|---|---|---|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 (opt.) | | | | | |
+| 5 (opt.) | | | | | |
 
-**Bestehen:** Mehrheit trifft sinngemäss alle drei Punkte.  
-**Nicht bestanden:** Hero-Text nachschärfen, bevor SIZ oder weitere Inhalte priorisiert werden.
+**Bestehen:** Mehrheit trifft sinngemäss Q1/Q2; bei Q3 reicht Formular **oder** WhatsApp.  
+**Nicht bestanden:** Hero nachschärfen, aber erst nach diesem Testlauf, nicht vorher.
 
 ## Screenshot-Platzhalter
 
-_Hier Hero-Screenshot einfügen (nur erster Viewport)._
+_Hier Hero-Screenshot einfügen (mobil, nur erster Viewport / Above-the-fold)._

@@ -100,4 +100,4 @@ Public booleans only: `ok`, `hasKv`, `hasResendKey`, `hasWebhook`, `hasTelegram`
 2. Redeploy.
 3. Bookmark the HTML viewer URL (keep private).
 4. Optional later: Telegram / Resend.
-5. Ana 5-second test — [5-SEKUNDEN-TEST.md](./5-SEKUNDEN-TEST.md).
+5. 5-second first-contact test (screenshot, 3–5 strangers) — [5-SEKUNDEN-TEST.md](./5-SEKUNDEN-TEST.md).
