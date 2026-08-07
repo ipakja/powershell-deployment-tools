@@ -356,7 +356,8 @@
     "submit": "Anfrage senden",
     "success": "Danke. Ihre Angaben sind eingegangen. Rückmeldung in der Regel innerhalb von zwei Arbeitstagen.",
     "error": "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder schreiben Sie an admin@boksitsupport.ch.",
-    "privacy_label": "Ich habe die Datenschutzerklärung gelesen und willige in die Verarbeitung der Angaben zur Bedarfsabklärung ein."
+    "privacy_label": "Ich habe die Datenschutzerklärung gelesen und willige in die Verarbeitung der Angaben zur Bedarfsabklärung ein.",
+    "terms_note": "Es gelten die Allgemeinen Geschäftsbedingungen."
   },
   "closing": {
     "title": "Passt Ihr Anliegen zu BIT?",
@@ -556,5 +557,6 @@
       "Ab wann:"
     ]
   },
-  "travel_line": "Die meisten Anfragen werden remote bearbeitet. Ist ein Termin vor Ort erforderlich, wird er vorab vereinbart und im Angebot separat ausgewiesen – im Raum Zürich, ohne Anfahrtspauschale als versteckte Position."
+  "travel_line": "Die meisten Anfragen werden remote bearbeitet. Ist ein Termin vor Ort erforderlich, wird er vorab vereinbart und im Angebot separat ausgewiesen – im Raum Zürich, ohne Anfahrtspauschale als versteckte Position.",
+  "terms_label": "AGB"
 }

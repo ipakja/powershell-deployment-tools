@@ -1,0 +1,348 @@
+{
+  "meta_title": "Allgemeine Geschäftsbedingungen (AGB) | BIT",
+  "meta_description": "Allgemeine Geschäftsbedingungen von BIT – Boks IT Support, Zürich. Stand August 2026.",
+  "h1": "Allgemeine Geschäftsbedingungen (AGB)",
+  "brand_line": "BIT – Boks IT Support",
+  "entity_line": "Stefan Bogdanovic, Einzelunternehmen",
+  "address_line": "Schaffhauserstrasse 457, 8052 Zürich",
+  "contact_line": "admin@boksitsupport.ch · +41 78 263 27 01",
+  "stand": "Stand: August 2026",
+  "toc_label": "Inhalt",
+  "sections": [
+    {
+      "id": "geltungsbereich",
+      "number": "1",
+      "title": "Geltungsbereich",
+      "clauses": [
+        {
+          "id": "1.1",
+          "text": "Diese Allgemeinen Geschäftsbedingungen gelten für alle Leistungen, die BIT – Boks IT Support, Inhaber Stefan Bogdanovic (nachfolgend «BIT»), für Kundinnen und Kunden erbringt."
+        },
+        {
+          "id": "1.2",
+          "text": "Die Leistungen richten sich ausschliesslich an Unternehmen, Selbstständigerwerbende und Organisationen. Verträge mit Privatpersonen für private Zwecke werden nicht abgeschlossen."
+        },
+        {
+          "id": "1.3",
+          "text": "Abweichende oder ergänzende Bedingungen der Kundin oder des Kunden gelten nur, wenn BIT ihnen schriftlich zustimmt. Dies gilt auch dann, wenn BIT in Kenntnis solcher Bedingungen eine Leistung vorbehaltlos erbringt."
+        },
+        {
+          "id": "1.4",
+          "text": "Massgebend ist die bei Vertragsschluss gültige Fassung dieser AGB."
+        }
+      ]
+    },
+    {
+      "id": "vertragspartner-vertragsschluss",
+      "number": "2",
+      "title": "Vertragspartner und Vertragsschluss",
+      "clauses": [
+        {
+          "id": "2.1",
+          "text": "Vertragspartner der Kundin oder des Kundens ist ausschliesslich BIT."
+        },
+        {
+          "id": "2.2",
+          "text": "Anfragen über das Anfrageformular, per E-Mail, Telefon oder Messenger stellen keine Beauftragung dar. Mit dem Absenden einer Anfrage entsteht weder ein Vertrag noch eine Verpflichtung von BIT zur Bearbeitung."
+        },
+        {
+          "id": "2.3",
+          "text": "Ein Vertrag kommt zustande, wenn BIT eine Offerte oder Auftragsbestätigung in Textform übermittelt und die Kundin oder der Kunde diese in Textform annimmt. Als Textform gelten auch E-Mail und Messenger-Nachrichten."
+        },
+        {
+          "id": "2.4",
+          "text": "In der Offerte oder Auftragsbestätigung werden mindestens festgehalten: Leistungsgegenstand, Abgrenzung des Umfangs, Vergütung und – soweit vereinbart – zeitlicher Rahmen."
+        }
+      ]
+    },
+    {
+      "id": "leistungen-leistungsgrenzen",
+      "number": "3",
+      "title": "Leistungen und Leistungsgrenzen",
+      "clauses": [
+        {
+          "id": "3.1",
+          "text": "BIT erbringt Dienstleistungen im Bereich der Organisation und Bearbeitung klar abgegrenzter Aufgaben rund um Benutzerkonten, Zugänge, Microsoft-365-nahe Standardanfragen sowie alltägliche Arbeitsplatzthemen. Der konkrete Umfang ergibt sich aus der jeweiligen Vereinbarung."
+        },
+        {
+          "id": "3.2",
+          "text": "BIT schuldet ein sorgfältiges Tätigwerden, nicht einen bestimmten Erfolg. Auf das Vertragsverhältnis findet, soweit nichts anderes vereinbart ist, Auftragsrecht gemäss Art. 394 ff. OR Anwendung."
+        },
+        {
+          "id": "3.3",
+          "text": "Nicht Bestandteil der Leistungen sind insbesondere:",
+          "bullets": [
+            "Bereitschaftsdienste ausserhalb vereinbarter Zeiten sowie ein durchgehender Betrieb rund um die Uhr;",
+            "unbegrenzte Pauschalbetreuung ohne definierten Umfang;",
+            "Arbeiten ausserhalb des schriftlich bestätigten Auftragsumfangs;",
+            "Leistungen, für die BIT nicht über die erforderlichen Berechtigungen, Zugänge oder Fachkenntnisse verfügt;",
+            "die Übernahme der Gesamtverantwortung für die IT-Infrastruktur der Kundin oder des Kunden."
+          ]
+        },
+        {
+          "id": "3.4",
+          "text": "Reaktions- und Bearbeitungszeiten werden nur zugesichert, wenn sie ausdrücklich schriftlich vereinbart wurden. Ohne solche Vereinbarung erfolgt die Bearbeitung nach Möglichkeit und in angemessener Frist."
+        },
+        {
+          "id": "3.5",
+          "text": "Arbeiten werden grundsätzlich remote erbracht. Ist ein Einsatz vor Ort erforderlich, wird dieser vorab vereinbart und im Angebot separat ausgewiesen."
+        }
+      ]
+    },
+    {
+      "id": "beizug-dritter",
+      "number": "4",
+      "title": "Beizug Dritter",
+      "clauses": [
+        {
+          "id": "4.1",
+          "text": "BIT ist berechtigt, zur Erfüllung des Auftrags geeignete Dritte beizuziehen. BIT bleibt in diesem Fall Vertragspartner der Kundin oder des Kunden."
+        },
+        {
+          "id": "4.2",
+          "text": "Entstehen durch den Beizug Dritter zusätzliche Kosten, die nicht bereits vereinbart sind, werden diese vor Beauftragung mitgeteilt und bedürfen der Zustimmung der Kundin oder des Kunden in Textform."
+        },
+        {
+          "id": "4.3",
+          "text": "Besteht für eine Aufgabe keine geeignete Fachperson zur Verfügung, teilt BIT dies mit. Ein Anspruch auf Ausführung besteht in diesem Fall nicht."
+        }
+      ]
+    },
+    {
+      "id": "mitwirkung",
+      "number": "5",
+      "title": "Mitwirkung der Kundin oder des Kunden",
+      "clauses": [
+        {
+          "id": "5.1",
+          "text": "Die Kundin oder der Kunde stellt sicher, dass BIT die zur Auftragserfüllung notwendigen Informationen, Ansprechpersonen und Zugänge rechtzeitig zur Verfügung stehen."
+        },
+        {
+          "id": "5.2",
+          "text": "Die Kundin oder der Kunde benennt eine Person, die berechtigt ist, Änderungen an Benutzerkonten, Berechtigungen und Zugängen freizugeben. BIT führt sicherheitsrelevante Änderungen nur nach dokumentierter Freigabe dieser Person aus oder veranlasst sie."
+        },
+        {
+          "id": "5.3",
+          "text": "Die Kundin oder der Kunde ist für die Sicherung ihrer beziehungsweise seiner Daten verantwortlich. Vor Arbeiten, die Datenverlust verursachen können, ist eine aktuelle und geprüfte Datensicherung sicherzustellen. BIT schuldet keine Datensicherung, sofern dies nicht ausdrücklich vereinbart ist."
+        },
+        {
+          "id": "5.4",
+          "text": "Die Kundin oder der Kunde stellt sicher, dass die zur Verfügung gestellten Zugänge rechtmässig erteilt sind und dass die Weitergabe von Daten an BIT zulässig ist."
+        },
+        {
+          "id": "5.5",
+          "text": "Verzögerungen, die auf fehlende oder verspätete Mitwirkung zurückgehen, gehen nicht zulasten von BIT. Daraus entstehender Mehraufwand kann nach Aufwand verrechnet werden."
+        },
+        {
+          "id": "5.6",
+          "text": "Passwörter, Wiederherstellungscodes und besonders schützenswerte Personendaten sind nicht über Anfrageformular, E-Mail oder Messenger zu übermitteln."
+        }
+      ]
+    },
+    {
+      "id": "verguetung",
+      "number": "6",
+      "title": "Vergütung, Spesen und Zahlungsbedingungen",
+      "clauses": [
+        {
+          "id": "6.1",
+          "text": "Es gilt die in der Offerte oder Auftragsbestätigung vereinbarte Vergütung. Ohne abweichende Vereinbarung erfolgt die Abrechnung nach Aufwand zum jeweils gültigen Stundenansatz."
+        },
+        {
+          "id": "6.2",
+          "text": "Angaben auf der Website sind Richtwerte. Verbindlich sind ausschliesslich die schriftlich bestätigten Konditionen."
+        },
+        {
+          "id": "6.3",
+          "text": "Angefangene Zeiteinheiten werden gemäss der in der Offerte festgelegten Taktung verrechnet.",
+          "confirm": "Zeittaktung bei Abrechnung nach Aufwand"
+        },
+        {
+          "id": "6.4",
+          "text": "Reisezeit und Auslagen für Einsätze vor Ort werden nur verrechnet, wenn dies vorab vereinbart wurde."
+        },
+        {
+          "id": "6.5",
+          "text": "Rechnungen sind innert 30 Tagen ab Rechnungsdatum ohne Abzug zahlbar. Nach Ablauf dieser Frist gerät die Kundin oder der Kunde ohne weitere Mahnung in Verzug; es wird ein Verzugszins von 5 % pro Jahr gemäss Art. 104 Abs. 1 OR geschuldet."
+        },
+        {
+          "id": "6.6",
+          "text": "BIT ist berechtigt, Vorauszahlung oder Teilzahlungen zu verlangen, insbesondere bei Erstaufträgen."
+        },
+        {
+          "id": "6.7",
+          "text": "Sämtliche Beträge verstehen sich in Schweizer Franken. Solange BIT nicht mehrwertsteuerpflichtig ist, wird keine Mehrwertsteuer ausgewiesen; ein entsprechender Hinweis erfolgt auf der Rechnung."
+        }
+      ]
+    },
+    {
+      "id": "termine",
+      "number": "7",
+      "title": "Termine und Verzögerungen",
+      "clauses": [
+        {
+          "id": "7.1",
+          "text": "Angegebene Termine sind unverbindlich, sofern sie nicht ausdrücklich schriftlich als verbindlich vereinbart wurden."
+        },
+        {
+          "id": "7.2",
+          "text": "Kann ein vereinbarter Termin nicht eingehalten werden, informiert BIT ohne Verzug und stimmt das weitere Vorgehen ab."
+        }
+      ]
+    },
+    {
+      "id": "vertraulichkeit",
+      "number": "8",
+      "title": "Vertraulichkeit",
+      "clauses": [
+        {
+          "id": "8.1",
+          "text": "BIT behandelt alle im Rahmen der Zusammenarbeit erlangten Informationen vertraulich und verwendet sie ausschliesslich zur Auftragserfüllung."
+        },
+        {
+          "id": "8.2",
+          "text": "Die Vertraulichkeitspflicht gilt auch nach Beendigung der Zusammenarbeit fort."
+        },
+        {
+          "id": "8.3",
+          "text": "Werden Dritte beigezogen, werden diese in gleichem Umfang zur Vertraulichkeit verpflichtet."
+        },
+        {
+          "id": "8.4",
+          "text": "BIT ist berechtigt, die Zusammenarbeit in anonymisierter Form als Referenz zu beschreiben, sofern die Kundin oder der Kunde ausdrücklich in Textform zugestimmt hat."
+        }
+      ]
+    },
+    {
+      "id": "datenschutz",
+      "number": "9",
+      "title": "Datenschutz",
+      "clauses": [
+        {
+          "id": "9.1",
+          "text": "BIT bearbeitet Personendaten nach Massgabe des Schweizer Datenschutzgesetzes. Einzelheiten sind der Datenschutzerklärung auf boksitsupport.ch zu entnehmen."
+        },
+        {
+          "id": "9.2",
+          "text": "Soweit BIT im Auftrag der Kundin oder des Kunden Personendaten bearbeitet, erfolgt dies ausschliesslich im Rahmen der Weisungen und des vereinbarten Zwecks. Auf Wunsch wird eine ergänzende Vereinbarung zur Auftragsbearbeitung abgeschlossen."
+        }
+      ]
+    },
+    {
+      "id": "haftung",
+      "number": "10",
+      "title": "Haftung",
+      "section_confirm": "Besteht eine Betriebshaftpflicht?",
+      "clauses": [
+        {
+          "id": "10.1",
+          "text": "BIT haftet für Schäden, die auf Absicht oder grober Fahrlässigkeit beruhen. Diese Haftung kann nicht wegbedungen werden (Art. 100 Abs. 1 OR)."
+        },
+        {
+          "id": "10.2",
+          "text": "Für leichte Fahrlässigkeit ist die Haftung im gesetzlich zulässigen Rahmen ausgeschlossen."
+        },
+        {
+          "id": "10.3",
+          "text": "Soweit gesetzlich zulässig, ist die Haftung auf den Betrag der für den betreffenden Auftrag vereinbarten Vergütung beschränkt."
+        },
+        {
+          "id": "10.4",
+          "text": "Ausgeschlossen ist, soweit gesetzlich zulässig, die Haftung für indirekte Schäden und Folgeschäden, insbesondere für entgangenen Gewinn, Betriebsunterbruch, Datenverlust und Ansprüche Dritter."
+        },
+        {
+          "id": "10.5",
+          "text": "BIT haftet nicht für Schäden, die auf fehlender oder unvollständiger Datensicherung der Kundin oder des Kunden beruhen."
+        },
+        {
+          "id": "10.6",
+          "text": "BIT haftet nicht für Leistungen, Produkte oder Ausfälle Dritter, insbesondere von Software- und Cloud-Anbietern, Netzbetreibern und Hardwareherstellern."
+        },
+        {
+          "id": "10.7",
+          "text": "Beanstandungen sind unverzüglich nach Kenntnis, spätestens jedoch innert 10 Tagen nach Leistungserbringung, in Textform mitzuteilen."
+        }
+      ]
+    },
+    {
+      "id": "rechte",
+      "number": "11",
+      "title": "Rechte an Arbeitsergebnissen",
+      "clauses": [
+        {
+          "id": "11.1",
+          "text": "Dokumentationen, Auswertungen und Berichte, die im Rahmen eines Auftrags erstellt und vergütet wurden, dürfen von der Kundin oder dem Kunden im eigenen Unternehmen frei verwendet werden."
+        },
+        {
+          "id": "11.2",
+          "text": "An Vorlagen, Checklisten, Prüfrastern und Arbeitsmethoden von BIT verbleiben sämtliche Rechte bei BIT."
+        }
+      ]
+    },
+    {
+      "id": "dauer",
+      "number": "12",
+      "title": "Dauer und Beendigung",
+      "clauses": [
+        {
+          "id": "12.1",
+          "text": "Einzelaufträge enden mit der vollständigen Erbringung der vereinbarten Leistung."
+        },
+        {
+          "id": "12.2",
+          "text": "Auf unbestimmte Zeit abgeschlossene Vereinbarungen können von beiden Seiten unter Einhaltung einer Frist von 30 Tagen auf das Monatsende in Textform gekündigt werden, sofern nichts anderes vereinbart ist."
+        },
+        {
+          "id": "12.3",
+          "text": "Das Recht zum jederzeitigen Widerruf beziehungsweise zur jederzeitigen Kündigung nach Art. 404 OR bleibt vorbehalten. Bereits erbrachte Leistungen sind in jedem Fall zu vergüten."
+        },
+        {
+          "id": "12.4",
+          "text": "Bei Beendigung der Zusammenarbeit werden auf Wunsch die vorhandenen Dokumentationen in üblicher Form übergeben."
+        }
+      ]
+    },
+    {
+      "id": "aenderungen",
+      "number": "13",
+      "title": "Änderungen der AGB",
+      "clauses": [
+        {
+          "id": "13.1",
+          "text": "BIT kann diese AGB anpassen. Für bereits erteilte Aufträge gilt die bei Vertragsschluss gültige Fassung."
+        },
+        {
+          "id": "13.2",
+          "text": "Bei laufenden Vereinbarungen werden Änderungen mindestens 30 Tage im Voraus in Textform mitgeteilt. Widerspricht die Kundin oder der Kunde nicht innert dieser Frist, gelten die geänderten Bedingungen als angenommen."
+        }
+      ]
+    },
+    {
+      "id": "schlussbestimmungen",
+      "number": "14",
+      "title": "Schlussbestimmungen",
+      "clauses": [
+        {
+          "id": "14.1",
+          "text": "Sollte eine Bestimmung dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Die unwirksame Bestimmung ist durch eine zulässige Regelung zu ersetzen, die dem wirtschaftlichen Zweck am nächsten kommt."
+        },
+        {
+          "id": "14.2",
+          "text": "Änderungen und Ergänzungen bedürfen der Textform."
+        },
+        {
+          "id": "14.3",
+          "text": "Die Abtretung von Ansprüchen aus dem Vertragsverhältnis an Dritte bedarf der vorgängigen Zustimmung der anderen Partei."
+        },
+        {
+          "id": "14.4",
+          "text": "Es gilt ausschliesslich Schweizer Recht unter Ausschluss kollisionsrechtlicher Bestimmungen und des Übereinkommens der Vereinten Nationen über Verträge über den internationalen Warenkauf (CISG)."
+        },
+        {
+          "id": "14.5",
+          "text": "Ausschliesslicher Gerichtsstand ist Zürich, Schweiz."
+        }
+      ]
+    }
+  ]
+}

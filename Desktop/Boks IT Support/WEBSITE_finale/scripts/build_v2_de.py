@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE_CONFIG = ROOT / "config" / "site.json"
 BASE_TEMPLATE = ROOT / "templates" / "v2" / "base.html"
 V2_FILES = {"de": ROOT / "config" / "de_v2.json", "en": ROOT / "config" / "en_v2.json"}
+AGB_FILES = {"de": ROOT / "config" / "agb_de.json", "en": ROOT / "config" / "agb_en.json"}
 
 # Shared page keys → per-language path (for hreflang + language switch)
 PAGE_PATHS: dict[str, dict[str, str]] = {
@@ -26,6 +27,7 @@ PAGE_PATHS: dict[str, dict[str, str]] = {
     "inquiry": {"de": "/de/anfrage/", "en": "/en/inquiry/"},
     "market-access": {"de": "/de/market-access/", "en": "/en/market-access/"},
     "legal": {"de": "/de/legal/", "en": "/en/legal/"},
+    "terms": {"de": "/de/agb/", "en": "/en/terms/"},
     "svc-users-access": {
         "de": "/de/leistungen/benutzer-und-zugaenge/",
         "en": "/en/services/users-and-access/",
@@ -179,6 +181,11 @@ def load_site() -> dict[str, Any]:
 def load_v2(language: str) -> dict[str, Any]:
     """Load Zustand-A content for one language."""
     return json.loads(V2_FILES[language].read_text(encoding="utf-8"))
+
+
+def load_agb(language: str) -> dict[str, Any]:
+    """Load AGB / Terms content (DE verbatim source; EN translation)."""
+    return json.loads(AGB_FILES[language].read_text(encoding="utf-8"))
 
 
 def write_text(path: Path, content: str) -> None:
@@ -464,6 +471,8 @@ def render_page(
         footer_channels=footer_channels_html(site, language),
         inquiry_href=escape(v2["cta_primary_href"]),
         inquiry_label=escape(v2["inquiry_label"]),
+        terms_href=escape(PAGE_PATHS["terms"][language]),
+        terms_label=escape(v2.get("terms_label") or ("AGB" if language == "de" else "Terms")),
         legal_label=escape(v2["legal_label"]),
         extra_head=extra_head,
         extra_scripts=extra_scripts,
@@ -983,8 +992,10 @@ def inquiry_main(v2: dict[str, Any], site: dict[str, Any] | None = None) -> str:
         '                <label class="form-check">\n'
         '                    <input name="privacy" type="checkbox" required>\n'
         f"                    <span>{escape(iq['privacy_label'])} "
-        f'(<a href="/{lang}/legal/">{escape(v2["legal_label"])}</a>)</span>\n'
+        f'(<a href="/{lang}/legal/#{escape("privacy")}">{escape(v2["legal_label"])}</a>)</span>\n'
         "                </label>\n"
+        f'                <p class="form-terms-note muted">{escape(iq.get("terms_note") or "")} '
+        f'(<a href="{escape(PAGE_PATHS["terms"][lang])}">{escape(v2.get("terms_label") or ("AGB" if lang == "de" else "Terms"))}</a>)</p>\n'
         '                <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">\n'
         f'                <button class="button button-primary" type="submit"{submit_disabled}>'
         f'{escape(iq["submit"])}</button>\n'
@@ -993,6 +1004,76 @@ def inquiry_main(v2: dict[str, Any], site: dict[str, Any] | None = None) -> str:
         "        </div></section>\n"
         + cta_block(v2)
     )
+
+def agb_main(v2: dict[str, Any], agb: dict[str, Any]) -> str:
+    """Render AGB / Terms page: TOC + numbered sections, no accordion."""
+    toc_items = []
+    for section in agb["sections"]:
+        toc_items.append(
+            f'                    <li><a href="#{escape(section["id"])}">'
+            f'{escape(section["number"])}. {escape(section["title"])}</a></li>'
+        )
+    blocks = []
+    for section in agb["sections"]:
+        confirm = section.get("section_confirm")
+        confirm_html = (
+            f'                    <!-- BESTÄTIGUNG ERFORDERLICH: {confirm} -->\n'
+            if confirm
+            else ""
+        )
+        clause_html = []
+        for clause in section["clauses"]:
+            clause_confirm = clause.get("confirm")
+            if clause_confirm:
+                clause_html.append(
+                    f'                    <!-- BESTÄTIGUNG ERFORDERLICH: {clause_confirm} -->\n'
+                )
+            clause_html.append(
+                f'                    <p class="agb-clause" id="absatz-{escape(clause["id"])}">'
+                f'<span class="agb-clause-id">{escape(clause["id"])}</span> '
+                f'{escape(clause["text"])}</p>\n'
+            )
+            bullets = clause.get("bullets") or []
+            if bullets:
+                items = "".join(f"<li>{escape(item)}</li>" for item in bullets)
+                clause_html.append(f"                    <ul class=\"agb-list\">{items}</ul>\n")
+        blocks.append(
+            f'                <section class="agb-section" id="{escape(section["id"])}" '
+            f'aria-labelledby="agb-{escape(section["id"])}-title">\n'
+            f"{confirm_html}"
+            f'                    <h2 id="agb-{escape(section["id"])}-title">'
+            f'{escape(section["number"])}. {escape(section["title"])}</h2>\n'
+            f"{''.join(clause_html)}"
+            "                </section>\n"
+        )
+    back_label = "Zurück zur Website" if v2["language"] == "de" else "Back to the website"
+    return (
+        '        <section class="section legal-section agb-page">\n'
+        '            <div class="container legal-content">\n'
+        f'                <h1>{escape(agb["h1"])}</h1>\n'
+        f'                <p class="agb-identity"><strong>{escape(agb["brand_line"])}</strong><br>\n'
+        f'                {escape(agb["entity_line"])}<br>\n'
+        f'                {escape(agb["address_line"])}<br>\n'
+        f'                {escape(agb["contact_line"])}</p>\n'
+        f'                <p class="legal-updated agb-stand">{escape(agb["stand"])}</p>\n'
+        f'                <nav class="agb-toc" aria-label="{escape(agb["toc_label"])}">\n'
+        f'                    <h2 class="agb-toc-title">{escape(agb["toc_label"])}</h2>\n'
+        "                    <ol>\n"
+        f"{chr(10).join(toc_items)}\n"
+        "                    </ol>\n"
+        "                </nav>\n"
+        '                <div class="agb-document">\n'
+        f"{''.join(blocks)}"
+        "                </div>\n"
+        f'                <p class="legal-updated">{escape(agb["stand"])}</p>\n'
+        '                <p class="legal-back">\n'
+        f'                    <a class="button button-secondary" href="/{escape(v2["language"])}/">'
+        f"{escape(back_label)}</a>\n"
+        "                </p>\n"
+        "            </div>\n"
+        "        </section>\n"
+    )
+
 
 def market_access_main(v2: dict[str, Any]) -> str:
     """Market Access notice: IT focus; former market offer not continued."""
@@ -1018,7 +1099,7 @@ def write_sitemap(site: dict[str, Any], routes: list[str]) -> None:
     for route in sorted(set(routes)):
         entry = ElementTree.SubElement(urlset, f"{{{namespace}}}url")
         ElementTree.SubElement(entry, f"{{{namespace}}}loc").text = site["base_url"] + route
-        ElementTree.SubElement(entry, f"{{{namespace}}}lastmod").text = "2026-08-07"
+        ElementTree.SubElement(entry, f"{{{namespace}}}lastmod").text = "2026-08-08"
     tree = ElementTree.ElementTree(urlset)
     ElementTree.indent(tree, space="  ")
     tree.write(ROOT / "sitemap.xml", encoding="utf-8", xml_declaration=True)
@@ -1122,6 +1203,10 @@ def write_redirects() -> None:
         "/rechtliches /de/legal/ 301",
         "/legal /de/legal/ 301",
         "/legal.html /de/legal/ 301",
+        "/agb /de/agb/ 301",
+        "/agb/ /de/agb/ 301",
+        "/terms /en/terms/ 301",
+        "/terms/ /en/terms/ 301",
         "/about /de/ueber-bit/ 301",
         "/about.html /de/ueber-bit/ 301",
         "/de/about /de/ueber-bit/ 301",
@@ -1144,6 +1229,8 @@ def write_redirects() -> None:
         "/kontakt-en.html /en/inquiry/ 302",
         "/legal-en /en/legal/ 302",
         "/legal-en.html /en/legal/ 302",
+        "/terms-en /en/terms/ 302",
+        "/terms-en.html /en/terms/ 302",
         "",
         "# Force non-www on Cloudflare Pages",
         "https://www.boksitsupport.ch/* https://boksitsupport.ch/:splat 301",
@@ -1246,6 +1333,18 @@ def build_language(language: str, site: dict[str, Any], routes: list[str]) -> No
         ),
     ]
 
+    agb = load_agb(language)
+    pages.append(
+        (
+            "terms",
+            PAGE_PATHS["terms"][language],
+            agb["meta_title"],
+            agb["meta_description"],
+            agb_main(v2, agb),
+            "terms",
+        )
+    )
+
     for page_key, path, title, desc, main, page_id in pages:
         extra_scripts = ""
         extra_head = ""
@@ -1253,6 +1352,8 @@ def build_language(language: str, site: dict[str, Any], routes: list[str]) -> No
             extra_scripts = (
                 '    <script type="module" src="/assets/js/inquiry-form.js?v=10"></script>\n'
             )
+        if page_id == "terms":
+            extra_head = '    <meta name="robots" content="index,follow">\n'
         if page_id in {"home", "services", "about", "process", "examples", "audience"}:
             extra_head = professional_service_json_ld(site)
         if page_id == "faq":
@@ -1319,9 +1420,10 @@ def build_v2() -> list[str]:
     # Root must never ship dual-gateway or full home HTML; middleware/_redirects 301 → /de/.
     write_text(ROOT / "index.html", ROOT_REDIRECT_HTML)
 
-    # Include legal pages in sitemap (built by legacy renderer)
+    # Include legal + AGB/Terms pages in sitemap
     for language in active_languages(site):
         routes.append(f"/{language}/legal/")
+        routes.append(PAGE_PATHS["terms"][language])
 
     write_sitemap(site, routes)
     write_redirects()

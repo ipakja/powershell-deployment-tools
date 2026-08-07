@@ -430,7 +430,8 @@
     "submit": "Send inquiry",
     "success": "Thank you. Your details have been received. Reply usually within two working days.",
     "error": "The inquiry could not be sent. Please try again later or email admin@boksitsupport.ch.",
-    "privacy_label": "I have read the privacy notice and consent to processing of these details for needs assessment."
+    "privacy_label": "I have read the privacy notice and consent to processing of these details for needs assessment.",
+    "terms_note": "The Terms and Conditions apply."
   },
   "closing": {
     "title": "Does your need fit BIT?",
@@ -556,5 +557,6 @@
       "Starting when:"
     ]
   },
-  "travel_line": "Most requests are handled remotely. If an on-site appointment is required, it is agreed in advance and listed separately in the quote — Zurich area, with no hidden travel flat fee."
+  "travel_line": "Most requests are handled remotely. If an on-site appointment is required, it is agreed in advance and listed separately in the quote — Zurich area, with no hidden travel flat fee.",
+  "terms_label": "Terms"
 }

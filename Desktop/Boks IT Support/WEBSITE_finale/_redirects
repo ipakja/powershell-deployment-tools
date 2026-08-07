@@ -93,6 +93,10 @@
 /rechtliches /de/legal/ 301
 /legal /de/legal/ 301
 /legal.html /de/legal/ 301
+/agb /de/agb/ 301
+/agb/ /de/agb/ 301
+/terms /en/terms/ 301
+/terms/ /en/terms/ 301
 /about /de/ueber-bit/ 301
 /about.html /de/ueber-bit/ 301
 /de/about /de/ueber-bit/ 301
@@ -115,6 +119,8 @@
 /kontakt-en.html /en/inquiry/ 302
 /legal-en /en/legal/ 302
 /legal-en.html /en/legal/ 302
+/terms-en /en/terms/ 302
+/terms-en.html /en/terms/ 302
 
 # Force non-www on Cloudflare Pages
 https://www.boksitsupport.ch/* https://boksitsupport.ch/:splat 301

@@ -531,6 +531,8 @@ class SiteRenderer:
                 "footer_note": "",
                 "inquiry_href": f"/{language}/",
                 "inquiry_label": "Contact",
+                "terms_href": "/de/agb/" if language == "de" else "/en/terms/",
+                "terms_label": "AGB" if language == "de" else "Terms",
                 "footer_legal": "Legal",
                 "footer_city": "Zürich" if language == "de" else "Zurich",
             }
@@ -555,6 +557,10 @@ class SiteRenderer:
             "footer_note": escape(footer_note),
             "inquiry_href": escape(v2["cta_primary_href"]),
             "inquiry_label": escape(v2["inquiry_label"]),
+            "terms_href": escape(
+                "/de/agb/" if language == "de" else "/en/terms/"
+            ),
+            "terms_label": escape(v2.get("terms_label") or ("AGB" if language == "de" else "Terms")),
             "footer_legal": escape(v2.get("legal_label") or "Legal"),
             "footer_city": escape("Zürich" if language == "de" else "Zurich"),
         }
@@ -623,6 +629,8 @@ class SiteRenderer:
             "footer_note": chrome["footer_note"],
             "inquiry_href": chrome["inquiry_href"],
             "inquiry_label": chrome["inquiry_label"],
+            "terms_href": chrome["terms_href"],
+            "terms_label": chrome["terms_label"],
             "footer_legal": chrome["footer_legal"],
         }
         return self.templates.get("legal.html").substitute(context)

@@ -7,7 +7,7 @@ Zustand A: IT-Support für kleine Unternehmen ohne eigene IT.
 
 - Semantisches HTML5 / CSS / JS (kein Framework)
 - Python-Build: `scripts/build_site.py` + `scripts/build_v2_de.py`
-- Content: `config/de_v2.json`, `config/en_v2.json`, `locales/de.json`, `locales/en.json`
+- Content: `config/de_v2.json`, `config/en_v2.json`, `config/agb_de.json`, `config/agb_en.json`, `locales/de.json`, `locales/en.json`
 - Cloudflare Pages (`website`) + Pages Function `/api/inquiry`
 - Lead-Speicherung: **Cloudflare KV** (`INQUIRY_LOG`, TTL ~12 Monate)
 - Optional: Webhook (`INQUIRY_WEBHOOK_URL`), später Resend (`RESEND_API_KEY`)
@@ -28,6 +28,7 @@ Zustand A: IT-Support für kleine Unternehmen ohne eigene IT.
 | `/de/faq/`, `/en/faq/` | FAQ |
 | `/de/anfrage/`, `/en/inquiry/` | Formular (primärer CTA) |
 | `/de/legal/`, `/en/legal/` | Impressum & Datenschutz |
+| `/de/agb/`, `/en/terms/` | AGB / Terms and Conditions |
 
 FR / IT / SR / BS / HR → **302** auf `/de/`.  
 Alte Market-/Hospitality-URLs → **301** auf aktuelle Seiten.

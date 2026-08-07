@@ -304,7 +304,7 @@ def test_inquiry_direct_path_whatsapp_and_mailto() -> None:
     assert "Per WhatsApp schildern" in cta_de.group(0)
     assert cta_en and "button-whatsapp" in cta_en.group(0)
     assert "Describe via WhatsApp" in cta_en.group(0)
-    assert "universal.css?v=15" in de
+    assert "universal.css?v=16" in de
     assert (build_site.ROOT / "docs" / "INQUIRY_DIRECT.md").is_file()
 
 
@@ -701,4 +701,72 @@ def test_phase2_markers_partner_examples_process_list() -> None:
     notify = (build_site.ROOT / "docs" / "INQUIRY_NOTIFY.md").read_text(encoding="utf-8")
     assert "/api/inquiry-notify-test" in notify
     assert "INQUIRY_VIEWER" in notify or "HTML" in notify
+
+
+def test_agb_and_terms_pages() -> None:
+    """Full AGB DE + EN Terms: TOC, stand, footer, sitemap, no JSON-LD, confirm markers."""
+    de = read("de/agb/index.html")
+    en = read("en/terms/index.html")
+
+    assert "<title>Allgemeine Geschäftsbedingungen (AGB) | BIT</title>" in de
+    assert 'meta name="robots" content="index,follow"' in de
+    assert "Stand: August 2026" in de
+    assert 'class="agb-toc"' in de
+    assert 'href="#geltungsbereich"' in de
+    assert "1. Geltungsbereich" in de
+    assert "14. Schlussbestimmungen" in de
+    assert "Angefangene Zeiteinheiten werden gemäss der in der Offerte festgelegten Taktung verrechnet." in de
+    assert "<!-- BESTÄTIGUNG ERFORDERLICH: Zeittaktung bei Abrechnung nach Aufwand -->" in de
+    assert "<!-- BESTÄTIGUNG ERFORDERLICH: Besteht eine Betriebshaftpflicht? -->" in de
+    assert "Schaffhauserstrasse 457" in de
+    assert "Einzelunternehmen" in de
+    assert "application/ld+json" not in de
+    assert 'hreflang="en"' in de and 'href="https://boksitsupport.ch/en/terms/"' in de
+    assert 'hreflang="de-CH"' in de and 'href="https://boksitsupport.ch/de/agb/"' in de
+    assert 'class="main-nav"' in de
+    nav = re.search(r'<nav class="main-nav".*?</nav>', de, re.S).group(0)
+    assert "/de/agb/" not in nav
+    assert "<details" not in de and "<details" not in en
+    assert "accordion" not in de.lower() and "accordion" not in en.lower()
+
+    assert "<title>Terms and Conditions | BIT</title>" in en
+    assert 'meta name="robots" content="index,follow"' in en
+    assert "As of: August 2026" in en
+    assert "Submitting an inquiry creates neither a contract" in en
+    assert "exclusive place of jurisdiction is Zurich" in en
+    assert "application/ld+json" not in en
+    assert 'href="https://boksitsupport.ch/de/agb/"' in en
+
+    home = read("de/index.html")
+    footer = re.search(r'<div class="footer-links">.*?</div>', home, re.S).group(0)
+    assert 'href="/de/agb/">AGB</a>' in footer
+    assert 'href="/de/legal/">Impressum &amp; Datenschutz</a>' in footer
+
+    en_home = read("en/index.html")
+    en_footer = re.search(r'<div class="footer-links">.*?</div>', en_home, re.S).group(0)
+    assert 'href="/en/terms/">Terms</a>' in en_footer
+
+    legal = read("de/legal/index.html")
+    legal_footer = re.search(r'<div class="footer-links">.*?</div>', legal, re.S).group(0)
+    assert 'href="/de/agb/">AGB</a>' in legal_footer
+
+    inquiry = read("de/anfrage/index.html")
+    assert 'name="privacy"' in inquiry
+    assert 'href="/de/legal/#privacy"' in inquiry
+    assert 'href="/de/agb/"' in inquiry
+    assert "Es gelten die Allgemeinen Geschäftsbedingungen." in inquiry
+    assert "Ich habe die Datenschutzerklärung gelesen" in inquiry
+
+    en_inquiry = read("en/inquiry/index.html")
+    assert 'href="/en/legal/#privacy"' in en_inquiry
+    assert 'href="/en/terms/"' in en_inquiry
+    assert "The Terms and Conditions apply." in en_inquiry
+
+    sitemap = (build_site.ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    assert "https://boksitsupport.ch/de/agb/" in sitemap
+    assert "https://boksitsupport.ch/en/terms/" in sitemap
+
+    assert (build_site.ROOT / "docs" / "AGB_ABGLEICH.md").is_file()
+    assert (build_site.ROOT / "config" / "agb_de.json").is_file()
+    assert (build_site.ROOT / "config" / "agb_en.json").is_file()
 

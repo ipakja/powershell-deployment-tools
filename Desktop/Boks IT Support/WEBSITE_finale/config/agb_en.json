@@ -1,0 +1,348 @@
+{
+  "meta_title": "Terms and Conditions | BIT",
+  "meta_description": "Terms and conditions of BIT – Boks IT Support, Zurich. As of August 2026.",
+  "h1": "Terms and Conditions",
+  "brand_line": "BIT – Boks IT Support",
+  "entity_line": "Stefan Bogdanovic, sole proprietorship",
+  "address_line": "Schaffhauserstrasse 457, 8052 Zurich",
+  "contact_line": "admin@boksitsupport.ch · +41 78 263 27 01",
+  "stand": "As of: August 2026",
+  "toc_label": "Contents",
+  "sections": [
+    {
+      "id": "scope",
+      "number": "1",
+      "title": "Scope",
+      "clauses": [
+        {
+          "id": "1.1",
+          "text": "These Terms and Conditions apply to all services that BIT – Boks IT Support, owned by Stefan Bogdanovic (hereinafter «BIT»), provides to customers."
+        },
+        {
+          "id": "1.2",
+          "text": "Services are offered exclusively to companies, self-employed professionals and organisations. Contracts with private individuals for private purposes are not concluded."
+        },
+        {
+          "id": "1.3",
+          "text": "Diverging or supplementary terms of the customer apply only if BIT agrees to them in writing. This also applies where BIT provides a service without reservation despite knowledge of such terms."
+        },
+        {
+          "id": "1.4",
+          "text": "The version of these Terms in force at the time the contract is concluded is decisive."
+        }
+      ]
+    },
+    {
+      "id": "contracting-party-formation",
+      "number": "2",
+      "title": "Contracting party and formation of contract",
+      "clauses": [
+        {
+          "id": "2.1",
+          "text": "The sole contracting party of the customer is BIT."
+        },
+        {
+          "id": "2.2",
+          "text": "Inquiries via the inquiry form, email, phone or messaging apps do not constitute an engagement. Submitting an inquiry creates neither a contract nor an obligation for BIT to process the request."
+        },
+        {
+          "id": "2.3",
+          "text": "A contract is formed when BIT issues a quote or order confirmation in text form and the customer accepts it in text form. Email and messaging messages also qualify as text form."
+        },
+        {
+          "id": "2.4",
+          "text": "The quote or order confirmation records at least: the subject of the services, the scope boundaries, the remuneration and — where agreed — the timeframe."
+        }
+      ]
+    },
+    {
+      "id": "services-limits",
+      "number": "3",
+      "title": "Services and service limits",
+      "clauses": [
+        {
+          "id": "3.1",
+          "text": "BIT provides services in organising and handling clearly scoped tasks relating to user accounts, access, Microsoft 365-related standard requests and everyday workplace topics. The concrete scope follows from the respective agreement."
+        },
+        {
+          "id": "3.2",
+          "text": "BIT owes careful performance of the mandate, not a specific result. Unless otherwise agreed, the Swiss Code of Obligations rules on mandates (Art. 394 et seq. CO) apply."
+        },
+        {
+          "id": "3.3",
+          "text": "In particular, the following are not part of the services:",
+          "bullets": [
+            "on-call cover outside agreed times or round-the-clock operations;",
+            "unlimited flat-rate support without a defined scope;",
+            "work outside the written confirmed engagement scope;",
+            "services for which BIT lacks the required permissions, access or expertise;",
+            "assuming overall responsibility for the customer’s IT infrastructure."
+          ]
+        },
+        {
+          "id": "3.4",
+          "text": "Response and handling times are only committed where expressly agreed in writing. Without such agreement, work is handled as reasonably practicable and within a reasonable period."
+        },
+        {
+          "id": "3.5",
+          "text": "Work is generally delivered remotely. Where an on-site engagement is required, it is agreed in advance and listed separately in the quote."
+        }
+      ]
+    },
+    {
+      "id": "third-parties",
+      "number": "4",
+      "title": "Involvement of third parties",
+      "clauses": [
+        {
+          "id": "4.1",
+          "text": "BIT may involve suitable third parties to fulfil the engagement. In that case BIT remains the customer’s contracting party."
+        },
+        {
+          "id": "4.2",
+          "text": "Where involving third parties creates additional costs not already agreed, BIT informs the customer before placing the order; the customer’s consent in text form is required."
+        },
+        {
+          "id": "4.3",
+          "text": "If no suitable specialist is available for a task, BIT informs the customer. There is then no entitlement to performance of that task."
+        }
+      ]
+    },
+    {
+      "id": "customer-cooperation",
+      "number": "5",
+      "title": "Customer cooperation",
+      "clauses": [
+        {
+          "id": "5.1",
+          "text": "The customer ensures that BIT receives the information, contact persons and access needed to fulfil the engagement in good time."
+        },
+        {
+          "id": "5.2",
+          "text": "The customer designates a person authorised to approve changes to user accounts, permissions and access. BIT carries out or initiates security-relevant changes only after documented approval by that person."
+        },
+        {
+          "id": "5.3",
+          "text": "The customer is responsible for backing up their data. Before work that may cause data loss, a current and verified backup must be in place. BIT does not owe data backup unless expressly agreed."
+        },
+        {
+          "id": "5.4",
+          "text": "The customer ensures that any access provided is lawfully granted and that sharing data with BIT is permitted."
+        },
+        {
+          "id": "5.5",
+          "text": "Delays caused by missing or late cooperation are not attributable to BIT. Additional effort arising from this may be charged on a time basis."
+        },
+        {
+          "id": "5.6",
+          "text": "Passwords, recovery codes and specially protected personal data must not be submitted via the inquiry form, email or messaging apps."
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "number": "6",
+      "title": "Fees, expenses and payment terms",
+      "clauses": [
+        {
+          "id": "6.1",
+          "text": "The remuneration agreed in the quote or order confirmation applies. Unless otherwise agreed, billing is on a time basis at the then-current hourly rate."
+        },
+        {
+          "id": "6.2",
+          "text": "Figures on the website are guideline rates. Only the written confirmed terms are binding."
+        },
+        {
+          "id": "6.3",
+          "text": "Started time units are billed according to the increment set in the quote.",
+          "confirm": "Zeittaktung bei Abrechnung nach Aufwand"
+        },
+        {
+          "id": "6.4",
+          "text": "Travel time and expenses for on-site work are charged only where agreed in advance."
+        },
+        {
+          "id": "6.5",
+          "text": "Invoices are payable within 30 days of the invoice date without deduction. After that period the customer is in default without further reminder; default interest of 5% per year under Art. 104 para. 1 CO is owed."
+        },
+        {
+          "id": "6.6",
+          "text": "BIT may require advance payment or instalments, especially for first engagements."
+        },
+        {
+          "id": "6.7",
+          "text": "All amounts are in Swiss francs. While BIT is not subject to VAT, no VAT is shown; a corresponding note appears on the invoice."
+        }
+      ]
+    },
+    {
+      "id": "deadlines",
+      "number": "7",
+      "title": "Deadlines and delays",
+      "clauses": [
+        {
+          "id": "7.1",
+          "text": "Stated deadlines are non-binding unless expressly agreed in writing as binding."
+        },
+        {
+          "id": "7.2",
+          "text": "If an agreed deadline cannot be met, BIT informs without delay and aligns on next steps."
+        }
+      ]
+    },
+    {
+      "id": "confidentiality",
+      "number": "8",
+      "title": "Confidentiality",
+      "clauses": [
+        {
+          "id": "8.1",
+          "text": "BIT treats all information obtained in the course of the collaboration as confidential and uses it solely to fulfil the engagement."
+        },
+        {
+          "id": "8.2",
+          "text": "The confidentiality obligation continues after the collaboration ends."
+        },
+        {
+          "id": "8.3",
+          "text": "Where third parties are involved, they are bound to confidentiality to the same extent."
+        },
+        {
+          "id": "8.4",
+          "text": "BIT may describe the collaboration in anonymised form as a reference only if the customer has expressly consented in text form."
+        }
+      ]
+    },
+    {
+      "id": "data-protection",
+      "number": "9",
+      "title": "Data protection",
+      "clauses": [
+        {
+          "id": "9.1",
+          "text": "BIT processes personal data in accordance with the Swiss Data Protection Act. Details are set out in the privacy notice on boksitsupport.ch."
+        },
+        {
+          "id": "9.2",
+          "text": "Where BIT processes personal data on the customer’s behalf, this is done solely within the customer’s instructions and the agreed purpose. An additional data-processing agreement can be concluded on request."
+        }
+      ]
+    },
+    {
+      "id": "liability",
+      "number": "10",
+      "title": "Liability",
+      "section_confirm": "Besteht eine Betriebshaftpflicht?",
+      "clauses": [
+        {
+          "id": "10.1",
+          "text": "BIT is liable for damage caused by intent or gross negligence. This liability cannot be excluded (Art. 100 para. 1 CO)."
+        },
+        {
+          "id": "10.2",
+          "text": "Liability for slight negligence is excluded to the extent permitted by law."
+        },
+        {
+          "id": "10.3",
+          "text": "To the extent permitted by law, liability is limited to the amount of the remuneration agreed for the relevant engagement."
+        },
+        {
+          "id": "10.4",
+          "text": "To the extent permitted by law, liability for indirect and consequential damage is excluded, including lost profit, business interruption, data loss and third-party claims."
+        },
+        {
+          "id": "10.5",
+          "text": "BIT is not liable for damage resulting from missing or incomplete customer backups."
+        },
+        {
+          "id": "10.6",
+          "text": "BIT is not liable for third-party products, services or outages, including software and cloud providers, network operators and hardware manufacturers."
+        },
+        {
+          "id": "10.7",
+          "text": "Complaints must be notified in text form without delay after becoming aware and no later than 10 days after delivery of the service."
+        }
+      ]
+    },
+    {
+      "id": "work-product-rights",
+      "number": "11",
+      "title": "Rights in work product",
+      "clauses": [
+        {
+          "id": "11.1",
+          "text": "Documentation, assessments and reports created and paid for under an engagement may be used freely by the customer within their own organisation."
+        },
+        {
+          "id": "11.2",
+          "text": "All rights in BIT’s templates, checklists, review grids and working methods remain with BIT."
+        }
+      ]
+    },
+    {
+      "id": "term-termination",
+      "number": "12",
+      "title": "Term and termination",
+      "clauses": [
+        {
+          "id": "12.1",
+          "text": "Individual engagements end when the agreed service has been fully delivered."
+        },
+        {
+          "id": "12.2",
+          "text": "Agreements of indefinite duration may be terminated by either party in text form with 30 days’ notice to the end of a calendar month, unless otherwise agreed."
+        },
+        {
+          "id": "12.3",
+          "text": "The right of either party to revoke or terminate at any time under Art. 404 CO remains reserved. Services already performed must be paid for in any event."
+        },
+        {
+          "id": "12.4",
+          "text": "On ending the collaboration, existing documentation is handed over on request in a customary format."
+        }
+      ]
+    },
+    {
+      "id": "changes",
+      "number": "13",
+      "title": "Changes to these Terms",
+      "clauses": [
+        {
+          "id": "13.1",
+          "text": "BIT may update these Terms. For engagements already placed, the version in force at contract formation continues to apply."
+        },
+        {
+          "id": "13.2",
+          "text": "For ongoing agreements, changes are notified in text form at least 30 days in advance. If the customer does not object within that period, the amended terms are deemed accepted."
+        }
+      ]
+    },
+    {
+      "id": "final-provisions",
+      "number": "14",
+      "title": "Final provisions",
+      "clauses": [
+        {
+          "id": "14.1",
+          "text": "If any provision of these Terms is invalid, the remaining provisions remain effective. The invalid provision is to be replaced by a lawful rule that comes closest to the economic purpose."
+        },
+        {
+          "id": "14.2",
+          "text": "Amendments and additions require text form."
+        },
+        {
+          "id": "14.3",
+          "text": "Assignment of claims arising from the contractual relationship to third parties requires the other party’s prior consent."
+        },
+        {
+          "id": "14.4",
+          "text": "Swiss law applies exclusively, excluding conflict-of-law rules and the United Nations Convention on Contracts for the International Sale of Goods (CISG)."
+        },
+        {
+          "id": "14.5",
+          "text": "The exclusive place of jurisdiction is Zurich, Switzerland."
+        }
+      ]
+    }
+  ]
+}
