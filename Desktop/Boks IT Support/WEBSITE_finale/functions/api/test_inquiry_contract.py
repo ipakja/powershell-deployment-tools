@@ -38,6 +38,15 @@ def test_inquiry_kv_webhook_telegram_no_formsubmit() -> None:
     assert "hasPushNotify" in INQUIRY
     assert "export function buildNotifyText" in INQUIRY
     assert "export function hasPushNotify" in INQUIRY
+    assert "export function escapeHtml" in INQUIRY
+    assert "email_notification_status" in INQUIRY
+    assert "Neue BIT-Anfrage" in INQUIRY
+    assert "INQUIRY_FROM_EMAIL" in INQUIRY
+    assert "INQUIRY_NOTIFY_EMAIL" in INQUIRY
+    assert "invalid_content_type" in INQUIRY
+    assert "unexpected_fields" in INQUIRY
+    assert "rate_limited" in INQUIRY
+    assert "storage_failed" in INQUIRY
     assert "notified" in INQUIRY
     assert "notifyVias" in INQUIRY
     assert "INQUIRY_STORED_BUT_NOTIFY_FAILED" in INQUIRY
@@ -47,6 +56,21 @@ def test_inquiry_kv_webhook_telegram_no_formsubmit() -> None:
     assert '"employees"' in INQUIRY
     assert '"area"' in INQUIRY
     assert "OPTIONAL" in INQUIRY
+
+
+def test_client_sends_meta_and_endpoint() -> None:
+    assert 'fetch("/api/inquiry"' in CLIENT
+    assert "timestamp" in CLIENT
+    assert "source_page" in CLIENT
+    assert "showFailure" in CLIENT
+    assert "buildMailtoHref" in CLIENT
+    assert "formsubmit.co" not in CLIENT.lower()
+
+
+def test_viewer_shows_email_notification_status() -> None:
+    assert "email_notification_status" in INQUIRIES
+    assert "email_notification_status" in INQUIRIES_VIEW
+    assert "E-Mail-Benachrichtigung" in INQUIRIES_VIEW
 
 
 def test_health_reports_push_booleans_no_secrets() -> None:
@@ -126,7 +150,7 @@ def test_client_no_formsubmit() -> None:
     assert "FormSubmit" not in CLIENT
 
 
-def test_privacy_mentions_messaging_notify_no_secrets() -> None:
+def test_privacy_mentions_pipeline_no_secrets() -> None:
     for text in (DE_PRIVACY, EN_PRIVACY):
         assert "FormSubmit" not in text
         assert "formsubmit" not in text.lower()
@@ -134,11 +158,16 @@ def test_privacy_mentions_messaging_notify_no_secrets() -> None:
         assert "INQUIRY_NOTIFY_EMAIL" not in text
         assert "TELEGRAM_BOT_TOKEN" not in text
         assert "INQUIRY_WEBHOOK_URL" not in text
+        assert "RESEND_API_KEY" not in text
     assert "dauerhaft" not in DE_PRIVACY
     assert "zwölf Monate" in DE_PRIVACY or "zwoelf Monate" in DE_PRIVACY
     assert "twelve months" in EN_PRIVACY.lower()
-    assert "Messaging" in DE_PRIVACY or "Telegram" in DE_PRIVACY
-    assert "messaging" in EN_PRIVACY.lower() or "Telegram" in EN_PRIVACY
+    assert "Cloudflare-Endpunkt" in DE_PRIVACY or "Cloudflare" in DE_PRIVACY
+    assert "Cloudflare endpoint" in EN_PRIVACY or "Cloudflare" in EN_PRIVACY
+    assert "Resend" in DE_PRIVACY
+    assert "Resend" in EN_PRIVACY
+    assert "admin@boksitsupport.ch" in DE_PRIVACY
+    assert "admin@boksitsupport.ch" in EN_PRIVACY
 
 
 def test_notify_docs_and_list_script_exist() -> None:

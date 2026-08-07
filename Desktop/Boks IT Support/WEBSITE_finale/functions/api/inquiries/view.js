@@ -120,6 +120,7 @@ function summarizeFull(key, record) {
     start: fields.start || "",
     description: String(fields.description ?? "").trim(),
     language: fields.language || record?.language || "",
+    email_notification_status: record?.email_notification_status || "",
     missing: false,
     parseError: false,
     error: "",
@@ -146,6 +147,7 @@ function emptyItem(key, extra = {}) {
     start: "",
     description: "",
     language: "",
+    email_notification_status: "",
     missing: false,
     parseError: false,
     error: "",
@@ -245,6 +247,7 @@ function renderViewer(items, last7, newestIso, limit, nowMs) {
     ${plainRow("Bereich", item.area)}
     ${plainRow("Startzeitpunkt", item.start)}
     ${plainRow("Sprachversion", item.language)}
+    ${plainRow("E-Mail-Benachrichtigung", item.email_notification_status)}
   </dl>
   <p class="desc"><strong>Beschreibung</strong><br>${desc}</p>
   ${flagHtml}

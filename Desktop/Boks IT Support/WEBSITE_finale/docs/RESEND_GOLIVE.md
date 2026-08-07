@@ -1,82 +1,78 @@
 # Resend Go-Live – Checkliste für Stefan
 
-Ziel: E-Mail-Notify über Resend nur wenn gewünscht.  
-**Standard ops path bleibt:** KV + HTML-Viewer ([INQUIRY_VIEWER.md](./INQUIRY_VIEWER.md)).
+Ziel: E-Mail-Benachrichtigung für neue Anfragen an `admin@boksitsupport.ch`.  
+**Speicherpfad bleibt immer:** Website → Cloudflare `/api/inquiry` → KV `INQUIRY_LOG` (TTL ~12 Monate) → HTML-Viewer.
 
-Code-Absender (Default): `BIT Anfrage <anfrage@boksitsupport.ch>`  
-Empfänger (Default): `admin@boksitsupport.ch`  
-Diagnose: `GET /api/inquiry-health` → `{ hasResendKey, hasKv, hasWebhook, hasTelegram, hasPushNotify }` (nur Booleans).
+Ohne `RESEND_API_KEY` funktioniert das Formular weiterhin (KV + Viewer), aber **keine E-Mail**.
 
 ---
 
-## A. Ohne eigene Domain (nur Test)
+## Status-Hinweis
 
-Resend erlaubt `from: onboarding@resend.dev` **ohne** Verifikation der eigenen Domain, aber:
+Vor Go-Live prüfen:
 
-- Empfänger darf **nur** die E-Mail-Adresse des Resend-Account-Inhabers sein
-- Andere Empfänger → typisch **403** ([Resend KB](https://resend.com/docs/knowledge-base/403-error-resend-dev-domain))
-- Nicht für Produktion an beliebige Postfächer geeignet
-
-**Schritte (optionaler Kurztest):**
-
-1. Resend-Konto anlegen (Account-E-Mail = gewünschte Test-Inbox, z. B. `admin@boksitsupport.ch`)
-2. API-Key erzeugen
-3. Cloudflare Pages → Projekt **`website`** → Production Secrets:
-   - `RESEND_API_KEY`
-   - `INQUIRY_FROM` = `BIT Anfrage <onboarding@resend.dev>`
-   - optional `INQUIRY_TO` = Account-E-Mail
-4. Redeploy
-5. Formular-Test oder Health: `hasResendKey: true`
-
-**Erfolgskriterium:** Resend-Dashboard zeigt Delivered an die Account-E-Mail.
-
----
-
-## B. Produktion mit eigener Domain (DNS only)
-
-Für Versand von `@boksitsupport.ch` an beliebige Empfänger: Domain in Resend verifizieren.
-
-### 1. Domain in Resend
-
-1. https://resend.com → Domains → **Add Domain** → `boksitsupport.ch`
-2. Angezeigte Records notieren (DKIM, SPF-Hinweis, ggf. Ownership)
-
-### 2. DNS in Cloudflare — **Proxy DNS only (graue Wolke)**
-
-| Typ | Name | Value | Proxy |
-|-----|------|-------|-------|
-| `TXT` oder `CNAME` (DKIM) | exakt wie Resend (oft `resend._domainkey`) | Wert exakt aus Resend | **DNS only** (grau) |
-| `TXT` (SPF) | `@` / Root | Bestehendes SPF **erweitern** (Resend-`include:` ergänzen, nicht ersetzen) | **DNS only** |
-| optional Ownership `TXT` | wie Resend | Wert aus Dashboard | **DNS only** |
-| optional DMARC `TXT` | `_dmarc` | Policy nach Bedarf (später) | **DNS only** |
-
-**Wichtig:** Nie „Proxied“ (orange) für Mail-Verifikationsrecords. Cloudflare Email Routing / bestehendes SPF nicht löschen.
-
-**Erfolgskriterium:** Resend zeigt Domain **Verified**.
-
-### 3. Secrets + From-Adresse
-
-```powershell
-npx wrangler pages secret put RESEND_API_KEY --project-name website
-npx wrangler pages secret put INQUIRY_FROM --project-name website
-# Wert z. B. BIT Anfrage <anfrage@boksitsupport.ch>
+```text
+GET https://boksitsupport.ch/api/inquiry-health
+→ hasKv: true, hasResendKey: true  (Ziel)
 ```
 
-Redeploy Pflicht.
-
-### 4. Prüfen
-
-1. Formular-Submit
-2. Resend → Emails → Subject `BIT Anfrage: …`
-3. Pages Function Logs: `INQUIRY_RESEND_HTTP` / `INQUIRY_RESEND_FAILED`
+`hasResendKey: false` bedeutet: Codepfad ist bereit, Secret fehlt → E-Mail-Test = FAIL.
 
 ---
 
-## Kurz: Zustellungslogik
+## A. Secrets setzen (Production, Projekt `website`)
 
-1. Client POSTet `/api/inquiry`
-2. KV-Schreiben = primärer Erfolgspfad (wenn Binding vorhanden)
-3. Resend/Telegram/Webhook danach optional; Notify-Fehler setzen den Besuchererfolg nicht zurück, wenn KV ok ist
-4. Ohne jeden konfigurierten Pfad → **503**
+```powershell
+cd "C:\Users\41765\Desktop\Boks IT Support\WEBSITE_finale"
 
-**Empfehlung:** Viewer-Bookmark zuerst; Resend nach Domain-Verify ergänzen.
+npx wrangler pages secret put RESEND_API_KEY --project-name website
+# Wert: Resend API Key (re_…)
+
+npx wrangler pages secret put INQUIRY_FROM --project-name website
+# Wert z. B.: BIT Anfrage <anfrage@boksitsupport.ch>
+# Alias ebenfalls unterstützt: INQUIRY_FROM_EMAIL
+
+# Optional Empfänger (Default ist admin@boksitsupport.ch):
+# npx wrangler pages secret put INQUIRY_NOTIFY_EMAIL --project-name website
+# Alias ebenfalls unterstützt: INQUIRY_TO
+```
+
+Danach **Redeploy** (Pages Secrets greifen erst nach neuem Deployment).
+
+---
+
+## B. Domain in Resend verifizieren (Produktion)
+
+1. https://resend.com → Domains → **Add Domain** → `boksitsupport.ch`
+2. DNS in Cloudflare als **DNS only** (graue Wolke): DKIM / SPF-`include` / Ownership wie Resend angibt
+3. Resend zeigt Domain **Verified**
+4. From-Adresse muss zur verifizierten Domain gehören (nicht `onboarding@resend.dev` für beliebige Empfänger)
+
+### Kurztest ohne Domain (nur Account-Inbox)
+
+- `INQUIRY_FROM` = `BIT Anfrage <onboarding@resend.dev>`
+- Empfänger darf nur die Resend-Account-E-Mail sein
+- Nicht für Produktion an beliebige Postfächer
+
+---
+
+## C. Prüfen nach Deploy
+
+1. Formular DE/EN absenden
+2. Subject erwartet: `Neue BIT-Anfrage – [Unternehmen] – [Leistungsbereich]`
+3. Reply-To = Lead-E-Mail
+4. Viewer: Feld **E-Mail-Benachrichtigung** = `sent` (oder `failed` / `skipped`)
+5. Function Logs: `INQUIRY_RESEND_HTTP` / `INQUIRY_DELIVERED_RESEND` bzw. `INQUIRY_RESEND_FAILED`
+6. Health: `hasResendKey: true`
+
+---
+
+## Zustellungslogik (verbindlich)
+
+1. Client POSTet nur `/api/inquiry` (kein FormSubmit)
+2. Validierung → bei Fehler **400** (Werte bleiben im Formular)
+3. KV-Schreiben zuerst; bei KV-Fehler → **500**, keine Erfolgsmeldung
+4. Danach Resend; bei E-Mail-Fehler bleibt KV, Status `failed`, Besucher sieht trotzdem Erfolg (**200**)
+5. Ohne Resend-Key: Status `skipped`, KV bleibt die Quelle der Wahrheit
+
+**Empfehlung:** Viewer-Bookmark nutzen; Resend erst nach Domain-Verify und Secret aktivieren.

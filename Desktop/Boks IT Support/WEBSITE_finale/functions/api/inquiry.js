@@ -1,13 +1,13 @@
 /**
- * Inquiry form API – KV store (durable) + push notify (webhook/Telegram) + optional Resend.
+ * Inquiry form API – KV store (durable) + optional Resend email + push notify.
  *
- * Success for the visitor: KV write succeeds (or webhook/Resend if KV missing).
- * Notification is attempted after KV; webhook failure is logged and does NOT fail the user.
+ * Visitor success requires KV write when INQUIRY_LOG is bound.
+ * Email/notify failures keep the KV record and still return 200.
  *
  * Notify options (any):
+ *   - RESEND_API_KEY (preferred email)
  *   - TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID
- *   - INQUIRY_WEBHOOK_URL (Slack Incoming Webhook, Discord, or generic JSON)
- *   - RESEND_API_KEY (email, optional)
+ *   - INQUIRY_WEBHOOK_URL (Slack/Discord/generic)
  */
 const MAX_BODY = 32_000;
 const HONEYPOT = "website";
@@ -15,6 +15,9 @@ const HONEYPOT = "website";
 const KV_TTL_SECONDS = 60 * 60 * 24 * 365;
 const WEBHOOK_TIMEOUT_MS = 8_000;
 const DEFAULT_NOTIFY_EMAIL = "admin@boksitsupport.ch";
+const DEFAULT_FROM = "BIT Anfrage <anfrage@boksitsupport.ch>";
+const RATE_LIMIT_WINDOW_SECONDS = 3600;
+const RATE_LIMIT_MAX = 8;
 
 const REQUIRED = [
   "company",
@@ -37,6 +40,35 @@ const OPTIONAL = [
   "start",
 ];
 
+/** Meta fields accepted from the client (not form inputs). */
+const META = ["language", "timestamp", "source_page", "privacy"];
+
+const ALLOWED_KEYS = new Set([...REQUIRED, ...OPTIONAL, ...META, HONEYPOT]);
+
+const FIELD_MAX = {
+  company: 200,
+  first_name: 100,
+  last_name: 100,
+  email: 200,
+  employees: 40,
+  area: 80,
+  description: 4000,
+  phone: 40,
+  location: 120,
+  industry: 120,
+  workstations: 40,
+  m365: 40,
+  internal_it: 40,
+  external_it: 40,
+  start: 80,
+  language: 8,
+  timestamp: 40,
+  source_page: 200,
+};
+
+const REJECT_KEY_RE =
+  /password|passwd|secret|token|mfa|otp|cookie|authorization|api[_-]?key|credit|ssn|iban/i;
+
 function json(status, payload) {
   return new Response(JSON.stringify(payload), {
     status,
@@ -47,11 +79,21 @@ function json(status, payload) {
   });
 }
 
-function sanitize(value) {
+function sanitize(value, max = 4000) {
   return String(value ?? "")
     .replace(/\r/g, "")
     .trim()
-    .slice(0, 4000);
+    .slice(0, max);
+}
+
+/** Escape text for safe HTML email bodies. */
+export function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function isEmail(value) {
@@ -59,17 +101,91 @@ function isEmail(value) {
 }
 
 function notifyEmail(env) {
-  const raw = String(env?.INQUIRY_NOTIFY_EMAIL || DEFAULT_NOTIFY_EMAIL).trim();
+  const raw = String(
+    env?.INQUIRY_NOTIFY_EMAIL || env?.INQUIRY_TO || DEFAULT_NOTIFY_EMAIL,
+  ).trim();
   return isEmail(raw) ? raw : DEFAULT_NOTIFY_EMAIL;
 }
 
-function buildTextBody(requestId, receivedAt, fields) {
-  const lines = Object.entries(fields)
-    .filter(([k]) => k !== "privacy")
-    .map(([k, v]) => `${k}: ${v}`);
-  return [`Request-ID: ${requestId}`, `Empfangen: ${receivedAt}`, "", ...lines].join(
-    "\n",
-  );
+function fromAddress(env) {
+  const raw = String(
+    env?.INQUIRY_FROM_EMAIL || env?.INQUIRY_FROM || DEFAULT_FROM,
+  ).trim();
+  return raw || DEFAULT_FROM;
+}
+
+function isAllowedContentType(request) {
+  const ct = (request.headers.get("content-type") || "").toLowerCase();
+  return ct.includes("application/json");
+}
+
+function hasRejectedKeys(data) {
+  if (!data || typeof data !== "object" || Array.isArray(data)) return true;
+  for (const key of Object.keys(data)) {
+    if (REJECT_KEY_RE.test(key)) return true;
+    if (!ALLOWED_KEYS.has(key)) return true;
+  }
+  return false;
+}
+
+function buildTextBody(requestId, receivedAt, fields, source) {
+  const person = [fields.first_name, fields.last_name].filter(Boolean).join(" ");
+  return [
+    "Neue BIT-Anfrage",
+    "",
+    `Unternehmen: ${fields.company || "—"}`,
+    `Ansprechpartner: ${person || "—"}`,
+    `E-Mail: ${fields.email || "—"}`,
+    `Telefon: ${fields.phone || "—"}`,
+    `Standort: ${fields.location || "—"}`,
+    `Branche: ${fields.industry || "—"}`,
+    `Mitarbeitende: ${fields.employees || "—"}`,
+    `Arbeitsplätze: ${fields.workstations || "—"}`,
+    `Microsoft 365: ${fields.m365 || "—"}`,
+    `Interne IT: ${fields.internal_it || "—"}`,
+    `Externe IT: ${fields.external_it || "—"}`,
+    `Leistungsbereich: ${fields.area || "—"}`,
+    `Startzeitpunkt: ${fields.start || "—"}`,
+    `Sprache: ${fields.language || "—"}`,
+    "",
+    "Kurzbeschreibung:",
+    fields.description || "—",
+    "",
+    `Request-ID: ${requestId}`,
+    `Empfangen: ${receivedAt}`,
+    `Quelle: ${source || "—"}`,
+  ].join("\n");
+}
+
+function buildHtmlBody(requestId, receivedAt, fields, source) {
+  const person = [fields.first_name, fields.last_name].filter(Boolean).join(" ");
+  const rows = [
+    ["Unternehmen", fields.company],
+    ["Ansprechpartner", person],
+    ["E-Mail", fields.email],
+    ["Telefon", fields.phone || "—"],
+    ["Standort", fields.location || "—"],
+    ["Branche", fields.industry || "—"],
+    ["Mitarbeitende", fields.employees],
+    ["Arbeitsplätze", fields.workstations || "—"],
+    ["Microsoft 365", fields.m365 || "—"],
+    ["Interne IT", fields.internal_it || "—"],
+    ["Externe IT", fields.external_it || "—"],
+    ["Leistungsbereich", fields.area],
+    ["Startzeitpunkt", fields.start || "—"],
+    ["Sprache", fields.language || "—"],
+  ]
+    .map(
+      ([label, value]) =>
+        `<tr><td style="padding:4px 12px 4px 0;color:#555;vertical-align:top">${escapeHtml(label)}</td><td style="padding:4px 0;vertical-align:top">${escapeHtml(value || "—")}</td></tr>`,
+    )
+    .join("");
+  return `<!DOCTYPE html><html><body style="font-family:system-ui,sans-serif;line-height:1.45;color:#1a1a1a">
+<h1 style="font-size:1.15rem">Neue BIT-Anfrage</h1>
+<table style="border-collapse:collapse">${rows}</table>
+<p style="margin-top:1rem"><strong>Kurzbeschreibung</strong><br>${escapeHtml(fields.description || "—").replace(/\n/g, "<br>")}</p>
+<p style="margin-top:1rem;color:#555;font-size:0.9rem">Request-ID: ${escapeHtml(requestId)}<br>Empfangen: ${escapeHtml(receivedAt)}<br>Quelle: ${escapeHtml(source || "—")}</p>
+</body></html>`;
 }
 
 /** Compact human notification for Telegram/Slack/Discord. */
@@ -91,6 +207,9 @@ export function buildNotifyText(record) {
     f.description || "—",
     "",
     `ID: ${record.requestId || ""}`,
+    record.email_notification_status
+      ? `E-Mail-Status: ${record.email_notification_status}`
+      : null,
   ]
     .filter((line) => line !== null)
     .join("\n");
@@ -114,6 +233,28 @@ export function hasPushNotify(env) {
   );
 }
 
+async function enforceRateLimit(env, ip, requestId) {
+  if (!env?.INQUIRY_LOG || !ip) {
+    return { ok: true, skipped: true };
+  }
+  const key = `ratelimit:${ip}`;
+  try {
+    const raw = await env.INQUIRY_LOG.get(key);
+    const count = raw ? Number.parseInt(raw, 10) || 0 : 0;
+    if (count >= RATE_LIMIT_MAX) {
+      console.warn("INQUIRY_RATE_LIMITED", requestId, ip);
+      return { ok: false };
+    }
+    await env.INQUIRY_LOG.put(key, String(count + 1), {
+      expirationTtl: RATE_LIMIT_WINDOW_SECONDS,
+    });
+    return { ok: true };
+  } catch (err) {
+    console.error("INQUIRY_RATE_LIMIT_ERROR", requestId, String(err));
+    return { ok: true, skipped: true };
+  }
+}
+
 async function storeInKv(env, record) {
   if (!env.INQUIRY_LOG) {
     return { ok: false, reason: "not_bound" };
@@ -128,6 +269,19 @@ async function storeInKv(env, record) {
   } catch (err) {
     console.error("INQUIRY_KV_FAILED", record.requestId, String(err));
     return { ok: false, reason: "write_failed" };
+  }
+}
+
+async function updateKvEmailStatus(env, key, record, status) {
+  if (!env.INQUIRY_LOG || !key) return;
+  record.email_notification_status = status;
+  try {
+    await env.INQUIRY_LOG.put(key, JSON.stringify(record), {
+      expirationTtl: KV_TTL_SECONDS,
+    });
+    console.log("INQUIRY_KV_EMAIL_STATUS", record.requestId, status);
+  } catch (err) {
+    console.error("INQUIRY_KV_STATUS_UPDATE_FAILED", record.requestId, String(err));
   }
 }
 
@@ -245,21 +399,23 @@ export async function deliverPushNotify(env, record) {
   };
 }
 
-async function deliverViaResend(env, requestId, receivedAt, fields) {
+async function deliverViaResend(env, requestId, receivedAt, fields, source) {
   const apiKey = env.RESEND_API_KEY;
   if (!apiKey) {
     return { ok: false, reason: "not_configured" };
   }
 
-  const to = env.INQUIRY_TO || notifyEmail(env);
-  const from = env.INQUIRY_FROM || "BIT Anfrage <anfrage@boksitsupport.ch>";
+  const to = notifyEmail(env);
+  const from = fromAddress(env);
   const mirror = env.INQUIRY_MIRROR_TO || "";
+  const subject = `Neue BIT-Anfrage – ${fields.company} – ${fields.area}`;
 
   const emailBody = {
     from,
     to: [to],
-    subject: `BIT Anfrage: ${fields.company} · ${fields.area}`,
-    text: buildTextBody(requestId, receivedAt, fields),
+    subject,
+    text: buildTextBody(requestId, receivedAt, fields, source),
+    html: buildHtmlBody(requestId, receivedAt, fields, source),
     reply_to: fields.email,
   };
   if (mirror) {
@@ -324,6 +480,10 @@ export async function onRequestPost(context) {
   const receivedAt = new Date().toISOString();
   const requestId = crypto.randomUUID();
 
+  if (!isAllowedContentType(request)) {
+    return json(400, { ok: false, error: "invalid_content_type" });
+  }
+
   let raw;
   try {
     raw = await request.text();
@@ -341,22 +501,32 @@ export async function onRequestPost(context) {
     return json(400, { ok: false, error: "invalid_json" });
   }
 
-  if (sanitize(data[HONEYPOT])) {
-    return json(200, { ok: true, requestId, notified: false });
+  if (hasRejectedKeys(data)) {
+    return json(400, { ok: false, error: "unexpected_fields" });
+  }
+
+  if (sanitize(data[HONEYPOT], 200)) {
+    return json(200, { ok: true, requestId, notified: false, emailQueued: false });
+  }
+
+  const ip = request.headers.get("cf-connecting-ip") || "";
+  const rate = await enforceRateLimit(env, ip, requestId);
+  if (!rate.ok) {
+    return json(429, { ok: false, error: "rate_limited" });
   }
 
   const fields = {};
   for (const key of REQUIRED) {
-    fields[key] = sanitize(data[key]);
+    fields[key] = sanitize(data[key], FIELD_MAX[key] || 4000);
     if (!fields[key]) {
       return json(400, { ok: false, error: "missing_field", field: key });
     }
   }
   for (const key of OPTIONAL) {
-    fields[key] = sanitize(data[key]).slice(0, key === "phone" ? 40 : 4000);
+    fields[key] = sanitize(data[key], FIELD_MAX[key] || 4000);
   }
   fields.privacy = Boolean(data.privacy);
-  const langRaw = sanitize(data.language || "").toLowerCase();
+  const langRaw = sanitize(data.language || "", FIELD_MAX.language).toLowerCase();
   fields.language = langRaw === "en" || langRaw === "de" ? langRaw : "";
 
   if (!fields.privacy) {
@@ -366,22 +536,49 @@ export async function onRequestPost(context) {
     return json(400, { ok: false, error: "invalid_email" });
   }
 
-  const sourcePath =
+  const defaultSource =
     fields.language === "en"
       ? "boksitsupport.ch/en/inquiry/"
       : "boksitsupport.ch/de/anfrage/";
+  const clientSource = sanitize(data.source_page || "", FIELD_MAX.source_page);
+  const sourcePath =
+    clientSource.startsWith("boksitsupport.ch/") ||
+    clientSource.startsWith("https://boksitsupport.ch/")
+      ? clientSource.replace(/^https?:\/\//, "")
+      : defaultSource;
+
+  const clientTs = sanitize(data.timestamp || "", FIELD_MAX.timestamp);
+  const clientTimestamp =
+    clientTs && Number.isFinite(Date.parse(clientTs)) ? clientTs : receivedAt;
+
+  const emailConfigured = Boolean(env.RESEND_API_KEY);
+  const initialEmailStatus = emailConfigured ? "pending" : "skipped";
 
   const record = {
     requestId,
     receivedAt,
+    clientTimestamp,
     source: sourcePath,
+    source_page: sourcePath,
     language: fields.language || "",
-    ip: request.headers.get("cf-connecting-ip") || "",
+    ip,
     country: request.cf?.country || "",
+    email_notification_status: initialEmailStatus,
     fields,
   };
 
-  console.log("INQUIRY_SUBMISSION", JSON.stringify(record));
+  console.log(
+    "INQUIRY_SUBMISSION",
+    JSON.stringify({
+      requestId,
+      receivedAt,
+      source: sourcePath,
+      language: fields.language,
+      company: fields.company,
+      area: fields.area,
+      email_notification_status: initialEmailStatus,
+    }),
+  );
 
   if (!hasDurableDelivery(env)) {
     console.log("INQUIRY_NO_DURABLE_PATH", requestId);
@@ -392,6 +589,7 @@ export async function onRequestPost(context) {
       requestId,
       logged: true,
       notified: false,
+      emailQueued: false,
     });
   }
 
@@ -399,13 +597,39 @@ export async function onRequestPost(context) {
   const kvBound = Boolean(env.INQUIRY_LOG);
   const kvResult = await storeInKv(env, record);
 
-  // 2) Push notify is optional. Failures must not wipe KV success.
+  if (kvBound && !kvResult.ok) {
+    console.error("INQUIRY_STORAGE_FAILED", requestId, kvResult.reason || "");
+    return json(500, {
+      ok: false,
+      error: "storage_failed",
+      requestId,
+      logged: true,
+      stored: false,
+      notified: false,
+      emailQueued: false,
+    });
+  }
+
+  // 2) Resend email after KV; failure keeps KV and still returns success.
+  let resendResult = { ok: false, reason: "not_configured" };
+  if (emailConfigured) {
+    resendResult = await deliverViaResend(
+      env,
+      requestId,
+      receivedAt,
+      fields,
+      sourcePath,
+    );
+    const emailStatus = resendResult.ok ? "sent" : "failed";
+    await updateKvEmailStatus(env, kvResult.key, record, emailStatus);
+    if (!resendResult.ok) {
+      console.error("INQUIRY_NOTIFY_RESEND_FAILED", requestId, resendResult);
+    }
+  }
+
+  // 3) Optional push notify (Telegram/Webhook). Failures must not wipe KV success.
   const telegramResult = await deliverViaTelegram(env, record);
   const webhookResult = await deliverViaWebhook(env, record);
-  const resendResult = env.RESEND_API_KEY
-    ? await deliverViaResend(env, requestId, receivedAt, fields)
-    : { ok: false, reason: "not_configured" };
-
   const notifyVias = [];
   if (telegramResult.ok) notifyVias.push("telegram");
   if (webhookResult.ok) notifyVias.push("webhook");
@@ -416,23 +640,6 @@ export async function onRequestPost(context) {
   }
   if (!webhookResult.ok && webhookResult.reason !== "not_configured") {
     console.error("INQUIRY_NOTIFY_WEBHOOK_FAILED", requestId, webhookResult);
-  }
-  if (!resendResult.ok && resendResult.reason !== "not_configured") {
-    console.error("INQUIRY_NOTIFY_RESEND_FAILED", requestId, resendResult);
-  }
-
-  // Storage fail → no visitor success when KV is the configured store.
-  if (kvBound && !kvResult.ok) {
-    console.error("INQUIRY_STORAGE_FAILED", requestId, kvResult.reason || "");
-    return json(502, {
-      ok: false,
-      error: "delivery_failed",
-      requestId,
-      logged: true,
-      stored: false,
-      notified: notifyVias.length > 0,
-      notifyVias,
-    });
   }
 
   const durableOk =
@@ -450,6 +657,8 @@ export async function onRequestPost(context) {
       via: kvResult.ok ? "kv" : notifyVias[0] || "ok",
       stored: Boolean(kvResult.ok),
       notified: notifyVias.length > 0,
+      emailQueued: Boolean(resendResult.ok),
+      email_notification_status: record.email_notification_status,
       notifyVias,
     });
   }
@@ -466,12 +675,13 @@ export async function onRequestPost(context) {
     "resend=",
     resendResult.error || resendResult.reason || "",
   );
-  return json(502, {
+  return json(500, {
     ok: false,
     error: "delivery_failed",
     requestId,
     logged: true,
     notified: false,
+    emailQueued: false,
   });
 }
 

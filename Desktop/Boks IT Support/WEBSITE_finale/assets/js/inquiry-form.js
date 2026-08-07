@@ -11,6 +11,11 @@ const INQUIRY_TO = "admin@boksitsupport.ch";
 function collect(form) {
   const data = Object.fromEntries(new FormData(form).entries());
   data.privacy = form.elements.namedItem("privacy")?.checked === true;
+  data.timestamp = new Date().toISOString();
+  data.source_page =
+    typeof window !== "undefined" && window.location?.pathname
+      ? `boksitsupport.ch${window.location.pathname}`
+      : "";
   return data;
 }
 

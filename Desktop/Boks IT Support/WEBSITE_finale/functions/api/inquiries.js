@@ -86,8 +86,9 @@ function summarize(key, record) {
     start: fields.start || "",
     description: preview(fields.description),
     language: fields.language || record?.language || "",
-    source: record?.source || "",
+    source: record?.source || record?.source_page || "",
     country: record?.country || "",
+    email_notification_status: record?.email_notification_status || "",
   };
 }
 
@@ -104,6 +105,9 @@ function emptyItem(key, extra = {}) {
     start: "",
     description: "",
     language: "",
+    source: "",
+    country: "",
+    email_notification_status: "",
     ...extra,
   };
 }

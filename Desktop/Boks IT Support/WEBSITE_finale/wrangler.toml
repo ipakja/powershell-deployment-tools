@@ -4,8 +4,8 @@
 #   optional INQUIRY_WEBHOOK_URL (Slack/Discord/generic)
 #   INQUIRY_VIEW_TOKEN (protected GET /api/inquiries and POST /api/inquiry-notify-test)
 #   optional INQUIRY_DIAG_TOKEN, RESEND_API_KEY, INQUIRY_MIRROR_TO,
-#   optional INQUIRY_NOTIFY_EMAIL / INQUIRY_TO / INQUIRY_FROM (nur wenn Resend aktiv).
-# Delivery: KV INQUIRY_LOG (primär) + Telegram/Webhook notify + optional Resend.
+#   optional INQUIRY_NOTIFY_EMAIL / INQUIRY_TO / INQUIRY_FROM / INQUIRY_FROM_EMAIL (nur wenn Resend aktiv).
+# Delivery: KV INQUIRY_LOG (primär) + optional Resend email + optional Telegram/Webhook.
 # Notify-Test ohne KV: POST /api/inquiry-notify-test (Token erforderlich).
 # KV-Binding INQUIRY_LOG: Namespace erstellt, Binding via diesem File beim Deploy.
 
