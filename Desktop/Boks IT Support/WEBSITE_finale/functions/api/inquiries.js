@@ -1,15 +1,18 @@
 /**
- * Protected list of recent inquiry KV records.
+ * Protected JSON list of recent inquiry KV records.
  * GET /api/inquiries?token=…&limit=20
  * Auth: Authorization Bearer OR ?token= matching INQUIRY_VIEW_TOKEN
  *       (fallback: INQUIRY_DIAG_TOKEN when VIEW is unset).
  * If neither secret is configured → 503 (never open access).
  * Wrong/missing token when secrets exist → 401.
+ * HTML viewer: GET /api/inquiries/view (see inquiries/view.js).
  */
 const DEFAULT_LIMIT = 20;
 const MAX_LIMIT = 50;
+const LIST_FETCH = 200;
 const KEY_PREFIX = "inquiry:";
 const PREVIEW_LEN = 160;
+const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 
 function json(status, payload) {
   return new Response(JSON.stringify(payload), {
@@ -45,6 +48,22 @@ function preview(text) {
   return s.slice(0, PREVIEW_LEN - 1) + "…";
 }
 
+function parseReceivedAt(iso) {
+  if (!iso) return NaN;
+  const t = Date.parse(iso);
+  return Number.isFinite(t) ? t : NaN;
+}
+
+export function countLast7Days(items, nowMs = Date.now()) {
+  const cutoff = nowMs - SEVEN_DAYS_MS;
+  let n = 0;
+  for (const item of items) {
+    const t = parseReceivedAt(item?.receivedAt);
+    if (Number.isFinite(t) && t >= cutoff) n += 1;
+  }
+  return n;
+}
+
 function summarize(key, record) {
   const fields = record?.fields || {};
   const person = [fields.first_name, fields.last_name].filter(Boolean).join(" ");
@@ -56,13 +75,84 @@ function summarize(key, record) {
     contact: person,
     email: fields.email || "",
     phone: fields.phone || "",
+    location: fields.location || "",
+    industry: fields.industry || "",
+    employees: fields.employees || "",
+    workstations: fields.workstations || "",
+    m365: fields.m365 || "",
+    internal_it: fields.internal_it || "",
+    external_it: fields.external_it || "",
     area: fields.area || "",
     start: fields.start || "",
-    employees: fields.employees || "",
     description: preview(fields.description),
+    language: fields.language || record?.language || "",
     source: record?.source || "",
     country: record?.country || "",
   };
+}
+
+function emptyItem(key, extra = {}) {
+  return {
+    key,
+    receivedAt: "",
+    requestId: "",
+    company: "",
+    contact: "",
+    email: "",
+    phone: "",
+    area: "",
+    start: "",
+    description: "",
+    language: "",
+    ...extra,
+  };
+}
+
+async function loadItems(env, limit) {
+  const fetchLimit = Math.min(Math.max(limit, LIST_FETCH), 1000);
+  let listed;
+  try {
+    listed = await env.INQUIRY_LOG.list({ prefix: KEY_PREFIX, limit: fetchLimit });
+  } catch (err) {
+    console.error("INQUIRIES_LIST_FAILED", String(err));
+    return { error: "list_failed" };
+  }
+
+  const keys = listed?.keys || [];
+  const items = [];
+
+  for (const entry of keys) {
+    const key = entry.name;
+    try {
+      const raw = await env.INQUIRY_LOG.get(key);
+      if (!raw) {
+        items.push(emptyItem(key, { missing: true }));
+        continue;
+      }
+      let record;
+      try {
+        record = JSON.parse(raw);
+      } catch {
+        items.push(emptyItem(key, { parseError: true }));
+        continue;
+      }
+      items.push(summarize(key, record));
+    } catch (err) {
+      console.error("INQUIRIES_GET_FAILED", key, String(err));
+      items.push(emptyItem(key, { error: "read_failed" }));
+    }
+  }
+
+  items.sort((a, b) => {
+    const ta = parseReceivedAt(a.receivedAt);
+    const tb = parseReceivedAt(b.receivedAt);
+    const na = Number.isFinite(ta) ? ta : 0;
+    const nb = Number.isFinite(tb) ? tb : 0;
+    return nb - na;
+  });
+
+  const last7 = countLast7Days(items);
+  return { items: items.slice(0, limit), last7 };
 }
 
 export async function onRequestGet(context) {
@@ -94,77 +184,16 @@ export async function onRequestGet(context) {
   }
 
   const limit = parseLimit(url.searchParams.get("limit"));
-
-  let listed;
-  try {
-    listed = await env.INQUIRY_LOG.list({ prefix: KEY_PREFIX, limit });
-  } catch (err) {
-    console.error("INQUIRIES_LIST_FAILED", String(err));
+  const loaded = await loadItems(env, limit);
+  if (loaded.error === "list_failed") {
     return json(502, { ok: false, error: "list_failed" });
-  }
-
-  const keys = listed?.keys || [];
-  const items = [];
-
-  for (const entry of keys) {
-    const key = entry.name;
-    try {
-      const raw = await env.INQUIRY_LOG.get(key);
-      if (!raw) {
-        items.push({
-          key,
-          receivedAt: "",
-          requestId: "",
-          company: "",
-          contact: "",
-          email: "",
-          area: "",
-          start: "",
-          description: "",
-          missing: true,
-        });
-        continue;
-      }
-      let record;
-      try {
-        record = JSON.parse(raw);
-      } catch {
-        items.push({
-          key,
-          receivedAt: "",
-          requestId: "",
-          company: "",
-          contact: "",
-          email: "",
-          area: "",
-          start: "",
-          description: "",
-          parseError: true,
-        });
-        continue;
-      }
-      items.push(summarize(key, record));
-    } catch (err) {
-      console.error("INQUIRIES_GET_FAILED", key, String(err));
-      items.push({
-        key,
-        receivedAt: "",
-        requestId: "",
-        company: "",
-        contact: "",
-        email: "",
-        area: "",
-        start: "",
-        description: "",
-        error: "read_failed",
-      });
-    }
   }
 
   return json(200, {
     ok: true,
-    count: items.length,
-    items,
+    count: loaded.items.length,
+    last7Days: loaded.last7,
+    items: loaded.items,
   });
 }
 

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="$html_lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$meta_title</title>
+    <meta name="description" content="$meta_description">
+    <meta name="keywords" content="$meta_keywords">
+    <meta name="theme-color" content="#0d0f11">
+    <link rel="canonical" href="$canonical">
+$alternate_links
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/assets/universal.css?v=6">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="$canonical">
+    <meta property="og:title" content="$meta_title">
+    <meta property="og:description" content="$meta_description">
+    <script type="application/ld+json">$structured_data</script>
+</head>
+<body data-current-language="$language"
+      data-language-prompt="$language_prompt"
+      data-language-switch="$language_switch"
+      data-language-dismiss="$language_dismiss">
+    <a class="skip-link" href="#main">$skip</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/$language/" aria-label="BIT">
+                <img src="/LOGO_DARK.png" alt="BIT – Boks IT Support" width="174">
+            </a>
+            <nav class="main-nav" data-main-nav aria-label="$nav_aria">
+                <a href="#services">$nav_services</a>
+                <a href="#market">$nav_market</a>
+                <a href="#about">$nav_about</a>
+                <a href="#contact">$nav_contact</a>
+            </nav>
+            <button class="menu-toggle" type="button" data-menu-toggle
+                    aria-expanded="false" aria-label="$nav_menu">
+                $nav_menu
+            </button>
+            <nav class="language-nav" data-language-nav aria-label="$nav_languages">
+$language_links
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow">$hero_eyebrow</p>
+                <h1>$hero_title</h1>
+                <p class="hero-lead">$hero_lead</p>
+                <div class="hero-actions">
+                    <a class="button button-whatsapp" data-contact="whatsapp"
+                       href="$whatsapp_url">WhatsApp</a>
+                    <a class="button button-viber" data-contact="viber"
+                       href="$viber_url">Viber</a>
+                    <a class="button button-secondary" href="#services">
+                        $hero_services_button
+                    </a>
+                </div>
+                <p class="trust-line">$hero_trust</p>
+            </div>
+        </section>
+
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">$services_eyebrow</p>
+                        <h2>$services_title</h2>
+                    </div>
+                    <p class="section-intro">$services_intro</p>
+                </div>
+                <div class="card-grid">$service_cards</div>
+            </div>
+        </section>
+
+        <section class="section" id="market">
+            <div class="container market-layout">
+                <div class="market-copy">
+                    <p class="eyebrow">$market_eyebrow</p>
+                    <h2>$market_title</h2>
+                    <p>$market_text</p>
+                </div>
+                <div class="market-panel">
+                    <ul class="market-list">$market_items</ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="audiences">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">$audiences_eyebrow</p>
+                        <h2>$audiences_title</h2>
+                    </div>
+                    <p class="section-intro">$audiences_intro</p>
+                </div>
+                <div class="card-grid audience-grid">$audience_cards</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">$process_eyebrow</p>
+                        <h2>$process_title</h2>
+                    </div>
+                    <p class="section-intro">$process_intro</p>
+                </div>
+                <div class="process-grid">$process_steps</div>
+            </div>
+        </section>
+
+        <section class="section assurance-section">
+            <div class="container market-layout">
+                <div class="market-copy">
+                    <p class="eyebrow">$assurance_eyebrow</p>
+                    <h2>$assurance_title</h2>
+                    <p>$assurance_text</p>
+                </div>
+                <div class="market-panel">
+                    <ul class="market-list">$assurance_items</ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container faq-layout">
+                <div>
+                    <p class="eyebrow">$faq_eyebrow</p>
+                    <h2>$faq_title</h2>
+                </div>
+                <div class="faq-list">$faq_items</div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container about-layout">
+                <img class="about-photo" src="/ICH.png" alt="$about_image_alt"
+                     width="430" loading="lazy">
+                <div class="about-copy">
+                    <p class="eyebrow">$about_eyebrow</p>
+                    <h2>$about_title</h2>
+                    <p>$about_text</p>
+                    <p>$about_independent</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-panel">
+                    <p class="eyebrow">$contact_eyebrow</p>
+                    <h2>$contact_title</h2>
+                    <p class="section-intro">$contact_text</p>
+                    <div class="contact-actions">
+                        <a class="button button-whatsapp" data-contact="whatsapp"
+                           href="$whatsapp_url">$contact_whatsapp</a>
+                        <a class="button button-viber" data-contact="viber"
+                           href="$viber_url">$contact_viber</a>
+                        <a class="button button-secondary"
+                           href="$email_url">$contact_email</a>
+                        <a class="button button-secondary" href="$phone_href">
+                            $phone_display
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© 2026 BIT · $footer_location</div>
+            <div class="footer-links">
+                <a href="/$language/legal/">$footer_legal</a>
+                <a href="/$language/legal/#privacy">$footer_privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-contact" aria-label="$quick_contact">
+        <a class="button button-whatsapp" data-contact="whatsapp"
+           href="$whatsapp_url">WhatsApp</a>
+        <a class="button button-viber" data-contact="viber"
+           href="$viber_url">Viber</a>
+    </div>
+    <script type="module" src="/assets/js/app.js?v=1"></script>
+</body>
+</html>

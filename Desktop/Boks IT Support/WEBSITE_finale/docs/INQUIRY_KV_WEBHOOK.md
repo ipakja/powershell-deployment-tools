@@ -1,19 +1,21 @@
-# Inquiry delivery – KV + push notify + optional Resend
+# Inquiry delivery – KV + HTML viewer + optional push
 
-**Push notify is mandatory for ops.** KV stores leads durably, but Stefan is **not** alerted unless Telegram and/or a webhook (or Resend) is configured. Setup: **[INQUIRY_NOTIFY.md](./INQUIRY_NOTIFY.md)**.
+**Standard ops:** KV stores leads; Stefan checks them via the **HTML viewer** — [INQUIRY_VIEWER.md](./INQUIRY_VIEWER.md).  
+Push notify (Telegram / webhook / Resend) is **optional**.
 
-**No FormSubmit.** Delivery paths only:
+**No FormSubmit.** Delivery paths:
 
 | Path | Config | Role |
 |------|--------|------|
 | **KV `INQUIRY_LOG`** | Binding in `wrangler.toml` | Primary durable store (TTL ~12 months) → visitor HTTP 200 when write succeeds |
-| **Telegram** | `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` | Immediate operator notify (recommended) |
-| **Webhook** | `INQUIRY_WEBHOOK_URL` | Slack Incoming Webhook / Discord / generic JSON |
-| **Resend** | optional `RESEND_API_KEY` | Optional email when key present |
+| **HTML viewer** | `INQUIRY_VIEW_TOKEN` | Bookmarkable review of recent leads |
+| **Telegram** | `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID` | Optional push (code kept) |
+| **Webhook** | `INQUIRY_WEBHOOK_URL` | Optional Slack / Discord / JSON |
+| **Resend** | optional `RESEND_API_KEY` | Optional email (domain DNS for production) |
 
-`POST /api/inquiry` returns **200** when at least one durable path succeeds (KV preferred).  
-Push notify runs **after** KV; notify failure is **logged** and does **not** fail the visitor if KV wrote.  
-JSON includes `stored`, `notified`, `notifyVias`.  
+`POST /api/inquiry` returns **200** when KV write succeeds (KV bound).  
+When KV is bound, storage failure → **no** visitor success.  
+Push runs after KV; notify failure is **logged** and does **not** fail the visitor if KV wrote.  
 If no durable path is configured → **503** `delivery_not_configured`.
 
 ## Health
@@ -25,10 +27,9 @@ GET /api/inquiry-health
 
 ## Viewer
 
-Protected list without wrangler CLI — see [INQUIRY_NOTIFY.md](./INQUIRY_NOTIFY.md):
-
 ```
-GET /api/inquiries?token=SECRET&limit=20
+GET /api/inquiries/view?token=TOKEN_PLACEHOLDER
+GET /api/inquiries?token=TOKEN_PLACEHOLDER&limit=20
 ```
 
 Requires `INQUIRY_VIEW_TOKEN` (or fallback `INQUIRY_DIAG_TOKEN`).

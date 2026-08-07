@@ -1,0 +1,122 @@
+# Active: DE + EN. Root always → /de/. FR/IT/SR/BS/HR temporarily 302 → /de/
+/ /de/ 301
+/index.html /de/ 301
+
+# Former Market Access URLs → current home (no archive page)
+/de/market-access /de/ 301
+/de/market-access/ /de/ 301
+/en/market-access /en/ 301
+/en/market-access/ /en/ 301
+/de/markt /de/ 301
+/de/markt/ /de/ 301
+/en/market /en/ 301
+/en/market/ /en/ 301
+/fr/marche /de/ 301
+/fr/marche/ /de/ 301
+/it/mercato /de/ 301
+/it/mercato/ /de/ 301
+/sr/trziste /de/ 301
+/sr/trziste/ /de/ 301
+/bs/trziste /de/ 301
+/bs/trziste/ /de/ 301
+/hr/trziste /de/ 301
+/hr/trziste/ /de/ 301
+
+# Hospitality → services (all former locale folders)
+/de/hospitality /de/leistungen/ 301
+/de/hospitality/ /de/leistungen/ 301
+/en/hospitality /en/services/ 301
+/en/hospitality/ /en/services/ 301
+/fr/hospitality /de/leistungen/ 301
+/fr/hospitality/ /de/leistungen/ 301
+/it/hospitality /de/leistungen/ 301
+/it/hospitality/ /de/leistungen/ 301
+/sr/hospitality /de/leistungen/ 301
+/sr/hospitality/ /de/leistungen/ 301
+/bs/hospitality /de/leistungen/ 301
+/bs/hospitality/ /de/leistungen/ 301
+/hr/hospitality /de/leistungen/ 301
+/hr/hospitality/ /de/leistungen/ 301
+
+# Inactive locales → DE (after specific hospitality/market rules)
+/fr /de/ 302
+/fr/ /de/ 302
+/fr/* /de/ 302
+/it /de/ 302
+/it/ /de/ 302
+/it/* /de/ 302
+/sr /de/ 302
+/sr/ /de/ 302
+/sr/* /de/ 302
+/bs /de/ 302
+/bs/ /de/ 302
+/bs/* /de/ 302
+/hr /de/ 302
+/hr/ /de/ 302
+/hr/* /de/ 302
+
+# Legacy service detail slugs → new Leistung pages
+/de/leistungen/onboarding /de/leistungen/benutzer-und-zugaenge/ 301
+/de/leistungen/onboarding/ /de/leistungen/benutzer-und-zugaenge/ 301
+/de/leistungen/offboarding /de/leistungen/benutzer-und-zugaenge/ 301
+/de/leistungen/offboarding/ /de/leistungen/benutzer-und-zugaenge/ 301
+/de/leistungen/arbeitsplatz-anfragen /de/leistungen/microsoft-365-arbeitsplatz/ 301
+/de/leistungen/arbeitsplatz-anfragen/ /de/leistungen/microsoft-365-arbeitsplatz/ 301
+/de/leistungen/anbieterkoordination /de/leistungen/ 301
+/de/leistungen/anbieterkoordination/ /de/leistungen/ 301
+/de/leistungen/ansprechpartner /de/leistungen/ 301
+/de/leistungen/ansprechpartner/ /de/leistungen/ 301
+/de/leistungen/zugang-sicherheit /de/leistungen/it-basischeck/ 301
+/de/leistungen/zugang-sicherheit/ /de/leistungen/it-basischeck/ 301
+/en/services/onboarding /en/services/users-and-access/ 301
+/en/services/onboarding/ /en/services/users-and-access/ 301
+/en/services/offboarding /en/services/users-and-access/ 301
+/en/services/offboarding/ /en/services/users-and-access/ 301
+/en/services/workplace-requests /en/services/microsoft-365-workplace/ 301
+/en/services/workplace-requests/ /en/services/microsoft-365-workplace/ 301
+/en/services/vendor-coordination /en/services/ 301
+/en/services/vendor-coordination/ /en/services/ 301
+/en/services/single-point-of-contact /en/services/ 301
+/en/services/single-point-of-contact/ /en/services/ 301
+/en/services/access-security-basics /en/services/it-basics-check/ 301
+/en/services/access-security-basics/ /en/services/it-basics-check/ 301
+
+# Legacy German routes
+/services /de/leistungen/ 301
+/services.html /de/leistungen/ 301
+/packages /de/leistungen/ 301
+/packages.html /de/leistungen/ 301
+/it-matrix /de/leistungen/ 301
+/it-matrix.html /de/leistungen/ 301
+/kontakt /de/anfrage/ 301
+/kontakt.html /de/anfrage/ 301
+/rechtliches /de/legal/ 301
+/legal /de/legal/ 301
+/legal.html /de/legal/ 301
+/about /de/ueber-bit/ 301
+/about.html /de/ueber-bit/ 301
+/de/about /de/ueber-bit/ 301
+/de/about/ /de/ueber-bit/ 301
+/en/about /en/about-bit/ 301
+/en/about/ /en/about-bit/ 301
+
+# Legacy English entry points → EN (not DE)
+/index_en /en/ 302
+/index_en.html /en/ 302
+/index-en.html /en/ 302
+/en.html /en/ 302
+/services-en /en/services/ 302
+/services-en.html /en/services/ 302
+/packages-en /en/services/ 302
+/packages-en.html /en/services/ 302
+/it-matrix-en /en/services/ 302
+/it-matrix-en.html /en/services/ 302
+/kontakt-en /en/inquiry/ 302
+/kontakt-en.html /en/inquiry/ 302
+/legal-en /en/legal/ 302
+/legal-en.html /en/legal/ 302
+
+# Force non-www on Cloudflare Pages
+https://www.boksitsupport.ch/* https://boksitsupport.ch/:splat 301
+http://www.boksitsupport.ch/* https://boksitsupport.ch/:splat 301
+

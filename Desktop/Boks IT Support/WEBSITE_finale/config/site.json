@@ -1,0 +1,109 @@
+{
+  "base_url": "https://boksitsupport.ch",
+  "site_name": "BIT – Boks IT Support",
+  "brand": "BIT – IT support for small businesses without in-house IT",
+  "phase1_de_only": false,
+  "active_languages": [
+    "de",
+    "en"
+  ],
+  "prices": {
+    "hourly": "CHF 120",
+    "small_job": "CHF 190",
+    "zurich_travel": "CHF 35",
+    "pilot": "CHF 4'900",
+    "pilot_payment": "50/50"
+  },
+  "paths": {
+    "hospitality": {
+      "languages": [
+        "de",
+        "en",
+        "fr",
+        "it",
+        "sr",
+        "bs",
+        "hr"
+      ],
+      "slugs": {
+        "de": "hospitality",
+        "en": "hospitality",
+        "fr": "hospitality",
+        "sr": "hospitality",
+        "bs": "hospitality",
+        "hr": "hospitality",
+        "it": "hospitality"
+      }
+    },
+    "market": {
+      "languages": [
+        "de",
+        "en",
+        "fr",
+        "it",
+        "sr",
+        "bs",
+        "hr"
+      ],
+      "slugs": {
+        "de": "markt",
+        "en": "market",
+        "sr": "trziste",
+        "bs": "trziste",
+        "hr": "trziste",
+        "it": "mercato",
+        "fr": "marche"
+      }
+    }
+  },
+  "languages": [
+    {
+      "code": "de",
+      "label": "DE",
+      "hreflang": "de-CH"
+    },
+    {
+      "code": "en",
+      "label": "EN",
+      "hreflang": "en"
+    },
+    {
+      "code": "fr",
+      "label": "FR",
+      "hreflang": "fr-CH"
+    },
+    {
+      "code": "it",
+      "label": "IT",
+      "hreflang": "it-CH"
+    },
+    {
+      "code": "sr",
+      "label": "SR",
+      "hreflang": "sr-Latn"
+    },
+    {
+      "code": "bs",
+      "label": "BS",
+      "hreflang": "bs"
+    },
+    {
+      "code": "hr",
+      "label": "HR",
+      "hreflang": "hr"
+    }
+  ],
+  "contact": {
+    "phone_display": "+41 78 263 27 01",
+    "phone_href": "tel:+41782632701",
+    "email": "admin@boksitsupport.ch",
+    "whatsapp_url": "https://wa.me/41782632701",
+    "viber_url": "viber://chat?number=%2B41782632701"
+  },
+  "address": {
+    "street": "Schaffhauserstrasse 457",
+    "postal_code": "8052",
+    "city": "Zürich",
+    "country_code": "CH"
+  }
+}

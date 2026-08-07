@@ -1,0 +1,115 @@
+{
+  "lang": "it-CH",
+  "skip": "Vai al contenuto",
+  "language_suggestion": {
+    "prompt": "Vuole aprire questa pagina nella lingua del browser?",
+    "switch": "Cambia lingua",
+    "dismiss": "Chiudi"
+  },
+  "meta": {
+    "title": "Supporto IT Zurigo e sviluppo mercato Svizzera | BIT",
+    "description": "Supporto IT per PMI e hospitality a Zurigo, nonché sviluppo e verifica del mercato svizzero per offerte B2B.",
+    "keywords": "supporto IT Zurigo, IT PMI Svizzera, IT hotel, revenue management, Microsoft 365 Zurigo, ingresso mercato Svizzera"
+  },
+  "nav": {
+    "aria": "Navigazione principale",
+    "services": "Prestazioni",
+    "market": "Mercato svizzero",
+    "about": "Su BIT",
+    "contact": "Contatto",
+    "menu": "Menu",
+    "languages": "Scegliere la lingua"
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "",
+    "lead": "",
+    "services_button": "",
+    "trust": ""
+  },
+  "services": {
+    "eyebrow": "",
+    "title": "",
+    "intro": "",
+    "cards": []
+  },
+  "market": {
+    "eyebrow": "",
+    "title": "",
+    "text": "",
+    "items": []
+  },
+  "audiences": {
+    "eyebrow": "",
+    "title": "",
+    "intro": "",
+    "cards": []
+  },
+  "process": {
+    "eyebrow": "",
+    "title": "",
+    "intro": "",
+    "steps": []
+  },
+  "assurance": {
+    "title": "",
+    "text": "",
+    "items": []
+  },
+  "faq": {
+    "title": "",
+    "items": []
+  },
+  "about": {
+    "eyebrow": "Su di me",
+    "title": "Stefan Bogdanovic",
+    "text": "Vivo e lavoro a Zurigo.",
+    "independent": "Lavoro in modo indipendente e non rappresento ufficialmente alcun fornitore PMS o software.",
+    "image_alt": "Stefan Bogdanovic a Zurigo"
+  },
+  "contact": {
+    "eyebrow": "Contatto diretto",
+    "title": "Scrivetemi direttamente.",
+    "text": "Nessun modulo. Descrivete brevemente la richiesta.",
+    "whatsapp": "Scrivere su WhatsApp",
+    "viber": "Scrivere su Viber",
+    "email": "Inviare un'e-mail",
+    "email_subject": "Richiesta via boksitsupport.ch",
+    "quick_contact": "Contatto rapido"
+  },
+  "footer": {
+    "location": "Zurigo, Svizzera",
+    "legal": "Note legali",
+    "privacy": "Protezione dei dati"
+  },
+  "legal_page": {
+    "title": "Note legali",
+    "eyebrow": "Informazioni legali",
+    "lead": "Identificazione del prestatore e informazioni sull'uso di questo sito. Diritto applicabile principale: Svizzera.",
+    "back": "Torna al sito",
+    "provider_title": "Prestatore",
+    "provider_name": "BIT – Boks IT Support",
+    "entity_type": "La forma giuridica / lo status di indipendente è attualmente in chiarimento",
+    "owner": "Responsabile dei contenuti: Stefan Bogdanovic",
+    "activity_title": "Attività",
+    "activity": "Sviluppo del mercato svizzero e rappresentanza sulla base di un mandato scritto, nonché supporto IT e assistenza digitale per PMI e hospitality.",
+    "address_title": "Indirizzo",
+    "city": "Zurigo",
+    "country": "Svizzera",
+    "contact_title": "Contatto",
+    "registration_title": "Registro e fiscalità",
+    "registration": "Eventuali identificativi aziendali, del registro di commercio o IVA sono comunicati su richiesta. Qui vengono pubblicate solo informazioni note e verificate.",
+    "terms_title": "Condizioni generali – punti essenziali",
+    "terms": "Ambito, prezzo e calendario sono concordati per iscritto. Le spese di terzi richiedono un'autorizzazione; ogni rappresentanza richiede un mandato scritto esplicito. Coinvolgo specialisti esterni solo previo accordo. Rimango l'unica controparte contrattuale. Si tratta di punti essenziali e non di una consulenza legale completa.",
+    "liability_title": "Responsabilità dei contenuti",
+    "liability": "I contenuti di questo sito sono preparati con cura. Non viene fornita alcuna assicurazione di completezza, esattezza o disponibilità continua. I contenuti dei siti esterni collegati restano di esclusiva responsabilità dei rispettivi gestori.",
+    "copyright_title": "Diritto d'autore",
+    "copyright": "© 2026 BIT – Boks IT Support. Tutti i diritti riservati. Testi, design e altri contenuti di questo sito non possono essere riprodotti, diffusi o utilizzati diversamente senza previa autorizzazione scritta.",
+    "privacy_title": "Protezione dei dati",
+    "privacy": "Questo sito statico non utilizza moduli di contatto né tracking proprietario. Il fornitore di hosting può elaborare i log tecnici necessari. In caso di contatto via WhatsApp, Viber o e-mail valgono anche le regole sulla riservatezza del rispettivo fornitore.",
+    "privacy_messaging": "WhatsApp e Viber possono elaborare e trasferire metadati di contatto, dispositivo e comunicazione fuori dalla Svizzera. E-mail e telefono restano disponibili come alternative. Non inviate mai credenziali riservate tramite messaggistica.",
+    "jurisdiction_title": "Diritto applicabile e foro",
+    "jurisdiction": "Si applica il diritto svizzero. Nella misura consentita dalla legge, Zurigo è il foro per le controversie relative a questo sito e alle prestazioni proposte.",
+    "updated": "Aggiornamento: luglio 2026"
+  }
+}

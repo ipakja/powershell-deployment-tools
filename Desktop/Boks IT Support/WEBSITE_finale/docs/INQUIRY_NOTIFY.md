@@ -1,179 +1,86 @@
-# Inquiry push notify (Telegram / Slack) + KV viewer
+# Inquiry notify (optional) + KV + HTML viewer
 
-**Mandatory for ops:** KV alone stores leads; Stefan is **not** notified unless push notify is configured. Set Telegram (recommended) or Slack before relying on the form in production.
+**Standard ops path (recommended):** WhatsApp/mailto direct + form → Cloudflare KV (`INQUIRY_LOG`) + **HTML viewer bookmark** — see [INQUIRY_VIEWER.md](./INQUIRY_VIEWER.md).
 
-**No FormSubmit.** Paths: Cloudflare KV (`INQUIRY_LOG`) + Telegram and/or webhook + optional Resend.
+Push notify (Telegram / Slack webhook / Resend) stays in the codebase for later use. It is **optional** and **not** the recommended daily path.
 
-**Parallel zero-backend path:** WhatsApp / mailto with pre-filled templates on the inquiry pages — see [INQUIRY_DIRECT.md](./INQUIRY_DIRECT.md). Keep both; do not remove the form.
+**No FormSubmit.**
 
-Full delivery model: see [INQUIRY_KV_WEBHOOK.md](./INQUIRY_KV_WEBHOOK.md).
+**Parallel zero-backend path:** WhatsApp / mailto templates — [INQUIRY_DIRECT.md](./INQUIRY_DIRECT.md). Keep both; do not remove the form.
 
----
-
-## Nummerierte Schritte für Stefan (Telegram empfohlen)
-
-### Schritt 1 — Bot anlegen
-
-1. In Telegram [@BotFather](https://t.me/BotFather) öffnen → `/newbot` → Name und Username wählen.
-2. BotFather liefert den **Bot-Token** (Format `123456:ABC…`).
-
-**Erfolgskriterium:** Sie haben den Token kopiert und speichern ihn nur als Secret (nicht in Git).
-
-**Secret-Name:** `TELEGRAM_BOT_TOKEN`
+Full delivery model: [INQUIRY_KV_WEBHOOK.md](./INQUIRY_KV_WEBHOOK.md).
 
 ---
 
-### Schritt 2 — Chat-ID ermitteln
+## Viewer (recommended)
 
-1. Den neuen Bot in Telegram einmal anschreiben (beliebiger Text).
-2. Im Browser öffnen:  
-   `https://api.telegram.org/bot<TOKEN>/getUpdates`  
-   (`<TOKEN>` durch den echten Token ersetzen).
-3. In der JSON-Antwort `message.chat.id` notieren (Zahl, ggf. negativ bei Gruppen).
+Bookmark (replace placeholder after setting the secret):
 
-**Erfolgskriterium:** Sie sehen eine numerische `chat.id` und haben sie kopiert.
-
-**Secret-Name:** `TELEGRAM_CHAT_ID`
-
----
-
-### Schritt 3 — Secrets in Cloudflare setzen (Dashboard)
-
-1. [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → Projekt **`website`**.
-2. **Settings** → **Environment variables** (bzw. Variables and Secrets) → Umgebung **Production**.
-3. Anlegen bzw. aktualisieren:
-
-| Secret / Variable | Pflicht | Zweck |
-|-------------------|---------|--------|
-| `TELEGRAM_BOT_TOKEN` | ja (für Telegram) | Bot-Token von BotFather |
-| `TELEGRAM_CHAT_ID` | ja (für Telegram) | Numerische Chat-ID |
-| `INQUIRY_VIEW_TOKEN` | empfohlen | Langer Zufallsstring (32+ Zeichen) für Viewer und Notify-Test |
-| `INQUIRY_DIAG_TOKEN` | optional | Fallback-Auth für Health/Viewer/Notify-Test, falls VIEW fehlt |
-| `INQUIRY_WEBHOOK_URL` | optional | Alternative/Zusatz: Slack Incoming Webhook, Discord oder generisches JSON |
-
-**Wrangler-Alternative** (lokal, eingeloggt):
-
-```bat
-npx wrangler pages secret put TELEGRAM_BOT_TOKEN --project-name website
-npx wrangler pages secret put TELEGRAM_CHAT_ID --project-name website
-npx wrangler pages secret put INQUIRY_VIEW_TOKEN --project-name website
+```
+https://boksitsupport.ch/api/inquiries/view?token=TOKEN_PLACEHOLDER
 ```
 
-(Jeder Befehl fragt den Wert interaktiv ab.)
+Setup steps and success criteria: **[INQUIRY_VIEWER.md](./INQUIRY_VIEWER.md)**.
 
-**Erfolgskriterium:** Die drei Namen erscheinen unter Production für Projekt `website` (Werte bleiben verborgen).
+JSON for scripts:
+
+```powershell
+.\scripts\list_inquiries.ps1 -Token "SECRET" -Limit 20
+```
 
 ---
 
-### Schritt 4 — Redeploy
+## Robustness
 
-Nach dem Setzen von Production-Variablen/Secrets:
-
-```bat
-deploy.bat
-```
-
-oder:
-
-```bat
-python scripts\build_site.py
-npx wrangler pages deploy . --project-name website --branch=main --commit-dirty=true
-```
-
-**Erfolgskriterium:** Deploy endet ohne Fehler; Production zeigt den neuen Deployment-Zeitpunkt.
-
-**Hinweis:** Secrets gelten erst zuverlässig nach einem erfolgreichen Pages-Deploy (oder wenn Cloudflare die Vars sofort an die laufenden Functions bindet — Redeploy ist der sichere Weg).
+- KV write without push notify → visitor success (**OK**)
+- When KV is bound: storage failure → **no** visitor success (502)
+- KV TTL ≈ 12 months — aligned with privacy retention wording
+- Notify failure after successful KV → logged (`INQUIRY_STORED_BUT_NOTIFY_FAILED`); visitor still sees success
 
 ---
 
-### Schritt 5 — Notify-Test ohne KV-Eintrag
+## Optional: Telegram (code present, not recommended now)
 
-**Auth Pflicht:** `INQUIRY_VIEW_TOKEN` (oder Fallback `INQUIRY_DIAG_TOKEN`). Ohne konfiguriertes Secret → **503** `auth_not_configured`. Falsches Token → **401**. Endpoint ist **nie öffentlich**.
+Telegram remains implemented (`TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID`). Prefer the HTML viewer unless you explicitly want push messages.
+
+### Schritt A — Bot anlegen
+
+1. [@BotFather](https://t.me/BotFather) → `/newbot`
+2. Copy bot token → secret `TELEGRAM_BOT_TOKEN`
+
+### Schritt B — Chat-ID
+
+1. Message the bot once
+2. Open `https://api.telegram.org/bot<TOKEN>/getUpdates`
+3. Note `message.chat.id` → secret `TELEGRAM_CHAT_ID`
+
+### Schritt C — Secrets + redeploy
+
+Cloudflare → Workers & Pages → **`website`** → Settings → Production secrets, then redeploy.
+
+### Schritt D — Notify-Test (no KV write)
 
 ```http
 POST https://boksitsupport.ch/api/inquiry-notify-test
 Authorization: Bearer <INQUIRY_VIEW_TOKEN>
-Content-Type: application/json
-
-{"note":"Notify-Test Stefan"}
 ```
 
-Alternativ Query: `POST …/api/inquiry-notify-test?token=<INQUIRY_VIEW_TOKEN>`
-
-curl (PowerShell):
-
-```powershell
-curl.exe -X POST "https://boksitsupport.ch/api/inquiry-notify-test" `
-  -H "Authorization: Bearer $env:INQUIRY_VIEW_TOKEN" `
-  -H "Content-Type: application/json" `
-  -d "{\"note\":\"Notify-Test Stefan\"}"
-```
-
-Invoke-RestMethod:
-
-```powershell
-Invoke-RestMethod -Method Post `
-  -Uri "https://boksitsupport.ch/api/inquiry-notify-test" `
-  -Headers @{ Authorization = "Bearer $env:INQUIRY_VIEW_TOKEN" } `
-  -ContentType "application/json" `
-  -Body '{"note":"Notify-Test Stefan"}'
-```
-
-**Erfolgskriterium:** HTTP 200 mit `"ok":true,"stored":false,"notified":true`; Telegram (oder Webhook) erhält die Testnachricht; unter `/api/inquiries` erscheint **kein** neuer KV-Eintrag für diesen Test.
+Success: `"ok":true,"stored":false,"notified":true` and a Telegram message.
 
 ---
 
-### Schritt 6 — Echten Formular-Submit prüfen
+## Optional: Slack webhook
 
-1. Formular auf `https://boksitsupport.ch/de/anfrage/` ausfüllen und senden.
-2. Telegram prüfen.
-3. Optional Viewer:
-
-```powershell
-.\scripts\list_inquiries.ps1 -Token "SECRET" -Limit 5
-```
-
-**Erfolgskriterium:** Besuchermeldung Erfolg; Telegram-Nachricht; Eintrag in `/api/inquiries`. Wenn Notify fehlschlägt, bleibt KV-Erfolg für den Besucher erhalten (im Log: `INQUIRY_STORED_BUT_NOTIFY_FAILED`).
+Set `INQUIRY_WEBHOOK_URL` (Incoming Webhook), redeploy, run notify-test.
 
 ---
 
-## Slack-Alternative
+## Optional: Resend
 
-1. Slack **Incoming Webhook** für den gewünschten Kanal erstellen.
-2. Production: `INQUIRY_WEBHOOK_URL` = Webhook-URL.
-3. Redeploy (Schritt 4), dann Notify-Test (Schritt 5).
+- **Without own domain verify:** `from: onboarding@resend.dev` can send **only** to the Resend account owner email. Usable as a short test; not production-grade for arbitrary recipients.
+- **Production to any mailbox:** verify `boksitsupport.ch` in Resend — DNS **Proxy DNS only** (grey cloud). See [RESEND_GOLIVE.md](./RESEND_GOLIVE.md).
 
----
-
-## Viewer (letzte Anfragen ohne wrangler)
-
-**Auth Pflicht:** `INQUIRY_VIEW_TOKEN` (oder Fallback `INQUIRY_DIAG_TOKEN`). Ohne Secret → **503** `auth_not_configured`. Falsches/fehlendes Token → **401**. **Nie** Inquiry-Daten ohne gültiges Token.
-
-```http
-GET https://boksitsupport.ch/api/inquiries?token=SECRET&limit=20
-```
-
-oder Header: `Authorization: Bearer SECRET`
-
-- Default `limit` 20, Maximum 50
-- Secrets nicht gesetzt → **503** `auth_not_configured`
-- Falsches/fehlendes Token → **401**
-- KV nicht gebunden → **503** `kv_not_bound`
-
-curl:
-
-```powershell
-curl.exe "https://boksitsupport.ch/api/inquiries?token=$env:INQUIRY_VIEW_TOKEN&limit=20"
-# oder:
-curl.exe "https://boksitsupport.ch/api/inquiries?limit=20" `
-  -H "Authorization: Bearer $env:INQUIRY_VIEW_TOKEN"
-```
-
-```powershell
-.\scripts\list_inquiries.ps1 -Token $env:INQUIRY_VIEW_TOKEN -Limit 20
-```
-
-Optional: `-BaseUrl "https://boksitsupport.ch"`
+Secrets (when ready): `RESEND_API_KEY`, optional `INQUIRY_FROM`, `INQUIRY_TO`.
 
 ---
 
@@ -183,27 +90,14 @@ Optional: `-BaseUrl "https://boksitsupport.ch"`
 GET https://boksitsupport.ch/api/inquiry-health
 ```
 
-Öffentlich (Booleans only): `ok`, `hasKv`, `hasResendKey`, `hasWebhook`, `hasTelegram`, `hasPushNotify`.
-
-Keine Secrets, Tokens, Chat-IDs oder Inquiry-Inhalte. `hasPushNotify` ist `true`, sobald Telegram **oder** Webhook **oder** Resend gesetzt ist.
-
-Wenn `INQUIRY_DIAG_TOKEN` gesetzt ist: `?token=…` mitgeben (sonst 401).
+Public booleans only: `ok`, `hasKv`, `hasResendKey`, `hasWebhook`, `hasTelegram`, `hasPushNotify`.
 
 ---
 
-## Fallback-Verhalten (technisch)
+## What Stefan does himself
 
-- KV-Schreiben ist der primäre Erfolgspfad für den Besucher.
-- Push-Notify (Telegram/Webhook/Resend) läuft danach; Fehler werden geloggt und **setzen den Besuchererfolg nicht zurück**, wenn KV ok ist.
-- Formular-Client: bei API-Fehler **keine** Erfolgsmeldung, Felder bleiben, Mailto-Alternative wird angeboten.
-
----
-
-## Was Stefan selbst erledigen muss
-
-Cursor/Deploy kann den Telegram-Bot und die privaten Secrets nicht für Sie anlegen.
-
-1. Bot + `chat_id` (Schritte 1–2).
-2. Secrets in Cloudflare Production für Projekt **`website`** (Schritt 3).
-3. Redeploy (Schritt 4).
-4. Notify-Test + ein echter Formular-Test (Schritte 5–6).
+1. Generate `INQUIRY_VIEW_TOKEN` and set it on Production for project **`website`** ([INQUIRY_VIEWER.md](./INQUIRY_VIEWER.md)).
+2. Redeploy.
+3. Bookmark the HTML viewer URL (keep private).
+4. Optional later: Telegram / Resend.
+5. Ana 5-second test — [5-SEKUNDEN-TEST.md](./5-SEKUNDEN-TEST.md).

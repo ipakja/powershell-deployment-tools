@@ -356,6 +356,8 @@ export async function onRequestPost(context) {
     fields[key] = sanitize(data[key]).slice(0, key === "phone" ? 40 : 4000);
   }
   fields.privacy = Boolean(data.privacy);
+  const langRaw = sanitize(data.language || "").toLowerCase();
+  fields.language = langRaw === "en" || langRaw === "de" ? langRaw : "";
 
   if (!fields.privacy) {
     return json(400, { ok: false, error: "privacy_required" });
@@ -364,10 +366,16 @@ export async function onRequestPost(context) {
     return json(400, { ok: false, error: "invalid_email" });
   }
 
+  const sourcePath =
+    fields.language === "en"
+      ? "boksitsupport.ch/en/inquiry/"
+      : "boksitsupport.ch/de/anfrage/";
+
   const record = {
     requestId,
     receivedAt,
-    source: "boksitsupport.ch/de/anfrage/",
+    source: sourcePath,
+    language: fields.language || "",
     ip: request.headers.get("cf-connecting-ip") || "",
     country: request.cf?.country || "",
     fields,
@@ -387,10 +395,11 @@ export async function onRequestPost(context) {
     });
   }
 
-  // 1) Always try KV first – visitor success depends on durable store when KV is bound.
+  // 1) KV first – when KV is bound, visitor success requires a successful write.
+  const kvBound = Boolean(env.INQUIRY_LOG);
   const kvResult = await storeInKv(env, record);
 
-  // 2) Push notify – failures must not wipe KV success.
+  // 2) Push notify is optional. Failures must not wipe KV success.
   const telegramResult = await deliverViaTelegram(env, record);
   const webhookResult = await deliverViaWebhook(env, record);
   const resendResult = env.RESEND_API_KEY
@@ -410,6 +419,20 @@ export async function onRequestPost(context) {
   }
   if (!resendResult.ok && resendResult.reason !== "not_configured") {
     console.error("INQUIRY_NOTIFY_RESEND_FAILED", requestId, resendResult);
+  }
+
+  // Storage fail → no visitor success when KV is the configured store.
+  if (kvBound && !kvResult.ok) {
+    console.error("INQUIRY_STORAGE_FAILED", requestId, kvResult.reason || "");
+    return json(502, {
+      ok: false,
+      error: "delivery_failed",
+      requestId,
+      logged: true,
+      stored: false,
+      notified: notifyVias.length > 0,
+      notifyVias,
+    });
   }
 
   const durableOk =

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="$html_lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$meta_title</title>
+    <meta name="description" content="$meta_description">
+    <meta name="theme-color" content="#0d0f11">
+    <link rel="canonical" href="$canonical">
+$alternate_links
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/assets/universal.css?v=9">
+    <script type="application/ld+json">$structured_data</script>
+</head>
+<body data-current-language="$language" data-current-path="$path_key"
+      data-language-prompt="$language_prompt" data-language-switch="$language_switch"
+      data-language-dismiss="$language_dismiss">
+    <a class="skip-link" href="#main">$skip</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="$canonical_path" aria-label="BIT">
+                <img src="/LOGO_DARK.png" alt="BIT – Boks IT Support" width="174">
+            </a>
+            <nav class="main-nav" data-main-nav aria-label="$nav_aria">$nav_links
+                <a href="/$language/about/">$about_label</a>
+                <a href="#contact">$contact_label</a>
+            </nav>
+            <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="$menu_label">$menu_label</button>
+            <nav class="language-nav" data-language-nav aria-label="$languages_label">
+$language_links
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow">$eyebrow</p>
+                <h1>$title</h1>
+                <p class="hero-lead">$lead</p>
+            </div>
+        </section>
+$main_sections
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-panel">
+                    <h2>$contact_label</h2>
+                    <p class="section-intro">$warning</p>
+                    <div class="contact-actions">
+$contact_actions
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© 2026 BIT · $location</div>
+            <div class="footer-links">
+                <a href="/$language/about/">$about_label</a>
+                <a href="/$language/legal/">$legal_label</a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/assets/js/app.js?v=2"></script>
+</body>
+</html>

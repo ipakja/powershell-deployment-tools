@@ -7,15 +7,20 @@ ROOT = Path(__file__).resolve().parents[2]
 INQUIRY = (ROOT / "functions" / "api" / "inquiry.js").read_text(encoding="utf-8")
 HEALTH = (ROOT / "functions" / "api" / "inquiry-health.js").read_text(encoding="utf-8")
 INQUIRIES = (ROOT / "functions" / "api" / "inquiries.js").read_text(encoding="utf-8")
+INQUIRIES_VIEW = (ROOT / "functions" / "api" / "inquiries" / "view.js").read_text(
+    encoding="utf-8"
+)
 WRANGLER = (ROOT / "wrangler.toml").read_text(encoding="utf-8")
 CLIENT = (ROOT / "assets" / "js" / "inquiry-form.js").read_text(encoding="utf-8")
 DE_PRIVACY = (ROOT / "locales" / "de.json").read_text(encoding="utf-8")
 EN_PRIVACY = (ROOT / "locales" / "en.json").read_text(encoding="utf-8")
 NOTIFY_DOC = (ROOT / "docs" / "INQUIRY_NOTIFY.md").read_text(encoding="utf-8")
+VIEWER_DOC = (ROOT / "docs" / "INQUIRY_VIEWER.md").read_text(encoding="utf-8")
 LIST_PS1 = (ROOT / "scripts" / "list_inquiries.ps1").read_text(encoding="utf-8")
 NOTIFY_TEST = (ROOT / "functions" / "api" / "inquiry-notify-test.js").read_text(
     encoding="utf-8"
 )
+ROBOTS = (ROOT / "robots.txt").read_text(encoding="utf-8")
 
 
 def test_inquiry_kv_webhook_telegram_no_formsubmit() -> None:
@@ -73,6 +78,39 @@ def test_inquiries_viewer_auth_and_kv() -> None:
     assert "FormSubmit" not in INQUIRIES
     # Never open when secrets missing: early 503 before KV read
     assert INQUIRIES.index("auth_not_configured") < INQUIRIES.index("kv_not_bound")
+    assert "last7Days" in INQUIRIES
+
+
+def test_html_viewer_escape_auth_and_fields() -> None:
+    assert "export function escapeHtml" in INQUIRIES_VIEW
+    assert "export function countLast7Days" in INQUIRIES_VIEW
+    assert "export function isRecent48h" in INQUIRIES_VIEW
+    assert "text/html" in INQUIRIES_VIEW
+    assert "noindex" in INQUIRIES_VIEW
+    assert "no-store" in INQUIRIES_VIEW
+    assert "mailto:" in INQUIRIES_VIEW
+    assert "tel:" in INQUIRIES_VIEW
+    assert "Einträge der letzten 7 Tage" in INQUIRIES_VIEW
+    assert "Neueste Anfrage" in INQUIRIES_VIEW
+    assert "Sprachversion" in INQUIRIES_VIEW
+    assert "Geschäftliche E-Mail" in INQUIRIES_VIEW
+    assert "inquiry.recent" in INQUIRIES_VIEW or "class=\"inquiry recent\"" in INQUIRIES_VIEW
+    assert "INQUIRY_VIEW_TOKEN" in INQUIRIES_VIEW
+    assert "auth_not_configured" in INQUIRIES_VIEW or "Viewer nicht konfiguriert" in INQUIRIES_VIEW
+    assert "unauthorized" in INQUIRIES_VIEW or "Nicht autorisiert" in INQUIRIES_VIEW
+    assert "503" in INQUIRIES_VIEW
+    assert "401" in INQUIRIES_VIEW
+    # Escape covers XSS-sensitive characters
+    assert "&amp;" in INQUIRIES_VIEW and "&lt;" in INQUIRIES_VIEW
+    assert INQUIRIES_VIEW.index("viewToken") < INQUIRIES_VIEW.index("INQUIRY_LOG.list")
+
+
+def test_inquiry_kv_required_when_bound_and_language() -> None:
+    assert "INQUIRY_STORAGE_FAILED" in INQUIRY
+    assert 'fields.language' in INQUIRY or "fields.language =" in INQUIRY
+    assert "boksitsupport.ch/en/inquiry/" in INQUIRY
+    assert "boksitsupport.ch/de/anfrage/" in INQUIRY
+    assert "60 * 60 * 24 * 365" in INQUIRY
 
 
 def test_wrangler_binds_inquiry_log_kv() -> None:
@@ -104,18 +142,21 @@ def test_privacy_mentions_messaging_notify_no_secrets() -> None:
 
 
 def test_notify_docs_and_list_script_exist() -> None:
-    assert "TELEGRAM_BOT_TOKEN" in NOTIFY_DOC
-    assert "TELEGRAM_CHAT_ID" in NOTIFY_DOC
     assert "INQUIRY_VIEW_TOKEN" in NOTIFY_DOC
     assert "/api/inquiries" in NOTIFY_DOC
     assert "/api/inquiry-notify-test" in NOTIFY_DOC
-    assert "BotFather" in NOTIFY_DOC
     assert "list_inquiries.ps1" in NOTIFY_DOC
-    assert "Erfolgskriterium" in NOTIFY_DOC
-    assert "auth_not_configured" in NOTIFY_DOC
-    assert "503" in NOTIFY_DOC
+    assert "HTML viewer" in NOTIFY_DOC or "HTML-Viewer" in NOTIFY_DOC or "INQUIRY_VIEWER" in NOTIFY_DOC
+    assert "optional" in NOTIFY_DOC.lower() or "Optional" in NOTIFY_DOC
+    assert "TOKEN_PLACEHOLDER" in VIEWER_DOC
+    assert "/api/inquiries/view" in VIEWER_DOC
+    assert "INQUIRY_VIEW_TOKEN" in VIEWER_DOC
+    assert "Workers & Pages" in VIEWER_DOC or "website" in VIEWER_DOC
+    assert "Redeploy" in VIEWER_DOC or "redeploy" in VIEWER_DOC
     assert "INQUIRY_VIEW_TOKEN" in LIST_PS1 or "Token" in LIST_PS1
     assert "/api/inquiries" in LIST_PS1
+    assert "/api/inquiries" in ROBOTS or "/api/inquiries/view" in ROBOTS
+    assert "Disallow: /api/inquiries" in ROBOTS
 
 
 def test_notify_test_endpoint_no_kv() -> None:

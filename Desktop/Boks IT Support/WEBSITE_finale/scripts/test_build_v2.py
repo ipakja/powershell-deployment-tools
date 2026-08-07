@@ -199,11 +199,12 @@ def test_no_travel_flat_rate_remote_policy_on_it_pages() -> None:
     de_remote = (
         "Die meisten Anfragen werden remote bearbeitet. Ist ein Termin vor Ort "
         "erforderlich, wird er vorab vereinbart und im Angebot separat ausgewiesen "
-        "– im Raum Zürich."
+        "– im Raum Zürich, ohne Anfahrtspauschale als versteckte Position."
     )
     en_remote = (
         "Most requests are handled remotely. If an on-site appointment is required, "
-        "it is agreed in advance and listed separately in the quote — Zurich area."
+        "it is agreed in advance and listed separately in the quote — Zurich area, "
+        "with no hidden travel flat fee."
     )
     for path in (
         "de/leistungen/index.html",
@@ -215,6 +216,7 @@ def test_no_travel_flat_rate_remote_policy_on_it_pages() -> None:
         assert "CHF 35" not in text
         assert "Anfahrt innerhalb Zürichs" not in text
         assert "Travel within Zurich" not in text
+        assert "Anfahrtspauschale" in text or "travel flat fee" in text
     assert de_remote in read("de/leistungen/index.html")
     assert de_remote in read("de/faq/index.html")
     assert en_remote in read("en/services/index.html")
@@ -657,13 +659,16 @@ def test_phase2_markers_partner_examples_process_list() -> None:
 
     users = read("de/leistungen/benutzer-und-zugaenge/index.html")
     words = re.findall(r"[A-Za-zÄÖÜäöü]{2,}", users)
-    assert len(words) >= 280
+    assert len(words) >= 300
     assert 'area=users-access' in users
     assert "ProfessionalService" in users
 
     assert (build_site.ROOT / "docs" / "PHASE2_PLAN.md").is_file()
     assert (build_site.ROOT / "functions" / "api" / "inquiry-notify-test.js").is_file()
+    assert (build_site.ROOT / "functions" / "api" / "inquiries" / "view.js").is_file()
+    assert (build_site.ROOT / "docs" / "INQUIRY_VIEWER.md").is_file()
+    assert (build_site.ROOT / "docs" / "5-SEKUNDEN-TEST.md").is_file()
     notify = (build_site.ROOT / "docs" / "INQUIRY_NOTIFY.md").read_text(encoding="utf-8")
     assert "/api/inquiry-notify-test" in notify
-    assert "TELEGRAM_BOT_TOKEN" in notify
+    assert "INQUIRY_VIEWER" in notify or "HTML" in notify
 
