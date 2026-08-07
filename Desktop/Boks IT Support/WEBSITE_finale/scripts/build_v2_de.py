@@ -146,8 +146,8 @@ def professional_service_json_ld(site: dict[str, Any]) -> str:
         },
         "areaServed": {"@type": "City", "name": "Zürich"},
         "serviceType": [
-            "User and access administration",
-            "Microsoft 365 and workplace support",
+            "User and access services",
+            "Microsoft 365 and workplace services",
             "IT basics check",
         ],
     }
@@ -319,7 +319,7 @@ def cards(
 
 
 def service_cards(v2: dict[str, Any]) -> str:
-    """Render service cards with benefit line, icon and secondary CTA."""
+    """Render service cards with when / what BIT does / outcome and secondary CTA."""
     ui = v2["ui"]
     path_prefix = v2["services"]["path"]
     view_label = escape(ui["view_service"])
@@ -327,10 +327,18 @@ def service_cards(v2: dict[str, Any]) -> str:
     for item in v2["services"]["cards"]:
         href = f"{path_prefix}{item['slug']}/"
         icon = SERVICE_ICONS.get(item.get("icon", ""), SERVICE_ICONS["users"])
-        benefit = item.get("benefit") or ""
-        benefit_html = (
-            f'                        <p class="service-benefit">{escape(benefit)}</p>\n'
-            if benefit
+        when = item.get("when") or item.get("benefit") or ""
+        what = item.get("what") or item.get("text") or ""
+        outcome = item.get("outcome") or ""
+        when_html = (
+            f'                        <p class="service-benefit">{escape(when)}</p>\n'
+            if when
+            else ""
+        )
+        what_html = f"                        <p>{escape(what)}</p>\n" if what else ""
+        outcome_html = (
+            f'                        <p class="service-outcome">{escape(outcome)}</p>\n'
+            if outcome
             else ""
         )
         price = item.get("price_label") or ""
@@ -344,14 +352,16 @@ def service_cards(v2: dict[str, Any]) -> str:
             f'                        <span class="service-icon" data-icon="{escape(item.get("icon", ""))}">'
             f"{icon}</span>\n"
             f"                        <h3>{escape(item['title'])}</h3>\n"
-            f"{benefit_html}"
-            f"                        <p>{escape(item['text'])}</p>\n"
+            f"{when_html}"
+            f"{what_html}"
+            f"{outcome_html}"
             f"{price_html}"
             f'                        <a class="service-card-cta" href="{escape(href)}">{view_label}</a>\n'
             "                    </article>"
         )
     blocks.append("                </div>\n")
     return "\n".join(blocks) + "\n"
+
 
 def services_section_body(v2: dict[str, Any], *, include_price_panel: bool = False) -> str:
     """Shared services body: cards, scope note, vendor note, guideline price, CTA."""
@@ -371,15 +381,24 @@ def services_section_body(v2: dict[str, Any], *, include_price_panel: bool = Fal
     )
     if include_price_panel:
         prices = v2["prices"]
+        price_items = [
+            ui.get("small_job_line", "").format(**prices),
+            ui.get("setup_line", ""),
+            ui.get("recurring_line", ""),
+            ui.get("special_line", ""),
+            ui.get("travel_line", "").format(**prices),
+            ui.get("hourly_line", "").format(**prices),
+        ]
+        lis = "".join(
+            f"                        <li>{escape(item)}</li>\n"
+            for item in price_items
+            if item
+        )
         parts.append(
             '                <div class="price-panel">\n'
             f'                    <p class="eyebrow">{escape(ui["guidelines_title"])}</p>\n'
             f"                    <p>{escape(v2['price_note'])}</p>\n"
-            '                    <ul class="plain-list">\n'
-            f"                        <li>{escape(ui['hourly_line'].format(**prices))}</li>\n"
-            f"                        <li>{escape(ui['small_job_line'].format(**prices))}</li>\n"
-            f"                        <li>{escape(ui['travel_line'].format(**prices))}</li>\n"
-            "                    </ul>\n"
+            f'                    <ul class="plain-list">\n{lis}                    </ul>\n'
             "                </div>\n"
         )
     parts.append(
@@ -480,15 +499,9 @@ def render_page(
 
 
 def home_main(v2: dict[str, Any]) -> str:
-    """Homepage sections for the live DE/EN IT site."""
+    """Homepage: Ana order — offer → services → whom → situations → process → why → CTA."""
     home = v2["home"]
-    trust_block = home.get("trust_block") or {}
-    trust_html = ""
-    if trust_block.get("title") and trust_block.get("text"):
-        trust_html = section(
-            trust_block["title"],
-            f'                <p>{escape(trust_block["text"])}</p>\n',
-        )
+    audience = v2["audience"]
     subline = home.get("cta_subline") or ""
     subline_html = (
         f'                <p class="hero-subline">{escape(subline)}</p>\n' if subline else ""
@@ -497,27 +510,39 @@ def home_main(v2: dict[str, Any]) -> str:
     outcome_html = (
         f'                <p class="hero-outcome">{escape(outcome)}</p>\n' if outcome else ""
     )
-    teaser = home.get("examples_teaser") or {}
-    teaser_html = ""
-    if teaser.get("title"):
-        teaser_html = section(
-            teaser["title"],
+
+    def teaser_section(block: dict[str, Any] | None) -> str:
+        if not block or not block.get("title"):
+            return ""
+        return section(
+            block["title"],
             (
-                f'                <p>{escape(teaser.get("text", ""))}</p>\n'
+                f'                <p>{escape(block.get("text", ""))}</p>\n'
                 f'                <div class="hero-actions">\n'
-                f'                    <a class="button button-secondary" href="{escape(teaser.get("href", "#"))}">'
-                f'{escape(teaser.get("cta", ""))}</a>\n'
+                f'                    <a class="button button-secondary" href="{escape(block.get("href", "#"))}">'
+                f'{escape(block.get("cta", ""))}</a>\n'
                 "                </div>\n"
             ),
         )
-    partner = home.get("partner") or {}
-    partner_html = ""
-    if partner.get("title") and partner.get("text"):
-        partner_html = section(
-            partner["title"],
-            f'                <p>{escape(partner["text"])}</p>\n',
-            section_id="vertragspartner",
+
+    why = home.get("why_bit") or {}
+    why_html = ""
+    if why.get("title") and why.get("items"):
+        why_body = ul(why["items"])
+        partner = home.get("partner") or {}
+        if partner.get("text"):
+            why_body += f'                <p>{escape(partner["text"])}</p>\n'
+        why_html = section(why["title"], why_body, section_id="warum-bit")
+
+    process = v2["process"]
+    process_intro = process.get("lead") or ""
+    process_body = process_list_html(process["steps"])
+    if process_intro:
+        process_body = (
+            f'                <p class="section-intro">{escape(process_intro)}</p>\n'
+            + process_body
         )
+
     return "".join(
         [
             (
@@ -539,28 +564,27 @@ def home_main(v2: dict[str, Any]) -> str:
                 "            </div>\n"
                 "        </section>\n"
             ),
-            section(v2["concerns"]["title"], ul(v2["concerns"]["items"])),
-            section(v2["problem"]["title"], cards(v2["problem"]["items"])),
             section(
                 v2["services"]["title"],
                 services_section_body(v2),
                 intro=v2["services"]["intro"],
             ),
-            partner_html,
+            section(audience["fit_title"], ul(audience["fit"])),
             section(
                 v2["limits"]["title"],
                 ul(v2["limits"]["items"]),
                 intro=v2["limits"]["lead"],
             ),
-            section(
-                v2["process"]["title"],
-                process_list_html(v2["process"]["steps"]),
-            ),
-            teaser_html,
-            trust_html,
-            cta_block(v2, include_whatsapp=True),
+            section(v2["concerns"]["title"], ul(v2["concerns"]["items"])),
+            section(process["title"], process_body),
+            why_html,
+            teaser_section(home.get("examples_teaser")),
+            teaser_section(home.get("about_teaser")),
+            teaser_section(home.get("faq_teaser")),
+            cta_block(v2, include_whatsapp=False),
         ]
     )
+
 
 def leistungen_main(v2: dict[str, Any]) -> str:
     """Services overview."""
@@ -749,15 +773,18 @@ def examples_main(v2: dict[str, Any]) -> str:
 def process_main(v2: dict[str, Any]) -> str:
     """Process page."""
     ui = v2["ui"]
-    steps = v2["process"]["steps"]
+    process = v2["process"]
+    steps = process["steps"]
+    lead = process.get("lead") or ui["process_lead"]
+    step_label = ui.get("five_steps") or ""
     return (
         '        <section class="hero"><div class="container">\n'
         f'            <p class="eyebrow">{escape(ui["process_eyebrow"])}</p>\n'
-        f"            <h1>{escape(v2['process']['title'])}</h1>\n"
-        f'            <p class="hero-lead">{escape(ui["process_lead"])}</p>\n'
+        f"            <h1>{escape(process['title'])}</h1>\n"
+        f'            <p class="hero-lead">{escape(lead)}</p>\n'
         "        </div></section>\n"
         + section(
-            ui["five_steps"],
+            step_label,
             process_list_html(steps),
         )
         + cta_block(v2)
@@ -900,21 +927,6 @@ def inquiry_main(v2: dict[str, Any], site: dict[str, Any] | None = None) -> str:
         f'            <p class="form-security">{escape(iq["security"])}</p>\n'
         "        </div></section>\n"
         '        <section class="section"><div class="container">\n'
-        '            <div class="inquiry-direct">\n'
-        f'                <p class="inquiry-direct-intro">{escape(direct["intro"])}</p>\n'
-        '                <div class="hero-actions">\n'
-        f'                    <a class="button button-whatsapp" data-contact="whatsapp" '
-        f'href="{escape(wa_url)}">{escape(direct["whatsapp_label"])}</a>\n'
-        f'                    <a class="button button-secondary" href="#" role="button" '
-        f"data-direct-mailto "
-        f'data-email-user="{escape(email_user)}" '
-        f'data-email-domain="{escape(email_domain)}" '
-        f'data-mailto-subject-enc="{escape(subject_enc)}" '
-        f'data-mailto-body-enc="{escape(body_enc)}">'
-        f'{escape(direct["email_label"])}</a>\n'
-        "                </div>\n"
-        f"{contact_line}"
-        "            </div>\n"
         f'            <h2 class="inquiry-form-alt-heading">{escape(direct["form_heading"])}</h2>\n'
         f'            <form class="inquiry-form" id="inquiry-form" novalidate{form_disabled} '
         f'data-success="{escape(iq["success"])}" data-error="{escape(iq["error"])}">\n'
@@ -1001,6 +1013,21 @@ def inquiry_main(v2: dict[str, Any], site: dict[str, Any] | None = None) -> str:
         f'{escape(iq["submit"])}</button>\n'
         '                <p class="form-status" id="inquiry-status" role="status" aria-live="polite"></p>\n'
         "            </form>\n"
+        '            <div class="inquiry-direct inquiry-direct-secondary">\n'
+        f'                <p class="inquiry-direct-intro">{escape(direct["intro"])}</p>\n'
+        '                <div class="hero-actions">\n'
+        f'                    <a class="button button-whatsapp" data-contact="whatsapp" '
+        f'href="{escape(wa_url)}">{escape(direct["whatsapp_label"])}</a>\n'
+        f'                    <a class="button button-secondary" href="#" role="button" '
+        f"data-direct-mailto "
+        f'data-email-user="{escape(email_user)}" '
+        f'data-email-domain="{escape(email_domain)}" '
+        f'data-mailto-subject-enc="{escape(subject_enc)}" '
+        f'data-mailto-body-enc="{escape(body_enc)}">'
+        f'{escape(direct["email_label"])}</a>\n'
+        "                </div>\n"
+        f"{contact_line}"
+        "            </div>\n"
         "        </div></section>\n"
         + cta_block(v2)
     )

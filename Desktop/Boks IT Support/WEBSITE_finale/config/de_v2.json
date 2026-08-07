@@ -1,6 +1,6 @@
 {
   "state": "A",
-  "cta_primary": "IT-Anliegen prüfen lassen",
+  "cta_primary": "Bedarf prüfen lassen",
   "cta_primary_href": "/de/anfrage/",
   "cta_secondary": "Leistungen ansehen",
   "cta_secondary_href": "/de/leistungen/",
@@ -46,40 +46,59 @@
       "pair": "inquiry"
     }
   ],
-  "footer_channels_note": "E-Mail, Telefon und WhatsApp stehen im Footer zur Verfügung. Für eine Bedarfsabklärung nutzen Sie den Direktweg per WhatsApp oder E-Mail, oder das Anfrageformular.",
-  "footer_channels_note_offline": "Für die Bedarfsabklärung erreichen Sie mich derzeit direkt per E-Mail oder Telefon (WhatsApp optional). Die Formularzustellung wird eingerichtet.",
-  "price_note": "Richtwerte, verbindlich erst nach schriftlicher Prüfung des Umfangs.",
+  "footer_channels_note": "Für die Bedarfsabklärung nutzen Sie zuerst das Anfrageformular. E-Mail, Telefon und WhatsApp stehen im Footer als sekundäre Kontaktwege zur Verfügung.",
+  "footer_channels_note_offline": "Für die Bedarfsabklärung erreichen Sie BIT derzeit direkt per E-Mail oder Telefon (WhatsApp optional). Die Formularzustellung wird eingerichtet.",
+  "price_note": "Richtwerte nach Prüfung des Servicebedarfs. Verbindlich erst nach schriftlicher Vereinbarung. Struktur: einmalige Prüfung / Setup, standardisierte Festpreisleistung, wiederkehrender Service, Spezialaufwand nur nach vorheriger Freigabe.",
   "prices": {
     "hourly": "CHF 120",
     "small_job": "CHF 190"
   },
   "home": {
-    "meta_title": "IT-Support für kleine Unternehmen ohne eigene IT | BIT Zürich",
-    "meta_description": "BIT unterstützt Unternehmen in Zürich bei Benutzerkonten, Microsoft 365, Zugängen und Arbeitsplatzproblemen – klar abgegrenzt, mit schriftlich vereinbartem Umfang.",
-    "eyebrow": "IT-Koordination für Zürich und remote in der Schweiz",
-    "h1": "IT-Support für kleine Unternehmen ohne eigene IT",
-    "lead": "BIT unterstützt Unternehmen bei Benutzerkonten, Microsoft 365, Zugängen und wiederkehrenden Arbeitsplatzproblemen. Klar definierte Standardfälle werden geprüft und bearbeitet.",
+    "meta_title": "Benutzer-, Zugangs- und Arbeitsplatzservices für KMU | BIT Zürich",
+    "meta_description": "BIT bietet klar definierte Services für kleinere Schweizer Unternehmen ohne eigene IT: Benutzer & Zugänge, Microsoft 365 & Arbeitsplatz, IT-Basischeck.",
+    "eyebrow": "Services für Zürich und remote in der Schweiz",
+    "h1": "Benutzer, Zugänge und digitale Arbeitsplatzservices für kleine Unternehmen",
+    "lead": "BIT bietet klar definierte Services für kleinere Schweizer Unternehmen ohne eigene interne IT – von Benutzer- und Zugangsprozessen bis zu standardisierten Microsoft-365- und Arbeitsplatzaufgaben.",
     "trust": "Für Unternehmen mit ca. 5–50 Mitarbeitenden · Zürich und remote in der Schweiz",
     "cta_subline": "Unverbindliche Bedarfsabklärung. Durch das Formular entsteht noch kein Auftrag.",
-    "outcome": "Sie erhalten einen klaren Ansprechpartner, einen schriftlich vereinbarten Umfang und einen dokumentierten Abschluss. Der Leistungsumfang ist klar abgegrenzt und wird vor Beginn festgehalten.",
+    "outcome": "Sie beauftragen den Service bei BIT. BIT bleibt Ansprechpartner, steuert den vereinbarten Leistungsrahmen und liefert einen dokumentierten Abschluss.",
     "pilot_banner": "BIT prüft derzeit ausgewählte Anfragen im Rahmen eines begrenzten Einführungsbetriebs.",
-    "trust_block": {
-      "title": "Wer dahintersteht",
-      "text": "Stefan Bogdanovic, Zürich. Operative Erfahrung aus Hotel- und Rezeptionsumfeld. Klar abgegrenzte Benutzer-, Zugangs- und Arbeitsplatzanfragen – Ansprechpartner, schriftlicher Umfang, nachvollziehbarer Abschluss."
+    "why_bit": {
+      "title": "Warum BIT",
+      "items": [
+        "Ein zentraler Servicezugang statt mehrerer paralleler Anbieterkontakte",
+        "Klar definierter Leistungsrahmen vor dem Start",
+        "Dokumentierter Ablauf von Anfrage bis Abschluss",
+        "Fachkompetenz nach Bedarf innerhalb des BIT-Service",
+        "Keine überdimensionierte Voll-IT erforderlich",
+        "BIT bleibt Vertragspartner und steuert Qualität und Abrechnung"
+      ]
+    },
+    "about_teaser": {
+      "title": "Über BIT",
+      "text": "BIT wird von Stefan Bogdanovic in Zürich geführt. Auf der Über-BIT-Seite finden Sie Hintergrund zur Person und zur Arbeitsweise.",
+      "href": "/de/ueber-bit/",
+      "cta": "Über BIT lesen"
+    },
+    "faq_teaser": {
+      "title": "Häufige Fragen",
+      "text": "Kurzantworten zu Zielgruppe, Grenzen und technischer Ausführung.",
+      "href": "/de/faq/",
+      "cta": "FAQ öffnen"
     },
     "examples_teaser": {
       "title": "Musterfälle statt Referenzen",
-      "text": "Drei anonymisierte Musterabläufe zeigen, wie BIT Eintritte, Austritte und Arbeitsplatzstörungen strukturiert – ohne erfundene Kundenfälle.",
+      "text": "Drei anonymisierte Musterabläufe zeigen, wie BIT Eintritte, Austritte und Arbeitsplatzfälle strukturiert – ohne erfundene Kundenfälle.",
       "href": "/de/beispiele/",
       "cta": "Musterfälle ansehen"
     },
     "partner": {
-      "title": "Ein Vertragspartner, ein Ansprechpartner",
-      "text": "BIT nimmt Ihr Anliegen auf, klärt den Umfang schriftlich und bleibt Ihr Ansprechpartner bis zum dokumentierten Abschluss. Sie verhandeln nicht mit mehreren Anbietern und koordinieren keine Termine. Wird für ein Spezialthema zusätzliche Fachkompetenz benötigt, wird das vorab besprochen; Kosten Dritter entstehen nur nach Ihrer schriftlichen Freigabe."
+      "title": "Sie beauftragen BIT – nicht mehrere Anbieter",
+      "text": "Sie kaufen den definierten Service bei BIT. BIT nimmt die Anfrage auf, klärt den Leistungsrahmen schriftlich und bleibt Ihr Ansprechpartner bis zum dokumentierten Abschluss. Vor Annahme wird geprüft, ob die benötigte Fachleistung innerhalb des verfügbaren Leistungs- und Partnerumfangs erbracht werden kann. Spezialisierte Facharbeit läuft innerhalb des bestätigten BIT-Service; Kosten Dritter entstehen nur nach Ihrer schriftlichen Freigabe."
     }
   },
   "concerns": {
-    "title": "Typische Anliegen",
+    "title": "Typische Situationen",
     "items": [
       {
         "text": "Ein neuer Mitarbeiter beginnt und benötigt Zugänge",
@@ -90,12 +109,12 @@
         "href": "/de/anfrage/?area=users-access"
       },
       {
-        "text": "Outlook oder Microsoft 365 funktioniert an einem Arbeitsplatz nicht",
-        "href": "/de/anfrage/?area=m365-workplace"
+        "text": "Rollenwechsel erfordert angepasste Rechte und Postfächer",
+        "href": "/de/anfrage/?area=users-access"
       },
       {
-        "text": "Unklar, welche Zugänge und Rechte noch aktiv sind",
-        "href": "/de/anfrage/?area=basischeck"
+        "text": "Standardisierte Microsoft-365- oder Arbeitsplatzanfrage",
+        "href": "/de/anfrage/?area=m365-workplace"
       }
     ]
   },
@@ -108,7 +127,7 @@
       },
       {
         "title": "Liegen bleibende Alltagsanfragen",
-        "text": "Outlook, Drucker und Rechtefragen bleiben liegen, weil die Zuständigkeit unklar ist."
+        "text": "Arbeitsplatzanfragen bleiben liegen, weil die Zuständigkeit unklar ist."
       },
       {
         "title": "Unklare Prioritäten",
@@ -117,18 +136,18 @@
     ]
   },
   "services": {
-    "title": "Drei klare Einstiege",
-    "intro": "Für Unternehmen mit etwa 5–50 Mitarbeitenden in Zürich und remote in der Schweiz. BIT prüft und bearbeitet klar definierte Standardfälle innerhalb eines schriftlich vereinbarten Umfangs. Jede Leistung startet mit schriftlich festgelegtem Umfang. Remote ist der Normalweg; Termine vor Ort im Raum Zürich werden vorab vereinbart und im Angebot separat ausgewiesen – ohne Anfahrtspauschale als versteckte Position.",
-    "scope_note": "Umfang und technische Zuständigkeit werden vorab vereinbart. Nicht jedes Problem ist automatisch enthalten.",
-    "vendor_note": "Anbieterkoordination ist kein eigener Produktblock: Bei Bedarf klärt BIT Zuständigkeiten und verfolgt die Bearbeitung nach – innerhalb des schriftlich vereinbarten Umfangs.",
+    "title": "Drei Services, die Sie beauftragen können",
+    "intro": "BIT bietet diese Services für kleinere Unternehmen mit etwa 5–50 Mitarbeitenden in Zürich und remote in der Schweiz. Jeder Service startet mit schriftlich festgelegtem Leistungsrahmen. Remote ist der Normalweg; Termine vor Ort im Raum Zürich werden vorab vereinbart und im Angebot separat ausgewiesen.",
+    "scope_note": "Leistungsrahmen und technische Zuständigkeit werden vorab vereinbart. Nicht jeder Fall ist automatisch enthalten.",
+    "vendor_note": "Anbieterzuständigkeit ist kein eigenes Verkaufsprodukt: Bei Bedarf klärt BIT Zuständigkeiten und steuert die Bearbeitung innerhalb des vereinbarten BIT-Service.",
     "path": "/de/leistungen/",
     "cards": [
       {
         "slug": "benutzer-und-zugaenge",
         "icon": "users",
         "title": "Benutzer & Zugänge",
-        "benefit": "Eintritt bereit, Austritt nichts unnötig offen",
-        "text": "Eintritte, Austritte, Rollenwechsel, Berechtigungen, gemeinsame Postfächer, MFA und Lizenzen – mit dokumentierten Freigaben.",
+        "benefit": "Für Eintritte, Austritte und Rollenwechsel.",
+        "text": "BIT organisiert die definierten Konten, Zugangsänderungen und Freigaben über einen dokumentierten Ablauf. Am Ende: Übersicht der bearbeiteten und offenen Punkte.",
         "area": "users-access",
         "detail": {
           "situations": [
@@ -140,7 +159,7 @@
           "steps": [
             "Anliegen und benötigte Angaben aufnehmen",
             "Freigaben und Zuständigkeiten klären",
-            "Freigegebene Änderungen innerhalb des vereinbarten Leistungsumfangs bearbeiten oder die technische Umsetzung mit der zuständigen Fachstelle koordinieren.",
+            "Freigegebene Änderungen innerhalb des vereinbarten Leistungsrahmens bearbeiten oder freigegebene Facharbeit steuern.",
             "Abschluss schriftlich dokumentieren"
           ],
           "required_info": [
@@ -148,29 +167,32 @@
             "Benötigte Systeme und Rollen",
             "Wer Freigaben erteilen darf"
           ],
-          "boundaries": "Technische Spezialfälle ausserhalb des vereinbarten Umfangs gehören nicht automatisch dazu und werden vor Beginn geprüft. Keine 24/7-Bereitschaft und kein unbegrenzter Leistungsumfang. BIT ersetzt keine interne IT-Abteilung und übernimmt keine unbegrenzten Pauschalaufträge. Spezielle Hersteller- oder Infrastrukturthemen werden vor Beginn geprüft und nur nach Absprache mit einer geeigneten Fachperson weitergeführt.",
-          "intro": "Benutzer- und Zugangsthemen entstehen oft unter Zeitdruck: ein Eintritt am Montag, ein Austritt ohne klare Kontenliste, ein Rollenwechsel mit neuen Rechten. BIT nimmt das Anliegen strukturiert auf, klärt Freigaben und hält den vereinbarten Umfang schriftlich fest. Ergebnis zuerst: arbeitsfähiger Start oder geschlossene Zugänge – dokumentiert, nachvollziehbar und ohne offenen Dauerauftrag. Die meisten Fälle werden remote bearbeitet; ein Termin vor Ort im Raum Zürich wird nur bei Bedarf vorab vereinbart und im Angebot separat ausgewiesen. Freigaben bleiben beim Unternehmen. Ohne schriftlich vereinbarten Umfang startet keine Bearbeitung.",
+          "boundaries": "Technische Spezialfälle ausserhalb des vereinbarten Leistungsrahmens gehören nicht automatisch dazu und werden vor Beginn geprüft. Keine 24/7-Bereitschaft und kein unbegrenzter Leistungsumfang. BIT ersetzt keine interne IT-Abteilung und übernimmt keine unbegrenzten Pauschalaufträge. Vor Annahme wird geprüft, ob die benötigte Fachleistung innerhalb des verfügbaren Leistungs- und Partnerumfangs erbracht werden kann.",
+          "intro": "Benutzer- und Zugangsthemen entstehen oft unter Zeitdruck: ein Eintritt am Montag, ein Austritt ohne klare Kontenliste, ein Rollenwechsel mit neuen Rechten. BIT nimmt das Anliegen strukturiert auf, klärt Freigaben und hält den vereinbarten Leistungsrahmen schriftlich fest. Ergebnis zuerst: arbeitsfähiger Start oder geschlossene Zugänge – dokumentiert und nachvollziehbar. Die meisten Fälle werden remote bearbeitet; ein Termin vor Ort im Raum Zürich wird nur bei Bedarf vorab vereinbart und im Angebot separat ausgewiesen. Freigaben bleiben beim Unternehmen. Ohne schriftlich vereinbarten Leistungsrahmen startet keine Bearbeitung.",
           "closing": "Für eine unverbindliche Einschätzung nutzen Sie das Anfrageformular mit vorausgewähltem Bereich Benutzer & Zugänge. Durch das Absenden entsteht noch kein Auftrag."
-        }
+        },
+        "when": "Für Eintritte, Austritte und Rollenwechsel.",
+        "what": "BIT organisiert die definierten Konten, Zugangsänderungen und Freigaben über einen dokumentierten Ablauf.",
+        "outcome": "Am Ende erhalten Sie eine nachvollziehbare Übersicht der bearbeiteten und noch offenen Punkte."
       },
       {
         "slug": "microsoft-365-arbeitsplatz",
         "icon": "m365",
         "title": "Microsoft 365 & Arbeitsplatz",
-        "benefit": "Weniger Zeitverlust bei Alltagsstörungen",
-        "text": "Anmeldung, Outlook, Teams, Windows, Drucker und Geräte: strukturierte Prüfung und Bearbeitung klar abgegrenzter Standardfälle.",
+        "benefit": "Für standardisierte Arbeitsplatz- und Microsoft-365-Fälle.",
+        "text": "BIT prüft und steuert klar abgegrenzte Standardfälle im vereinbarten Serviceprozess. Ergebnis: dokumentierter Abschluss statt offener Dauerauftrag.",
         "area": "m365-workplace",
         "detail": {
           "situations": [
+            "Anmeldung oder MFA blockiert den Arbeitsbeginn.",
             "Outlook oder Teams funktioniert an einem Arbeitsplatz nicht.",
-            "Anmeldungen oder MFA blockieren den Arbeitsbeginn.",
-            "Wiederkehrende Drucker- oder Gerätestörungen kosten Zeit.",
-            "Ein Arbeitsplatz startet langsam oder blockiert den Tagesbetrieb durch wiederkehrende Anmeldestörungen."
+            "Wiederkehrende Standardstörungen am Arbeitsplatz kosten Zeit.",
+            "Ein Arbeitsplatz blockiert den Tagesbetrieb durch wiederkehrende Anmeldeprobleme."
           ],
           "steps": [
             "Störung und Auswirkungen aufnehmen",
             "Prüfen, ob der Fall in den Standardumfang passt",
-            "Bearbeitung durchführen oder nach Abstimmung koordinieren",
+            "Standardfall im BIT-Service ausführen bzw. freigegebene Facharbeit steuern",
             "Ergebnis und offene Punkte dokumentieren"
           ],
           "required_info": [
@@ -179,16 +201,19 @@
             "Seit wann und wie oft das Problem auftritt"
           ],
           "boundaries": "Herstellerabhängige oder tiefgehende Infrastrukturthemen sind nicht automatisch enthalten. Eine Fachperson wird nur nach Absprache beigezogen. Ohne ausreichende Angaben (Fehlerbild, Zeitpunkt, betroffener Arbeitsplatz) kann der Fall nicht zuverlässig eingegrenzt werden. Kritische Infrastruktur- oder Produktionsumgebungen gehören nicht in diesen Einstieg.",
-          "intro": "Wenn Outlook, Teams oder die Anmeldung an einem Arbeitsplatz stocken, kostet das sofort Arbeitszeit. BIT grenzt ein, ob Konto, Gerät oder Dienst betroffen ist, und bearbeitet klar abgegrenzte Standardfälle im vereinbarten Umfang. Ergebnis zuerst: weniger Zeitverlust bei Alltagsstörungen und ein fester Ansprechpartner bis zum dokumentierten Abschluss. Nicht enthalten sind automatisch Hersteller-Ticket-Eskalationen oder tiefgehende Infrastrukturänderungen ohne vorherige schriftliche Klärung. Ziel ist ein klar abgegrenzter Standardfall mit dokumentiertem Ergebnis – kein offener Dauerauftrag und keine automatische Hersteller-Eskalation. Remote ist der Normalweg; Vor-Ort-Termine im Raum Zürich nur nach Vereinbarung und separat im Angebot.",
+          "intro": "Wenn Anmeldung, Outlook oder Teams an einem Arbeitsplatz stocken, kostet das sofort Arbeitszeit. BIT grenzt ein, ob Konto, Gerät oder Dienst betroffen ist, und bearbeitet klar abgegrenzte Standardfälle im vereinbarten Leistungsrahmen. Ergebnis zuerst: weniger Unterbruch und ein fester Ansprechpartner bis zum dokumentierten Abschluss. Ziel ist ein klar abgegrenzter Standardfall – kein offener Dauerauftrag. Remote ist der Normalweg; Vor-Ort-Termine im Raum Zürich nur nach Vereinbarung und separat im Angebot.",
           "closing": "Schildern Sie die Störung über das Anfrageformular (Bereich Microsoft 365 & Arbeitsplatz). Durch das Absenden entsteht noch kein Auftrag."
-        }
+        },
+        "when": "Für standardisierte Arbeitsplatz- und Microsoft-365-Fälle.",
+        "what": "BIT prüft und steuert klar abgegrenzte Standardfälle im vereinbarten Serviceprozess – Anmeldung, Outlook, Teams und typische Arbeitsplatzblockaden.",
+        "outcome": "Am Ende erhalten Sie ein dokumentiertes Ergebnis und klare offene Punkte – kein offener Dauerauftrag."
       },
       {
         "slug": "it-basischeck",
         "icon": "security",
         "title": "IT-Basischeck",
-        "benefit": "Schriftlicher Befund und Prioritäten",
-        "text": "Klar abgegrenzter Einstieg: vorhandene Konten und Zugänge sichten, Risiken priorisieren, schriftlichen Befund liefern. Kein Cybersecurity-Audit.",
+        "benefit": "Wenn unklar ist, welche Konten und Zugänge noch aktiv sind.",
+        "text": "BIT sichtet vorhandene Zugänge, priorisiert Risiken und liefert einen schriftlichen Befund. Kein Cybersecurity-Audit.",
         "area": "basischeck",
         "detail": {
           "situations": [
@@ -211,38 +236,43 @@
           "boundaries": "Der Basischeck ist kein Cybersecurity-Audit und kein Penetrationstest. Technische Spezialumsetzung erfolgt nur nach vorheriger Abstimmung mit einer geeigneten Fachperson. Der Befund ist eine Prioritätenübersicht, keine Garantie für Vollständigkeit aller Systeme und keine Freigabe für technische Eingriffe ohne schriftliche Folgevereinbarung.",
           "intro": "Wenn unklar ist, welche Konten und Rechte noch aktiv sind, braucht es zuerst einen schriftlichen Überblick – keinen offenen Auftrag. Der IT-Basischeck ist ein klar abgegrenzter Einstieg: vorhandene Zugänge sichten, Risiken priorisieren, Befund liefern. Ergebnis zuerst: ein dokumentierter Befund mit Prioritäten, bevor weitere Schritte vereinbart werden. Ab CHF 190 als Festpreis-Einstieg. Der Check schafft Entscheidungsgrundlage: was zuerst, was später, was ausserhalb des vereinbarten Umfangs liegt. Remote üblich; Vor-Ort im Raum Zürich nur bei Bedarf und separat ausgewiesen. Kein Ersatz für ein Sicherheitsaudit und kein unbegrenzter Folgeauftrag.",
           "closing": "Für den Basischeck nutzen Sie das Anfrageformular mit vorausgewähltem Bereich IT-Basischeck. Durch das Absenden entsteht noch kein Auftrag."
-        }
+        },
+        "when": "Wenn unklar ist, welche Konten und Zugänge noch aktiv sind.",
+        "what": "BIT sichtet vorhandene Zugänge, priorisiert Risiken und liefert einen schriftlichen Befund.",
+        "outcome": "Am Ende erhalten Sie Prioritäten und eine Entscheidungsgrundlage für nächste Schritte."
       }
     ]
   },
   "limits": {
-    "title": "Klar abgegrenzt",
-    "lead": "BIT übernimmt klar abgegrenzte Aufgaben mit schriftlich definiertem Ziel. Umfang und Zuständigkeit werden vor Beginn festgehalten.",
+    "title": "Aktueller Standardservice nicht gedacht für…",
+    "lead": "BIT übernimmt klar abgegrenzte Aufgaben mit schriftlich definiertem Ziel. Leistungsrahmen und Zuständigkeit werden vor Beginn festgehalten.",
     "items": [
       "keine 24/7-Störungsbereitschaft",
       "keine unbegrenzten Pauschalaufträge",
-      "keine Arbeiten ausserhalb des bestätigten Umfangs"
+      "keine Arbeiten ausserhalb des bestätigten Leistungsrahmens"
     ]
   },
   "process": {
     "title": "So funktioniert es",
+    "lead": "Kunde → BIT → ggf. Fachpartner innerhalb des BIT-Service → Qualitätskontrolle → dokumentierter Abschluss. Die Kundenbeziehung wird nicht weitergeleitet.",
     "steps": [
-      "Anliegen schildern",
-      "Umfang und Zuständigkeit prüfen",
-      "Vorgehen schriftlich bestätigen",
-      "Bearbeitung koordinieren und nachverfolgen",
-      "Ergebnis dokumentieren"
+      "Anfrage stellen",
+      "Bedarf und Machbarkeit prüfen",
+      "Leistungsrahmen schriftlich bestätigen",
+      "Service ausführen bzw. freigegebene Facharbeit steuern",
+      "Qualität prüfen",
+      "Ergebnis dokumentieren und abschliessen"
     ]
   },
   "audience": {
-    "title": "Für kleine Unternehmen ohne eigene interne IT",
-    "lead": "BIT organisiert klar definierte Benutzer-, Zugangs- und digitale Arbeitsplatzprozesse für Schweizer Unternehmen mit ungefähr 5–50 Mitarbeitenden.",
+    "title": "Benutzer-, Zugangs- und Arbeitsplatzservices für kleine Unternehmen",
+    "lead": "BIT bietet klar definierte Services für Schweizer Unternehmen mit ungefähr 5–50 Mitarbeitenden ohne eigene interne IT.",
     "services_title": "Typische Leistungen",
     "services": [
       "Benutzer-Onboarding und Offboarding",
       "Konten, Rollen und Zugangsänderungen",
-      "Microsoft-365- und Arbeitsplatzanfragen",
-      "strukturierte Übergabe an spezialisierte Fachpartner",
+      "Microsoft-365- und Arbeitsplatzservices",
+      "Facharbeit innerhalb des BIT-Service; BIT bleibt Vertragspartner",
       "Dokumentation und Nachverfolgung"
     ],
     "fit_title": "Besonders geeignet für Unternehmen, die",
@@ -260,13 +290,13 @@
       "fortgeschrittene Cybersicherheitsprojekte",
       "kritische oder stark regulierte Umgebungen"
     ],
-    "nofit_note": "Zusätzliche Spezialleistungen können separat koordiniert werden, sofern eine geeignete Fachstelle verfügbar ist."
+    "nofit_note": "Zusätzliche Spezialleistungen können innerhalb des BIT-Service koordiniert werden, sofern die benötigte Fachleistung im verfügbaren Leistungs- und Partnerumfang liegt."
   },
   "role": {
     "title": "Die Rolle von BIT",
-    "owns": "Aufnahme, Strukturierung, Koordination, Kommunikation, Dokumentation, Nachverfolgung und Abrechnung.",
-    "tech": "Spezialthemen und Kosten Dritter werden vorab besprochen; siehe Abschnitt «Ein Vertragspartner, ein Ansprechpartner» auf der Startseite.",
-    "contract": "Leistungsumfang, Zuständigkeiten und Abrechnung werden vor Beginn schriftlich festgelegt. Vertragspartner bleibe ich."
+    "owns": "Aufnahme, Strukturierung, Steuerung, Kommunikation, Dokumentation, Nachverfolgung und Abrechnung.",
+    "tech": "Vor Annahme wird geprüft, ob die benötigte Fachleistung innerhalb des verfügbaren Leistungs- und Partnerumfangs erbracht werden kann. Spezialisierte Facharbeit läuft innerhalb des bestätigten BIT-Service; BIT bleibt Ansprechpartner.",
+    "contract": "Leistungsrahmen, Zuständigkeiten und Abrechnung werden vor Beginn schriftlich festgelegt. Vertragspartner ist BIT (Einzelunternehmen Stefan Bogdanovic)."
   },
   "examples": {
     "title": "Anwendungsbeispiele",
@@ -274,32 +304,28 @@
     "items": [
       {
         "title": "Muster: Neuer Mitarbeiter startet",
-        "text": "Aufnahme der benötigten Zugänge, schriftliche Freigabe, Koordination der Einrichtung, dokumentierter Abschluss."
+        "text": "Aufnahme der benötigten Zugänge, schriftliche Freigabe, Einrichtung im BIT-Service, dokumentierter Abschluss."
       },
       {
         "title": "Muster: Austritt ohne Klarheit",
-        "text": "Bestehende Konten und Rechte erfassen, Deaktivierung koordinieren lassen, Abschluss und Bestätigung dokumentieren."
+        "text": "Bestehende Konten und Rechte erfassen, Deaktivierung im vereinbarten Service steuern, Abschluss dokumentieren."
       },
       {
-        "title": "Muster: Outlook funktioniert an einem Arbeitsplatz nicht",
-        "text": "Problem strukturiert aufnehmen, zuständige Stelle klären, Bearbeitung nachverfolgen, Ergebnis festhalten."
-      },
-      {
-        "title": "Muster: Unklare Anbieterzuständigkeit",
-        "text": "Angaben sammeln, die zuständige Stelle kontaktieren, den Stand nachverfolgen und den dokumentierten Abschluss festhalten."
+        "title": "Muster: Arbeitsplatz-Standardfall",
+        "text": "Problem strukturiert aufnehmen, im BIT-Service bearbeiten oder freigegebene Facharbeit steuern, Ergebnis festhalten."
       }
     ]
   },
   "about": {
     "meta_title": "Über BIT | BIT",
-    "meta_description": "Stefan Bogdanovic führt BIT in Zürich. Operative Erfahrung aus Hotel- und Rezeptionsumfeld, Fokus auf klar abgegrenzte Benutzer- und Arbeitsplatzanfragen.",
+    "meta_description": "Stefan Bogdanovic führt BIT in Zürich. BIT bietet klar definierte Benutzer-, Zugangs- und Arbeitsplatzservices für kleinere Unternehmen.",
     "title": "Wer hinter BIT steht",
     "lead": "Stefan Bogdanovic · Inhaber und zentrale Ansprechperson · Zürich",
     "body": [
       "Ich kenne operative Abläufe aus Hotel- und Rezeptionsumfeld und die alltäglichen Benutzer-, Zugangs- und Systemfragen kleiner Betriebe.",
-      "BIT unterstützt kleine Unternehmen ohne eigene IT bei Benutzerkonten, Microsoft 365, Zugängen und wiederkehrenden Arbeitsplatzproblemen. Ich arbeite als operativer Ansprechpartner – nicht als allgemeiner IT-Experte für jedes Problem und nicht als Expertenteam.",
-      "Vertragspartner bleibe ich. Als Einzelunternehmen bin ich Ihr Ansprechpartner für Aufnahme, schriftlichen Umfang, Nachverfolgung und Abrechnung.",
-      "Arbeitssprachen für diese Schweizer IT-Seite: Deutsch und Englisch. Weitere Sprachen nach Vereinbarung beziehungsweise mit externer Sprachunterstützung."
+      "BIT bietet klar definierte Services für kleine Unternehmen ohne eigene IT: Benutzerkonten, Microsoft 365, Zugänge und standardisierte Arbeitsplatzaufgaben. Ich stehe hinter der Marke als Inhaber und zentrale Qualitätsstelle – nicht als stundenweiser Ticket-Techniker für jedes Problem.",
+      "Rechtlich ist BIT ein Einzelunternehmen. Vertragspartner ist BIT; ich bleibe Ihr Ansprechpartner für Aufnahme, schriftlichen Leistungsrahmen, Nachverfolgung und Abrechnung.",
+      "Arbeitssprachen für diese Schweizer Seite: Deutsch und Englisch. Weitere Sprachen nach Vereinbarung beziehungsweise mit externer Sprachunterstützung."
     ],
     "siz_comment": "",
     "pilot": "BIT prüft derzeit ausgewählte Anfragen im Rahmen eines begrenzten Einführungsbetriebs.",
@@ -315,7 +341,7 @@
     "items": [
       {
         "q": "Ist BIT eine interne IT-Abteilung?",
-        "a": "Nein. BIT nimmt klar abgegrenzte Benutzer-, Zugangs- und Arbeitsplatzanfragen auf, dokumentiert sie und verfolgt die Bearbeitung nach. Der Umfang wird vorab schriftlich festgelegt."
+        "a": "Nein. BIT bietet klar abgegrenzte Benutzer-, Zugangs- und Arbeitsplatzservices. Der Leistungsrahmen wird vorab schriftlich festgelegt."
       },
       {
         "q": "Für welche Unternehmen ist das Angebot?",
@@ -323,7 +349,7 @@
       },
       {
         "q": "Können alle IT-Probleme übernommen werden?",
-        "a": "Nein. BIT übernimmt klar abgegrenzte Benutzer-, Zugangs- und Arbeitsplatzaufgaben innerhalb eines schriftlich vereinbarten Umfangs. Komplexe Infrastruktur-, Hersteller- oder Spezialthemen gehören nicht automatisch dazu und werden vor Beginn geprüft."
+        "a": "Nein. BIT übernimmt klar abgegrenzte Services innerhalb eines schriftlich vereinbarten Leistungsrahmens. Komplexe Infrastruktur-, Hersteller- oder Spezialthemen gehören nicht automatisch dazu und werden vor Beginn geprüft."
       },
       {
         "q": "Arbeitet BIT nur mit Hotels?",
@@ -331,28 +357,28 @@
       },
       {
         "q": "Wer führt technische Änderungen aus?",
-        "a": "Je nach Fall und schriftlicher Vereinbarung. Bei Aufgaben ausserhalb des eigenen Leistungsumfangs wird vorab geprüft, ob eine geeignete externe Fachperson beigezogen werden kann."
+        "a": "Sie beauftragen den Service bei BIT. Vor Annahme wird geprüft, ob die benötigte Fachleistung innerhalb des verfügbaren Leistungs- und Partnerumfangs erbracht werden kann. Spezialisierte Facharbeit läuft innerhalb des bestätigten BIT-Service; BIT bleibt Ansprechpartner."
       },
       {
         "q": "Wie werden Zugangsänderungen freigegeben?",
-        "a": "Berechtigungs- und Zugangsänderungen erfolgen nur nach dokumentierter Freigabe und innerhalb des schriftlich vereinbarten Umfangs."
+        "a": "Berechtigungs- und Zugangsänderungen erfolgen nur nach dokumentierter Freigabe und innerhalb des schriftlich vereinbarten Leistungsrahmens."
       },
       {
         "q": "Gibt es feste Pakete oder Preise?",
-        "a": "Es gibt Richtwerte (Arbeitszeit CHF 120 pro Stunde). Der IT-Basischeck ist ein Festpreis-Einstieg ab CHF 190 mit schriftlichem Befund und Prioritäten. Die meisten Anfragen werden remote bearbeitet. Ist ein Termin vor Ort erforderlich, wird er vorab vereinbart und im Angebot separat ausgewiesen – im Raum Zürich, ohne Anfahrtspauschale als versteckte Position. Verbindlich sind Preise erst nach schriftlicher Prüfung des Umfangs."
+        "a": "Der IT-Basischeck ist ein Festpreis-Einstieg ab CHF 190 mit schriftlichem Befund und Prioritäten. Weitere Leistungen folgen nach Prüfung des Bedarfs: Setup, standardisierte Festpreisleistung, wiederkehrender Service oder Spezialaufwand nach vorheriger Freigabe. Die meisten Anfragen werden remote bearbeitet; Vor-Ort im Raum Zürich wird vorab vereinbart und separat ausgewiesen. Die meisten Anfragen werden remote bearbeitet. Ist ein Termin vor Ort erforderlich, wird er vorab vereinbart und im Angebot separat ausgewiesen – im Raum Zürich, ohne Anfahrtspauschale als versteckte Position. Verbindlich sind Preise erst nach schriftlicher Vereinbarung. Ein Stundenrichtwert kann in Ausnahmefällen für freigegebenen Spezialaufwand genannt werden, ist aber kein Kernprodukt."
       }
     ]
   },
   "inquiry": {
     "live": true,
-    "meta_title": "IT-Anliegen prüfen lassen | BIT",
-    "meta_description": "Schildern Sie Ihr IT-Anliegen unverbindlich. Rückmeldung in der Regel innerhalb von zwei Arbeitstagen.",
-    "title": "IT-Anliegen prüfen lassen",
-    "lead": "Beschreiben Sie Ihre Ausgangslage in wenigen Minuten. Sie erhalten eine Einschätzung, ob und in welchem Umfang eine Zusammenarbeit möglich ist.",
+    "meta_title": "Bedarf prüfen lassen | BIT",
+    "meta_description": "Schildern Sie Ihren Servicebedarf unverbindlich. Rückmeldung in der Regel innerhalb von zwei Arbeitstagen.",
+    "title": "Bedarf prüfen lassen",
+    "lead": "Beschreiben Sie Ihre Ausgangslage in wenigen Minuten. Sie erhalten eine Einschätzung, ob und in welchem Rahmen eine Zusammenarbeit möglich ist.",
     "notice": "Unverbindliche Bedarfsabklärung. Durch das Formular entsteht noch kein Auftrag. BIT prüft derzeit ausgewählte Anfragen im Rahmen eines begrenzten Einführungsbetriebs.",
     "response_expectation": "Rückmeldung in der Regel innerhalb von zwei Arbeitstagen.",
     "security": "Bitte übermitteln Sie keine Passwörter, Wiederherstellungscodes oder besonders schützenswerten Personendaten.",
-    "offline_banner": "Die Formularzustellung wird gerade eingerichtet. Bis der Versandweg nachweislich funktioniert, erreichen Sie mich bitte direkt per E-Mail.",
+    "offline_banner": "Die Formularzustellung wird gerade eingerichtet. Bis der Versandweg nachweislich funktioniert, erreichen Sie BIT bitte direkt per E-Mail.",
     "submit": "Anfrage senden",
     "success": "Danke. Ihre Angaben sind eingegangen. Rückmeldung in der Regel innerhalb von zwei Arbeitstagen.",
     "error": "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es später erneut oder schreiben Sie an admin@boksitsupport.ch.",
@@ -360,17 +386,17 @@
     "terms_note": "Es gelten die Allgemeinen Geschäftsbedingungen."
   },
   "closing": {
-    "title": "Passt Ihr Anliegen zu BIT?",
-    "text": "Schildern Sie Ihr IT-Anliegen unverbindlich. Sie erhalten eine Einschätzung, ob und in welchem Umfang eine Zusammenarbeit möglich ist.",
+    "title": "Passt Ihr Bedarf zu BIT?",
+    "text": "Lassen Sie Ihren Servicebedarf unverbindlich prüfen. Sie erhalten eine Einschätzung, ob und in welchem Rahmen eine Zusammenarbeit möglich ist.",
     "note": "Unverbindliche Bedarfsabklärung · Durch das Absenden entsteht noch kein Auftrag.",
     "response_expectation": "Rückmeldung in der Regel innerhalb von zwei Arbeitstagen.",
-    "whatsapp_label": "Per WhatsApp schildern"
+    "whatsapp_label": "Optional per WhatsApp"
   },
   "market_access_archive": {
-    "meta_title": "BIT konzentriert sich auf IT-Koordination | BIT",
-    "meta_description": "BIT unterstützt kleinere Schweizer Unternehmen ohne interne IT bei Benutzern, Zugängen und Arbeitsplatzthemen.",
-    "title": "BIT konzentriert sich auf IT-Koordination",
-    "lead": "BIT unterstützt kleinere Schweizer Unternehmen ohne interne IT bei Benutzern, Zugängen und Arbeitsplatzthemen. Frühere Angebote zu Markteintritt und Vertretung werden derzeit nicht weitergeführt.",
+    "meta_title": "BIT konzentriert sich auf digitale Betriebsservices | BIT",
+    "meta_description": "BIT bietet klar definierte Benutzer-, Zugangs- und Arbeitsplatzservices für kleinere Schweizer Unternehmen.",
+    "title": "BIT konzentriert sich auf digitale Betriebsservices",
+    "lead": "BIT bietet klar definierte Services für kleinere Schweizer Unternehmen ohne interne IT: Benutzer, Zugänge und Arbeitsplatz. Frühere Angebote zu Markteintritt und Vertretung werden derzeit nicht weitergeführt.",
     "cta": "Zum aktuellen Angebot"
   },
   "language": "de",
@@ -392,15 +418,15 @@
     "inquiry_eyebrow": "Anfrage",
     "archive_eyebrow": "Archiv",
     "back_to_services": "Leistungen",
-    "guidelines_title": "Richtwerte",
+    "guidelines_title": "Preislogik (Richtwerte)",
     "four_areas": "Drei Leistungsbereiche",
-    "five_steps": "Fünf Schritte",
+    "five_steps": "Sechs Schritte",
     "answers": "Antworten",
-    "process_lead": "Jeder Auftrag beginnt mit einer schriftlichen Klärung von Umfang und Zuständigkeit.",
+    "process_lead": "Jeder Auftrag beginnt mit einer schriftlichen Klärung des Leistungsrahmens. BIT steuert den Service bis zum dokumentierten Abschluss.",
     "view_service": "Leistung ansehen",
     "from_small_job": "IT-Basischeck ab CHF 190",
-    "hourly_line": "Arbeitszeit: {hourly} pro Stunde",
-    "small_job_line": "IT-Basischeck / klar abgegrenzter Einstieg: ab {small_job} (schriftlicher Befund)",
+    "hourly_line": "Sonderaufwand nur nach vorheriger Freigabe (Richtwert {hourly}/h, kein Standardprodukt)",
+    "small_job_line": "Einmalige Prüfung / Assessment: IT-Basischeck ab {small_job} (schriftlicher Befund)",
     "travel_line": "Die meisten Anfragen werden remote bearbeitet. Ist ein Termin vor Ort erforderlich, wird er vorab vereinbart und im Angebot separat ausgewiesen – im Raum Zürich, ohne Anfahrtspauschale als versteckte Position.",
     "to_it_home": "Zur IT-Startseite",
     "archive_extra": "Frühere Inhalte zu Markteintritt und Vertretung sind hier nur noch als Archiv referenziert und gehören nicht zum aktuellen Schweizer IT-Angebot.",
@@ -411,7 +437,10 @@
     "steps_title": "Ablauf",
     "required_info_title": "Benötigte Angaben",
     "boundaries_title": "Grenzen",
-    "report_structure_title": "Musterbericht-Struktur"
+    "report_structure_title": "Musterbericht-Struktur",
+    "setup_line": "Setup und standardisierte Festpreisleistungen: nach Prüfung des Bedarfs",
+    "recurring_line": "Wiederkehrende Services: nach schriftlicher Vereinbarung",
+    "special_line": "Spezialaufwand: nur nach vorheriger Freigabe"
   },
   "form": {
     "company": "Unternehmen *",
@@ -466,7 +495,7 @@
         "steps": [
           "Ausgangslage und betroffene Systeme aufnehmen",
           "Freigabe für Deaktivierung einholen",
-          "Freigegebene Änderungen innerhalb des vereinbarten Leistungsumfangs bearbeiten oder die technische Umsetzung mit der zuständigen Fachstelle koordinieren.",
+          "Freigegebene Änderungen innerhalb des vereinbarten Leistungsrahmens bearbeiten oder freigegebene Facharbeit steuern.",
           "Abschluss sowie offene Punkte und Risiken dokumentieren"
         ],
         "approvals": "Schriftliche Freigabe der zuständigen Führungsperson vor jeder Zugangsänderung.",
@@ -502,7 +531,7 @@
         ],
         "steps": [
           "Eingrenzen, ob Konto, Gerät oder Dienst betroffen ist",
-          "Im bestätigten Umfang bearbeiten oder an die zuständige Fachstelle übergeben",
+          "Im bestätigten Leistungsrahmen bearbeiten oder freigegebene Facharbeit innerhalb des BIT-Service steuern",
           "Bearbeitung nachverfolgen",
           "Ergebnis und offene Punkte dokumentieren"
         ],
@@ -542,11 +571,11 @@
     }
   },
   "direct_path": {
-    "intro": "Am schnellsten geht es so – die Vorlage ist bereits ausgefüllt, Sie ergänzen nur Ihre Angaben.",
-    "whatsapp_label": "Per WhatsApp schildern",
-    "email_label": "Per E-Mail schildern",
-    "form_heading": "Oder über das Formular",
-    "subject": "IT-Anliegen – [Firmenname]",
+    "intro": "Primär nutzen Sie das Formular unten. WhatsApp und E-Mail sind optionale Direktwege mit vorausgefüllter Vorlage.",
+    "whatsapp_label": "Optional per WhatsApp",
+    "email_label": "Optional per E-Mail",
+    "form_heading": "Anfrageformular",
+    "subject": "Servicebedarf – [Firmenname]",
     "body_lines": [
       "Firma:",
       "Ansprechperson:",

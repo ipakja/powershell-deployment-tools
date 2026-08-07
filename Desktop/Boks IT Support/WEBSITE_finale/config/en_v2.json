@@ -11,7 +11,7 @@
   "legal_label": "Legal notice & privacy",
   "archive_label": "Market Access",
   "state": "A",
-  "cta_primary": "Have your IT need reviewed",
+  "cta_primary": "Have your need reviewed",
   "cta_primary_href": "/en/inquiry/",
   "cta_secondary": "View services",
   "cta_secondary_href": "/en/services/",
@@ -57,9 +57,9 @@
       "pair": "inquiry"
     }
   ],
-  "footer_channels_note": "Email, phone and WhatsApp are available in the footer. For a needs assessment, use the direct WhatsApp or email path, or the inquiry form.",
-  "footer_channels_note_offline": "For a needs assessment, please reach me directly by email or phone (WhatsApp optional). Form delivery is being set up.",
-  "price_note": "Guideline figures only; binding once the scope has been reviewed in writing.",
+  "footer_channels_note": "For a needs assessment, start with the inquiry form. Email, phone and WhatsApp remain available in the footer as secondary contact options.",
+  "footer_channels_note_offline": "For a needs assessment, please reach BIT directly by email or phone (WhatsApp optional). Form delivery is being set up.",
+  "price_note": "Guideline figures after review of the service need. Binding only after written agreement. Structure: one-off assessment / setup, standardised fixed-price work, recurring service, special effort only after prior approval.",
   "prices": {
     "hourly": "CHF 120",
     "small_job": "CHF 190"
@@ -72,15 +72,15 @@
     "inquiry_eyebrow": "Inquiry",
     "archive_eyebrow": "Archive",
     "back_to_services": "Services",
-    "guidelines_title": "Guideline rates",
+    "guidelines_title": "Pricing logic (guidelines)",
     "four_areas": "Three service areas",
-    "five_steps": "Five steps",
+    "five_steps": "Six steps",
     "answers": "Answers",
-    "process_lead": "Every engagement starts with a written clarification of scope and responsibility.",
+    "process_lead": "Every engagement starts with a written clarification of the service frame. BIT steers the service through to documented close-out.",
     "view_service": "View service",
     "from_small_job": "IT basics check from CHF 190",
-    "hourly_line": "Working time: {hourly} per hour",
-    "small_job_line": "IT basics check / clearly scoped entry: from {small_job} (written finding)",
+    "hourly_line": "Special effort only after prior approval (guideline {hourly}/h, not a core product)",
+    "small_job_line": "One-off assessment: IT basics check from {small_job} (written finding)",
     "travel_line": "Most requests are handled remotely. If an on-site appointment is required, it is agreed in advance and listed separately in the quote — Zurich area, with no hidden travel flat fee.",
     "to_it_home": "Back to the IT home page",
     "archive_extra": "Earlier market-entry content is kept here for reference only and is not part of the current Swiss IT offer.",
@@ -91,7 +91,10 @@
     "steps_title": "Process",
     "required_info_title": "Required details",
     "boundaries_title": "Boundaries",
-    "report_structure_title": "Sample report structure"
+    "report_structure_title": "Sample report structure",
+    "setup_line": "Setup and standardised fixed-price work: after review of need",
+    "recurring_line": "Recurring services: after written agreement",
+    "special_line": "Special effort: only after prior approval"
   },
   "form": {
     "company": "Company *",
@@ -128,28 +131,47 @@
     "optional_heading": "Additional details (optional)"
   },
   "home": {
-    "meta_title": "IT support for small businesses without in-house IT | BIT Zurich",
-    "meta_description": "BIT helps companies in Zurich with user accounts, Microsoft 365, access and workplace issues — clearly scoped, with a written agreement on scope.",
-    "eyebrow": "IT coordination for Zurich and remote across Switzerland",
-    "h1": "IT support for small businesses without in-house IT",
-    "lead": "BIT supports businesses with user accounts, Microsoft 365, access and recurring workplace issues. Clearly defined standard cases are reviewed and handled.",
+    "meta_title": "User, access and workplace services for SMEs | BIT Zurich",
+    "meta_description": "BIT offers clearly defined services for smaller Swiss businesses without in-house IT: users & access, Microsoft 365 & workplace, IT basics check.",
+    "eyebrow": "Services for Zurich and remote across Switzerland",
+    "h1": "User, access and digital workplace services for small businesses",
+    "lead": "BIT offers clearly defined services for smaller Swiss businesses without an in-house IT role – from user and access processes to standardised Microsoft 365 and workplace tasks.",
     "trust": "For companies with about 5–50 employees · Zurich and remote across Switzerland",
     "cta_subline": "Non-binding needs assessment. Submitting the form does not create an engagement.",
-    "outcome": "You get a clear contact person, a written scope and a documented close-out. The service scope is clearly bounded and agreed before work starts.",
+    "outcome": "You buy the service from BIT. BIT remains your contact, steers the agreed service frame and delivers a documented close-out.",
     "pilot_banner": "BIT currently reviews selected requests within a limited introductory operation.",
-    "trust_block": {
-      "title": "Who is behind BIT",
-      "text": "Stefan Bogdanovic, Zurich. Operational experience from hotel and front-desk environments. Clearly scoped user, access and workplace requests – a contact person, a written scope and a traceable close-out."
+    "why_bit": {
+      "title": "Why BIT",
+      "items": [
+        "One central service entry instead of multiple parallel vendor contacts",
+        "Clearly defined service frame before work starts",
+        "Documented process from inquiry to close-out",
+        "Specialist capacity as needed within the BIT service",
+        "No oversized full-IT engagement required",
+        "BIT remains the contractual partner and steers quality and billing"
+      ]
+    },
+    "about_teaser": {
+      "title": "About BIT",
+      "text": "BIT is run by Stefan Bogdanovic in Zurich. The About BIT page covers the person behind the brand and how the work is organised.",
+      "href": "/en/about-bit/",
+      "cta": "Read about BIT"
+    },
+    "faq_teaser": {
+      "title": "FAQ",
+      "text": "Short answers on audience, boundaries and technical execution.",
+      "href": "/en/faq/",
+      "cta": "Open FAQ"
     },
     "examples_teaser": {
       "title": "Sample cases instead of references",
-      "text": "Three anonymised sample flows show how BIT structures joiners, leavers and workplace disruptions — without invented client stories.",
+      "text": "Three anonymised sample flows show how BIT structures joiners, leavers and workplace cases — without invented client stories.",
       "href": "/en/examples/",
       "cta": "View sample cases"
     },
     "partner": {
-      "title": "One contractual partner, one contact person",
-      "text": "BIT takes in your request, clarifies the scope in writing and remains your contact person through to documented close-out. You do not negotiate with multiple providers or coordinate appointments. If additional specialist expertise is needed for a specialist topic, that is discussed in advance; third-party costs arise only after your written approval."
+      "title": "You engage BIT — not multiple providers",
+      "text": "You buy the defined service from BIT. BIT takes in the request, clarifies the service frame in writing and remains your contact through to documented close-out. Before acceptance, BIT checks whether the required specialist work can be delivered within the available service and partner scope. Specialist work runs inside the confirmed BIT service; third-party costs arise only after your written approval."
     }
   },
   "concerns": {
@@ -164,12 +186,12 @@
         "href": "/en/inquiry/?area=users-access"
       },
       {
-        "text": "Outlook or Microsoft 365 fails at a workstation",
-        "href": "/en/inquiry/?area=m365-workplace"
+        "text": "A role change needs adjusted rights and mailboxes",
+        "href": "/en/inquiry/?area=users-access"
       },
       {
-        "text": "Unclear which accounts and rights are still active",
-        "href": "/en/inquiry/?area=basischeck"
+        "text": "A standardised Microsoft 365 or workplace request",
+        "href": "/en/inquiry/?area=m365-workplace"
       }
     ]
   },
@@ -182,7 +204,7 @@
       },
       {
         "title": "Day-to-day requests that stall",
-        "text": "Outlook, printers and permission questions sit unresolved when ownership is unclear."
+        "text": "Workplace requests sit unresolved when ownership is unclear."
       },
       {
         "title": "Unclear priorities",
@@ -191,18 +213,18 @@
     ]
   },
   "services": {
-    "title": "Three clear entry points",
-    "intro": "For companies with about 5–50 employees in Zurich and remote across Switzerland. BIT reviews and handles clearly defined standard cases within a written scope. Each service starts with a written scope. Remote is the default; Zurich-area on-site appointments are agreed in advance and listed separately in the quote — with no hidden travel flat fee.",
-    "scope_note": "Scope and technical responsibility are agreed up front. Not every issue is automatically included.",
-    "vendor_note": "Vendor coordination is not a separate product card: where needed, BIT clarifies ownership and follows the work through — within the written scope.",
+    "title": "Three services you can engage",
+    "intro": "BIT offers these services for smaller companies with about 5–50 employees in Zurich and remote across Switzerland. Each service starts with a written service frame. Remote is the default; Zurich-area on-site appointments are agreed in advance and listed separately in the quote.",
+    "scope_note": "Service frame and technical responsibility are agreed up front. Not every case is automatically included.",
+    "vendor_note": "Vendor ownership is not a separate sales product: where needed, BIT clarifies responsibility and steers the work within the agreed BIT service.",
     "path": "/en/services/",
     "cards": [
       {
         "slug": "users-and-access",
         "icon": "users",
         "title": "Users & access",
-        "benefit": "Joiner ready, leaver nothing left open unnecessarily",
-        "text": "Joiners, leavers, role changes, permissions, shared mailboxes, MFA and licences — with documented approvals.",
+        "benefit": "For joiners, leavers and role changes.",
+        "text": "BIT organises the defined accounts, access changes and approvals through a documented process. Outcome: an overview of handled and open points.",
         "area": "users-access",
         "detail": {
           "situations": [
@@ -214,7 +236,7 @@
           "steps": [
             "Capture the need and required details",
             "Clarify approvals and ownership",
-            "Handle approved changes within the agreed scope or coordinate technical execution with the responsible specialist function.",
+            "Handle approved changes within the agreed service frame or steer approved specialist work.",
             "Document the close-out in writing"
           ],
           "required_info": [
@@ -222,29 +244,32 @@
             "Required systems and roles",
             "Who may grant approvals"
           ],
-          "boundaries": "Specialist technical cases outside the agreed scope are not automatically included and are reviewed before work starts. No 24/7 cover and no unlimited scope. BIT does not replace an internal IT department and does not take unlimited retainer work. Vendor or infrastructure specialities are reviewed before start and continued only after agreement with a suitable specialist.",
-          "intro": "User and access topics often arise under time pressure: a Monday joiner, a leaver without a clear account list, a role change with new rights. BIT captures the request in a structured way, clarifies approvals and records the agreed scope in writing. Result first: a productive start or closed access — documented, traceable and without an open-ended retainer. Most cases are handled remotely; an on-site appointment in the Zurich area is agreed in advance only when needed and listed separately in the quote. Approvals stay with the company. Work does not start without a written scope.",
+          "boundaries": "Specialist technical cases outside the agreed service frame are not automatically included and are reviewed before work starts. No 24/7 cover and no unlimited scope. BIT does not replace an internal IT department and does not take unlimited retainer work. Before acceptance, BIT checks whether the required specialist work can be delivered within the available service and partner scope.",
+          "intro": "User and access topics often arise under time pressure: a Monday joiner, a leaver without a clear account list, a role change with new rights. BIT captures the request in a structured way, clarifies approvals and records the agreed service frame in writing. Result first: a productive start or closed access — documented and traceable. Most cases are handled remotely; Zurich-area on-site visits only when needed and listed separately. Approvals stay with the company. Work does not start without a written service frame.",
           "closing": "For a non-binding assessment, use the inquiry form with Users & access preselected. Submitting the form does not create an engagement."
-        }
+        },
+        "when": "For joiners, leavers and role changes.",
+        "what": "BIT organises the defined accounts, access changes and approvals through a documented process.",
+        "outcome": "At the end you receive a traceable overview of handled and still-open points."
       },
       {
         "slug": "microsoft-365-workplace",
         "icon": "m365",
         "title": "Microsoft 365 & workplace",
-        "benefit": "Less time lost on everyday disruptions",
-        "text": "Sign-in, Outlook, Teams, Windows, printers and devices: structured review and handling of clearly scoped standard cases.",
+        "benefit": "For standardised workplace and Microsoft 365 cases.",
+        "text": "BIT reviews and steers clearly scoped standard cases in the agreed service process. Outcome: documented close-out instead of an open-ended retainer.",
         "area": "m365-workplace",
         "detail": {
           "situations": [
-            "Outlook or Teams fails at a workstation.",
             "Sign-in or MFA blocks the start of work.",
-            "Recurring printer or device issues cost time.",
-            "A workstation starts slowly or blocks the working day through recurring sign-in failures."
+            "Outlook or Teams fails at a workstation.",
+            "Recurring standard workplace disruptions cost time.",
+            "A workstation blocks the working day through recurring sign-in failures."
           ],
           "steps": [
             "Capture the issue and impact",
             "Check whether it fits the standard scope",
-            "Handle or coordinate after agreement",
+            "Execute the standard case in the BIT service or steer approved specialist work",
             "Document the outcome and open points"
           ],
           "required_info": [
@@ -253,16 +278,19 @@
             "Since when and how often it occurs"
           ],
           "boundaries": "Vendor-dependent or deep infrastructure topics are not automatically included. A specialist is involved only by agreement. Without enough detail (error picture, timing, affected workstation) the case cannot be scoped reliably. Critical infrastructure or production environments are outside this entry point.",
-          "intro": "When Outlook, Teams or sign-in stalls at a workstation, work time is lost immediately. BIT narrows whether the account, device or service is affected and handles clearly scoped standard cases within the agreed scope. Result first: less time lost on everyday disruptions and one contact person through to documented close-out. The goal is a clearly scoped standard case with a documented outcome — not an open-ended retainer and not an automatic vendor escalation. Remote is the default; Zurich-area on-site visits only by agreement and listed separately in the quote.",
+          "intro": "When sign-in, Outlook or Teams stalls at a workstation, work time is lost immediately. BIT narrows whether the account, device or service is affected and handles clearly scoped standard cases within the agreed service frame. Result first: less disruption and one contact through to documented close-out. The goal is a clearly scoped standard case — not an open-ended retainer. Remote is the default; Zurich-area on-site visits only by agreement and listed separately.",
           "closing": "Describe the issue via the inquiry form (Microsoft 365 & workplace). Submitting the form does not create an engagement."
-        }
+        },
+        "when": "For standardised workplace and Microsoft 365 cases.",
+        "what": "BIT reviews and steers clearly scoped standard cases in the agreed service process — sign-in, Outlook, Teams and typical workplace blockers.",
+        "outcome": "At the end you receive a documented result and clear open points — not an open-ended retainer."
       },
       {
         "slug": "it-basics-check",
         "icon": "security",
         "title": "IT basics check",
-        "benefit": "Written findings and priorities",
-        "text": "Clearly scoped entry: review accounts and access, prioritise risks, deliver a written finding. Not a cybersecurity audit.",
+        "benefit": "When it is unclear which accounts and access rights are still active.",
+        "text": "BIT reviews existing access, prioritises risks and delivers a written finding. Not a cybersecurity audit.",
         "area": "basischeck",
         "detail": {
           "situations": [
@@ -285,38 +313,43 @@
           "boundaries": "The basics check is not a cybersecurity audit and not a penetration test. Specialist technical execution only after prior agreement with a suitable specialist. The finding is a priority overview, not a guarantee of completeness across every system and not approval for technical changes without a written follow-on agreement.",
           "intro": "When it is unclear which accounts and rights are still active, you need a written overview first — not an open-ended engagement. The IT basics check is a clearly scoped entry: review access, prioritise risks, deliver a finding. Result first: a documented finding with priorities before further steps are agreed. From CHF 190 as a fixed-price entry. The check creates a decision base: what first, what later, what sits outside the agreed scope. Remote is usual; Zurich-area on-site only when needed and listed separately. Not a security audit and not an unlimited follow-on engagement.",
           "closing": "For the basics check, use the inquiry form with IT basics check preselected. Submitting the form does not create an engagement."
-        }
+        },
+        "when": "When it is unclear which accounts and access rights are still active.",
+        "what": "BIT reviews existing access, prioritises risks and delivers a written finding.",
+        "outcome": "At the end you receive priorities and a decision base for next steps."
       }
     ]
   },
   "limits": {
-    "title": "Clearly scoped",
-    "lead": "BIT takes on clearly scoped tasks with a written objective. Scope and responsibility are set before work starts.",
+    "title": "Current standard service is not intended for…",
+    "lead": "BIT takes on clearly scoped tasks with a written objective. Service frame and responsibility are set before work starts.",
     "items": [
       "no 24/7 incident cover",
       "no open-ended retainer work",
-      "no work outside the confirmed scope"
+      "no work outside the confirmed service frame"
     ]
   },
   "process": {
     "title": "How it works",
+    "lead": "Customer → BIT → specialist partner inside the BIT service if needed → quality check → documented close-out. The customer relationship is not handed off.",
     "steps": [
-      "Describe the need",
-      "Review scope and responsibility",
-      "Confirm the approach in writing",
-      "Coordinate and follow through",
-      "Document the outcome"
+      "Submit an inquiry",
+      "Review need and feasibility",
+      "Confirm the service frame in writing",
+      "Execute the service or steer approved specialist work",
+      "Quality check",
+      "Document and close out"
     ]
   },
   "audience": {
-    "title": "Services for small businesses without an in-house IT team",
-    "lead": "BIT provides structured user, access and digital workplace services for Swiss businesses with approximately 5–50 employees.",
+    "title": "User, access and workplace services for small businesses",
+    "lead": "BIT offers clearly defined services for Swiss businesses with approximately 5–50 employees without an in-house IT role.",
     "services_title": "Typical services",
     "services": [
       "employee onboarding and offboarding",
       "user accounts, roles and access changes",
-      "Microsoft 365 and workplace requests",
-      "coordination with specialised delivery partners",
+      "Microsoft 365 and workplace services",
+      "specialist work inside the BIT service; BIT remains the contractual partner",
       "documented completion and follow-up"
     ],
     "fit_title": "Best suited for businesses that…",
@@ -334,13 +367,13 @@
       "advanced cybersecurity projects",
       "critical or highly regulated environments"
     ],
-    "nofit_note": "Additional specialist services may be coordinated separately where a suitable delivery partner is available."
+    "nofit_note": "Additional specialist services may be coordinated inside the BIT service where the required work sits within the available service and partner scope."
   },
   "role": {
     "title": "BIT’s role",
-    "owns": "Intake, structuring, coordination, communication, documentation, follow-up and billing.",
-    "tech": "Specialist topics and third-party costs are discussed in advance; see the section «One contractual partner, one contact person» on the home page.",
-    "contract": "Scope, responsibilities and billing are set in writing before work begins. I remain the contractual counterparty."
+    "owns": "Intake, structuring, steering, communication, documentation, follow-up and billing.",
+    "tech": "Before acceptance, BIT checks whether the required specialist work can be delivered within the available service and partner scope. Specialist work runs inside the confirmed BIT service; BIT remains the contact.",
+    "contract": "Service frame, responsibilities and billing are set in writing before work begins. The contractual partner is BIT (sole proprietorship Stefan Bogdanovic)."
   },
   "examples": {
     "title": "Worked examples",
@@ -348,32 +381,28 @@
     "items": [
       {
         "title": "Sample: new employee starts",
-        "text": "Capture required access, written approval, coordinate setup, documented close-out."
+        "text": "Capture required access, written approval, setup inside the BIT service, documented close-out."
       },
       {
         "title": "Sample: leaver without clarity",
-        "text": "List existing accounts and rights, coordinate disablement, document close-out and confirmation."
+        "text": "List existing accounts and rights, steer disablement inside the agreed service, document close-out."
       },
       {
-        "title": "Sample: Outlook does not work at a workstation",
-        "text": "Structured intake, clarify ownership, follow progress, record the outcome."
-      },
-      {
-        "title": "Sample: unclear vendor ownership",
-        "text": "Collect details, contact the responsible party, track status and document the close-out."
+        "title": "Sample: workplace standard case",
+        "text": "Structured intake, handle inside the BIT service or steer approved specialist work, record the outcome."
       }
     ]
   },
   "about": {
     "meta_title": "About BIT | BIT",
-    "meta_description": "Stefan Bogdanovic runs BIT in Zurich. Operational experience from hotel and front-desk environments, focused on clearly scoped user and workplace requests.",
+    "meta_description": "Stefan Bogdanovic runs BIT in Zurich. BIT offers clearly defined user, access and workplace services for smaller businesses.",
     "title": "Who is behind BIT",
     "lead": "Stefan Bogdanovic · owner and main contact · Zurich",
     "body": [
       "I know day-to-day operations from hotel and front-desk environments and the everyday user, access and system questions small businesses face.",
-      "BIT supports small businesses without in-house IT with user accounts, Microsoft 365, access and recurring workplace issues. I work as an operational contact — not as a general IT expert for every issue, and not as an expert team.",
-      "I remain the contractual counterparty. As a sole proprietorship I am your contact for intake, written scope, follow-up and billing.",
-      "Working languages for this Swiss IT site: German and English. Other languages by agreement or with external language support."
+      "BIT offers clearly defined services for small businesses without in-house IT: user accounts, Microsoft 365, access and standardised workplace tasks. I stand behind the brand as owner and quality owner — not as an hourly ticket technician for every issue.",
+      "Legally BIT is a sole proprietorship. The contractual partner is BIT; I remain your contact for intake, written service frame, follow-up and billing.",
+      "Working languages for this Swiss site: German and English. Other languages by agreement or with external language support."
     ],
     "siz_comment": "",
     "pilot": "BIT currently reviews selected requests within a limited introductory operation.",
@@ -389,7 +418,7 @@
     "items": [
       {
         "q": "Is BIT an in-house IT department?",
-        "a": "No. BIT takes structured ownership of clearly scoped user, access and workplace requests, documents them and follows them through. Scope is agreed in writing first."
+        "a": "No. BIT offers clearly scoped user, access and workplace services. The service frame is agreed in writing first."
       },
       {
         "q": "Which companies is this for?",
@@ -397,7 +426,7 @@
       },
       {
         "q": "Can every IT problem be covered?",
-        "a": "No. BIT takes on clearly scoped user, access and workplace tasks within a written scope. Complex infrastructure, vendor-dependent or specialist topics are not automatically included and are reviewed before work starts."
+        "a": "No. BIT takes on clearly scoped services within a written service frame. Complex infrastructure, vendor-dependent or specialist topics are not automatically included and are reviewed before work starts."
       },
       {
         "q": "Does BIT only work with hotels?",
@@ -405,28 +434,28 @@
       },
       {
         "q": "Who makes technical changes?",
-        "a": "It depends on the case and the written agreement. Where a task sits outside my own scope, I check first whether a suitable external specialist can be involved."
+        "a": "You engage the service with BIT. Before acceptance, BIT checks whether the required specialist work can be delivered within the available service and partner scope. Specialist work runs inside the confirmed BIT service; BIT remains the contact."
       },
       {
         "q": "How are access changes approved?",
-        "a": "Permission and access changes only happen after documented approval and within the written scope."
+        "a": "Permission and access changes only happen after documented approval and within the written service frame."
       },
       {
         "q": "Are there fixed packages or prices?",
-        "a": "There are guideline rates (working time CHF 120 per hour). The IT basics check is a fixed-price entry from CHF 190 with a written finding and priorities. Most requests are handled remotely. If an on-site appointment is required, it is agreed in advance and listed separately in the quote — Zurich area, with no hidden travel flat fee. Prices become binding only after written review of scope."
+        "a": "The IT basics check is a fixed-price entry from CHF 190 with a written finding and priorities. Further work follows after review of need: setup, standardised fixed-price service, recurring service or special effort after prior approval. Most requests are handled remotely; Zurich-area on-site visits are agreed in advance and listed separately. Most requests are handled remotely. If an on-site appointment is required, it is agreed in advance and listed separately in the quote — Zurich area, with no hidden travel flat fee. Prices become binding only after written agreement. An hourly guideline may be quoted for approved special effort in exceptions, but it is not a core product."
       }
     ]
   },
   "inquiry": {
     "live": true,
-    "meta_title": "Have your IT need reviewed | BIT",
-    "meta_description": "Describe your IT need without obligation. Reply usually within two working days.",
-    "title": "Have your IT need reviewed",
+    "meta_title": "Have your need reviewed | BIT",
+    "meta_description": "Describe your service need without obligation. Reply usually within two working days.",
+    "title": "Have your need reviewed",
     "lead": "Describe your starting point in a few minutes. You will receive an assessment of whether and how a collaboration could work.",
     "notice": "Non-binding needs assessment. Submitting the form does not create an engagement. BIT currently reviews selected requests within a limited introductory operation.",
     "response_expectation": "Reply usually within two working days.",
     "security": "Please do not submit passwords, recovery codes or specially protected personal data.",
-    "offline_banner": "Form delivery is being set up. Until delivery is proven, please reach me directly by email.",
+    "offline_banner": "Form delivery is being set up. Until delivery is proven, please reach BIT directly by email.",
     "submit": "Send inquiry",
     "success": "Thank you. Your details have been received. Reply usually within two working days.",
     "error": "The inquiry could not be sent. Please try again later or email admin@boksitsupport.ch.",
@@ -435,16 +464,16 @@
   },
   "closing": {
     "title": "Does your need fit BIT?",
-    "text": "Have your IT need reviewed without obligation. You will receive an assessment of whether and how a collaboration could work.",
+    "text": "Have your service need reviewed without obligation. You will receive an assessment of whether and how a collaboration could work.",
     "note": "Non-binding needs assessment · Submitting the form does not create an engagement.",
     "response_expectation": "Reply usually within two working days.",
-    "whatsapp_label": "Describe via WhatsApp"
+    "whatsapp_label": "Optional via WhatsApp"
   },
   "market_access_archive": {
-    "meta_title": "BIT focuses on IT coordination | BIT",
-    "meta_description": "BIT supports smaller Swiss companies without in-house IT with users, access and workplace topics.",
-    "title": "BIT focuses on IT coordination",
-    "lead": "BIT supports smaller Swiss companies without in-house IT with users, access and workplace topics. Earlier offerings on market entry and representation are not currently continued.",
+    "meta_title": "BIT focuses on digital workplace services | BIT",
+    "meta_description": "BIT offers clearly defined user, access and workplace services for smaller Swiss businesses.",
+    "title": "BIT focuses on digital workplace services",
+    "lead": "BIT offers clearly defined services for smaller Swiss businesses without in-house IT: users, access and workplace. Earlier offerings on market entry and representation are not currently continued.",
     "cta": "To the current offer"
   },
   "examples_page": {
@@ -466,7 +495,7 @@
         "steps": [
           "Capture starting point and affected systems",
           "Obtain approval for deactivation",
-          "Handle approved changes within the agreed scope or coordinate technical execution with the responsible specialist function.",
+          "Handle approved changes within the agreed service frame or steer approved specialist work.",
           "Document close-out plus open points and risks"
         ],
         "approvals": "Written approval from the responsible manager before any access change.",
@@ -502,7 +531,7 @@
         ],
         "steps": [
           "Narrow whether account, device or service is affected",
-          "Handle within the confirmed scope or coordinate with the responsible specialist function",
+          "Handle within the confirmed service frame or steer approved specialist work inside the BIT service",
           "Follow the work through",
           "Document the outcome and open points"
         ],
@@ -542,11 +571,11 @@
     }
   },
   "direct_path": {
-    "intro": "The quickest way is this – the template is pre-filled; you only add your details.",
-    "whatsapp_label": "Describe via WhatsApp",
-    "email_label": "Describe via email",
-    "form_heading": "Or use the form",
-    "subject": "IT need – [Company name]",
+    "intro": "Please use the form below as the primary path. WhatsApp and email are optional direct routes with a pre-filled template.",
+    "whatsapp_label": "Optional via WhatsApp",
+    "email_label": "Optional via email",
+    "form_heading": "Inquiry form",
+    "subject": "Service need – [Company name]",
     "body_lines": [
       "Company:",
       "Contact person:",
