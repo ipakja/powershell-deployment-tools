@@ -80,7 +80,10 @@ def test_homepage_zurich_pilot_concerns_and_footer() -> None:
     assert "Warum BIT" in de
     assert "Wer dahintersteht" not in de
     assert "Bedarf prüfen lassen" in de
-    assert "begrenzten Einführungsbetriebs" in de
+    assert "begrenzte Anzahl neuer Serviceanfragen" in de
+    assert "Einführungsbetrieb" not in de
+    assert "limited number of new service requests" in en
+    assert "introductory operation" not in en
     assert 'href="/de/anfrage/?area=users-access"' in de
     assert 'href="/de/leistungen/benutzer-und-zugaenge/">Ein ehemaliger' not in de
     assert 'href="/de/anfrage/?area=users-access">Ein ehemaliger Mitarbeiter hat noch aktive Konten<' in de
@@ -198,23 +201,27 @@ def test_prices_richtwerte_no_pilot_on_it_pages() -> None:
         text = read(path)
         assert "CHF 190" in text
         assert "4&#x27;900" not in text and "4'900" not in text
+        assert "Preise und Abrechnung" in text or "Prices and billing" in text
         # Hourly may appear only as secondary special-effort note, not as lead product
         if "CHF 120" in text:
-            assert "kein Standardprodukt" in text or "not a core product" in text
-        assert "Setup" in text or "setup" in text.lower() or "Einmalige Prüfung" in text or "One-off" in text
+            assert (
+                "Richtwert" in text
+                or "Sonderaufwand" in text
+                or "guideline" in text.lower()
+                or "special effort" in text.lower()
+            )
+        assert "Festpreis" in text or "fixed price" in text.lower() or "fixed-price" in text.lower()
 
 
 def test_no_travel_flat_rate_remote_policy_on_it_pages() -> None:
     """IT price surfaces use remote-first wording, not CHF 35 travel."""
     de_remote = (
-        "Die meisten Anfragen werden remote bearbeitet. Ist ein Termin vor Ort "
-        "erforderlich, wird er vorab vereinbart und im Angebot separat ausgewiesen "
-        "– im Raum Zürich, ohne Anfahrtspauschale als versteckte Position."
+        "Remote ist der Standard. Vor-Ort-Termine im Raum Zürich werden vorab "
+        "vereinbart und separat ausgewiesen."
     )
     en_remote = (
-        "Most requests are handled remotely. If an on-site appointment is required, "
-        "it is agreed in advance and listed separately in the quote — Zurich area, "
-        "with no hidden travel flat fee."
+        "Remote is the default. Zurich-area on-site appointments are agreed in "
+        "advance and listed separately."
     )
     for path in (
         "de/leistungen/index.html",
@@ -226,12 +233,10 @@ def test_no_travel_flat_rate_remote_policy_on_it_pages() -> None:
         assert "CHF 35" not in text
         assert "Anfahrt innerhalb Zürichs" not in text
         assert "Travel within Zurich" not in text
-        assert "Anfahrtspauschale" in text or "travel flat fee" in text
     assert de_remote in read("de/leistungen/index.html")
-    assert de_remote in read("de/faq/index.html")
+    assert "Remote ist der Standard" in read("de/faq/index.html")
     assert en_remote in read("en/services/index.html")
-    assert en_remote in read("en/faq/index.html")
-
+    assert "Remote is the default" in read("en/faq/index.html")
 
 def test_footer_offline_and_inquiry_gated() -> None:
     """When inquiry.live is true: form enabled; footer uses live channel note."""
@@ -383,7 +388,11 @@ def test_services_rewrite_structure_and_slugs() -> None:
         assert "it-basischeck" in text
         assert "Mitarbeiter-Onboarding" not in text
 
-    assert "Anbieterzuständigkeit ist kein eigenes" in de_home or "Anbieterzuständigkeit ist kein eigenes" in de_svc
+    assert "Anbieterzuständigkeit ist kein eigenes" not in de_home
+    assert "Anbieterzuständigkeit ist kein eigenes" not in de_svc
+    assert "Falls weitere Fachanbieter benötigt werden" in de_home or "Falls weitere Fachanbieter benötigt werden" in de_svc
+    assert "Vendor ownership is not a separate" not in en_home
+    assert "If additional specialist providers are needed" in en_home or "If additional specialist providers are needed" in en_svc
 
     for text in (en_home, en_svc):
         assert "Zurich" in text
@@ -651,27 +660,34 @@ def test_phase2_markers_partner_examples_process_list() -> None:
     assert "CHF 120" not in en_home
 
     about = read("de/ueber-bit/index.html")
-    assert "Vertragspartner ist BIT" in about or "Einzelunternehmen" in about
+    assert "Als Inhaber verantworte ich Aufnahme, Koordination, Qualität" in about
+    assert "kleines Serviceunternehmen in Zürich" in about
+    assert "stundenweiser Ticket-Techniker" not in about
+    assert "Arbeitssprachen: Deutsch und Englisch." in about
     legal = read("de/legal/index.html")
     assert "Vertragspartner ist BIT" in legal
 
     examples = read("de/beispiele/index.html")
-    assert "So kann ein Auftrag bei BIT ablaufen" in examples
-    assert "illustrative Musterfälle" in examples
+    assert "So können Aufträge bei BIT ablaufen" in examples
+    assert "illustrative Musterabläufe" in examples
+    assert "keine Kundenreferenzen" in examples
     assert "Muster: Outlook funktioniert an einem Arbeitsplatz nicht" in examples
     assert "besonders schützenswerte Personendaten" in examples
     assert "Offene Punkte und Risiken" in examples
-    assert "Freigegebene Änderungen innerhalb des vereinbarten Leistungsrahmens" in examples
-    assert "Freigegebene Konten, Rechte und Lizenzen" in examples
+    assert "Freigegebene Änderungen umsetzen oder notwendige Facharbeit koordinieren" in examples
+    assert "autorisierten Person" in examples
+    assert "Vergleichsrolle" in examples
+    assert "Massnahmen durchführen bzw. koordinieren" in examples
     assert "Zustand A" not in examples
     assert 'class="form-notice"' not in examples
 
     en_ex = read("en/examples/index.html")
-    assert "How an engagement with BIT can run" in en_ex
+    assert "How engagements with BIT can run" in en_ex
     assert "Sample: Outlook does not work at a workstation" in en_ex
     assert "specially protected personal data" in en_ex
     assert "Open points and risks" in en_ex
-
+    assert "authorised person" in en_ex
+    assert "comparison role" in en_ex
     # Process list: ul + span numbering only (no double ol markers in source)
     for path in (
         "de/index.html",
@@ -694,9 +710,23 @@ def test_phase2_markers_partner_examples_process_list() -> None:
         ), f"double number markers in {path}"
 
     faq = read("de/faq/index.html")
+    assert "Ersetzt BIT eine eigene IT-Abteilung?" in faq
     assert "Können alle IT-Probleme übernommen werden?" in faq
-    assert "klar abgegrenzte" in faq and "Leistungsrahmen" in faq
+    assert "konzentriert sich auf Benutzer-" in faq
+    assert "Wie schnell reagiert BIT?" in faq
+    assert "Muss unsere IT bereits dokumentiert sein?" in faq
+    assert "Stundenrichtwert" not in faq
+    assert faq.count("Die meisten Anfragen werden remote bearbeitet") == 0
     assert "Durch das Absenden entsteht noch kein Auftrag" in read("de/index.html")
+
+    process = read("de/so-funktioniert-es/index.html")
+    assert "Umfang und Preis bestätigen" in process
+    assert "BIT bleibt während des gesamten Auftrags Ihr zentraler Ansprechpartner" in process
+    assert "Kundenbeziehung wird nicht weitergeleitet" not in process
+    assert "Was Sie erwarten können" in process
+    assert "Leistungsgrenzen" in read("de/index.html")
+    assert "Aktueller Standardservice nicht gedacht" not in read("de/index.html")
+    assert "Für neue Serviceanfragen empfehlen wir das Anfrageformular." in read("de/index.html")
 
     users = read("de/leistungen/benutzer-und-zugaenge/index.html")
     words = re.findall(r"[A-Za-zÄÖÜäöü]{2,}", users)

@@ -713,7 +713,9 @@ def examples_main(v2: dict[str, Any]) -> str:
     ui = v2["ui"]
     note = (page.get("note") or "").strip()
     note_html = (
-        f'            <p class="form-notice">{escape(note)}</p>\n' if note else ""
+        f'            <p class="section-intro examples-disclaimer">{escape(note)}</p>\n'
+        if note
+        else ""
     )
     blocks = [
         '        <section class="hero"><div class="container">\n'
@@ -771,12 +773,25 @@ def examples_main(v2: dict[str, Any]) -> str:
     return "".join(blocks)
 
 def process_main(v2: dict[str, Any]) -> str:
-    """Process page."""
+    """Process page with shared steps plus light customer-facing extras."""
     ui = v2["ui"]
     process = v2["process"]
     steps = process["steps"]
     lead = process.get("lead") or ui["process_lead"]
     step_label = ui.get("five_steps") or ""
+    extras = process.get("extras") or []
+    extras_html = ""
+    if extras:
+        extras_title = process.get("extras_title") or (
+            "What to expect" if v2["language"] == "en" else "Was Sie erwarten können"
+        )
+        extras_body = "".join(
+            f"                <h3>{escape(item['title'])}</h3>\n"
+            f"                <p>{escape(item['text'])}</p>\n"
+            for item in extras
+            if item.get("title") and item.get("text")
+        )
+        extras_html = section(extras_title, extras_body)
     return (
         '        <section class="hero"><div class="container">\n'
         f'            <p class="eyebrow">{escape(ui["process_eyebrow"])}</p>\n'
@@ -787,6 +802,7 @@ def process_main(v2: dict[str, Any]) -> str:
             step_label,
             process_list_html(steps),
         )
+        + extras_html
         + cta_block(v2)
     )
 
