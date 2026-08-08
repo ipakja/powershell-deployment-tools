@@ -1,0 +1,274 @@
+{
+  "lang": "en",
+  "skip": "Skip to content",
+  "language_suggestion": {
+    "prompt": "Would you like to view this page in your browser language?",
+    "switch": "Switch language",
+    "dismiss": "Close"
+  },
+  "meta": {
+    "title": "Swiss Market Entry & SME IT Support Zurich | BIT",
+    "description": "Swiss market entry and business representation for Balkan B2B companies, plus SME and hospitality IT support, PMS/OTA reviews in Zurich.",
+    "keywords": "Swiss market entry, business representation Switzerland, Swiss business development, hospitality IT support, PMS OTA reconciliation, SME IT support Zurich, Microsoft 365 support Zurich"
+  },
+  "nav": {
+    "aria": "Main navigation",
+    "services": "Services",
+    "market": "Swiss market",
+    "about": "About BIT",
+    "contact": "Contact",
+    "menu": "Menu",
+    "languages": "Choose language"
+  },
+  "hero": {
+    "eyebrow": "BIT – Swiss Market Development & Representation · Zurich",
+    "title": "Stable systems. Clear operations. A practical route into Switzerland.",
+    "lead": "We secure day-to-day IT for Swiss SMEs, hotels and restaurants. For B2B companies from the Balkans, we provide structured Swiss market entry support – from validation to local business representation.",
+    "services_button": "View services",
+    "trust": "One accountable contact · documented outcomes · remote or on-site by arrangement"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Operational support with defined deliverables.",
+    "intro": "We assess the cause, dependencies and business risk before recommending work. Hotels and restaurants remain consolidated in one hospitality service point.",
+    "cards": [
+      {
+        "title": "Hospitality: hotels & restaurants",
+        "text": "Hospitality IT support connecting front desk, reservations, accounting and restaurant operations.",
+        "items": [
+          "PMS/OTA review of rates, availability and booking flows",
+          "Folio, commission, fee and payment reconciliation",
+          "Investigation of mapping, interface and duplicate-booking issues",
+          "POS, printers, Wi-Fi, devices and user access",
+          "Booking journeys, digital menus and Google Business Profile",
+          "Documented findings and prioritised corrective actions"
+        ]
+      },
+      {
+        "title": "SME IT & digital solutions",
+        "text": "SME IT support in Zurich and Switzerland for practices, trades, service firms and teams without an internal IT department.",
+        "items": [
+          "Microsoft 365 users, MFA, Outlook and permissions",
+          "Windows 11, computers, printers and secure configuration",
+          "Wi-Fi, DNS, domains, email delivery and website operations",
+          "Account clean-up and least-privilege role design",
+          "Backup, update and baseline security review",
+          "Concise system documentation and staff handover"
+        ]
+      },
+      {
+        "title": "Process & project support",
+        "text": "A sound decision basis and coordinated delivery for clearly defined digital projects.",
+        "items": [
+          "Current-state, root-cause and risk analysis",
+          "Requirements, ownership and measurable target state",
+          "Independent provider, licensing and solution comparison",
+          "Process mapping, bottlenecks and automation potential",
+          "Coordination of selected specialists and vendors",
+          "Acceptance review, documentation and open-actions register"
+        ]
+      }
+    ]
+  },
+  "market": {
+    "eyebrow": "BIT – Swiss Market Development & Representation",
+    "title": "Swiss market entry with local representation.",
+    "text": "For B2B companies from Bosnia and Herzegovina, Croatia, Serbia, Montenegro and North Macedonia, we turn market potential into a testable sales path. We do not promise contracts; we provide disciplined local market work and transparent reporting.",
+    "items": [
+      "Swiss target-market, competitor and offer validation",
+      "Adaptation of value proposition, pricing logic and sales material",
+      "Identification and qualification of relevant business contacts",
+      "Local outreach and business development in Switzerland",
+      "Representation in meetings and technical or language clarification",
+      "Pilot coordination, market feedback and next-step recommendation"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Two audiences · one local contact",
+    "title": "Support where operational proximity matters.",
+    "intro": "Swiss businesses need reliable systems. International providers need local context and presence. BIT serves both needs through clearly separated, accountable mandates.",
+    "cards": [
+      {
+        "title": "For Swiss SMEs and hospitality",
+        "text": "For SMEs, medical practices, trades, service companies, hotels and restaurants in Zurich and across Switzerland.",
+        "items": [
+          "Resolve incidents and recurring root causes",
+          "Secure Microsoft 365, devices and access",
+          "Review hospitality systems and revenue flows",
+          "Document responsibilities and operating procedures",
+          "Coordinate external vendors with technical clarity"
+        ]
+      },
+      {
+        "title": "For Balkan B2B companies",
+        "text": "For established providers with references, delivery capability and a realistic commitment to the Swiss market.",
+        "items": [
+          "Challenge market readiness and target segments",
+          "Explain Swiss quality and communication expectations",
+          "Approach local contacts professionally and selectively",
+          "Support meetings, proposals and pilot projects",
+          "Return transparent evidence and market feedback"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "A traceable process from first contact to handover.",
+    "intro": "A clear process protects time, budget and sensitive information. Every engagement starts with assessment and scope, not premature promises.",
+    "steps": [
+      {
+        "title": "Initial contact",
+        "text": "Send the objective, current situation and urgency by WhatsApp, Viber or email – never passwords or confidential access details."
+      },
+      {
+        "title": "Assessment & scope",
+        "text": "We clarify causes, systems, target market, stakeholders and risks, then provide a candid view of feasibility and scope."
+      },
+      {
+        "title": "Delivery & communication",
+        "text": "We work in agreed steps, confirm decisions and flag deviations early rather than hiding them."
+      },
+      {
+        "title": "Handover & continuation",
+        "text": "You receive results, relevant documentation, open items and a prioritised recommendation for the secure next step."
+      }
+    ]
+  },
+  "assurance": {
+    "eyebrow": "Trust through clear boundaries",
+    "title": "What you can expect – and what you cannot.",
+    "text": "Good cooperation starts with realistic expectations. BIT works independently, discreetly and with defined accountability. We never request credentials through messaging apps.",
+    "items": [
+      "No vendor commission drives our recommendation",
+      "No guarantee of market success, contracts or flawless third-party systems",
+      "Confidential access only through an agreed secure channel",
+      "MFA, minimum permissions and documented changes as standard",
+      "External specialists only when needed and with a defined scope",
+      "Costs, assumptions and unresolved risks stated before implementation"
+    ]
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "title": "Before the first conversation.",
+    "items": [
+      {
+        "question": "Which businesses do you support in Zurich?",
+        "answer": "We primarily support SMEs, medical practices, trades and service firms, hotels and restaurants. Each engagement is scoped according to the systems, urgency and specialist expertise required."
+      },
+      {
+        "question": "Are hotels and restaurants separate services?",
+        "answer": "No. They remain one hospitality service point because PMS, OTA, POS, payments, Wi-Fi and operational processes are often interdependent."
+      },
+      {
+        "question": "What does PMS/OTA reconciliation include?",
+        "answer": "Depending on scope, we review rates, availability, booking flows, mapping, folios, fees, commissions and unusual variances. BIT is independent and is not an official PMS vendor representative."
+      },
+      {
+        "question": "How do you support Swiss market entry?",
+        "answer": "We validate target segments and positioning, qualify contacts, conduct agreed outreach, support meetings and coordinate pilots. Activity, feedback and conclusions are documented."
+      },
+      {
+        "question": "Do you guarantee customers or sales in Switzerland?",
+        "answer": "No. Responsible business development cannot guarantee contracts. We provide structured validation, local activity and reliable feedback so you can make evidence-based investment decisions."
+      },
+      {
+        "question": "Do you work remotely or on site?",
+        "answer": "Many assessments and support tasks can be delivered remotely. On-site work in Zurich and elsewhere in Switzerland is arranged according to availability and a clear scope."
+      },
+      {
+        "question": "How do we start?",
+        "answer": "Send a short outline through WhatsApp, Viber or email, including your objective, current situation and urgency. Never send passwords, access codes or sensitive customer data through messaging apps."
+      },
+      {
+        "question": "Can BIT provide ongoing support or representation?",
+        "answer": "Yes, where systems, responsibilities, territory and response expectations are clearly defined. We normally begin with an assessment before agreeing an ongoing mandate."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "About BIT",
+    "title": "Personally managed. Professionally connected.",
+    "text": "BIT is managed by Stefan Bogdanovic in Zurich. The focus is on understandable solutions, clean coordination and reliable delivery for SMEs, hospitality businesses and international partners.",
+    "independent": "Selected specialists may contribute depending on the engagement. Responsibility and quality assurance remain with BIT. BIT works independently and is not an official PMS vendor representative.",
+    "image_alt": "Stefan Bogdanovic, BIT Zurich"
+  },
+  "contact": {
+    "eyebrow": "Direct contact",
+    "title": "Message us directly.",
+    "text": "No contact form and no unnecessary detour. Send a brief outline – never send confidential credentials through messaging apps.",
+    "whatsapp": "Message on WhatsApp",
+    "viber": "Message on Viber",
+    "email": "Send email",
+    "email_subject": "Enquiry via boksitsupport.ch",
+    "quick_contact": "Quick contact"
+  },
+  "footer": {
+    "location": "Zurich, Switzerland",
+    "legal": "Legal notice",
+    "privacy": "Privacy"
+  },
+  "legal_page": {
+    "title": "Legal notice",
+    "eyebrow": "Legal information",
+    "lead": "Provider identification and notes on the use of this website. Primary jurisdiction: Switzerland.",
+    "back": "Back to website",
+    "provider_title": "Provider",
+    "provider_name": "Stefan Bogdanovic",
+    "entity_type": "BIT – Boks IT Support (sole proprietorship)",
+    "owner": "Content responsibility: Stefan Bogdanovic",
+    "activity_title": "Activity",
+    "activity": "User, access and digital workplace services for small businesses without in-house IT: clearly scoped services with a written service frame. Other fields of activity only by written agreement.",
+    "address_title": "Address",
+    "city": "Zurich",
+    "country": "Switzerland",
+    "contact_title": "Contact",
+    "registration_title": "Register and tax details",
+    "registration": "There is no commercial-register entry and no UID published on this website. Any VAT status is published only if it exists.",
+    "terms_title": "Terms – key points",
+    "terms": "The contractual partner is BIT – Boks IT Support (sole proprietorship Stefan Bogdanovic). Service frame, price and schedule are agreed in writing. Third-party costs require approval; representation requires an explicit written mandate. Before acceptance, BIT checks whether the required specialist work can be delivered within the available service and partner scope. These are key points, not comprehensive legal advice.",
+    "liability_title": "Liability for content",
+    "liability": "I prepare the content of this website with care. I give no assurance of completeness, accuracy or continuous availability. Operators of linked external sites remain solely responsible for their content.",
+    "copyright_title": "Copyright",
+    "copyright": "© 2026 BIT – Boks IT Support. All rights reserved. Texts, design and other content on this website may not be copied, distributed or otherwise used without prior written consent.",
+    "privacy_title": "Privacy",
+    "jurisdiction_title": "Applicable law and venue",
+    "jurisdiction": "Swiss law applies. Where legally permitted, Zurich is the place of jurisdiction for disputes relating to this website and the services offered through it.",
+    "updated": "Last updated: August 2026",
+    "privacy_detail": {
+      "intro": "This website provides an inquiry form for needs assessment. When you submit the form, the details you enter are processed so BIT can assess your needs and contact you. Alternatively, you can reach BIT by email, phone or WhatsApp.",
+      "categories_title": "Categories of data collected",
+      "categories": [
+        "Company",
+        "First and last name",
+        "Business email address",
+        "Number of employees",
+        "Requested service area",
+        "Short problem description",
+        "Phone number (optional)",
+        "Location / canton (optional)",
+        "Industry (optional)",
+        "Number of workstations (optional)",
+        "Microsoft 365 status and internal/external IT situation (optional)",
+        "Preferred start timing (optional)",
+        "Technical transmission metadata (e.g. timestamp, request ID; possibly IP country via the hosting provider)"
+      ],
+      "purpose_title": "Purpose of processing",
+      "purpose": "Needs assessment: reviewing whether and on what basis collaboration is possible, and contacting you with an initial assessment.",
+      "basis_title": "Legal basis",
+      "basis": "Consent. You give it via the mandatory checkbox on the inquiry form before submitting.",
+      "retention_title": "Retention",
+      "retention": "Inquiries are stored for a maximum of twelve months and then deleted, unless statutory retention duties or legitimate grounds require longer storage.",
+      "retention_confirm": "",
+      "processors_title": "Recipients and processors",
+      "processors": "The inquiry form is submitted from the website to a Cloudflare endpoint. The details are stored there for needs assessment (Cloudflare KV) and forwarded by email to admin@boksitsupport.ch (email delivery service Resend, if enabled). Website hosting: Cloudflare Pages. Cloudflare and, if used, Resend may operate servers outside Switzerland.",
+      "abroad_title": "Possible processing abroad",
+      "abroad": "Hosting (Cloudflare) and the optional email delivery service (Resend) may involve processing or storage outside Switzerland or the EEA. WhatsApp may process contact, device and communication metadata outside Switzerland if you use that channel.",
+      "rights_title": "Your rights",
+      "rights": "You may request access to, rectification or deletion of your personal data and withdraw consent for the future. Withdrawal does not affect the lawfulness of processing carried out before withdrawal.",
+      "contact_title": "Privacy contact",
+      "contact": "For privacy requests: admin@boksitsupport.ch. Do not send passwords, recovery codes or specially protected personal data through the form or messaging apps.",
+      "no_tracking": "There is no invasive tracking and no advertising measurement. When you visit the site, the hosting provider may process technically necessary server logs."
+    }
+  }
+}

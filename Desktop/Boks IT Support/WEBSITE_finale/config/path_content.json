@@ -1,0 +1,1229 @@
+{
+  "gateway": {
+    "de": {
+      "meta_title": "BIT – IT & Hospitality und Market Access Switzerland",
+      "meta_description": "Zwei getrennte Leistungsbereiche: IT & Hospitality für Schweizer Betriebe sowie BIT Market Access Switzerland für internationale Anbieter.",
+      "identity": "BIT — Stefan Bogdanovic, {city}",
+      "title": "Zwei getrennte Leistungsbereiche.",
+      "subtitle": "Bitte wählen Sie den passenden.",
+      "hospitality_title": "IT & Hospitality",
+      "hospitality_text": "für Schweizer Hotels, Gastronomiebetriebe und KMU",
+      "hospitality_note": "",
+      "market_title": "BIT Market Access Switzerland",
+      "market_text": "für internationale Anbieter, die den Schweizer Markt prüfen"
+    },
+    "en": {
+      "meta_title": "BIT – IT & Hospitality and Market Access Switzerland",
+      "meta_description": "Two separate service areas: IT & Hospitality for Swiss businesses and BIT Market Access Switzerland for international providers.",
+      "identity": "BIT — Stefan Bogdanovic, {city}",
+      "title": "Two separate service areas.",
+      "subtitle": "Please choose the one that fits.",
+      "hospitality_title": "IT & Hospitality",
+      "hospitality_text": "for Swiss hotels, restaurants and SMEs",
+      "hospitality_note": "",
+      "market_title": "BIT Market Access Switzerland",
+      "market_text": "for international providers assessing the Swiss market"
+    },
+    "fr": {
+      "meta_title": "BIT – IT & Hospitality et Market Access Switzerland",
+      "meta_description": "Deux domaines distincts : IT & Hospitality pour les entreprises suisses et BIT Market Access Switzerland pour les prestataires internationaux.",
+      "identity": "BIT — Stefan Bogdanovic, {city}",
+      "title": "Deux domaines de prestations distincts.",
+      "subtitle": "Veuillez choisir celui qui vous convient.",
+      "hospitality_title": "IT & Hospitality",
+      "hospitality_text": "pour les hôtels, restaurants et PME suisses",
+      "hospitality_note": "",
+      "market_title": "BIT Market Access Switzerland",
+      "market_text": "pour les prestataires internationaux qui évaluent le marché suisse"
+    },
+    "sr": {
+      "meta_title": "BIT – IT i ugostiteljstvo i Market Access Switzerland",
+      "meta_description": "Dve odvojene oblasti usluga: IT i ugostiteljstvo za švajcarske firme i BIT Market Access Switzerland za međunarodne ponuđače.",
+      "identity": "BIT — Stefan Bogdanović, {city}",
+      "title": "Dve odvojene oblasti usluga.",
+      "subtitle": "Izaberite onu koja vam odgovara.",
+      "hospitality_title": "IT i ugostiteljstvo",
+      "hospitality_text": "za švajcarske hotele, restorane i mala i srednja preduzeća",
+      "hospitality_note": "",
+      "market_title": "BIT Market Access Switzerland",
+      "market_text": "za međunarodne ponuđače koji proveravaju švajcarsko tržište"
+    },
+    "bs": {
+      "meta_title": "BIT – IT i ugostiteljstvo i Market Access Switzerland",
+      "meta_description": "Dvije odvojene oblasti usluga: IT i ugostiteljstvo za švicarske firme i BIT Market Access Switzerland za međunarodne ponuđače.",
+      "identity": "BIT — Stefan Bogdanović, {city}",
+      "title": "Dvije odvojene oblasti usluga.",
+      "subtitle": "Odaberite onu koja vam odgovara.",
+      "hospitality_title": "IT i ugostiteljstvo",
+      "hospitality_text": "za švicarske hotele, restorane i mala i srednja preduzeća",
+      "hospitality_note": "",
+      "market_title": "BIT Market Access Switzerland",
+      "market_text": "za međunarodne ponuđače koji provjeravaju švicarsko tržište"
+    },
+    "hr": {
+      "meta_title": "BIT – IT i ugostiteljstvo i Market Access Switzerland",
+      "meta_description": "Dva odvojena područja usluga: IT i ugostiteljstvo za švicarske tvrtke i BIT Market Access Switzerland za međunarodne ponuđače.",
+      "identity": "BIT — Stefan Bogdanović, {city}",
+      "title": "Dva odvojena područja usluga.",
+      "subtitle": "Odaberite ono koje vam odgovara.",
+      "hospitality_title": "IT i ugostiteljstvo",
+      "hospitality_text": "za švicarske hotele, restorane te mala i srednja poduzeća",
+      "hospitality_note": "",
+      "market_title": "BIT Market Access Switzerland",
+      "market_text": "za međunarodne ponuđače koji provjeravaju švicarsko tržište"
+    },
+    "it": {
+      "meta_title": "BIT – IT & Hospitality e Market Access Switzerland",
+      "meta_description": "Due ambiti distinti: IT & Hospitality per imprese svizzere e BIT Market Access Switzerland per fornitori internazionali.",
+      "identity": "BIT — Stefan Bogdanovic, {city}",
+      "title": "Due ambiti di prestazioni distinti.",
+      "subtitle": "Scelga quello adatto.",
+      "hospitality_title": "IT & Hospitality",
+      "hospitality_text": "per hotel, ristoranti e PMI svizzere",
+      "hospitality_note": "",
+      "market_title": "BIT Market Access Switzerland",
+      "market_text": "per fornitori internazionali che valutano il mercato svizzero"
+    }
+  },
+  "de": {
+    "common": {
+      "skip": "Zum Inhalt springen",
+      "menu": "Menü",
+      "languages": "Sprache wählen",
+      "about": "Über mich",
+      "legal": "Rechtliches",
+      "contact": "Kontakt",
+      "whatsapp": "Über WhatsApp schreiben",
+      "viber": "Über Viber schreiben",
+      "email": "E-Mail senden",
+      "warning": "Senden Sie keine Passwörter, Zugangscodes oder vertraulichen Kundendaten über Messenger.",
+      "exclusions": "Was ich nicht mache",
+      "price": "Preis",
+      "back": "Zurück zum Angebot",
+      "about_title": "Über mich",
+      "about_lead": "Stefan Bogdanovic · BIT – Boks IT Support · Zürich",
+      "about_text": "Ich unterstütze kleine und mittlere Betriebe bei klar abgegrenzten IT- und Digitalaufgaben. Für den Schweizer B2B-Markt führe ich strukturierte Pilotmandate unter der Bezeichnung BIT Market Access Switzerland durch. Ich prüfe zuerst Ausgangslage, Abhängigkeiten und Grenzen und dokumentiere die vereinbarten Ergebnisse. Wenn ein Auftrag zusätzliches Fachwissen verlangt, benenne ich das vor Beginn und beziehe externe Fachpersonen nur nach Absprache ein. Vertragspartner bleibe ich.",
+      "about_independent": "Ich arbeite unabhängig und bin keine offizielle Vertretung eines PMS- oder Softwareherstellers.",
+      "image_alt": "Stefan Bogdanovic in Zürich",
+      "about_practice": "Ich kenne operative Abläufe zwischen Rezeption, Reservierungen, Abrechnung und Hotelsystemen aus der Schweizer Praxis. Ergänzend unterstütze ich kleine Teams bei Microsoft 365, Geräten und Benutzerzugängen. Von Zürich aus arbeite ich auf Deutsch, Englisch sowie Serbisch, Bosnisch und Kroatisch und verbinde Schweizer Betriebsrealität mit dem südosteuropäischen Markt.",
+      "about_languages": "Arbeitssprachen: Deutsch, Englisch sowie Serbisch, Bosnisch und Kroatisch. Französisch und Italienisch nach Vereinbarung beziehungsweise mit externer Sprachunterstützung.",
+      "phone": "Anrufen"
+    },
+    "hospitality": {
+      "meta_title": "IT & Hospitality Support Zürich | BIT",
+      "meta_description": "Abgegrenzte IT- und Hospitality-Unterstützung sowie Prüfung von Buchungs-, Raten- und Abrechnungsdaten für KMU, Hotels und Gastronomie in Zürich.",
+      "eyebrow": "IT & Hospitality · Zürich",
+      "title": "IT- und Digitalaufgaben klar prüfen und umsetzen.",
+      "lead": "Ich unterstütze KMU, Hotels und Gastronomiebetriebe bei konkreten Störungen, Systemfragen, digitalen Arbeitsabläufen und der Prüfung von Buchungs-, Raten- und Abrechnungsdaten.",
+      "nav": [
+        "Leistungen",
+        "Preise",
+        "Grenzen"
+      ],
+      "blocks": [
+        {
+          "title": "Hospitality: Hotel & Gastronomie",
+          "text": "Ich prüfe klar abgegrenzte Abläufe zwischen Rezeption, Reservierung, Kasse, Betrieb und Abrechnung.",
+          "items": [
+            "PMS-/OTA-Buchungswege, Raten, Verfügbarkeiten und Mapping prüfen",
+            "Buchungs-, Raten- und Abrechnungsdaten: Belegung, ADR/RevPAR-Abweichungen und Ratenlogik anhand gelieferter Daten prüfen",
+            "No-Show-, Storno-, Gebühren- und Folio-Fälle nachvollziehen und vereinbarte Korrekturen nach Freigabe umsetzen",
+            "Kasse, Drucker, WLAN, Endgeräte und Benutzerzugänge eingrenzen",
+            "Befunde, Änderungen und offene Punkte verständlich dokumentieren"
+          ]
+        },
+        {
+          "title": "KMU IT & digitale Aufgaben",
+          "text": "Ich bearbeite konkrete IT-Aufgaben für kleine Teams ohne interne IT-Abteilung.",
+          "items": [
+            "Microsoft 365, MFA und Outlook prüfen; Berechtigungsänderungen nur nach dokumentierter Freigabe",
+            "Windows-Geräte, Drucker, WLAN und E-Mail-Störungen eingrenzen",
+            "Konten, Rollen, Updates und Übergabe nachvollziehbar dokumentieren"
+          ]
+        }
+      ],
+      "process": {
+        "title": "So gehe ich vor",
+        "intro": "Jeder Auftrag folgt fünf klaren Arbeitsschritten.",
+        "steps": [
+          {
+            "title": "Vorbereitung",
+            "text": "Ich kläre Ziel, schriftlichen Umfang, benötigte Unterlagen und den sicheren Zugangsweg. Ich halte ebenso fest, was nicht Teil des Auftrags ist."
+          },
+          {
+            "title": "Arbeitsbeginn",
+            "text": "Ich beginne nach Absprache remote oder vor Ort. Zuerst prüfe ich die Arbeitsumgebung und bestätige das Ziel für den vereinbarten Einsatz."
+          },
+          {
+            "title": "Umsetzung",
+            "text": "Ich bearbeite die schriftlich vereinbarten Aufgaben, etwa PMS-, Folio- oder Channel-Fälle, Microsoft 365 oder Geräte. Änderungen und Befunde halte ich innerhalb des vereinbarten Umfangs fest."
+          },
+          {
+            "title": "Sonderaufgaben",
+            "text": "Einmalige Ausnahmen übernehme ich nur nach schriftlicher Vereinbarung in einem separat vereinbarten Zusatzauftrag. Daraus entsteht keine offene oder unbegrenzte Betreuung."
+          },
+          {
+            "title": "Abschluss und Übergabe",
+            "text": "Ich übergebe Befunde, offene Punkte und den nächsten Schritt und schliesse den Einsatz ab. Vertrauliche Zugangsdaten sende ich nie über Messenger und fordere sie dort auch nicht an."
+          }
+        ]
+      },
+      "pricing": [
+        "Arbeitszeit: {hourly} pro Stunde",
+        "Klar abgegrenzter Kleinauftrag: ab {small_job}",
+        "Die meisten Anfragen werden remote bearbeitet. Ist ein Termin vor Ort erforderlich, wird er vorab vereinbart und im Angebot separat ausgewiesen – im Raum Zürich."
+      ],
+      "exclusions": [
+        "Keine Rund-um-die-Uhr-Bereitschaft oder zugesicherte Reaktionszeit",
+        "Keine unbegrenzte Betreuung von Fremdsystemen",
+        "Keine Herstellervertretung und keine Beschaffung ohne Auftrag",
+        "Keine Umsatzgarantie und keine Übernahme der kommerziellen Gesamtverantwortung"
+      ],
+      "honesty": "Vor Beginn grenze ich Aufgabe, Aufwand und benötigte Zugänge ab. Wenn eine sichere oder belastbare Umsetzung nicht möglich ist, sage ich das offen. Externe Fachpersonen beziehe ich nur nach vorheriger Absprache ein. Vertragspartner bleibe ich."
+    },
+    "market": {
+      "meta_title": "BIT Market Access Switzerland | Schweiz-Pilot",
+      "meta_description": "Sechs Wochen strukturierte Marktprüfung für ein klar definiertes B2B-Angebot in der Schweiz.",
+      "eyebrow": "BIT Market Access Switzerland",
+      "title": "Vom Unterlagen-Check zum Schweiz-Pilot.",
+      "lead": "Ich prüfe mit Ihnen, ob und wie ein klar definiertes Angebot im Schweizer Markt verständlich positioniert und gezielt getestet werden kann.",
+      "nav": [
+        "Unterlagen-Check",
+        "Preis",
+        "Grenzen"
+      ],
+      "document_title": "Unterlagen-Check",
+      "document_text": "Ihr Angebot, Kapazitätsprofil oder Firmentext in Schweizer Geschäftsdeutsch. {small_job} pro Dokument, 5 Arbeitstage, eine Korrekturrunde.",
+      "pilot_eyebrow": "Zweiter Schritt",
+      "pilot_title": "Der Sechs-Wochen-Pilot",
+      "pilot_intro": "Der Pilot ist ein abgegrenztes Prüfmandat mit dokumentierten Ergebnissen. Der genaue Umfang der Zielkundenrecherche, der Erstansprache und des Abschlussberichts wird vor Auftragserteilung schriftlich festgelegt.",
+      "deliverables": [
+        "Startgespräch und schriftliche Abgrenzung von Angebot, Zielsegment und Annahmen",
+        "Prüfung von Positionierung, Nutzenargumentation, Preislogik und vorhandenen Unterlagen",
+        "Aufbau einer begründeten Liste passender Zielunternehmen und Ansprechpartner",
+        "Transparente Erstansprache durch BIT als beauftragter Marktprüfer; Identität, Angebot und Unterlagen des Auftraggebers nur im vorher schriftlich vereinbarten Umfang. Vertretung nur mit ausdrücklichem schriftlichem Mandat",
+        "Wöchentliche Dokumentation von Aktivitäten, Rückmeldungen und offenen Fragen",
+        "Abschlussbericht mit Beobachtungen und einer sachlichen Empfehlung zum weiteren Vorgehen"
+      ],
+      "pricing": [
+        "Unterlagen-Check: {small_job} pro Dokument",
+        "Schweiz-Pilot Fixpreis: {pilot}",
+        "Zahlung Pilot: 50 % bei Auftragserteilung, 50 % nach Abschlussbericht"
+      ],
+      "optional_title": "Optional nach dem Pilot",
+      "optional": "Ein Folgemandat wird nur bei beidseitigem Interesse, schriftlich definiertem Umfang und separater Vergütung vereinbart. Externe Fachpersonen beziehe ich nur nach vorheriger Absprache ein. Vertragspartner bleibe ich.",
+      "exclusions": [
+        "Keine Zusage von Kunden, Umsatz, Aufträgen oder Markterfolg",
+        "Keine Rechts-, Steuer-, Zoll- oder Zertifizierungsberatung",
+        "Keine Vertretungs-, Abschluss- oder Inkassovollmacht ohne ausdrückliches schriftliches Mandat",
+        "Keine Reisekosten, Übersetzungen oder Leistungen Dritter im Fixpreis"
+      ],
+      "honesty": "Der Pilot liefert keine erfundenen Erfolgsnachweise und ersetzt keine Marktnachfrage. Er schafft eine dokumentierte Entscheidungsgrundlage; auch ein begründetes negatives Ergebnis ist ein verwertbares Ergebnis. Stellt sich früh heraus, dass das Angebot ungeeignet ist, halte ich das schriftlich fest und beende den vereinbarten Restumfang nicht als Scheinaktivität.",
+      "sample_title": "Beispiel: Form des Ergebnisses",
+      "sample_note": "Anonymisiertes Musterformat – kein echter Kundenfall und keine Erfolgsversprechen.",
+      "sample_targets_title": "Muster einer Zielkundenliste",
+      "sample_targets": [
+        "Hotellerie · Kanton Zürich · Betriebsleitung / Front Office",
+        "B2B-Dienstleistung · Kanton Bern · Geschäftsführung",
+        "Fachhandel · Kanton Aargau · Einkauf / IT-Verantwortung"
+      ],
+      "sample_criteria_title": "Prüfkriterien",
+      "sample_criteria": [
+        "Klarheit von Angebot und Nutzenargumentation",
+        "Passung zu Segment, Preislogik und vorhandenen Unterlagen",
+        "Erreichbarkeit und Qualität der ersten Rückmeldungen"
+      ],
+      "sample_findings_title": "Typische Finding-Kategorien",
+      "sample_findings": [
+        "Positionierung unklar oder zu breit für den Schweizer Markt",
+        "Unterlagen unvollständig für eine belastbare Erstansprache",
+        "Zielsegment zu weit oder Ansprechrollen nicht belastbar"
+      ],
+      "sample_report_title": "Gliederung des Abschlussberichts",
+      "sample_report": [
+        "Ausgangslage und schriftlicher Umfang",
+        "Beobachtungen aus Prüfung und Erstansprache",
+        "Offene Fragen und Risiken",
+        "Sachliche Empfehlung zum weiteren Vorgehen"
+      ]
+    }
+  },
+  "en": {
+    "common": {
+      "skip": "Skip to content",
+      "menu": "Menu",
+      "languages": "Choose language",
+      "about": "About me",
+      "legal": "Legal",
+      "contact": "Contact",
+      "whatsapp": "Message on WhatsApp",
+      "viber": "Message on Viber",
+      "email": "Send email",
+      "warning": "Do not send passwords, access codes or confidential customer data through messaging apps.",
+      "exclusions": "What I do not do",
+      "price": "Price",
+      "back": "Back to the offer",
+      "about_title": "About me",
+      "about_lead": "Stefan Bogdanovic · BIT – Boks IT Support · Zurich",
+      "about_text": "I support small and medium-sized businesses with clearly scoped IT and digital tasks. For the Swiss B2B market, I run structured pilot mandates under BIT Market Access Switzerland. I first assess the starting point, dependencies and limits, then document the agreed results. If an engagement requires additional expertise, I state this before work starts and involve external specialists only by agreement. I remain the contractual counterparty.",
+      "about_independent": "I work independently and am not an official representative of any PMS or software vendor.",
+      "image_alt": "Stefan Bogdanovic in Zurich",
+      "about_practice": "I know operational workflows between reception, reservations, billing and hotel systems from Swiss practice. I also support small teams with Microsoft 365, devices and user access. From Zurich I work in German, English and Serbian, Bosnian and Croatian, connecting Swiss operating reality with the South-East European market.",
+      "about_languages": "Working languages: German, English, and Serbian, Bosnian and Croatian. French and Italian by arrangement or with external language support.",
+      "phone": "Call"
+    },
+    "hospitality": {
+      "meta_title": "IT & Hospitality Support Zurich | BIT",
+      "meta_description": "Scoped IT, hospitality and booking, rate and billing-data review for SMEs, hotels and restaurants in Zurich.",
+      "eyebrow": "IT & Hospitality · Zurich",
+      "title": "Assess and complete defined IT and digital tasks.",
+      "lead": "I support SMEs, hotels and restaurants with specific incidents, system questions, digital workflows and scoped review of booking, rate and billing data.",
+      "nav": [
+        "Services",
+        "Prices",
+        "Boundaries"
+      ],
+      "blocks": [
+        {
+          "title": "Hospitality: hotels & restaurants",
+          "text": "I review clearly scoped workflows across reception, reservations, point of sale, operations and billing.",
+          "items": [
+            "Review PMS/OTA booking flows, rates, availability and mapping",
+            "Booking, rate and billing data: review occupancy, ADR/RevPAR deviations and rate logic from provided data",
+            "Trace no-show, cancellation, fee and folio cases and implement agreed corrections after approval",
+            "Isolate issues involving POS, printers, Wi-Fi, devices and user access",
+            "Document findings, changes and open items in plain language"
+          ]
+        },
+        {
+          "title": "SME IT & digital tasks",
+          "text": "I handle specific IT tasks for small teams without an internal IT department.",
+          "items": [
+            "Review Microsoft 365, MFA and Outlook; change permissions only after documented approval",
+            "Isolate Windows device, printer, Wi-Fi and email incidents",
+            "Document accounts, roles, updates and handover"
+          ]
+        }
+      ],
+      "process": {
+        "title": "How I proceed",
+        "intro": "Each engagement follows five clearly defined steps.",
+        "steps": [
+          {
+            "title": "Preparation",
+            "text": "I clarify the objective, written scope, required materials and the secure access method. I also record what is outside the engagement."
+          },
+          {
+            "title": "Engagement start",
+            "text": "I start remotely or on site as agreed. I first verify the working environment and confirm the goal for that session."
+          },
+          {
+            "title": "Execution",
+            "text": "I complete the tasks agreed in writing, such as PMS, folio or channel cases, Microsoft 365 or device work. I record changes and findings within the agreed scope."
+          },
+          {
+            "title": "Special tasks",
+            "text": "I take on one-off exceptions only under a separate additional scope agreed in writing. This does not create open-ended or unlimited support."
+          },
+          {
+            "title": "Completion and handover",
+            "text": "I hand over findings, open items and the next step, then close the engagement. I never send confidential credentials through messaging apps or request them there."
+          }
+        ]
+      },
+      "pricing": [
+        "Work: {hourly} per hour",
+        "Clearly scoped small task: from {small_job}",
+        "Most requests are handled remotely. If an on-site appointment is required, it is agreed in advance and listed separately in the quote — Zurich area."
+      ],
+      "exclusions": [
+        "No 24/7 availability or committed response time",
+        "No unlimited support for third-party systems",
+        "No vendor representation or purchasing without a mandate",
+        "No revenue guarantee and no takeover of overall commercial responsibility"
+      ],
+      "honesty": "Before work starts, I define the task, likely effort and required access. If a secure and sound implementation is not possible, I say so. I involve external specialists only after prior agreement. I remain the contractual counterparty."
+    },
+    "market": {
+      "meta_title": "BIT Market Access Switzerland | market pilot",
+      "meta_description": "Six weeks of structured market validation for one clearly defined B2B offer in Switzerland.",
+      "eyebrow": "BIT Market Access Switzerland",
+      "title": "From document review to a Swiss market pilot.",
+      "lead": "I assess with you whether and how a clearly defined offer can be positioned and tested with selected Swiss businesses.",
+      "nav": [
+        "Document review",
+        "Price",
+        "Boundaries"
+      ],
+      "document_title": "Document review",
+      "document_text": "Your offer, capacity profile or company text in Swiss business German. {small_job} per document, five working days, one revision round.",
+      "pilot_eyebrow": "Second step",
+      "pilot_title": "The six-week pilot",
+      "pilot_intro": "The pilot is a scoped validation mandate with documented outputs. The exact scope of target-company research, initial outreach and the final report is agreed in writing before work starts.",
+      "deliverables": [
+        "Kick-off and written scope for the offer, target segment and assumptions",
+        "Review of positioning, value proposition, pricing logic and existing material",
+        "A reasoned list of suitable target businesses and contacts",
+        "Transparent initial outreach by BIT as an appointed market reviewer; the client’s identity, offer and materials are used only within the scope agreed in writing beforehand. Representation only under an explicit written mandate",
+        "Weekly record of activity, responses and open questions",
+        "Final report with observations and an objective recommendation for next steps"
+      ],
+      "pricing": [
+        "Document check: {small_job} per document",
+        "Swiss pilot fixed price: {pilot}",
+        "Pilot payment: 50% at project start, 50% after the final report"
+      ],
+      "optional_title": "Optional after the pilot",
+      "optional": "A follow-on mandate is agreed only with mutual interest, a written scope and separate remuneration. I involve external specialists only after prior agreement. I remain the contractual counterparty.",
+      "exclusions": [
+        "No guarantee of customers, revenue, orders or market success",
+        "No legal, tax, customs or certification advice",
+        "No authority to represent, conclude contracts or collect funds without an explicit written mandate",
+        "No travel costs, translations or third-party services in the fixed price"
+      ],
+      "honesty": "The pilot does not use invented performance evidence and cannot create market demand. It provides a documented basis for a decision; a reasoned negative result is also useful. If it becomes clear early that the offer is unsuitable, I record this in writing and do not continue the remaining agreed scope as empty activity.",
+      "sample_title": "Example: form of the deliverable",
+      "sample_note": "Anonymised sample format – not a real client case and no promise of results.",
+      "sample_targets_title": "Sample target-business list",
+      "sample_targets": [
+        "Hospitality · Canton of Zurich · operations / front office",
+        "B2B services · Canton of Bern · managing director",
+        "Specialist trade · Canton of Aargau · purchasing / IT lead"
+      ],
+      "sample_criteria_title": "Review criteria",
+      "sample_criteria": [
+        "Clarity of offer and value proposition",
+        "Fit with segment, pricing logic and existing materials",
+        "Reachability and quality of first responses"
+      ],
+      "sample_findings_title": "Typical finding categories",
+      "sample_findings": [
+        "Positioning unclear or too broad for the Swiss market",
+        "Materials incomplete for a solid first outreach",
+        "Target segment too wide or contact roles not reliable"
+      ],
+      "sample_report_title": "Final-report structure",
+      "sample_report": [
+        "Starting point and written scope",
+        "Observations from review and initial outreach",
+        "Open questions and risks",
+        "Objective recommendation for next steps"
+      ]
+    }
+  },
+  "fr": {
+    "common": {
+      "skip": "Aller au contenu",
+      "menu": "Menu",
+      "languages": "Choisir la langue",
+      "about": "À propos de moi",
+      "legal": "Mentions légales",
+      "contact": "Contact",
+      "whatsapp": "Écrire sur WhatsApp",
+      "viber": "Écrire sur Viber",
+      "email": "Envoyer un e-mail",
+      "warning": "N’envoyez aucun mot de passe, code d’accès ou donnée client confidentielle par messagerie.",
+      "exclusions": "Ce que je ne fais pas",
+      "price": "Prix",
+      "back": "Retour à l’offre",
+      "about_title": "À propos de moi",
+      "about_lead": "Stefan Bogdanovic · BIT – Boks IT Support · Zurich",
+      "about_text": "J’accompagne les petites et moyennes entreprises pour des tâches informatiques et numériques clairement délimitées. Pour le marché B2B suisse, je mène des mandats pilotes structurés sous le nom BIT Market Access Switzerland. J’examine d’abord la situation, les dépendances et les limites, puis je documente les résultats convenus. Si une mission exige une expertise supplémentaire, je l’indique avant le début et ne fais intervenir des spécialistes externes qu’après accord. Je reste votre cocontractant.",
+      "about_independent": "Je travaille de manière indépendante et ne représente officiellement aucun fournisseur PMS ou logiciel.",
+      "image_alt": "Stefan Bogdanovic à Zurich",
+      "about_practice": "Je connais les processus opérationnels entre réception, réservations, facturation et systèmes hôteliers issus de la pratique suisse. J’accompagne aussi de petites équipes pour Microsoft 365, appareils et accès utilisateurs. Depuis Zurich, je travaille en allemand, anglais ainsi qu’en serbe, bosniaque et croate, et je relie la réalité opérationnelle suisse au marché d’Europe du Sud-Est.",
+      "about_languages": "Langues de travail : allemand, anglais, ainsi que serbe, bosniaque et croate. Français et italien sur accord ou avec un soutien linguistique externe.",
+      "phone": "Appeler"
+    },
+    "hospitality": {
+      "meta_title": "Support IT & Hospitality Zurich | BIT",
+      "meta_description": "Support informatique, hospitality et contrôle délimité des données de réservation, tarifs et facturation pour PME, hôtels et restaurants à Zurich.",
+      "eyebrow": "IT & Hospitality · Zurich",
+      "title": "Évaluer et réaliser des tâches IT et numériques définies.",
+      "lead": "J’accompagne PME, hôtels et restaurants pour des incidents concrets, des questions relatives aux systèmes, des flux numériques et le contrôle délimité des données de réservation, tarifs et facturation.",
+      "nav": [
+        "Services",
+        "Prix",
+        "Limites"
+      ],
+      "blocks": [
+        {
+          "title": "Hospitality : hôtels et restaurants",
+          "text": "Je contrôle des processus clairement délimités entre réception, réservation, caisse, exploitation et facturation.",
+          "items": [
+            "Contrôler parcours PMS/OTA, tarifs, disponibilités et mapping",
+            "Données de réservation, tarifs et facturation : contrôler occupation, écarts ADR/RevPAR et logique tarifaire à partir des données fournies",
+            "Retracer les cas de no-show, d’annulation, de taxes et de folio et mettre en œuvre les corrections convenues après validation",
+            "Cerner les incidents de caisse, imprimantes, Wi-Fi, appareils et accès",
+            "Documenter clairement constats, changements et points ouverts"
+          ]
+        },
+        {
+          "title": "IT PME et tâches numériques",
+          "text": "Je traite des tâches IT précises pour les petites équipes sans service informatique interne.",
+          "items": [
+            "Contrôler Microsoft 365, MFA et Outlook ; modifier les autorisations uniquement après validation documentée",
+            "Cerner les incidents Windows, imprimante, Wi-Fi et e-mail",
+            "Documenter comptes, rôles, mises à jour et remise"
+          ]
+        }
+      ],
+      "process": {
+        "title": "Ma façon de procéder",
+        "intro": "Chaque mandat suit cinq étapes clairement définies.",
+        "steps": [
+          {
+            "title": "Préparation",
+            "text": "Je clarifie l’objectif, le périmètre écrit, les documents nécessaires et le mode d’accès sécurisé. Je précise aussi ce qui ne fait pas partie de la mission."
+          },
+          {
+            "title": "Début de l’intervention",
+            "text": "Je commence à distance ou sur site selon accord. Je vérifie d’abord l’environnement de travail et confirme l’objectif de la session."
+          },
+          {
+            "title": "Exécution",
+            "text": "J’exécute les tâches convenues par écrit, par exemple les cas PMS, folio ou channel, Microsoft 365 ou les appareils. Je consigne les changements et constats dans le périmètre convenu."
+          },
+          {
+            "title": "Tâches spéciales",
+            "text": "Je prends en charge une exception ponctuelle uniquement dans un mini-périmètre séparé et convenu par écrit. Cela ne crée aucun support ouvert ou illimité."
+          },
+          {
+            "title": "Clôture et remise",
+            "text": "Je remets les constats, les points ouverts et l’étape suivante, puis je clos le mandat. Je n’envoie jamais d’identifiants confidentiels via messagerie et ne les demande pas non plus."
+          }
+        ]
+      },
+      "pricing": [
+        "Travail : {hourly} par heure",
+        "Petite tâche clairement délimitée : dès {small_job}",
+        "Déplacement dans Zurich : {zurich_travel}"
+      ],
+      "exclusions": [
+        "Aucune disponibilité 24 h/24 ni délai de réponse convenu",
+        "Aucun support illimité de systèmes tiers",
+        "Aucune représentation de fournisseur ni achat sans mandat",
+        "Aucune garantie de chiffre d’affaires et aucune reprise de la responsabilité commerciale globale"
+      ],
+      "honesty": "Avant le début, je délimite la tâche, l’effort probable et les accès nécessaires. Si une réalisation sûre et solide n’est pas possible, je le dis clairement. Je fais intervenir des spécialistes externes uniquement après accord préalable. Je reste votre cocontractant."
+    },
+    "market": {
+      "meta_title": "BIT Market Access Switzerland | pilote marché",
+      "meta_description": "Six semaines de validation structurée du marché pour une offre B2B clairement définie en Suisse.",
+      "eyebrow": "BIT Market Access Switzerland",
+      "title": "Du contrôle de documents au pilote marché suisse.",
+      "lead": "J’examine avec vous si et comment une offre clairement définie peut être positionnée et testée auprès d’entreprises suisses sélectionnées.",
+      "nav": [
+        "Contrôle de documents",
+        "Prix",
+        "Limites"
+      ],
+      "document_title": "Contrôle de documents",
+      "document_text": "Votre offre, profil de capacité ou texte d’entreprise en allemand commercial suisse. {small_job} par document, 5 jours ouvrables, un cycle de corrections.",
+      "pilot_eyebrow": "Deuxième étape",
+      "pilot_title": "Le pilote de six semaines",
+      "pilot_intro": "Le pilote est un mandat de validation délimité avec des résultats documentés. L’étendue exacte de la recherche d’entreprises cibles, du premier contact et du rapport final est fixée par écrit avant le mandat.",
+      "deliverables": [
+        "Entretien de démarrage et délimitation écrite de l’offre, du segment cible et des hypothèses",
+        "Examen du positionnement, de l’argumentaire de valeur, de la logique tarifaire et des documents existants",
+        "Liste motivée d’entreprises cibles et d’interlocuteurs adaptés",
+        "Premier contact transparent par BIT en tant que vérificateur de marché mandaté ; l’identité, l’offre et les documents du mandant ne sont utilisés que dans le périmètre convenu par écrit au préalable. Représentation uniquement avec mandat écrit explicite",
+        "Documentation hebdomadaire des activités, réponses et questions ouvertes",
+        "Rapport final avec observations et recommandation objective sur la suite"
+      ],
+      "pricing": [
+        "Contrôle de documents : {small_job} par document",
+        "Prix fixe du pilote : {pilot}",
+        "Paiement du pilote : 50 % au démarrage, 50 % après le rapport final"
+      ],
+      "optional_title": "Optionnel après le pilote",
+      "optional": "Un mandat suivant n’est convenu qu’avec un intérêt mutuel, un périmètre écrit et une rémunération séparée. Je fais intervenir des spécialistes externes uniquement après accord préalable. Je reste votre cocontractant.",
+      "exclusions": [
+        "Aucune garantie de clients, de chiffre d’affaires, de mandats ou de succès commercial",
+        "Aucun conseil juridique, fiscal, douanier ou de certification",
+        "Aucun pouvoir de représentation, de conclusion de contrats ou d’encaissement sans mandat écrit explicite",
+        "Frais de déplacement, traductions ou prestations de tiers non inclus dans le prix fixe"
+      ],
+      "honesty": "Le pilote n’utilise aucune preuve de succès inventée et ne crée pas de demande de marché. Il fournit une base documentée pour décider ; un résultat négatif motivé est aussi un résultat utile. S’il apparaît tôt que l’offre n’est pas adaptée, je le consigne par écrit et je ne poursuis pas le reste du périmètre convenu comme activité de façade.",
+      "sample_title": "Exemple : forme du résultat",
+      "sample_note": "Format d’exemple anonymisé – pas un cas client réel et aucune promesse de résultat.",
+      "sample_targets_title": "Exemple de liste d’entreprises cibles",
+      "sample_targets": [
+        "Hôtellerie · canton de Zurich · direction / réception",
+        "Services B2B · canton de Berne · direction",
+        "Commerce spécialisé · canton d’Argovie · achats / IT"
+      ],
+      "sample_criteria_title": "Critères de contrôle",
+      "sample_criteria": [
+        "Clarté de l’offre et de la proposition de valeur",
+        "Adéquation au segment, à la logique de prix et aux documents existants",
+        "Accessibilité et qualité des premiers retours"
+      ],
+      "sample_findings_title": "Catégories de constats typiques",
+      "sample_findings": [
+        "Positionnement flou ou trop large pour le marché suisse",
+        "Documents incomplets pour une première prise de contact solide",
+        "Segment cible trop large ou rôles de contact peu fiables"
+      ],
+      "sample_report_title": "Structure du rapport final",
+      "sample_report": [
+        "Situation de départ et périmètre écrit",
+        "Observations issues du contrôle et des premiers contacts",
+        "Questions ouvertes et risques",
+        "Recommandation objective pour la suite"
+      ]
+    }
+  },
+  "sr": {
+    "common": {
+      "skip": "Pređi na sadržaj",
+      "menu": "Meni",
+      "languages": "Izaberite jezik",
+      "about": "O meni",
+      "legal": "Pravne informacije",
+      "contact": "Kontakt",
+      "whatsapp": "Pišite putem WhatsApp-a",
+      "viber": "Pišite putem Vibera",
+      "email": "Pošaljite e-mail",
+      "warning": "Ne šaljite lozinke, pristupne kodove ili poverljive podatke klijenata putem aplikacija za poruke.",
+      "exclusions": "Šta ne radim",
+      "price": "Cena",
+      "back": "Nazad na ponudu",
+      "about_title": "O meni",
+      "about_lead": "Stefan Bogdanović · BIT – Boks IT Support · Cirih",
+      "about_text": "Podržavam mala i srednja preduzeća u jasno ograničenim IT i digitalnim zadacima. Za švajcarsko B2B tržište vodim strukturisane pilot-mandate pod nazivom BIT Market Access Switzerland. Prvo proveravam početnu situaciju, zavisnosti i granice, a zatim dokumentujem dogovorene rezultate. Ako mandat zahteva dodatno stručno znanje, to navodim pre početka i uključujem spoljne stručnjake samo uz dogovor. Ugovorna strana ostajem ja.",
+      "about_independent": "Radim nezavisno i nisam zvanični predstavnik proizvođača PMS-a ili softvera.",
+      "image_alt": "Stefan Bogdanović u Cirihu",
+      "about_practice": "Poznajem operativne tokove između recepcije, rezervacija, obračuna i hotelskih sistema iz švajcarske prakse. Pored toga pomažem malim timovima oko Microsoft 365, uređaja i korisničkih pristupa. Iz Ciriha radim na nemačkom, engleskom i srpskom, bosanskom i hrvatskom i povezujem švajcarsku poslovnu realnost sa jugoistočnoevropskim tržištem.",
+      "about_languages": "Radni jezici: nemački, engleski, kao i srpski, bosanski i hrvatski. Francuski i italijanski po dogovoru ili uz spoljnu jezičku podršku.",
+      "phone": "Pozovi"
+    },
+    "market": {
+      "meta_title": "BIT Market Access Switzerland | švajcarski pilot",
+      "meta_description": "Strukturisana provera jednog jasno definisanog B2B proizvoda na švajcarskom tržištu tokom šest nedelja.",
+      "eyebrow": "BIT Market Access Switzerland",
+      "title": "Od provere dokumentacije do švajcarskog pilota.",
+      "lead": "Sa vama proveravam da li i kako jasno definisana ponuda može da se pozicionira i testira kod odabranih švajcarskih firmi.",
+      "nav": [
+        "Provera dokumentacije",
+        "Cena",
+        "Granice"
+      ],
+      "document_title": "Provera dokumentacije",
+      "document_text": "Vaša ponuda, profil kapaciteta ili tekst o firmi na švajcarskom poslovnom nemačkom jeziku. {small_job} po dokumentu, pet radnih dana, jedan krug ispravki.",
+      "pilot_eyebrow": "Drugi korak",
+      "pilot_title": "Šestonedeljni pilot",
+      "pilot_intro": "Pilot je ograničen mandat provere sa dokumentovanim rezultatima. Tačan obim istraživanja ciljnih firmi, prvog kontakta i završnog izveštaja utvrđuje se pismeno pre početka mandata.",
+      "deliverables": [
+        "Početni razgovor i pisani obim ponude, ciljnog segmenta i pretpostavki",
+        "Provera pozicioniranja, vrednosti ponude, logike cena i postojećih materijala",
+        "Obrazložena lista odgovarajućih ciljnih firmi i kontakata",
+        "Transparentan prvi kontakt od strane BIT-a kao angažovanog proveravača tržišta; identitet, ponuda i dokumentacija naručioca samo u prethodno pismeno dogovorenom obimu. Zastupanje samo uz izričit pisani mandat",
+        "Nedeljna evidencija aktivnosti, odgovora i otvorenih pitanja",
+        "Završni izveštaj sa zapažanjima i trezvenom preporukom za dalji rad"
+      ],
+      "pricing": [
+        "Provera dokumentacije: {small_job} po dokumentu",
+        "Fiksna cena pilota: {pilot}",
+        "Plaćanje pilota: 50% pri naručivanju i 50% po završnom izveštaju"
+      ],
+      "optional_title": "Opciono posle pilota",
+      "optional": "Naredni mandat se ugovara samo uz obostrani interes, pisani obim i posebnu naknadu. Spoljne stručnjake uključujem samo uz prethodni dogovor. Ugovorna strana ostajem ja.",
+      "exclusions": [
+        "Nema obećanja klijenata, prihoda, ugovora ili tržišnog uspeha",
+        "Nema pravnog, poreskog, carinskog ili sertifikacionog savetovanja",
+        "Nema ovlašćenja za zastupanje, zaključivanje ugovora ili naplatu bez izričitog pisanog mandata",
+        "Putni troškovi, prevodi i usluge trećih lica nisu u fiksnoj ceni"
+      ],
+      "honesty": "Pilot ne koristi izmišljene rezultate i ne može da stvori tržišnu tražnju. Daje dokumentovanu osnovu za odluku; i obrazložen negativan rezultat je koristan. Ako se rano pokaže da ponuda nije pogodna, to beležim pismeno i ne nastavljam preostali dogovoreni obim kao prividnu aktivnost.",
+      "sample_title": "Primer: oblik rezultata",
+      "sample_note": "Anonimni format primera – nije stvarni klijentski slučaj i nije obećanje uspeha.",
+      "sample_targets_title": "Primer liste ciljnih firmi",
+      "sample_targets": [
+        "Ugostiteljstvo · kanton Cirih · rukovodstvo / front office",
+        "B2B usluge · kanton Bern · direktor",
+        "Specijalizovana trgovina · kanton Argau · nabavka / IT"
+      ],
+      "sample_criteria_title": "Kriterijumi provere",
+      "sample_criteria": [
+        "Jasnoća ponude i argumentacije koristi",
+        "Usklađenost sa segmentom, cenovnom logikom i postojećim materijalima",
+        "Dostupnost i kvalitet prvih povratnih informacija"
+      ],
+      "sample_findings_title": "Tipične kategorije nalaza",
+      "sample_findings": [
+        "Pozicioniranje nejasno ili preširoko za švajcarsko tržište",
+        "Dokumentacija nepotpuna za pouzdanu prvu kontaktnu poruku",
+        "Ciljni segment preširok ili uloge kontakata nisu pouzdane"
+      ],
+      "sample_report_title": "Struktura završnog izveštaja",
+      "sample_report": [
+        "Početna situacija i pisani obim",
+        "Zapažanja iz provere i prve kontaktne aktivnosti",
+        "Otvorena pitanja i rizici",
+        "Trezvena preporuka za dalji rad"
+      ]
+    },
+    "hospitality": {
+      "meta_title": "IT i ugostiteljstvo Cirih | BIT",
+      "meta_description": "Ograničena IT i ugostiteljska podrška te provera podataka o rezervacijama, cenama i obračunu za mala i srednja preduzeća, hotele i restorane u Cirihu.",
+      "eyebrow": "IT i ugostiteljstvo · Cirih",
+      "title": "Rešavam jasno definisane IT i digitalne zadatke.",
+      "lead": "Pomažem malim i srednjim preduzećima, hotelima i restoranima pri rešavanju konkretnih tehničkih problema, sistemskih pitanja, digitalnih tokova rada i proveri podataka o rezervacijama, cenama i obračunu.",
+      "nav": [
+        "Usluge",
+        "Cene",
+        "Granice"
+      ],
+      "blocks": [
+        {
+          "title": "Ugostiteljstvo: hoteli i restorani",
+          "text": "Proveravam jasno ograničene tokove između recepcije, rezervacija, kase, poslovanja i obračuna.",
+          "items": [
+            "Proveravam PMS/OTA puteve rezervacija, cene, dostupnost i mapping",
+            "Podaci o rezervacijama, cenama i obračunu: proveravam popunjenost, odstupanja ADR/RevPAR i logiku cena na osnovu dostavljenih podataka",
+            "Pratim no-show, otkazivanja, naknade i folio-slučajeve i sprovodim dogovorene korekcije tek nakon odobrenja",
+            "Razjašnjavam smetnje kod kase, štampača, WLAN-a, uređaja i korisničkih naloga",
+            "Dokumentujem nalaze, izmene i otvorene tačke razumljivim jezikom"
+          ]
+        },
+        {
+          "title": "IT za mala i srednja preduzeća i digitalni zadaci",
+          "text": "Obavljam konkretne IT zadatke za male timove bez interne IT službe.",
+          "items": [
+            "Proveravam Microsoft 365, MFA i Outlook; dozvole menjam samo nakon dokumentovanog odobrenja",
+            "Razjašnjavam smetnje Windows računara, štampača, WLAN-a i e-pošte",
+            "Dokumentujem naloge, uloge, ažuriranja i predaju"
+          ]
+        }
+      ],
+      "process": {
+        "title": "Kako postupam",
+        "intro": "Svaki angažman vodim kroz pet jasno definisanih koraka.",
+        "steps": [
+          {
+            "title": "Priprema",
+            "text": "Razjašnjavam cilj, pisani obim, potrebne materijale i bezbedan način pristupa. Takođe beležim šta nije deo angažmana."
+          },
+          {
+            "title": "Početak angažmana",
+            "text": "Počinjem dogovoreno na daljinu ili na licu mesta. Prvo proveravam radno okruženje i potvrđujem cilj za taj angažman."
+          },
+          {
+            "title": "Realizacija",
+            "text": "Obavljam pisano dogovorene zadatke, na primer PMS-, folio- ili channel-slučajeve, Microsoft 365 ili uređaje. Beležim izmene i nalaze u dogovorenom obimu."
+          },
+          {
+            "title": "Posebni zadaci",
+            "text": "Jednokratne izuzetke preuzimam samo uz zasebno, pisano dogovoren dodatni obim. Time ne nastaje otvorena ili neograničena podrška."
+          },
+          {
+            "title": "Završetak i predaja",
+            "text": "Predajem nalaze, otvorene tačke i sledeći korak, a zatim formalno zaključujem angažman. Poverljive pristupne podatke nikad ne šaljem preko aplikacija za poruke i ne tražim ih tamo."
+          }
+        ]
+      },
+      "pricing": [
+        "Rad: {hourly} po satu",
+        "Jasno ograničen mali zadatak: od {small_job}",
+        "Dolazak unutar Ciriha: {zurich_travel}"
+      ],
+      "exclusions": [
+        "Nema dostupnosti 24/7 ni zagarantovanog vremena odgovora",
+        "Nema neograničene podrške tuđih sistema",
+        "Nema zastupanja proizvođača ni nabavke bez mandata",
+        "Nema garancije prihoda ni preuzimanja ukupne komercijalne odgovornosti"
+      ],
+      "honesty": "Pre početka razgraničavam zadatak, rad i potrebne pristupe. Ako pouzdana i bezbedna realizacija nije moguća, kažem to otvoreno. Spoljne stručnjake uključujem samo uz prethodni dogovor. Ugovorna strana ostajem ja."
+    }
+  },
+  "bs": {
+    "common": {
+      "skip": "Pređi na sadržaj",
+      "menu": "Meni",
+      "languages": "Izaberite jezik",
+      "about": "O meni",
+      "legal": "Pravne informacije",
+      "contact": "Kontakt",
+      "whatsapp": "Pišite putem WhatsAppa",
+      "viber": "Pišite putem Vibera",
+      "email": "Pošaljite e-mail",
+      "warning": "Ne šaljite lozinke, pristupne kodove ili povjerljive podatke klijenata putem aplikacija za poruke.",
+      "exclusions": "Šta ne radim",
+      "price": "Cijena",
+      "back": "Nazad na ponudu",
+      "about_title": "O meni",
+      "about_lead": "Stefan Bogdanović · BIT – Boks IT Support · Cirih",
+      "about_text": "Podržavam mala i srednja preduzeća u jasno ograničenim IT i digitalnim zadacima. Za švicarsko B2B tržište vodim strukturirane pilot-mandate pod nazivom BIT Market Access Switzerland. Prvo provjeravam početnu situaciju, zavisnosti i granice, a zatim dokumentujem dogovorene rezultate. Ako mandat zahtijeva dodatno stručno znanje, to navodim prije početka i uključujem vanjske stručnjake samo uz dogovor. Ugovorna strana ostajem ja.",
+      "about_independent": "Radim nezavisno i nisam zvanični predstavnik proizvođača PMS-a ili softvera.",
+      "image_alt": "Stefan Bogdanović u Cirihu",
+      "about_practice": "Poznajem operativne tokove između recepcije, rezervacija, obračuna i hotelskih sistema iz švicarske prakse. Pored toga pomažem malim timovima oko Microsoft 365, uređaja i korisničkih pristupa. Iz Ciriha radim na njemačkom, engleskom i srpskom, bosanskom i hrvatskom i povezujem švicarsku poslovnu realnost sa jugoistočnoevropskim tržištem.",
+      "about_languages": "Radni jezici: njemački, engleski, kao i srpski, bosanski i hrvatski. Francuski i italijanski po dogovoru ili uz vanjsku jezičku podršku.",
+      "phone": "Nazovi"
+    },
+    "market": {
+      "meta_title": "BIT Market Access Switzerland | švicarski pilot",
+      "meta_description": "Strukturirana provjera jedne jasno definirane B2B ponude na švicarskom tržištu tokom šest sedmica.",
+      "eyebrow": "BIT Market Access Switzerland",
+      "title": "Od provjere dokumentacije do švicarskog pilota.",
+      "lead": "S vama provjeravam da li i kako jasno definirana ponuda može biti pozicionirana i testirana kod odabranih švicarskih firmi.",
+      "nav": [
+        "Provjera dokumentacije",
+        "Cijena",
+        "Granice"
+      ],
+      "document_title": "Provjera dokumentacije",
+      "document_text": "Vaša ponuda, profil kapaciteta ili tekst o firmi na švicarskom poslovnom njemačkom jeziku. {small_job} po dokumentu, pet radnih dana, jedan krug ispravki.",
+      "pilot_eyebrow": "Drugi korak",
+      "pilot_title": "Šestosedmični pilot",
+      "pilot_intro": "Pilot je ograničen mandat provjere s dokumentovanim rezultatima. Tačan obim istraživanja ciljnih firmi, prvog kontakta i završnog izvještaja utvrđuje se pismeno prije početka mandata.",
+      "deliverables": [
+        "Početni razgovor i pisani obim ponude, ciljnog segmenta i pretpostavki",
+        "Provjera pozicioniranja, vrijednosti ponude, logike cijena i postojećih materijala",
+        "Obrazložena lista odgovarajućih ciljnih firmi i kontakata",
+        "Transparentan prvi kontakt od strane BIT-a kao angažovanog provjeravača tržišta; identitet, ponuda i dokumentacija naručioca samo u prethodno pismeno dogovorenom obimu. Zastupanje samo uz izričit pisani mandat",
+        "Sedmična evidencija aktivnosti, odgovora i otvorenih pitanja",
+        "Završni izvještaj sa zapažanjima i trezvenom preporukom za dalji rad"
+      ],
+      "pricing": [
+        "Provjera dokumentacije: {small_job} po dokumentu",
+        "Fiksna cijena pilota: {pilot}",
+        "Plaćanje pilota: 50% pri naručivanju i 50% nakon završnog izvještaja"
+      ],
+      "optional_title": "Opcionalno nakon pilota",
+      "optional": "Naredni mandat ugovara se samo uz obostrani interes, pisani obim i posebnu naknadu. Vanjske stručnjake uključujem samo uz prethodni dogovor. Ugovorna strana ostajem ja.",
+      "exclusions": [
+        "Nema obećanja klijenata, prihoda, ugovora ili tržišnog uspjeha",
+        "Nema pravnog, poreznog, carinskog ili certifikacijskog savjetovanja",
+        "Nema ovlaštenja za zastupanje, zaključivanje ugovora ili naplatu bez izričitog pisanog mandata",
+        "Putni troškovi, prijevodi i usluge trećih lica nisu u fiksnoj cijeni"
+      ],
+      "honesty": "Pilot ne koristi izmišljene rezultate i ne može stvoriti tržišnu potražnju. Daje dokumentovanu osnovu za odluku; i obrazložen negativan rezultat je koristan. Ako se rano pokaže da ponuda nije pogodna, to bilježim pismeno i ne nastavljam preostali dogovoreni obim kao prividnu aktivnost.",
+      "sample_title": "Primjer: oblik rezultata",
+      "sample_note": "Anonimni format primjera – nije stvarni klijentski slučaj i nije obećanje uspjeha.",
+      "sample_targets_title": "Primjer liste ciljnih firmi",
+      "sample_targets": [
+        "Ugostiteljstvo · kanton Cirih · rukovodstvo / front office",
+        "B2B usluge · kanton Bern · direktor",
+        "Specijalizovana trgovina · kanton Aargau · nabavka / IT"
+      ],
+      "sample_criteria_title": "Kriteriji provjere",
+      "sample_criteria": [
+        "Jasnoća ponude i argumentacije koristi",
+        "Usklađenost sa segmentom, cjenovnom logikom i postojećim materijalima",
+        "Dostupnost i kvalitet prvih povratnih informacija"
+      ],
+      "sample_findings_title": "Tipične kategorije nalaza",
+      "sample_findings": [
+        "Pozicioniranje nejasno ili preširoko za švicarsko tržište",
+        "Dokumentacija nepotpuna za pouzdanu prvu kontaktnu poruku",
+        "Ciljni segment preširok ili uloge kontakata nisu pouzdane"
+      ],
+      "sample_report_title": "Struktura završnog izvještaja",
+      "sample_report": [
+        "Početna situacija i pisani obim",
+        "Zapažanja iz provjere i prve kontaktne aktivnosti",
+        "Otvorena pitanja i rizici",
+        "Trezvena preporuka za dalji rad"
+      ]
+    },
+    "hospitality": {
+      "meta_title": "IT i ugostiteljstvo Cirih | BIT",
+      "meta_description": "Ograničena IT i ugostiteljska podrška te provjera podataka o rezervacijama, cijenama i obračunu za mala i srednja preduzeća, hotele i restorane u Cirihu.",
+      "eyebrow": "IT i ugostiteljstvo · Cirih",
+      "title": "Rješavam jasno definirane IT i digitalne zadatke.",
+      "lead": "Pomažem malim i srednjim preduzećima, hotelima i restoranima pri rješavanju konkretnih tehničkih problema, sistemskih pitanja, digitalnih tokova rada i provjeri podataka o rezervacijama, cijenama i obračunu.",
+      "nav": [
+        "Usluge",
+        "Cijene",
+        "Granice"
+      ],
+      "blocks": [
+        {
+          "title": "Ugostiteljstvo: hoteli i restorani",
+          "text": "Provjeravam jasno ograničene tokove između recepcije, rezervacija, kase, poslovanja i obračuna.",
+          "items": [
+            "Provjeravam PMS/OTA puteve rezervacija, cijene, dostupnost i mapping",
+            "Podaci o rezervacijama, cijenama i obračunu: provjeravam popunjenost, odstupanja ADR/RevPAR i logiku cijena na osnovu dostavljenih podataka",
+            "Pratim no-show, otkazivanja, naknade i folio-slučajeve i provodim dogovorene korekcije tek nakon odobrenja",
+            "Razjašnjavam smetnje kod kase, štampača, WLAN-a, uređaja i korisničkih računa",
+            "Dokumentujem nalaze, izmjene i otvorene tačke razumljivim jezikom"
+          ]
+        },
+        {
+          "title": "IT za mala i srednja preduzeća i digitalni zadaci",
+          "text": "Obavljam konkretne IT zadatke za male timove bez interne IT službe.",
+          "items": [
+            "Provjeravam Microsoft 365, MFA i Outlook; dozvole mijenjam samo nakon dokumentovanog odobrenja",
+            "Razjašnjavam smetnje Windows računara, štampača, WLAN-a i e-pošte",
+            "Dokumentujem račune, uloge, ažuriranja i predaju"
+          ]
+        }
+      ],
+      "process": {
+        "title": "Kako postupam",
+        "intro": "Svaki angažman vodim kroz pet jasno definiranih koraka.",
+        "steps": [
+          {
+            "title": "Priprema",
+            "text": "Razjašnjavam cilj, pisani obim, potrebne materijale i siguran način pristupa. Također bilježim što nije dio angažmana."
+          },
+          {
+            "title": "Početak angažmana",
+            "text": "Počinjem dogovoreno na daljinu ili na licu mjesta. Prvo provjeravam radno okruženje i potvrđujem cilj za taj angažman."
+          },
+          {
+            "title": "Realizacija",
+            "text": "Obavljam pisano dogovorene zadatke, na primjer PMS-, folio- ili channel-slučajeve, Microsoft 365 ili uređaje. Bilježim izmjene i nalaze u dogovorenom obimu."
+          },
+          {
+            "title": "Posebni zadaci",
+            "text": "Jednokratne izuzetke preuzimam samo uz zasebno, pismeno dogovoren dodatni obim. Time ne nastaje otvorena ili neograničena podrška."
+          },
+          {
+            "title": "Završetak i predaja",
+            "text": "Predajem nalaze, otvorene tačke i sljedeći korak, a zatim formalno zaključujem angažman. Povjerljive pristupne podatke nikad ne šaljem preko aplikacija za poruke i ne tražim ih tamo."
+          }
+        ]
+      },
+      "pricing": [
+        "Rad: {hourly} po satu",
+        "Jasno ograničen mali zadatak: od {small_job}",
+        "Dolazak unutar Ciriha: {zurich_travel}"
+      ],
+      "exclusions": [
+        "Nema dostupnosti 24/7 ni zagarantovanog vremena odgovora",
+        "Nema neograničene podrške tuđih sistema",
+        "Nema zastupanja proizvođača ni nabavke bez mandata",
+        "Nema garancije prihoda ni preuzimanja ukupne komercijalne odgovornosti"
+      ],
+      "honesty": "Prije početka razgraničavam zadatak, rad i potrebne pristupe. Ako pouzdana i sigurna realizacija nije moguća, kažem to otvoreno. Vanjske stručnjake uključujem samo uz prethodni dogovor. Ugovorna strana ostajem ja."
+    }
+  },
+  "hr": {
+    "common": {
+      "skip": "Prijeđi na sadržaj",
+      "menu": "Izbornik",
+      "languages": "Odaberite jezik",
+      "about": "O meni",
+      "legal": "Pravne informacije",
+      "contact": "Kontakt",
+      "whatsapp": "Pišite putem WhatsAppa",
+      "viber": "Pišite putem Vibera",
+      "email": "Pošaljite e-mail",
+      "warning": "Ne šaljite lozinke, pristupne kodove ili povjerljive podatke klijenata putem aplikacija za poruke.",
+      "exclusions": "Što ne radim",
+      "price": "Cijena",
+      "back": "Natrag na ponudu",
+      "about_title": "O meni",
+      "about_lead": "Stefan Bogdanović · BIT – Boks IT Support · Cirih",
+      "about_text": "Podržavam mala i srednja poduzeća u jasno ograničenim IT i digitalnim zadacima. Za švicarsko B2B tržište vodim strukturirane pilot-mandate pod nazivom BIT Market Access Switzerland. Najprije provjeravam početno stanje, ovisnosti i granice, a zatim dokumentiram dogovorene rezultate. Ako mandat zahtijeva dodatno stručno znanje, to navodim prije početka i uključujem vanjske stručnjake samo uz dogovor. Ugovorna strana ostajem ja.",
+      "about_independent": "Radim neovisno i nisam službeni predstavnik proizvođača PMS-a ili softvera.",
+      "image_alt": "Stefan Bogdanović u Cirihu",
+      "about_practice": "Poznajem operativne tokove između recepcije, rezervacija, obračuna i hotelskih sustava iz švicarske prakse. Osim toga pomažem malim timovima oko Microsoft 365, uređaja i korisničkih pristupa. Iz Ciriha radim na njemačkom, engleskom te srpskom, bosanskom i hrvatskom i povezujem švicarsku poslovnu stvarnost s jugoistočnoeuropskim tržištem.",
+      "about_languages": "Radni jezici: njemački, engleski te srpski, bosanski i hrvatski. Francuski i talijanski prema dogovoru ili uz vanjsku jezičnu podršku.",
+      "phone": "Nazovi"
+    },
+    "market": {
+      "meta_title": "BIT Market Access Switzerland | švicarski pilot",
+      "meta_description": "Strukturirana provjera jedne jasno definirane B2B ponude na švicarskom tržištu tijekom šest tjedana.",
+      "eyebrow": "BIT Market Access Switzerland",
+      "title": "Od provjere dokumentacije do švicarskog pilota.",
+      "lead": "S vama provjeravam može li se i kako jasno definirana ponuda pozicionirati i testirati kod odabranih švicarskih tvrtki.",
+      "nav": [
+        "Provjera dokumentacije",
+        "Cijena",
+        "Granice"
+      ],
+      "document_title": "Provjera dokumentacije",
+      "document_text": "Vaša ponuda, profil kapaciteta ili tekst o tvrtki na švicarskom poslovnom njemačkom jeziku. {small_job} po dokumentu, pet radnih dana, jedan krug ispravaka.",
+      "pilot_eyebrow": "Drugi korak",
+      "pilot_title": "Šestotjedni pilot",
+      "pilot_intro": "Pilot je ograničen mandat provjere s dokumentiranim rezultatima. Točan opseg istraživanja ciljnih tvrtki, prvog kontakta i završnog izvješća utvrđuje se pisano prije početka mandata.",
+      "deliverables": [
+        "Početni razgovor i pisani opseg ponude, ciljnog segmenta i pretpostavki",
+        "Provjera pozicioniranja, vrijednosti ponude, logike cijena i postojećih materijala",
+        "Obrazloženi popis odgovarajućih ciljnih tvrtki i kontakata",
+        "Transparentan prvi kontakt od strane BIT-a kao angažiranog provjeravatelja tržišta; identitet, ponuda i dokumentacija naručitelja samo u unaprijed pisano dogovorenom opsegu. Zastupanje samo uz izričit pisani mandat",
+        "Tjedna evidencija aktivnosti, odgovora i otvorenih pitanja",
+        "Završno izvješće sa zapažanjima i trezvenom preporukom za daljnji rad"
+      ],
+      "pricing": [
+        "Provjera dokumentacije: {small_job} po dokumentu",
+        "Fiksna cijena pilota: {pilot}",
+        "Plaćanje pilota: 50% pri naručivanju i 50% nakon završnog izvješća"
+      ],
+      "optional_title": "Opcionalno nakon pilota",
+      "optional": "Naredni mandat ugovara se samo uz obostrani interes, pisani opseg i zasebnu naknadu. Vanjske stručnjake uključujem samo uz prethodni dogovor. Ugovorna strana ostajem ja.",
+      "exclusions": [
+        "Nema obećanja klijenata, prihoda, ugovora ili tržišnog uspjeha",
+        "Nema pravnog, poreznog, carinskog ili certifikacijskog savjetovanja",
+        "Nema ovlasti za zastupanje, sklapanje ugovora ili naplatu bez izričitog pisanog mandata",
+        "Putni troškovi, prijevodi i usluge trećih strana nisu u fiksnoj cijeni"
+      ],
+      "honesty": "Pilot ne koristi izmišljene rezultate i ne može stvoriti tržišnu potražnju. Daje dokumentiranu osnovu za odluku; koristan je i obrazložen negativan rezultat. Ako se rano pokaže da ponuda nije pogodna, to bilježim pisano i ne nastavljam preostali dogovoreni opseg kao prividnu aktivnost.",
+      "sample_title": "Primjer: oblik rezultata",
+      "sample_note": "Anonimni format primjera – nije stvarni klijentski slučaj i nije obećanje uspjeha.",
+      "sample_targets_title": "Primjer popisa ciljnih tvrtki",
+      "sample_targets": [
+        "Ugostiteljstvo · kanton Cirih · rukovodstvo / front office",
+        "B2B usluge · kanton Bern · direktor",
+        "Specijalizirana trgovina · kanton Aargau · nabava / IT"
+      ],
+      "sample_criteria_title": "Kriteriji provjere",
+      "sample_criteria": [
+        "Jasnoća ponude i argumentacije koristi",
+        "Usklađenost sa segmentom, cjenovnom logikom i postojećim materijalima",
+        "Dostupnost i kvaliteta prvih povratnih informacija"
+      ],
+      "sample_findings_title": "Tipične kategorije nalaza",
+      "sample_findings": [
+        "Pozicioniranje nejasno ili preširoko za švicarsko tržište",
+        "Dokumentacija nepotpuna za pouzdanu prvu kontaktnu poruku",
+        "Ciljni segment preširok ili uloge kontakata nisu pouzdane"
+      ],
+      "sample_report_title": "Struktura završnog izvješća",
+      "sample_report": [
+        "Početno stanje i pisani opseg",
+        "Zapažanja iz provjere i prve kontaktne aktivnosti",
+        "Otvorena pitanja i rizici",
+        "Trezvena preporuka za daljnji rad"
+      ]
+    },
+    "hospitality": {
+      "meta_title": "IT i ugostiteljstvo Cirih | BIT",
+      "meta_description": "Ograničena IT i ugostiteljska podrška te provjera podataka o rezervacijama, cijenama i obračunu za mala i srednja poduzeća, hotele i restorane u Cirihu.",
+      "eyebrow": "IT i ugostiteljstvo · Cirih",
+      "title": "Rješavam jasno definirane IT i digitalne zadatke.",
+      "lead": "Pomažem malim i srednjim poduzećima, hotelima i restoranima pri rješavanju konkretnih tehničkih problema, pitanja sustava, digitalnih tokova rada i provjeri podataka o rezervacijama, cijenama i obračunu.",
+      "nav": [
+        "Usluge",
+        "Cijene",
+        "Granice"
+      ],
+      "blocks": [
+        {
+          "title": "Ugostiteljstvo: hoteli i restorani",
+          "text": "Provjeravam jasno ograničene tokove između recepcije, rezervacija, blagajne, poslovanja i obračuna.",
+          "items": [
+            "Provjeravam PMS/OTA puteve rezervacija, cijene, dostupnost i mapping",
+            "Podaci o rezervacijama, cijenama i obračunu: provjeravam popunjenost, odstupanja ADR/RevPAR i logiku cijena na temelju dostavljenih podataka",
+            "Pratim no-show, otkazivanja, naknade i folio-slučajeve i provodim dogovorene korekcije tek nakon odobrenja",
+            "Razjašnjavam smetnje kod blagajne, pisača, WLAN-a, uređaja i korisničkih računa",
+            "Dokumentiram nalaze, izmjene i otvorene točke razumljivim jezikom"
+          ]
+        },
+        {
+          "title": "IT za mala i srednja poduzeća i digitalni zadaci",
+          "text": "Obavljam konkretne IT zadatke za male timove bez interne IT službe.",
+          "items": [
+            "Provjeravam Microsoft 365, MFA i Outlook; ovlasti mijenjam samo nakon dokumentiranog odobrenja",
+            "Razjašnjavam smetnje Windows računala, pisača, WLAN-a i e-pošte",
+            "Dokumentiram račune, uloge, ažuriranja i predaju"
+          ]
+        }
+      ],
+      "process": {
+        "title": "Kako postupam",
+        "intro": "Svaki angažman vodim kroz pet jasno definiranih koraka.",
+        "steps": [
+          {
+            "title": "Priprema",
+            "text": "Razjašnjavam cilj, pisani opseg, potrebne materijale i siguran način pristupa. Također bilježim što nije dio angažmana."
+          },
+          {
+            "title": "Početak angažmana",
+            "text": "Počinjem dogovoreno na daljinu ili na licu mjesta. Prvo provjeravam radno okruženje i potvrđujem cilj za taj angažman."
+          },
+          {
+            "title": "Provedba",
+            "text": "Obavljam pisano dogovorene zadatke, na primjer PMS-, folio- ili channel-slučajeve, Microsoft 365 ili uređaje. Bilježim izmjene i nalaze u dogovorenom opsegu."
+          },
+          {
+            "title": "Posebni zadaci",
+            "text": "Jednokratne iznimke preuzimam samo uz zasebno, pisano dogovoren dodatni opseg. Time ne nastaje otvorena ili neograničena podrška."
+          },
+          {
+            "title": "Završetak i predaja",
+            "text": "Predajem nalaze, otvorene točke i sljedeći korak, a zatim formalno zaključujem angažman. Povjerljive pristupne podatke nikad ne šaljem preko aplikacija za poruke i ne tražim ih tamo."
+          }
+        ]
+      },
+      "pricing": [
+        "Rad: {hourly} po satu",
+        "Jasno ograničen mali zadatak: od {small_job}",
+        "Dolazak unutar Ciriha: {zurich_travel}"
+      ],
+      "exclusions": [
+        "Nema dostupnosti 24/7 ni zajamčenog vremena odgovora",
+        "Nema neograničene podrške tuđih sustava",
+        "Nema zastupanja proizvođača ni nabave bez mandata",
+        "Nema jamstva prihoda ni preuzimanja ukupne komercijalne odgovornosti"
+      ],
+      "honesty": "Prije početka razgraničavam zadatak, rad i potrebne pristupe. Ako pouzdana i sigurna provedba nije moguća, kažem to otvoreno. Vanjske stručnjake uključujem samo uz prethodni dogovor. Ugovorna strana ostajem ja."
+    }
+  },
+  "it": {
+    "common": {
+      "skip": "Vai al contenuto",
+      "menu": "Menu",
+      "languages": "Scegliere la lingua",
+      "about": "Su di me",
+      "legal": "Note legali",
+      "contact": "Contatto",
+      "whatsapp": "Scrivere su WhatsApp",
+      "viber": "Scrivere su Viber",
+      "email": "Inviare un'e-mail",
+      "warning": "Non inviate password, codici di accesso o dati riservati dei clienti tramite app di messaggistica.",
+      "exclusions": "Cosa non faccio",
+      "price": "Prezzo",
+      "back": "Torna all'offerta",
+      "about_title": "Su di me",
+      "about_lead": "Stefan Bogdanovic · BIT – Boks IT Support · Zurigo",
+      "about_text": "Supporto piccole e medie imprese in compiti IT e digitali chiaramente delimitati. Per il mercato B2B svizzero conduco mandati pilota strutturati con il nome BIT Market Access Switzerland. Prima verifico situazione di partenza, dipendenze e limiti, poi documento i risultati concordati. Se un incarico richiede competenze aggiuntive, lo indico prima dell'inizio e coinvolgo specialisti esterni solo previo accordo. Rimango l'unica controparte contrattuale.",
+      "about_independent": "Lavoro in modo indipendente e non rappresento ufficialmente alcun fornitore PMS o software.",
+      "image_alt": "Stefan Bogdanovic a Zurigo",
+      "about_practice": "Conosco i flussi operativi tra reception, prenotazioni, fatturazione e sistemi alberghieri dalla pratica svizzera. Supporto anche piccoli team con Microsoft 365, dispositivi e accessi utente. Da Zurigo lavoro in tedesco, inglese nonché serbo, bosniaco e croato, collegando la realtà operativa svizzera al mercato dell’Europa sud-orientale.",
+      "about_languages": "Lingue di lavoro: tedesco, inglese nonché serbo, bosniaco e croato. Francese e italiano su accordo oppure con supporto linguistico esterno.",
+      "phone": "Chiama"
+    },
+    "hospitality": {
+      "meta_title": "Supporto IT & Hospitality Zurigo | BIT",
+      "meta_description": "Supporto IT, hospitality e verifica delimitata di dati di prenotazione, tariffe e fatturazione per PMI, hotel e ristoranti a Zurigo.",
+      "eyebrow": "IT & Hospitality · Zurigo",
+      "title": "Verificare e realizzare compiti IT e digitali definiti.",
+      "lead": "Supporto PMI, hotel e ristoranti per incidenti concreti, questioni relative ai sistemi, flussi digitali e verifica delimitata di dati di prenotazione, tariffe e fatturazione.",
+      "nav": [
+        "Prestazioni",
+        "Prezzi",
+        "Limiti"
+      ],
+      "blocks": [
+        {
+          "title": "Hospitality: hotel e ristoranti",
+          "text": "Verifico flussi chiaramente delimitati tra reception, prenotazioni, cassa, operativa e fatturazione.",
+          "items": [
+            "Verificare percorsi PMS/OTA, tariffe, disponibilità e mapping",
+            "Dati di prenotazione, tariffe e fatturazione: verificare occupazione, scostamenti ADR/RevPAR e logica tariffaria sui dati forniti",
+            "Ricostruire casi di no-show, cancellazione, tasse e folio e attuare le correzioni concordate dopo approvazione",
+            "Isolare problemi di cassa, stampanti, Wi-Fi, dispositivi e accessi utente",
+            "Documentare in modo chiaro rilievi, modifiche e punti aperti"
+          ]
+        },
+        {
+          "title": "IT per PMI e compiti digitali",
+          "text": "Gestisco compiti IT concreti per piccoli team senza un reparto IT interno.",
+          "items": [
+            "Verificare Microsoft 365, MFA e Outlook; modificare le autorizzazioni solo dopo approvazione documentata",
+            "Isolare incidenti di dispositivi Windows, stampanti, Wi-Fi e e-mail",
+            "Documentare account, ruoli, aggiornamenti e consegna"
+          ]
+        }
+      ],
+      "process": {
+        "title": "Come procedo",
+        "intro": "Ogni incarico segue cinque passi chiaramente definiti.",
+        "steps": [
+          {
+            "title": "Preparazione",
+            "text": "Chiarisco obiettivo, ambito scritto, materiali necessari e modalità di accesso sicura. Registro anche ciò che non fa parte dell'incarico."
+          },
+          {
+            "title": "Avvio dell’incarico",
+            "text": "Inizio da remoto o in loco come concordato. Prima verifico l'ambiente di lavoro e confermo l'obiettivo della sessione."
+          },
+          {
+            "title": "Esecuzione",
+            "text": "Eseguo i compiti concordati per iscritto, ad esempio casi PMS, folio o channel, Microsoft 365 o dispositivi. Registro modifiche e rilievi entro l'ambito concordato."
+          },
+          {
+            "title": "Compiti speciali",
+            "text": "Prendo in carico eccezioni una tantum solo con un mini-ambito separato concordato per iscritto. Ciò non crea un supporto aperto o illimitato."
+          },
+          {
+            "title": "Chiusura e consegna",
+            "text": "Consegno rilievi, punti aperti e il passo successivo, poi chiudo l'incarico. Non invio mai credenziali riservate via messaggistica e non le richiedo lì."
+          }
+        ]
+      },
+      "pricing": [
+        "Lavoro: {hourly} all'ora",
+        "Piccolo incarico chiaramente delimitato: da {small_job}",
+        "Spostamento entro Zurigo: {zurich_travel}"
+      ],
+      "exclusions": [
+        "Nessuna disponibilità 24/7 né tempo di risposta garantito",
+        "Nessun supporto illimitato di sistemi di terzi",
+        "Nessuna rappresentanza di fornitore né acquisto senza mandato",
+        "Nessuna garanzia di fatturato e nessun subentro della responsabilità commerciale complessiva"
+      ],
+      "honesty": "Prima dell'inizio delimito compito, impegno e accessi necessari. Se una realizzazione sicura e solida non è possibile, lo dico apertamente. Coinvolgo specialisti esterni solo previo accordo. Rimango l'unica controparte contrattuale."
+    },
+    "market": {
+      "meta_title": "BIT Market Access Switzerland | pilota mercato",
+      "meta_description": "Sei settimane di verifica strutturata del mercato per un'offerta B2B chiaramente definita in Svizzera.",
+      "eyebrow": "BIT Market Access Switzerland",
+      "title": "Dal controllo documenti al pilota di mercato svizzero.",
+      "lead": "Verifico con voi se e come un'offerta chiaramente definita possa essere posizionata e testata presso imprese svizzere selezionate.",
+      "nav": [
+        "Controllo documenti",
+        "Prezzo",
+        "Limiti"
+      ],
+      "document_title": "Controllo documenti",
+      "document_text": "La vostra offerta, profilo di capacità o testo aziendale in tedesco commerciale svizzero. {small_job} per documento, 5 giorni lavorativi, un ciclo di correzioni.",
+      "pilot_eyebrow": "Secondo passo",
+      "pilot_title": "Il pilota di sei settimane",
+      "pilot_intro": "Il pilota è un mandato di verifica delimitato con risultati documentati. L’esatto ambito della ricerca di imprese target, del primo contatto e del rapporto finale viene definito per iscritto prima dell’incarico.",
+      "deliverables": [
+        "Colloquio iniziale e delimitazione scritta di offerta, segmento target e ipotesi",
+        "Verifica di posizionamento, argomentazione di valore, logica dei prezzi e documenti esistenti",
+        "Elenco motivato di imprese target e referenti adatti",
+        "Primo contatto trasparente da parte di BIT come verificatore di mercato incaricato; identità, offerta e documenti del committente solo nell’ambito concordato per iscritto in precedenza. Rappresentanza solo con mandato scritto esplicito",
+        "Documentazione settimanale di attività, risposte e domande aperte",
+        "Rapporto finale con osservazioni e raccomandazione obiettiva sui prossimi passi"
+      ],
+      "pricing": [
+        "Controllo documenti: {small_job} per documento",
+        "Prezzo fisso pilota: {pilot}",
+        "Pagamento pilota: 50% all'avvio, 50% dopo il rapporto finale"
+      ],
+      "optional_title": "Opzionale dopo il pilota",
+      "optional": "Un mandato successivo viene concordato solo con interesse reciproco, ambito scritto e remunerazione separata. Rimango l'unica controparte contrattuale. Specialisti esterni solo previo accordo.",
+      "exclusions": [
+        "Nessuna garanzia di clienti, fatturato, incarichi o successo di mercato",
+        "Nessuna consulenza legale, fiscale, doganale o di certificazione",
+        "Nessuna procura di rappresentanza, conclusione contratti o riscossione senza mandato scritto esplicito",
+        "Spese di viaggio, traduzioni o prestazioni di terzi non incluse nel prezzo fisso"
+      ],
+      "honesty": "Il pilota non usa prove di successo inventate e non crea domanda di mercato. Fornisce una base documentata per decidere; anche un esito negativo motivato è un risultato utile. Se emerge presto che l’offerta non è adatta, lo documento per iscritto e non proseguo il resto dell’ambito concordato come attività apparente.",
+      "sample_title": "Esempio: forma del risultato",
+      "sample_note": "Formato di esempio anonimizzato – non un caso cliente reale e nessuna promessa di risultato.",
+      "sample_targets_title": "Esempio di elenco imprese target",
+      "sample_targets": [
+        "Hospitality · Cantone di Zurigo · direzione / front office",
+        "Servizi B2B · Cantone di Berna · direzione",
+        "Commercio specializzato · Cantone di Argovia · acquisti / IT"
+      ],
+      "sample_criteria_title": "Criteri di verifica",
+      "sample_criteria": [
+        "Chiarezza dell'offerta e della proposta di valore",
+        "Adattamento a segmento, logica di prezzo e documenti esistenti",
+        "Raggiungibilità e qualità delle prime risposte"
+      ],
+      "sample_findings_title": "Categorie tipiche di rilievi",
+      "sample_findings": [
+        "Posizionamento poco chiaro o troppo ampio per il mercato svizzero",
+        "Documenti incompleti per un primo contatto solido",
+        "Segmento target troppo ampio o ruoli di contatto non affidabili"
+      ],
+      "sample_report_title": "Struttura del rapporto finale",
+      "sample_report": [
+        "Situazione di partenza e ambito scritto",
+        "Osservazioni da verifica e primo contatto",
+        "Domande aperte e rischi",
+        "Raccomandazione obiettiva sui prossimi passi"
+      ]
+    }
+  }
+}

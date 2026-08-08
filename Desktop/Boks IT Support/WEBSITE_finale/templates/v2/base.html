@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="$html_lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>$meta_title</title>
+    <meta name="description" content="$meta_description">
+    <meta name="theme-color" content="#0d0f11">
+    <meta property="og:title" content="$meta_title">
+    <meta property="og:description" content="$meta_description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="$canonical">
+    <meta property="og:locale" content="$og_locale">
+    <link rel="canonical" href="$canonical">
+$alternate_links
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/assets/universal.css?v=16">
+$extra_head
+</head>
+<body data-current-language="$language" data-page="$page_id">
+    <a class="skip-link" href="#main">$skip</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/$language/" aria-label="BIT – Boks IT Support">
+                <img src="/LOGO_DARK.png" alt="BIT – Boks IT Support" width="174">
+            </a>
+            <nav class="main-nav" data-main-nav aria-label="$nav_aria">
+$nav_links
+            </nav>
+            <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="$menu_label">$menu_label</button>
+            <nav class="language-nav" data-language-nav aria-label="$languages_label">
+$language_links
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+$main
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <div>© 2026 BIT · Stefan Bogdanovic · Zürich</div>
+                <p class="footer-note">$footer_note</p>
+                <div class="footer-channels">
+$footer_channels
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="$inquiry_href">$inquiry_label</a>
+                <a href="$terms_href">$terms_label</a>
+                <a href="/$language/legal/">$legal_label</a>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/assets/js/app.js?v=5"></script>
+$extra_scripts
+</body>
+</html>

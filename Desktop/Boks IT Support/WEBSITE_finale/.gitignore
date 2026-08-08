@@ -1,0 +1,10 @@
+﻿.viewer-token.local
+*.local
+*.bak
+node_modules/
+.wrangler/
+.pytest_cache/
+__pycache__/
+*.pyc
+.env
+.env.*

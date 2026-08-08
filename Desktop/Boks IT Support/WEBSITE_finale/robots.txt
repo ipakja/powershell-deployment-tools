@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/inquiries
+Disallow: /api/inquiries/view
+Disallow: /api/inquiry-notify-test
+
+Sitemap: https://boksitsupport.ch/sitemap.xml

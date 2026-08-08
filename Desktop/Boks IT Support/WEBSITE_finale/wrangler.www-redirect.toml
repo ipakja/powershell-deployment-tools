@@ -1,0 +1,8 @@
+name = "www-boksitsupport-redirect"
+main = "workers/www-redirect.js"
+compatibility_date = "2026-07-30"
+workers_dev = true
+
+[[routes]]
+pattern = "www.boksitsupport.ch/*"
+zone_name = "boksitsupport.ch"

@@ -1,0 +1,241 @@
+{
+  "lang": "bs",
+  "skip": "Pređi na sadržaj",
+  "language_suggestion": {
+    "prompt": "Želite li otvoriti stranicu na jeziku preglednika?",
+    "switch": "Promijeni jezik",
+    "dismiss": "Zatvori"
+  },
+  "meta": {
+    "title": "Ulazak na švicarsko tržište i IT podrška | BIT",
+    "description": "Ulazak na švicarsko tržište, zastupanje u Švicarskoj i poslovna podrška za B2B kompanije, uz IT podršku i hospitality sisteme.",
+    "keywords": "ulazak na švicarsko tržište, zastupanje u Švicarskoj, poslovanje sa Švicarskom, razvoj poslovanja Švicarska, IT podrška Cirih, hotelijerstvo i ugostiteljstvo, PMS OTA provjera"
+  },
+  "nav": {
+    "aria": "Glavna navigacija",
+    "services": "Usluge",
+    "market": "Švicarsko tržište",
+    "about": "O BIT-u",
+    "contact": "Kontakt",
+    "menu": "Meni",
+    "languages": "Odaberite jezik"
+  },
+  "hero": {
+    "eyebrow": "BIT – Swiss Market Development & Representation · Cirih",
+    "title": "Stabilni sistemi. Jasni procesi. Pouzdan put ka švicarskom tržištu.",
+    "lead": "Švicarskim malim i srednjim preduzećima, hotelima i restoranima osiguravamo operativnu IT podršku. B2B kompanije s Balkana pratimo od provjere tržišta do lokalnog zastupanja u Švicarskoj.",
+    "services_button": "Pogledajte usluge",
+    "trust": "Jedna odgovorna kontakt osoba · dokumentovani rezultati · na daljinu ili na lokaciji po dogovoru"
+  },
+  "services": {
+    "eyebrow": "Usluge",
+    "title": "Operativna podrška s jasnim rezultatima.",
+    "intro": "Prvo provjeravamo uzrok, zavisnosti i poslovni rizik. Tek zatim predlažemo sigurno i održivo rješenje. Hotelijerstvo i ugostiteljstvo ostaju jedna objedinjena servisna oblast.",
+    "cards": [
+      {
+        "title": "Ugostiteljstvo: hoteli i restorani",
+        "text": "IT i procesna podrška koja povezuje recepciju, rezervacije, računovodstvo i restoransko poslovanje.",
+        "items": [
+          "PMS/OTA provjera cijena, raspoloživosti i toka rezervacije",
+          "Usklađivanje folija, provizija, naknada i uplata",
+          "Analiza mapiranja, interfejsa i duplih rezervacija",
+          "Kasa, štampač, Wi-Fi, računar i korisnički pristup",
+          "Web-stranica, digitalni meni i Google poslovni profil",
+          "Dokumentovan nalaz i prioritetne korektivne mjere"
+        ]
+      },
+      {
+        "title": "IT podrška i digitalna rješenja",
+        "text": "Razumljiva IT podrška za mala i srednja preduzeća bez vlastitog IT odjela.",
+        "items": [
+          "Microsoft 365, korisnički računi, MFA, Outlook i dozvole",
+          "Windows 11, računar, uređaji i štampač",
+          "Sigurne postavke, Wi-Fi, DNS, domen i e-mail",
+          "Uklanjanje nepotrebnih računa i minimalne privilegije",
+          "Provjera rezervnih kopija, ažuriranja i osnovne zaštite",
+          "Kratka dokumentacija sistema i predaja zaposlenima"
+        ]
+      },
+      {
+        "title": "Podrška procesima i projektima",
+        "text": "Za jasno ograničene projekte pripremamo pouzdanu osnovu za odluku i koordiniramo realizaciju.",
+        "items": [
+          "Analiza stanja, uzroka i rizika",
+          "Zahtjevi, odgovornosti i mjerljiv ciljni rezultat",
+          "Nezavisno poređenje dobavljača, licenci i rješenja",
+          "Mapiranje procesa, uskih grla i automatizacije",
+          "Koordinacija odabranih stručnjaka i dobavljača",
+          "Kontrola rezultata, dokumentacija i otvorene tačke"
+        ]
+      }
+    ]
+  },
+  "market": {
+    "eyebrow": "BIT – Swiss Market Development & Representation",
+    "title": "Ulazak na tržište i zastupanje u Švicarskoj.",
+    "text": "Kompanijama iz Bosne i Hercegovine, Hrvatske, Srbije, Crne Gore i Sjeverne Makedonije pomažemo realno provjeriti potencijal za poslovanje sa Švicarskom. Ne obećavamo ugovore; provodimo disciplinovan lokalni rad i transparentno izvještavamo.",
+    "items": [
+      "Provjera ciljnog tržišta, konkurencije i ponude",
+      "Prilagođavanje vrijednosne ponude, cijene i prodajnih materijala",
+      "Identifikacija i kvalifikacija relevantnih poslovnih kontakata",
+      "Lokalno obraćanje i razvoj poslovanja u Švicarskoj",
+      "Zastupanje na sastancima i tehničko-jezičko posredovanje",
+      "Koordinacija pilot-projekta, povratna informacija i preporuka"
+    ]
+  },
+  "audiences": {
+    "eyebrow": "Dvije ciljne grupe · jedna lokalna kontakt osoba",
+    "title": "Podrška tamo gdje je lokalno prisustvo važno.",
+    "intro": "Švicarskim preduzećima trebaju pouzdani sistemi. Kompanijama s Balkana trebaju lokalni kontekst i prisustvo. BIT oba mandata vodi jasno i odvojeno.",
+    "cards": [
+      {
+        "title": "Za švicarska preduzeća i hospitality",
+        "text": "Za mala i srednja preduzeća, ordinacije, zanatlije, pružaoce usluga, hotele i restorane u Cirihu i Švicarskoj.",
+        "items": [
+          "Otklanjanje kvara i ponavljajućeg uzroka",
+          "Zaštita Microsoft 365 sistema, računara i pristupa",
+          "Provjera hospitality sistema i toka prihoda",
+          "Dokumentovanje odgovornosti i postupaka",
+          "Stručna koordinacija vanjskih dobavljača"
+        ]
+      },
+      {
+        "title": "Za B2B kompanije s Balkana",
+        "text": "Za stabilne kompanije s referencama, kapacitetom isporuke i realnim planom za Švicarsku.",
+        "items": [
+          "Kritička provjera spremnosti i ciljnog segmenta",
+          "Tumačenje švicarskih očekivanja kvaliteta i komunikacije",
+          "Selektivno i profesionalno lokalno obraćanje",
+          "Podrška sastancima, ponudama i pilot-projektima",
+          "Transparentna povratna informacija s tržišta"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Postupak",
+    "title": "Jasan postupak od prvog kontakta do predaje.",
+    "intro": "Definisan proces štiti vrijeme, budžet i povjerljive podatke. Svaki angažman počinje provjerom i dogovorom o obimu.",
+    "steps": [
+      {
+        "title": "Prvi kontakt",
+        "text": "Pošaljite cilj, trenutno stanje i hitnost putem WhatsAppa, Vibera ili e-maila – bez lozinke i povjerljivog pristupa."
+      },
+      {
+        "title": "Provjera i obim",
+        "text": "Razjašnjavamo uzrok, sisteme, ciljno tržište, učesnike i rizike, pa otvoreno procjenjujemo izvodljivost."
+      },
+      {
+        "title": "Realizacija i komunikacija",
+        "text": "Radimo u dogovorenim koracima, potvrđujemo odluke i rano prijavljujemo odstupanja."
+      },
+      {
+        "title": "Predaja i nastavak",
+        "text": "Dobijate rezultat, relevantnu dokumentaciju, otvorene tačke i prioritetnu preporuku za sljedeći korak."
+      }
+    ]
+  },
+  "assurance": {
+    "eyebrow": "Povjerenje kroz jasne granice",
+    "title": "Šta možete očekivati – i šta ne obećavamo.",
+    "text": "Dobra saradnja počinje realnim očekivanjima. BIT radi nezavisno, diskretno i s definisanom odgovornošću. Pristupne podatke ne tražimo putem aplikacija za poruke.",
+    "items": [
+      "Preporuke ne zavise od provizije dobavljača",
+      "Nema garancije tržišnog uspjeha, ugovora ili rada tuđeg sistema bez greške",
+      "Povjerljiv pristup samo putem dogovorenog sigurnog kanala",
+      "MFA, minimalne dozvole i dokumentovane izmjene kao standard",
+      "Vanjski stručnjaci samo po potrebi i s jasnim zadatkom",
+      "Troškovi, pretpostavke i rizici navode se prije realizacije"
+    ]
+  },
+  "faq": {
+    "eyebrow": "Česta pitanja",
+    "title": "Prije prvog razgovora.",
+    "items": [
+      {
+        "question": "Kojim firmama pružate IT podršku u Cirihu?",
+        "answer": "Podržavamo mala i srednja preduzeća, ordinacije, zanatlije, uslužne firme, hotele i restorane. Obim zavisi od sistema, hitnosti i potrebnog stručnog znanja."
+      },
+      {
+        "question": "Jesu li hotel i restoran odvojene usluge?",
+        "answer": "Ne. Ostaju jedna hospitality servisna tačka jer PMS, OTA, kasa, plaćanja, Wi-Fi i operativni procesi često zavise jedni od drugih."
+      },
+      {
+        "question": "Šta obuhvata PMS/OTA provjera?",
+        "answer": "Prema dogovoru provjeravamo cijene, raspoloživost, rezervacije, mapiranje, folije, naknade, provizije i odstupanja. BIT je nezavisan i nije zvanični zastupnik PMS proizvođača."
+      },
+      {
+        "question": "Kako pomažete pri ulasku na švicarsko tržište?",
+        "answer": "Provjeravamo ciljni segment i pozicioniranje, kvalifikujemo kontakte, provodimo dogovoreno obraćanje, pratimo sastanke i koordiniramo pilot-projekte. Aktivnosti i zaključci se dokumentuju."
+      },
+      {
+        "question": "Garantujete li klijente ili prodaju u Švicarskoj?",
+        "answer": "Ne. Ozbiljan razvoj poslovanja ne može garantovati ugovor. Pružamo strukturiranu provjeru, lokalnu aktivnost i pouzdanu povratnu informaciju za odluku zasnovanu na činjenicama."
+      },
+      {
+        "question": "Radite li na daljinu ili na lokaciji?",
+        "answer": "Mnoge analize i zadaci mogu se obaviti na daljinu. Rad u Cirihu i drugim dijelovima Švicarske dogovara se prema dostupnosti i jasnom obimu."
+      },
+      {
+        "question": "Kako počinjemo saradnju?",
+        "answer": "Pošaljite kratak opis putem WhatsAppa, Vibera ili e-maila. Navedite cilj, trenutno stanje i hitnost. Nikada ne šaljite lozinku, kod ili osjetljive podatke putem aplikacije za poruke."
+      },
+      {
+        "question": "Je li moguć dugoročan angažman?",
+        "answer": "Da, kada su sistemi, odgovornosti i očekivano vrijeme reakcije jasno definisani. Najčešće počinjemo analizom stanja, a zatim dogovaramo kontinuiranu podršku ili zastupanje."
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "O BIT-u",
+    "title": "Lično vođenje. Stručna mreža.",
+    "text": "BIT vodi Stefan Bogdanović u Cirihu. Fokus je na razumljivim rješenjima, urednoj koordinaciji i pouzdanoj realizaciji za mala preduzeća, ugostiteljstvo i međunarodne partnere.",
+    "independent": "Zavisno od projekta uključuju se odabrani stručnjaci. Odgovornost i kontrola kvaliteta ostaju kod BIT-a. BIT radi nezavisno i nije zvanični predstavnik PMS proizvođača.",
+    "image_alt": "Stefan Bogdanović, BIT Cirih"
+  },
+  "contact": {
+    "eyebrow": "Direktan kontakt",
+    "title": "Pišite nam direktno.",
+    "text": "Bez kontakt forme i nepotrebnih koraka. Ukratko opišite zahtjev – povjerljive pristupne podatke nikada ne šaljite putem aplikacija za poruke.",
+    "whatsapp": "Pišite putem WhatsAppa",
+    "viber": "Pišite putem Vibera",
+    "email": "Pošaljite e-mail",
+    "email_subject": "Upit putem boksitsupport.ch",
+    "quick_contact": "Brzi kontakt"
+  },
+  "footer": {
+    "location": "Cirih, Švicarska",
+    "legal": "Impresum",
+    "privacy": "Zaštita podataka"
+  },
+  "legal_page": {
+    "title": "Impresum",
+    "eyebrow": "Pravne informacije",
+    "lead": "Identifikacija pružaoca usluge i napomene o korištenju ove web-stranice. Primarno mjerodavno pravo: Švicarska.",
+    "back": "Nazad na web-stranicu",
+    "provider_title": "Pružalac usluge",
+    "provider_name": "BIT – Boks IT Support",
+    "entity_type": "Pravni oblik, odnosno status samostalne djelatnosti, trenutno se razjašnjava",
+    "owner": "Odgovorno za sadržaj: Stefan Bogdanović",
+    "activity_title": "Djelatnost",
+    "activity": "Razvoj švicarskog tržišta i zastupanje na osnovu pisanog mandata, kao i IT podrška i digitalna pomoć za mala i srednja preduzeća i ugostiteljstvo.",
+    "address_title": "Adresa",
+    "city": "Cirih",
+    "country": "Švicarska",
+    "contact_title": "Kontakt",
+    "registration_title": "Registarski i poreski podaci",
+    "registration": "Podaci o eventualnim identifikacionim brojevima preduzeća, trgovačkog registra ili PDV-a dostupni su na zahtjev. Ovdje se objavljuju samo poznati i provjereni podaci.",
+    "terms_title": "Opći uslovi – važne tačke",
+    "terms": "Obim, cijena i rokovi dogovaraju se u pisanom obliku. Troškovi trećih lica zahtijevaju odobrenje; zastupanje zahtijeva izričit pisani mandat. Vanjske stručnjake uključujem samo uz prethodni dogovor. Ugovorna strana ostajem ja. Ovo su važne tačke, a ne sveobuhvatan pravni savjet.",
+    "liability_title": "Odgovornost za sadržaj",
+    "liability": "Sadržaj ove web-stranice pripremam pažljivo. Ne dajem uvjerenje o potpunosti, tačnosti ili stalnoj dostupnosti. Za sadržaj povezanih vanjskih stranica odgovorni su isključivo njihovi operatori.",
+    "copyright_title": "Autorska prava",
+    "copyright": "© 2026 BIT – Boks IT Support. Sva prava zadržana. Tekstovi, dizajn i ostali sadržaji ove web-stranice ne smiju se umnožavati, distribuirati ili na drugi način koristiti bez prethodne pisane saglasnosti.",
+    "privacy_title": "Zaštita podataka",
+    "privacy": "Ova statička web-stranica nema kontakt formu niti vlastito praćenje. Hosting provajder može obrađivati tehnički neophodne serverske zapise. Pri kontaktu putem WhatsAppa, Vibera ili e-maila važe i pravila privatnosti odgovarajućeg provajdera.",
+    "privacy_messaging": "WhatsApp i Viber mogu obrađivati i prenositi metapodatke o kontaktu, uređaju i komunikaciji izvan Švicarske. E-mail i telefon dostupni su kao alternative. Ne šaljite povjerljive pristupne podatke putem aplikacija za poruke.",
+    "jurisdiction_title": "Mjerodavno pravo i nadležnost",
+    "jurisdiction": "Primjenjuje se švicarsko pravo. Koliko je zakonski dopušteno, Cirih je mjesto nadležnosti za sporove u vezi s ovom web-stranicom i uslugama koje se preko nje nude.",
+    "updated": "Ažurirano: juli 2026."
+  }
+}
