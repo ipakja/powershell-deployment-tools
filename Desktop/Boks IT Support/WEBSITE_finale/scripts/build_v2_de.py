@@ -376,9 +376,11 @@ def services_section_body(v2: dict[str, Any], *, include_price_panel: bool = Fal
         parts.append(
             f'                <p class="services-vendor-note">{escape(vendor_note)}</p>\n'
         )
-    parts.append(
-        f'                <p class="services-price-hint">{escape(ui["from_small_job"])}</p>\n'
-    )
+    # Avoid double CHF 190 when the price panel already lists the basics check.
+    if not include_price_panel:
+        parts.append(
+            f'                <p class="services-price-hint">{escape(ui["from_small_job"])}</p>\n'
+        )
     if include_price_panel:
         prices = v2["prices"]
         price_items = [
@@ -832,12 +834,30 @@ def audience_main(v2: dict[str, Any]) -> str:
                 f'                <p>{escape(v2["role"]["contract"])}</p>\n'
             ),
         )
-        + section(
-            v2["examples"]["title"],
-            cards(v2["examples"]["items"]),
-            intro=v2["examples"]["note"],
-        )
+        + _audience_examples_section(v2)
         + cta_block(v2)
+    )
+
+
+def _audience_examples_section(v2: dict[str, Any]) -> str:
+    """Short examples teaser on audience page (full cases live on /beispiele/)."""
+    examples = v2.get("examples") or {}
+    items = examples.get("items") or []
+    href = examples.get("href") or ""
+    cta = examples.get("cta") or ""
+    if href and cta and not items:
+        body = (
+            f'                <p>{escape(examples.get("note", ""))}</p>\n'
+            f'                <div class="hero-actions">\n'
+            f'                    <a class="button button-secondary" href="{escape(href)}">'
+            f"{escape(cta)}</a>\n"
+            "                </div>\n"
+        )
+        return section(examples.get("title", ""), body)
+    return section(
+        examples.get("title", ""),
+        cards(items),
+        intro=examples.get("note", ""),
     )
 
 
@@ -851,7 +871,14 @@ def about_main(v2: dict[str, Any]) -> str:
         items = "\n".join(
             f"                    <li>{escape(item)}</li>" for item in credentials
         )
+        cred_title = about.get("credentials_title") or ""
+        title_html = (
+            f"                <h2 class=\"about-credentials-title\">{escape(cred_title)}</h2>\n"
+            if cred_title
+            else ""
+        )
         cred_html = (
+            f"{title_html}"
             '                <ul class="plain-list about-credentials">\n'
             f"{items}\n"
             "                </ul>\n"

@@ -346,9 +346,11 @@ def test_audience_what_whom_when_structure() -> None:
     assert "Ausserhalb des aktuellen Standardangebots" in de
     assert "Geeignet für" not in de or "Besonders geeignet" in de
     assert "Nicht der richtige Rahmen" not in de
-    assert "Leistungs- und Partnerumfang" in de
+    assert "Machbarkeit" in de
     assert "Benutzer-Onboarding und Offboarding" in de
-    assert "BIT bleibt Vertragspartner" in de
+    assert "Koordination spezialisierter Facharbeit bei Bedarf" in de
+    assert "Servicekoordination" in de
+    assert "/de/beispiele/" in de
 
     assert "User, access and workplace services for small businesses" in en
     assert "Typical services" in en
@@ -356,9 +358,10 @@ def test_audience_what_whom_when_structure() -> None:
     assert "Outside the current standard service" in en
     assert "A good fit for" not in en
     assert "Not the right frame" not in en
-    assert "service and partner scope" in en
+    assert "feasibility" in en
     assert "employee onboarding and offboarding" in en
-    assert "BIT remains the contractual partner" in en
+    assert "coordination of specialist work when required" in en
+    assert "/en/examples/" in en
 
     # Order: services before fit before nofit
     assert de.index("Typische Leistungen") < de.index("Besonders geeignet")
@@ -379,8 +382,9 @@ def test_services_rewrite_structure_and_slugs() -> None:
     assert "Three services you can engage" in en_home
     assert "Three services you can engage" in en_svc
 
+    assert "5–50 Mitarbeitenden" in de_home
+    assert "5–50" in read("de/fuer-unternehmen/index.html")
     for text in (de_home, de_svc):
-        assert "5–50 Mitarbeitenden" in text
         assert "CHF 190" in text
         assert "Leistung ansehen" in text
         assert "benutzer-und-zugaenge" in text
@@ -648,7 +652,9 @@ def test_phase2_markers_partner_examples_process_list() -> None:
     home = read("de/index.html")
     assert "Sie beauftragen BIT" in home or "Warum BIT" in home
     assert 'id="warum-bit"' in home
-    assert "verfügbaren Leistungs- und Partnerumfangs" in home
+    assert "verfügbaren Leistungs- und Partnerumfangs" not in home
+    assert "kein offener Dauerauftrag" not in home
+    assert "Nicht jeder Fall ist automatisch enthalten" not in home
     assert "bei Spezialthemen wird die technische Umsetzung" not in home
     hero = re.search(r'<section class="hero">.*?</section>', home, re.S).group(0)
     assert "Spezialthemen" not in hero
@@ -656,19 +662,28 @@ def test_phase2_markers_partner_examples_process_list() -> None:
 
     en_home = read("en/index.html")
     assert "Why BIT" in en_home
-    assert "available service and partner scope" in en_home
+    assert "available service and partner scope" not in en_home
+    assert "open-ended retainer" not in en_home
+    assert "Not every case is automatically included" not in en_home
     assert "CHF 120" not in en_home
 
     about = read("de/ueber-bit/index.html")
     assert "Als Inhaber verantworte ich Aufnahme, Koordination, Qualität" in about
-    assert "kleines Serviceunternehmen in Zürich" in about
+    assert "inhabergeführter Serviceanbieter" in about
+    assert about.count("Als Inhaber") == 1
+    assert "Qualifikationen" in about
     assert "stundenweiser Ticket-Techniker" not in about
     assert "Arbeitssprachen: Deutsch und Englisch." in about
     legal = read("de/legal/index.html")
-    assert "Vertragspartner ist BIT" in legal
+    assert "vollständigen Vertragsbedingungen" in legal
+    assert "Primäre Rechtsordnung" not in legal
+    assert "wichtige Eckpunkte und keine umfassende Rechtsberatung" not in legal
+    assert 'href="/de/agb/"' in legal
+    assert "Rechtsgrundlage" not in legal
+    assert "insbesondere in den USA" in legal
 
     examples = read("de/beispiele/index.html")
-    assert "So können Aufträge bei BIT ablaufen" in examples
+    assert "Typische Servicefälle" in examples
     assert "illustrative Musterabläufe" in examples
     assert "keine Kundenreferenzen" in examples
     assert "Muster: Outlook funktioniert an einem Arbeitsplatz nicht" in examples
@@ -682,7 +697,7 @@ def test_phase2_markers_partner_examples_process_list() -> None:
     assert 'class="form-notice"' not in examples
 
     en_ex = read("en/examples/index.html")
-    assert "How engagements with BIT can run" in en_ex
+    assert "Typical service cases" in en_ex
     assert "Sample: Outlook does not work at a workstation" in en_ex
     assert "specially protected personal data" in en_ex
     assert "Open points and risks" in en_ex

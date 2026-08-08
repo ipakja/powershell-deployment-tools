@@ -79,7 +79,7 @@
     "process_lead": "Every engagement starts by clarifying need, scope and price. BIT steers the service through to documented close-out.",
     "view_service": "View service",
     "from_small_job": "IT basics check from CHF 190",
-    "hourly_line": "",
+    "hourly_line": "Guideline for separately billed special effort: CHF 120/h",
     "small_job_line": "IT basics check from {small_job}",
     "travel_line": "Remote is the default. Zurich-area on-site appointments are agreed in advance and listed separately.",
     "to_it_home": "Back to the IT home page",
@@ -94,7 +94,7 @@
     "report_structure_title": "Sample report structure",
     "setup_line": "",
     "recurring_line": "",
-    "special_line": "Additional special effort only after prior approval. Guideline for separately billed special effort: CHF 120/h."
+    "special_line": "additional special effort only after prior approval"
   },
   "form": {
     "company": "Company *",
@@ -146,8 +146,8 @@
         "One central service entry instead of multiple parallel vendor contacts",
         "Clear scope before work starts",
         "Documented process from inquiry to close-out",
-        "Specialist capacity as needed within the BIT service",
-        "No oversized full-IT engagement required",
+        "Specialist expertise when required within the BIT service",
+        "A fitting scope for smaller businesses without in-house IT",
         "BIT remains the contractual partner and steers quality and billing"
       ]
     },
@@ -171,7 +171,7 @@
     },
     "partner": {
       "title": "You engage BIT — not multiple providers",
-      "text": "You buy the defined service from BIT. BIT takes in the request, confirms scope and price and remains your contact through to documented close-out. Before acceptance, BIT checks whether the required specialist work can be delivered within the available service and partner scope. Specialist work runs inside the confirmed BIT service; third-party costs arise only after your approval."
+      "text": "You commission the defined service from BIT. When specialist expertise is required, BIT coordinates it within the agreed service and remains your contact through to documented completion. Additional costs are stated up front and only triggered after your approval."
     }
   },
   "concerns": {
@@ -214,8 +214,8 @@
   },
   "services": {
     "title": "Three services you can engage",
-    "intro": "BIT offers these services for smaller companies with about 5–50 employees in Zurich and remote across Switzerland. Remote is the default; Zurich-area on-site appointments are agreed in advance and listed separately in the quote.",
-    "scope_note": "Scope and responsibility are agreed up front. Not every case is automatically included.",
+    "intro": "Three clearly defined services for recurring user, access and workplace tasks. Remote is the default; Zurich-area on-site appointments are agreed in advance and listed separately in the quote.",
+    "scope_note": "Scope and responsibility are agreed up front.",
     "vendor_note": "If additional specialist providers are needed, BIT coordinates the necessary steps within the agreed service.",
     "path": "/en/services/",
     "cards": [
@@ -224,7 +224,7 @@
         "icon": "users",
         "title": "Users & access",
         "benefit": "For joiners, leavers and role changes.",
-        "text": "BIT organises the defined accounts, access changes and approvals through a documented process. Outcome: an overview of handled and open points.",
+        "text": "BIT implements defined user and access processes in a structured way and coordinates the required approvals. Outcome: an overview of handled and open points.",
         "area": "users-access",
         "detail": {
           "situations": [
@@ -244,12 +244,12 @@
             "Required systems and roles",
             "Who may grant approvals"
           ],
-          "boundaries": "Specialist technical cases outside the agreed scope are not automatically included and are reviewed before work starts. No 24/7 cover and no unlimited scope. BIT does not replace an internal IT department and does not take unlimited retainer work. Before acceptance, BIT checks whether the required specialist work can be delivered within the available service and partner scope.",
+          "boundaries": "Specialist technical cases outside the agreed scope are reviewed before work starts. No 24/7 cover and no unlimited scope. BIT does not replace an internal IT department and does not take unlimited retainer work. Before accepting an engagement, BIT reviews whether the requested service is feasible.",
           "intro": "User and access topics often arise under time pressure: a Monday joiner, a leaver without a clear account list, a role change with new rights. BIT captures the request in a structured way, clarifies approvals and records the agreed scope. Result first: a productive start or closed access — documented and traceable. Most cases are handled remotely; Zurich-area on-site visits only when needed and listed separately. Approvals stay with the company.",
           "closing": "For a non-binding assessment, use the inquiry form with Users & access preselected."
         },
         "when": "For joiners, leavers and role changes.",
-        "what": "BIT organises the defined accounts, access changes and approvals through a documented process.",
+        "what": "BIT implements defined user and access processes in a structured way and coordinates the required approvals.",
         "outcome": "At the end you receive a traceable overview of handled and still-open points."
       },
       {
@@ -257,7 +257,7 @@
         "icon": "m365",
         "title": "Microsoft 365 & workplace",
         "benefit": "For standardised workplace and Microsoft 365 cases.",
-        "text": "BIT reviews and steers clearly scoped standard cases in the agreed service process. Outcome: documented close-out instead of an open-ended retainer.",
+        "text": "BIT handles and coordinates standardised Microsoft 365 and workplace cases — for example sign-in, Outlook, Teams and typical workplace blockers.",
         "area": "m365-workplace",
         "detail": {
           "situations": [
@@ -278,12 +278,12 @@
             "Since when and how often it occurs"
           ],
           "boundaries": "Vendor-dependent or deep infrastructure topics are not automatically included. A specialist is involved only by agreement. Without enough detail (error picture, timing, affected workstation) the case cannot be scoped reliably. Critical infrastructure or production environments are outside this entry point.",
-          "intro": "When sign-in, Outlook or Teams stalls at a workstation, work time is lost immediately. BIT narrows whether the account, device or service is affected and handles clearly scoped standard cases. Result first: less disruption and one contact through to documented close-out. The goal is a clearly scoped standard case — not an open-ended retainer. Remote is the default; Zurich-area on-site visits only by agreement and listed separately.",
+          "intro": "When sign-in, Outlook or Teams stalls at a workstation, work time is lost immediately. BIT narrows whether the account, device or service is affected and handles clearly scoped standard cases. Result first: less disruption and one contact through to documented close-out. Remote is the default; Zurich-area on-site visits only by agreement and listed separately.",
           "closing": "Describe the issue via the inquiry form (Microsoft 365 & workplace)."
         },
         "when": "For standardised workplace and Microsoft 365 cases.",
-        "what": "BIT reviews and steers clearly scoped standard cases in the agreed service process — sign-in, Outlook, Teams and typical workplace blockers.",
-        "outcome": "At the end you receive a documented result and clear open points — not an open-ended retainer."
+        "what": "BIT handles and coordinates standardised Microsoft 365 and workplace cases — for example sign-in, Outlook, Teams and typical workplace blockers.",
+        "outcome": "At the end you receive a documented result and a clear overview of open points."
       },
       {
         "slug": "it-basics-check",
@@ -326,7 +326,7 @@
     "items": [
       "no 24/7 incident cover",
       "no unlimited support retainers",
-      "additional work is agreed and approved in advance"
+      "additional services only after prior alignment and approval"
     ]
   },
   "process": {
@@ -360,11 +360,11 @@
       },
       {
         "title": "Extra effort",
-        "text": "Additional special effort arises only after prior approval and is stated up front."
+        "text": "Additional special effort is stated up front and only carried out after your approval."
       },
       {
         "title": "Documented close-out",
-        "text": "At the end you receive a clear outcome with completed items and remaining open points."
+        "text": "At the end you receive a clear outcome with completed items, open points and — where needed — recommended next steps."
       }
     ]
   },
@@ -376,8 +376,8 @@
       "employee onboarding and offboarding",
       "user accounts, roles and access changes",
       "Microsoft 365 and workplace services",
-      "specialist work inside the BIT service; BIT remains the contractual partner",
-      "documented completion and follow-up"
+      "coordination of specialist work when required",
+      "documentation and follow-up"
     ],
     "fit_title": "Best suited for businesses that…",
     "fit": [
@@ -394,31 +394,20 @@
       "advanced cybersecurity projects",
       "critical or highly regulated environments"
     ],
-    "nofit_note": "Additional specialist services may be coordinated inside the BIT service where the required work sits within the available service and partner scope."
+    "nofit_note": "Before accepting an engagement, BIT reviews whether the requested service is feasible. Additional specialist services may be coordinated inside the BIT service when needed."
   },
   "role": {
     "title": "BIT’s role",
-    "owns": "Intake, structuring, steering, communication, documentation, follow-up and billing.",
-    "tech": "Before acceptance, BIT checks whether the required specialist work can be delivered within the available service and partner scope. Specialist work runs inside the confirmed BIT service; BIT remains the contact.",
+    "owns": "Intake, service coordination, quality control, communication, documentation and close-out.",
+    "tech": "Before accepting an engagement, BIT reviews feasibility. If specialist expertise is required, it is coordinated within the agreed BIT service. BIT remains your central contact.",
     "contract": "Scope, responsibilities and billing are set before work begins. The contractual partner is BIT (sole proprietorship Stefan Bogdanovic)."
   },
   "examples": {
-    "title": "Worked examples",
-    "note": "All examples are sample flows, not documented client cases.",
-    "items": [
-      {
-        "title": "Sample: new employee starts",
-        "text": "Capture required access, written approval, setup inside the BIT service, documented close-out."
-      },
-      {
-        "title": "Sample: leaver without clarity",
-        "text": "List existing accounts and rights, steer disablement inside the agreed service, document close-out."
-      },
-      {
-        "title": "Sample: workplace standard case",
-        "text": "Structured intake, handle inside the BIT service or steer approved specialist work, record the outcome."
-      }
-    ]
+    "title": "Typical service cases",
+    "note": "Illustrative sample flows — not client references — are on the examples page.",
+    "cta": "View typical cases",
+    "href": "/en/examples/",
+    "items": []
   },
   "about": {
     "meta_title": "About BIT | BIT",
@@ -426,9 +415,8 @@
     "title": "Who is behind BIT",
     "lead": "Stefan Bogdanovic · owner and main contact · Zurich",
     "body": [
-      "I know day-to-day operations from hotel and front-desk environments and the everyday user, access and system questions small businesses face.",
-      "BIT offers clearly defined services for small businesses without in-house IT: user accounts, Microsoft 365, access and standardised workplace tasks. As owner I am responsible for intake, coordination, quality and documented close-out of the commissioned services.",
-      "BIT is run as a small service business in Zurich. As owner I am your central contact — from inquiry through to documented close-out.",
+      "I know day-to-day operations from hotel and front-desk environments: user changes, access, handovers, ownership and everyday workplace and system questions in small businesses.",
+      "BIT is an owner-led service provider in Zurich. As owner I am responsible for intake, coordination, quality and documented close-out of commissioned services, and I remain your central contact from inquiry through to completion.",
       "Working languages: German and English."
     ],
     "siz_comment": "",
@@ -436,7 +424,8 @@
     "credentials": [
       "ICT Professional SIZ – Systems & Network",
       "ICT Power-User SIZ"
-    ]
+    ],
+    "credentials_title": "Qualifications"
   },
   "faq": {
     "meta_title": "FAQ | BIT",
@@ -444,12 +433,12 @@
     "title": "Frequently asked questions",
     "items": [
       {
-        "q": "Does BIT replace an in-house IT department?",
-        "a": "BIT is for smaller companies that do not need a full internal IT role, but want one central contact for defined user, access and workplace services."
+        "q": "Which companies is BIT for?",
+        "a": "Smaller companies with about 5–50 employees without in-house IT, mostly on Windows and Microsoft 365 — Zurich and remote across Switzerland."
       },
       {
-        "q": "Which companies is this for?",
-        "a": "Smaller companies with about 5–50 employees, mostly on Windows and Microsoft 365, without a dedicated IT role — Zurich and remote across Switzerland."
+        "q": "Does BIT replace an in-house IT department?",
+        "a": "BIT is for smaller companies that do not need a full internal IT role, but want one central contact for defined user, access and workplace services."
       },
       {
         "q": "Can every IT problem be covered?",
@@ -457,7 +446,7 @@
       },
       {
         "q": "Does BIT only work with hotels?",
-        "a": "No. Hotels and front desk are one experience example. The offer is aimed at smaller Swiss companies without in-house IT."
+        "a": "No. Hotels and front desk are part of the operational background. The offer is aimed across industries at smaller Swiss companies without in-house IT."
       },
       {
         "q": "Who makes technical changes?",
@@ -465,7 +454,7 @@
       },
       {
         "q": "How are access changes approved?",
-        "a": "Permission and access changes only happen after documented approval by a person authorised by the company."
+        "a": "Access and permission changes only happen after approval by a person authorised by the company."
       },
       {
         "q": "Are there fixed packages or prices?",
@@ -473,11 +462,11 @@
       },
       {
         "q": "How quickly does BIT respond?",
-        "a": "Reply usually within two working days."
+        "a": "As a rule you receive a first reply within two working days with an assessment of feasibility and the next step."
       },
       {
         "q": "Must our IT already be documented?",
-        "a": "No. Especially when users, access or ownership are poorly documented, the IT basics check can serve as a starting point."
+        "a": "No. Especially when users, access or ownership are not fully documented, the IT basics check can serve as a starting point."
       }
     ]
   },
@@ -514,7 +503,7 @@
   "examples_page": {
     "meta_title": "Typical service cases | BIT",
     "meta_description": "Illustrative sample flows: leaver, new joiner and Outlook — plus sample report structure. No client references.",
-    "title": "How engagements with BIT can run",
+    "title": "Typical service cases",
     "lead": "The following examples show how BIT structures clearly scoped user, access and workplace tasks — from approval through to documented close-out.",
     "note": "The cases shown are illustrative sample flows, not client references.",
     "cases": [

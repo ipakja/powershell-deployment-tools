@@ -565,6 +565,22 @@ class SiteRenderer:
             "footer_city": escape("Zürich" if language == "de" else "Zurich"),
         }
 
+    @staticmethod
+    def _terms_with_link(
+        terms: str, terms_href: str, terms_label: str, language: str
+    ) -> str:
+        """Escape terms text and link the AGB / Terms label once."""
+        escaped = escape(terms)
+        label = escape(terms_label)
+        href = escape(terms_href)
+        link = f'<a href="{href}">{label}</a>'
+        if language == "de" and "AGB" in escaped:
+            return escaped.replace("AGB", link, 1)
+        needle = "Terms and Conditions"
+        if needle in escaped:
+            return escaped.replace(needle, link, 1)
+        return f"{escaped} {link}."
+
     def render_legal(self, language: str) -> str:
         """Render shared legal/privacy page with factual Swiss details."""
         locale = self.locales[language]
@@ -606,7 +622,9 @@ class SiteRenderer:
             "address_country": escape(legal["country"]),
             "legal_contact_title": escape(legal["contact_title"]),
             "legal_registration_title": escape(legal["terms_title"]),
-            "legal_registration": escape(legal["terms"]),
+            "legal_registration": self._terms_with_link(
+                legal["terms"], chrome["terms_href"], chrome["terms_label"], language
+            ),
             "liability_title": escape(legal["liability_title"]),
             "liability": escape(
                 legal["liability"]
